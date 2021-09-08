@@ -46,10 +46,10 @@
       }, function (error) {
         console.log(error);
       });
-    }
   
-    $scope.applyFilter = function(type) {
-      $scope.filter = type;
+      $scope.applyFilter = function(type) {
+        $scope.filter = type;
+      }
+      
     }
-    
 })();
