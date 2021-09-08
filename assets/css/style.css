@@ -271,6 +271,7 @@ hr {
 .item-container .item-icon {
   width: 85px;
   height: 85px;
+  margin: auto;
 }
 
 .item-container .item-icon img {
