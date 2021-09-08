@@ -2,8 +2,8 @@
 
 (function() {
   var app = angular.module('fortinetMarketplace', []);
-    app.config(['$rootScopeProvider', '$locationProvider', '$httpProvider', 'localStorageServiceProvider', '$qProvider', '$logProvider', '$controllerProvider', '$uiRouterProvider',
-      function($rootScopeProvider, $locationProvider, $httpProvider, localStorageServiceProvider, $qProvider, $logProvider, $controllerProvider, $uiRouterProvider) {
+    app.config(['$rootScopeProvider', '$locationProvider', '$httpProvider', '$qProvider', '$logProvider', '$controllerProvider',
+      function($rootScopeProvider, $locationProvider, $httpProvider, $qProvider, $logProvider, $controllerProvider) {
         $locationProvider.html5Mode(true);
         $logProvider.debugEnabled(false);
         $rootScopeProvider.digestTtl(20);
