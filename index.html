@@ -35,11 +35,11 @@
                         <div class="simplebar-content" style="padding: 0px;">
                             <input class="form-control" type="text" placeholder="Search In Marketplace"/>
                             <ul class="sidebar-nav">
-                                <li class="sidebar-item active"><a class="sidebar-link" onClick="applyFilter('all')">All</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('integrations')">Integrations</a></li>
+                                <li class="sidebar-item active"><a class="sidebar-link" ng-click="applyFilter('all')">All</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('connector')">Integrations</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('use_cases')">Use Cases</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('content_packs')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('widgets')">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('widget')">Widgets</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('how_tos')">How To's</a></li>
                             </ul>
                         </div>
@@ -50,7 +50,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="pull-left" style="min-height: 180px; width: 200px" ng-repeat="item in listItems">
+                                    <div class="pull-left" style="min-height: 180px; width: 200px" ng-repeat="item in listItems" ng-show="filter === 'all' || filter === item.type">
                                         <i class="fa fa-desktop" style="font-size:120px"></i>
                                         <h3>{{item.display}}</h3>
                                     </div>
