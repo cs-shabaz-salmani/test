@@ -5,7 +5,7 @@
   angular.module('fortinetMarketplace')
     .controller('marketplaceController', marketplaceController);
 
-    function marketplaceController ($scope, $http) {
+    function marketplaceController () {
       console.log('test loaded');
     }
     
