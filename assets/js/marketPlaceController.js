@@ -9,11 +9,12 @@
     function marketplaceController ($scope, $http) {
       
       console.log('test loaded');
+      var yumRepo = 'https://update.cybersponse.com/';
       $scope.listItems = [];
       $scope.filter = 'all';
       $http({
         method: 'GET',
-        url: 'https://update.cybersponse.com/connectors/info/connectors.json',
+        url: yumRepo + 'connectors/info/connectors.json',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         }
@@ -22,11 +23,12 @@
           angular.forEach(response.data, function(connector){
             connector.type = 'connector';
             connector.display = connector.label;
+            connector.icon_large = yumRepo + 'connectors'+ value.path + value.name + '_' + value.version + '/images/' + value.icon;
             $scope.listItems.push(connector);
           });
           $http({
             method: 'GET',
-            url: 'https://update.cybersponse.com/fsr-widgets/widgets.json',
+            url: yumRepo + 'fsr-widgets/widgets.json',
             headers: {
               'Content-Type': 'application/json;charset=utf-8'
             }
