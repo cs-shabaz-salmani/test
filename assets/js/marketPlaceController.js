@@ -27,16 +27,16 @@
             headers: {
               'Content-Type': 'application/json;charset=utf-8'
             }
-          }).then(function (response) {
-            console.log(response);
-            if(response.status === 200){
-              angular.forEach(response.data, function(widget){
+          }).then(function (data) {
+            console.log(data);
+            if(data.status === 200){
+              angular.forEach(data.data, function(widget){
                 widget.type = 'widget';
                 $scope.listItems.push(widget);
               }); 
             }
-          }, function (error) {
-            console.log(error);
+          }, function (widgeterror) {
+            console.log(widgeterror);
           });
         }
       }, function (error) {
