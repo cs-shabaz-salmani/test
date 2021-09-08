@@ -14,7 +14,7 @@
       $scope.filter = 'all';
       $http({
         method: 'GET',
-        url: yumRepo + 'connectors/info/connectors.json',
+        url: 'https://update.cybersponse.com/connectors/info/connectors.json',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         }
@@ -27,7 +27,7 @@
           });
           $http({
             method: 'GET',
-            url: yumRepo + 'fsr-widgets/widgets.json',
+            url: 'https://update.cybersponse.com/fsr-widgets/widgets.json',
             headers: {
               'Content-Type': 'application/json;charset=utf-8'
             }
