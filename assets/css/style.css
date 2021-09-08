@@ -258,3 +258,14 @@ hr {
   border: 0;
   border-top: 1px solid #eeeeee;
 }
+
+.item-container {
+  width: 200px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin: 10px 10px 15px 0px;
+}
+
+.item-container img {
+  width: 85px;
+}
