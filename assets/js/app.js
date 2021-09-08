@@ -5,8 +5,8 @@
       'ui.router',
       'ui.router.state.events'
     ]);
-    app.config(['$urlRouterProvider', '$rootScopeProvider', '$locationProvider', '$breadcrumbProvider', '$httpProvider', 'localStorageServiceProvider', '$animateProvider', '$qProvider', '$logProvider', 'uiSelectConfig', '$controllerProvider', '$uiRouterProvider',
-      function($urlRouterProvider, $rootScopeProvider, $locationProvider, $breadcrumbProvider, $httpProvider, localStorageServiceProvider, $animateProvider, $qProvider, $logProvider, uiSelectConfig, $controllerProvider, $uiRouterProvider) {
+    app.config(['$urlRouterProvider', '$rootScopeProvider', '$locationProvider', '$httpProvider', 'localStorageServiceProvider', '$qProvider', '$logProvider', '$controllerProvider', '$uiRouterProvider',
+      function($urlRouterProvider, $rootScopeProvider, $locationProvider, $httpProvider, localStorageServiceProvider, $qProvider, $logProvider, $controllerProvider, $uiRouterProvider) {
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
         $logProvider.debugEnabled(false);
