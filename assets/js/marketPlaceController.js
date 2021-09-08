@@ -19,8 +19,7 @@
           'Content-Type': 'application/json;charset=utf-8'
         }
       }).then(function (response) {
-        if(response.status === 200){
-          angular.forEach(response.data, function(connector){
+          angular.forEach(response, function(connector){
             connector.type = 'connector';
             connector.display = connector.label;
             connector.icon_large = yumRepo + 'connectors'+ value.path + value.name + '_' + value.version + '/images/' + value.icon;
@@ -34,17 +33,14 @@
             }
           }).then(function (data) {
             console.log(data);
-            if(data.status === 200){
-              angular.forEach(data.data, function(widget){
+              angular.forEach(data, function(widget){
                 widget.type = 'widget';
                 widget.display = widget.title;
                 $scope.listItems.push(widget);
               }); 
-            }
           }, function (widgeterror) {
             console.log(widgeterror);
           });
-        }
       }, function (error) {
         console.log(error);
       });
