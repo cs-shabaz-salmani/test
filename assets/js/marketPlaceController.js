@@ -10,7 +10,7 @@
       console.log('test loaded');
       $http({
         method: 'GET',
-        url: 'update.cybersponse.com/connectors/info/connectors.json',
+        url: 'https://update.cybersponse.com/connectors/info/connectors.json',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         }
