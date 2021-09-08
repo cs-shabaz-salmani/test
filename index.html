@@ -15,49 +15,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <style>
-            body,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: "Raleway", sans-serif
-            }
-        </style>
     </head>
     <body ng-controller="marketplaceController">
         <div class="wrapper">
             <div class="row">
                 <div class="col-md-3">
-                    <nav id="sidebar" class="sidebar">
-                        <div class="simplebar-content">
-                            <input class="form-control" type="text" placeholder="Search In Marketplace"/>
-                            <ul class="sidebar-nav list-unstyled">
-                                <li class="sidebar-item active"><a class="sidebar-link" ng-click="applyFilter('all')">All</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('connector')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('use_cases')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('content_packs')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('widget')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('how_tos')">How To's</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <div ng-include="test/assets/html/sidebar.html"></div>
                 </div>
                 <div class="main col-md-9">
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="pull-left text-center item-container" ng-repeat="item in listItems" ng-show="filter === 'all' || filter === item.type">
-                                        <div class="item-icon">
-                                            <i ng-if="item.type !== 'connector'" class="fa fa-desktop" style="font-size:120px"></i>
-                                            <img ng-if="item.type === 'connector'" data-ng-src="{{item.iconLarge}}" />
-                                        </div>
-                                        <h5>{{item.display}}</h5>
-                                    </div>
-                                </div>
+                                <div ng-include="test/assets/html/main.html"></div>
                             </div>
                         </div>
                     </main>
