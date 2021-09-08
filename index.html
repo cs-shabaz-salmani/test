@@ -36,11 +36,11 @@
                             <input class="form-control" type="text" placeholder="Search In Marketplace"/>
                             <ul class="sidebar-nav">
                                 <li class="sidebar-item active"><a class="sidebar-link" onClick="applyFilter('all')">All</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('integrations')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('use_cases')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('content_packs')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('widgets')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('how_tos')">How To's</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('integrations')">Integrations</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('use_cases')">Use Cases</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('content_packs')">Content Packs</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('widgets')">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('how_tos')">How To's</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -49,28 +49,10 @@
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-3">
-                                    <div class="" style="min-height:300px">
+                                <div class="col-md-12">
+                                    <div class="" style="min-height:300px; width: 200px" ng-repeat="item in listItems">
                                         <i class="fa fa-desktop" style="font-size:120px"></i>
-                                        <h3>Lorem Ipsum</h3>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="" style="min-height:300px">
-                                        <i class="fa fa-desktop" style="font-size:120px"></i>
-                                        <h3>Lorem Ipsum</h3>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="" style="min-height:300px">
-                                        <i class="fa fa-desktop" style="font-size:120px"></i>
-                                        <h3>Lorem Ipsum</h3>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="" style="min-height:300px">
-                                        <i class="fa fa-desktop" style="font-size:120px"></i>
-                                        <h3>Lorem Ipsum</h3>
+                                        <h3>{{item.display}}</h3>
                                     </div>
                                 </div>
                             </div>
