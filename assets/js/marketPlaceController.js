@@ -7,8 +7,10 @@
   
     marketplaceController.$inject = ['$scope', '$http'];
     function marketplaceController ($scope, $http) {
+      
       console.log('test loaded');
       $scope.listItems = [];
+      $scope.filter = 'all';
       $http({
         method: 'GET',
         url: 'https://update.cybersponse.com/connectors/info/connectors.json',
@@ -44,6 +46,10 @@
       }, function (error) {
         console.log(error);
       });
+    }
+  
+    $scope.applyFilter = function(type) {
+      $scope.filter = type;
     }
     
 })();
