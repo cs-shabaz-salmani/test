@@ -261,11 +261,18 @@ hr {
 
 .item-container {
   width: 200px;
+  min-height: 138px;
   border: 1px solid #cccccc;
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
+  padding: 10px 5px 5px 5px;
 }
 
-.item-container img {
+.item-container .item-icon {
+  width: 85px;
+  height 85px;
+}
+
+.item-container .item-icon img {
   width: 85px;
 }
