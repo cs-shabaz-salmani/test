@@ -19,6 +19,7 @@
         if(response.status === 200){
           angular.forEach(response.data, function(connector){
             connector.type = 'connector';
+            connector.display = connector.label;
             $scope.listItems.push(connector);
           });
           $http({
@@ -32,6 +33,7 @@
             if(data.status === 200){
               angular.forEach(data.data, function(widget){
                 widget.type = 'widget';
+                widget.display = widget.title;
                 $scope.listItems.push(widget);
               }); 
             }
