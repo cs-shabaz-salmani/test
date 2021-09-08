@@ -22,7 +22,7 @@
           angular.forEach(response.data, function(connector){
             connector.type = 'connector';
             connector.display = connector.label;
-            connector.iconLarge = 'https://update.cybersponse.com/connectors'+ value.path + value.name + '_' + value.version + '/images/' + value.icon;
+            connector.iconLarge = 'https://update.cybersponse.com/connectors' + value.path + value.name + '_' + value.version + '/images/' + value.icon;
             $scope.listItems.push(connector);
           });
           $http({
