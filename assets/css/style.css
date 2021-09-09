@@ -259,11 +259,33 @@ hr {
   border-top: 1px solid #eeeeee;
 }
 
+.topbar-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
 .topbar-container h1 {
   font-size: 30px;
   font-weight: 700;
   padding: 20px 10px 25px 20px;
   background: #eaeaea; 
+}
+
+.sidebar {
+  background: #f7f7f7;
+}
+
+.sidebar #sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  right: auto;
+}
+
+.main {
+  margin-top: 100px; 
 }
 
 .item-container {
