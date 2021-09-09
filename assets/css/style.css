@@ -273,15 +273,13 @@ hr {
   background: #eaeaea; 
 }
 
-.sidebar {
-  background: #f7f7f7;
-}
-
 .sidebar #sidebar {
   position: fixed;
   top: 80px;
   left: 0px;
   right: 75%;
+  bottom: 0px;
+  background: #f7f7f7;
 }
 
 .sidebar .sidebar-content {
@@ -291,7 +289,7 @@ hr {
 .sidebar .sidebar-nav {
   font-size: 17px;
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .sidebar .sidebar-item {
