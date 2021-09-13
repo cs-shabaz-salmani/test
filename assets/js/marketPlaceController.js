@@ -9,10 +9,10 @@
     function config ($routeProvider) {
       $routeProvider
       .when("/", {
-        templateUrl : "./html/main.html"
+        templateUrl : "../html/main.html"
       })
       .when("/detail", {
-        templateUrl : "./html/detail.html"
+        templateUrl : "../html/detail.html"
       })
     };
     
