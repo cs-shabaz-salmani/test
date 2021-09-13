@@ -60,5 +60,9 @@
         $scope.filter = type;
       }
       
+      $scope.openDetails = function(detail) {
+         $scope.detailInfo = detail;
+      }
+      
     }
 })();
