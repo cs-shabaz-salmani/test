@@ -59,8 +59,8 @@
       $scope.applyFilter = function(type, event) {
         $scope.filter = type;
         $location.path('/');
-        $("ul.sidebar-nav li").removeClass("active");
-        $(this).addClass("active");
+        $("ul.sidebar-nav a").removeClass("active");
+        $(event.target).addClass("active");
       };
       
       $scope.openDetails = function(detail) {
