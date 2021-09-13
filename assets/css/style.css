@@ -312,6 +312,11 @@ hr {
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
   padding: 10px 5px 5px 5px;
+  cursor: pointer;
+}
+
+.item-container:hover {
+  text-decoration: underline;
 }
 
 .item-container .item-icon {
