@@ -328,3 +328,21 @@ hr {
 .item-container .item-icon img {
   width: 85px;
 }
+
+.detail-content {
+  padding: 10px 20px;
+}
+
+.detail-summary {
+  margin-top: 20px;
+}
+
+.detail-summary img {
+  border: 1px solid #cccccc;
+  margin-left: 15px;
+}
+
+.detail-properties {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
