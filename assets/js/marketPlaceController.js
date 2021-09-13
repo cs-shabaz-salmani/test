@@ -81,6 +81,7 @@
               filteredListItems.push(item); 
             }
           });
+          $scope.listItems = filteredListItems;
         } else {
           $scope.listItems = listItemsBkp;
         }
