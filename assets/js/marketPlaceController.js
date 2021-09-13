@@ -59,12 +59,17 @@
       $scope.applyFilter = function(type) {
         $scope.filter = type;
         $location.path('/');
-      }
+      };
       
       $scope.openDetails = function(detail) {
        $scope.detailInfo = detail;
        $location.path('/detail');
-      }
+      };
+
+      $("ul.sidebar-nav li").on("click", function() {
+        $("ul.sidebar-nav li").removeClass("active");
+        $(this).addClass("active");
+      });
       
     }
 })();
