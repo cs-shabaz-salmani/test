@@ -301,6 +301,10 @@ hr {
   color: #000000;
 }
 
+.sidebar .sidebar-link.active {
+  color: #3b75b8;
+}
+
 .main {
   margin-top: 100px !important; 
 }
