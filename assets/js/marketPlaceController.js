@@ -23,6 +23,7 @@
       var yumRepo = 'https://update.cybersponse.com/';
       $scope.listItems = [];
       $scope.filter = 'all';
+      var listItemsBkp;
       
       $http({
         method: 'GET',
@@ -36,6 +37,7 @@
             connector.display = connector.label;
             connector.iconLarge = yumRepo + 'connectors' + connector.path + connector.name + '_' + connector.version + '/images/' + connector.icon;
             $scope.listItems.push(connector);
+            listItemsBkp = angular.copy($scope.listItems);
           });
           $http({
             method: 'GET',
@@ -48,6 +50,7 @@
               widget.type = 'widget';
               widget.display = widget.title;
               $scope.listItems.push(widget);
+              listItemsBkp = angular.copy($scope.listItems);
             }); 
           }, function (widgeterror) {
             console.log(widgeterror);
@@ -55,7 +58,7 @@
       }, function (error) {
         console.log(error);
       }).finally(function () {
-        var listItemsBkp = angular.copy($scope.listItems);
+        listItemsBkp = angular.copy($scope.listItems);
       });
   
       $scope.applyFilter = function(type, event) {
@@ -72,8 +75,11 @@
       
       $scope.submitSearch = function (searchText) {
         if(searchText.length >= 3) {
-          $scope.listItems = _.filter(listItemsBkp, function(item) {
-            return item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+          var filteredListItems = [];
+          angular.forEach($scope.listItems, function(item) {
+            if(item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+              filteredListItems.push(item); 
+            }
           });
         } else {
           $scope.listItems = listItemsBkp;
