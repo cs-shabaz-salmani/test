@@ -2,11 +2,10 @@
 
 (function() {
 
-  angular.module('fortinetMarketplace')
+  angular.module('fortinetMarketplace', ['ngRoute'])
     .controller('marketplaceController', marketplaceController)
     .config(config);
   
-    config.$inject = ['ngRoute'];
     function config ($routeProvider) {
       $routeProvider
       .when("/", {
