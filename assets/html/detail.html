@@ -10,13 +10,13 @@
             </div>
             <div class="pull-left">
               <h3 class="detail-title">{{detailInfo.display}}</h3>
-              <span data-ng-if="detailInfo.version" class="connector-properties">
+              <span data-ng-if="detailInfo.version" class="detail-properties">
                 <span class="detail-properties grey-text">Version</span>
                 <span>{{detailInfo.version}}</span>
               </span>
-              <p class="detail-properties margin-bottom-xsm"><span class="grey-text">Certified:</span>
+              <p class="detail-properties"><span class="grey-text">Certified:</span>
                 {{detailInfo.cs_approved ? 'Yes':'No' }}</p>
-              <p class="detail-properties margin-bottom-sm" data-ng-show="detailInfo.publisher !== ''">
+              <p class="detail-properties" data-ng-show="detailInfo.publisher !== ''">
                 <span class="grey-text">Publisher:</span>
                 <span class="detail-properties"
                   data-ng-show="(detailInfo.publisher | lowercase) === 'fortinet' || (detailInfo.publisher | lowercase) === 'cybersponse'">Fortinet
@@ -27,11 +27,11 @@
               </p>
             </div>
             <div class="pull-right">
-              <div class="detail-properties margin-top-sm">
+              <div class="detail-properties">
                 <div class="row">
                   <div class="col-md-12">
                     <div data-ng-show="detailInfo.version.help_file || detailInfo.version.help_online"
-                      class="display-inline-block padding-top-xs">
+                      class="display-inline-block">
                       <a id="administration-links" data-ng-show="detailInfo.help_file && !detailInfo.help_online"
                         data-ng-click="downloadHelpPDF()" class="nav-item dropdown-toggle detail-doc-link">
                         <span class="fa fa-file-pdf-o"></span> Documentaion
@@ -70,8 +70,8 @@
         </div>
       </div>
       <div class="row detail-container-bottom">
-        <div class="col-md-12 col-sm-12">
-          <div class="grey-text detail-properties detail-description" title="{{detailInfo.description}}">{{detailInfo.description}}</div>
+        <div class="col-md-12">
+          <div class="grey-text detail-properties detail-description">{{detailInfo.description}}</div>
         </div>
       </div>
     </div>
