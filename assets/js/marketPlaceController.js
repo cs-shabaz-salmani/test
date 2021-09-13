@@ -3,8 +3,20 @@
 (function() {
 
   angular.module('fortinetMarketplace')
-    .controller('marketplaceController', marketplaceController);
+    .controller('marketplaceController', marketplaceController)
+    .config(config);
   
+    config.$inject = [ngRoute];
+    function config ($routeProvider) {
+      $routeProvider
+      .when("/", {
+        templateUrl : "./html/main.html"
+      })
+      .when("/detail", {
+        templateUrl : "./html/detail.html"
+      })
+    };
+    
     marketplaceController.$inject = ['$scope', '$http'];
     function marketplaceController ($scope, $http) {
       
