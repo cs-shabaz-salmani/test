@@ -16,8 +16,8 @@
       })
     };
     
-    marketplaceController.$inject = ['$scope', '$http'];
-    function marketplaceController ($scope, $http) {
+    marketplaceController.$inject = ['$scope', '$http', '$location'];
+    function marketplaceController ($scope, $http, $location) {
       
       console.log('test loaded');
       var yumRepo = 'https://update.cybersponse.com/';
@@ -62,6 +62,7 @@
       
       $scope.openDetails = function(detail) {
          $scope.detailInfo = detail;
+         $location.path('/detail');
       }
       
     }
