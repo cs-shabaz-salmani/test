@@ -54,6 +54,8 @@
           });
       }, function (error) {
         console.log(error);
+      }).finally(function () {
+        var listItemsBkp = angular.copy($scope.listItems);
       });
   
       $scope.applyFilter = function(type, event) {
@@ -67,6 +69,17 @@
        $scope.detailInfo = detail;
        $location.path('/detail');
       };
+      
+      $scope.submitSearch = function (searchText) {
+        if(searchText.length >= 3) {
+          $scope.listItems = _.filter(listItemsBkp, function(item) {
+            return item.label.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+          });
+        } else {
+          $scope.listItems = listItemsBkp;
+        }
+      };
+        
       
     }
 })();
