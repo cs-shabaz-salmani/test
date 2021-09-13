@@ -19,10 +19,11 @@
     marketplaceController.$inject = ['$scope', '$http', '$location'];
     function marketplaceController ($scope, $http, $location) {
       
-      console.log('test loaded');
+      $location.path('/');
       var yumRepo = 'https://update.cybersponse.com/';
       $scope.listItems = [];
       $scope.filter = 'all';
+      
       $http({
         method: 'GET',
         url: yumRepo + 'connectors/info/connectors.json',
@@ -43,12 +44,11 @@
               'Content-Type': 'application/json;charset=utf-8'
             }
           }).then(function (data) {
-            console.log(data);
-              angular.forEach(data.data, function(widget){
-                widget.type = 'widget';
-                widget.display = widget.title;
-                $scope.listItems.push(widget);
-              }); 
+            angular.forEach(data.data, function(widget){
+              widget.type = 'widget';
+              widget.display = widget.title;
+              $scope.listItems.push(widget);
+            }); 
           }, function (widgeterror) {
             console.log(widgeterror);
           });
@@ -62,8 +62,8 @@
       }
       
       $scope.openDetails = function(detail) {
-         $scope.detailInfo = detail;
-         $location.path('/detail');
+       $scope.detailInfo = detail;
+       $location.path('/detail');
       }
       
     }
