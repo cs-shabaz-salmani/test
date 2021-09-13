@@ -6,7 +6,7 @@
     .controller('marketplaceController', marketplaceController)
     .config(config);
   
-    config.$inject = [ngRoute];
+    config.$inject = ['ngRoute'];
     function config ($routeProvider) {
       $routeProvider
       .when("/", {
