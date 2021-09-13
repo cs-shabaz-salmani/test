@@ -56,20 +56,17 @@
         console.log(error);
       });
   
-      $scope.applyFilter = function(type) {
+      $scope.applyFilter = function(type, event) {
         $scope.filter = type;
         $location.path('/');
+        $("ul.sidebar-nav li").removeClass("active");
+        $(this).addClass("active");
       };
       
       $scope.openDetails = function(detail) {
        $scope.detailInfo = detail;
        $location.path('/detail');
       };
-
-      $("ul.sidebar-nav li").on("click", function() {
-        $("ul.sidebar-nav li").removeClass("active");
-        $(this).addClass("active");
-      });
       
     }
 })();
