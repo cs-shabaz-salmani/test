@@ -73,7 +73,7 @@
       $scope.submitSearch = function (searchText) {
         if(searchText.length >= 3) {
           $scope.listItems = _.filter(listItemsBkp, function(item) {
-            return item.label.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+            return item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
           });
         } else {
           $scope.listItems = listItemsBkp;
