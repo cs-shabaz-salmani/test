@@ -1,3 +1,78 @@
-<div class="col-md-12">
-  <h3>Title {{detailInfo}}</h3>
+<div class="col-md-12 connector-browse margin-bottom-lg">
+  <div class="new-connector-content" id="configuration-window">
+    <div class="connector-container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="connector-summary">
+            <div class="pull-left">
+              <img src="{{detailInfo.iconLarge || 'assets/images/icon_large.png'}}" alt="{{detailInfo.display}}" />
+            </div>
+            <div class="connector-left pull-left">
+              <h3 class="connector-title">{{detailInfo.display}}</h3>
+              <span data-ng-if="detailInfo.version" class="connector-properties">
+                <span class="connector-properties grey-text">Version</span>
+                <span>{{detailInfo.version}}</span>
+              </span>
+              <p class="connector-properties margin-bottom-xsm"><span class="grey-text">Certified:</span>
+                {{detailInfo.cs_approved ? 'Yes':'No' }}</p>
+              <p class="connector-properties margin-bottom-sm" data-ng-show="detailInfo.publisher !== ''">
+                <span class="grey-text">Publisher:</span>
+                <span class="connector-properties"
+                  data-ng-show="(detailInfo.publisher | lowercase) === 'fortinet' || (detailInfo.publisher | lowercase) === 'cybersponse'">Fortinet
+                </span>
+                <span class="connector-properties"
+                  data-ng-show="(detailInfo.publisher | lowercase) !== 'fortinet' && (detailInfo.publisher | lowercase) !== 'cybersponse'">{{connector.publisher}}
+                </span>
+              </p>
+            </div>
+            <div class="pull-right display-inline-block">
+              <div class="connector-properties margin-top-sm">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div data-ng-show="detailInfo.version.help_file || detailInfo.version.help_online"
+                      class="display-inline-block padding-top-xs">
+                      <a id="administration-links" data-ng-show="detailInfo.help_file && !detailInfo.help_online"
+                        data-ng-click="downloadHelpPDF()" class="nav-item dropdown-toggle connector-doc-link">
+                        <span class="fa fa-file-pdf-o"></span> Documentaion
+                      </a>
+                      <a id="administration-links" data-ng-show="detailInfo.help_online && !detailInfo.help_file"
+                        href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"
+                        class="nav-item dropdown-toggle connector-doc-link">
+                        <i class="fa fa-globe"></i> Documentaion
+                      </a>
+                    </div>
+                    <ul class="nav navbar-nav display-inline-block"
+                      data-ng-show="detailInfo.help_file && detailInfo.help_online">
+                      <li class="dropdown" data-uib-dropdown data-uib-keyboard-nav>
+                        <a id="administration-links" href class="nav-item" data-uib-dropdown-toggle>
+                          <span class="fa fa-file-pdf-o"></span> Documentaion <span class="fa fa-caret-down"></span>
+                        </a>
+                        <ul id="administration-menu" class="dropdown-menu" role="menu"
+                          aria-labelledby="administration-menu">
+                          <li role="presentation" data-ng-show="detailInfo.help_file">
+                            <a href="#" title="Download Help PDF" data-ng-click="downloadHelpPDF()"><i
+                                class="fa fa-file-pdf-o"></i> Download PDF</a>
+                          </li>
+                          <li role="presentation" data-ng-show="detailInfo.help_online">
+                            <a href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"><i
+                                class="fa fa-globe"></i> View Article</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="row connector-container-bottom">
+        <div class="col-md-12 col-sm-12">
+          <div class="grey-text connector-properties connector-description" title="{{detailInfo.description}}">{{detailInfo.description}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
