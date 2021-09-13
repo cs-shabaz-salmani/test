@@ -46,15 +46,7 @@
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="pull-left text-center item-container" ng-repeat="item in listItems" ng-show="filter === 'all' || filter === item.type">
-                                        <div class="item-icon">
-                                            <img ng-if="item.type !== 'connector'" src="test/assets/images/icon_large.png" />
-                                            <img ng-if="item.type === 'connector'" data-ng-src="{{item.iconLarge}}" />
-                                        </div>
-                                        <h5>{{item.display}}</h5>
-                                    </div>
-                                </div>
+                                <div ng-view></div>
                             </div>
                         </div>
                     </main>
