@@ -1,6 +1,6 @@
 <nav id="sidebar">
     <div class="sidebar-content">
-        <input class="form-control" type="text" placeholder="Search In Marketplace"/>
+        <input class="form-control" type="text" ng-model="searchText" placeholder="Search In Marketplace" ng-change="submitSearch(searchText)"/>
         <ul class="sidebar-nav list-unstyled">
             <li class="sidebar-item"><a class="sidebar-link active" ng-click="applyFilter('all', $event)">All</a></li>
             <li class="sidebar-item"><a class="sidebar-link" ng-click="applyFilter('connector', $event)">Integrations</a></li>
