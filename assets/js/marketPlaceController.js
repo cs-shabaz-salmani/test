@@ -58,6 +58,7 @@
   
       $scope.applyFilter = function(type) {
         $scope.filter = type;
+        $location.path('/');
       }
       
       $scope.openDetails = function(detail) {
