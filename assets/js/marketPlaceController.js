@@ -69,8 +69,18 @@
       };
       
       $scope.openDetails = function(detail) {
-       $scope.detailInfo = detail;
-       $location.path('/detail');
+        $location.path('/detail');
+        var detailPath;
+        if(detail.type === 'connector'){
+          detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/'; + 'info.json';
+        } else if(detail.type === 'widget') {
+          detailPath = yumRepo + 'widgets/' + detail.name + '_' + detail.version + '/'; + 'info.json';
+        }
+        
+        $http.get(detailPath).then(function(response) {
+          $scope.detailInfo = response;
+          console.log(response);
+        });
       };
       
       $scope.submitSearch = function (searchText) {
