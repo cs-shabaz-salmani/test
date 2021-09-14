@@ -72,9 +72,9 @@
         $location.path('/detail');
         var detailPath;
         if(detail.type === 'connector'){
-          detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/'; + 'info.json';
+          detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/info.json';
         } else if(detail.type === 'widget') {
-          detailPath = yumRepo + 'widgets/' + detail.name + '_' + detail.version + '/'; + 'info.json';
+          detailPath = yumRepo + 'widgets/' + detail.name + '-' + detail.version + '/info.json';
         }
         
         $http.get(detailPath).then(function(response) {
