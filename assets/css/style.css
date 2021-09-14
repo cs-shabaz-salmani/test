@@ -292,6 +292,11 @@ hr {
   font-weight: 700;
 }
 
+.sidebar .sidebar-content .form-control {
+  height: 35px;
+  font-size: 14px;
+}
+
 .sidebar .sidebar-item {
   margin-top: 5px;
 }
