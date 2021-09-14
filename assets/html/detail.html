@@ -10,19 +10,19 @@
             </div>
             <div class="pull-left">
               <h3 class="detail-title">{{detailInfo.display}}</h3>
-              <span data-ng-if="detailInfo.version" class="detail-properties">
+              <p data-ng-if="detailInfo.version" class="detail-properties">
                 <span class="detail-properties grey-text">Version</span>
                 <span>{{detailInfo.version}}</span>
-              </span>
+              </p>
               <p class="detail-properties"><span class="grey-text">Certified:</span>
-                {{detailInfo.cs_approved ? 'Yes':'No' }}</p>
+                {{detailInfo.cs_approved ? 'Yes' : 'No' }}</p>
               <p class="detail-properties" data-ng-show="detailInfo.publisher !== ''">
                 <span class="grey-text">Publisher:</span>
                 <span class="detail-properties"
                   data-ng-show="(detailInfo.publisher | lowercase) === 'fortinet' || (detailInfo.publisher | lowercase) === 'cybersponse'">Fortinet
                 </span>
                 <span class="detail-properties"
-                  data-ng-show="(detailInfo.publisher | lowercase) !== 'fortinet' && (detailInfo.publisher | lowercase) !== 'cybersponse'">{{connector.publisher}}
+                  data-ng-show="(detailInfo.publisher | lowercase) !== 'fortinet' && (detailInfo.publisher | lowercase) !== 'cybersponse'">{{detailInfo.publisher}}
                 </span>
               </p>
             </div>
@@ -30,37 +30,13 @@
               <div class="detail-properties">
                 <div class="row">
                   <div class="col-md-12">
-                    <div data-ng-show="detailInfo.version.help_file || detailInfo.version.help_online"
-                      class="display-inline-block">
-                      <a id="administration-links" data-ng-show="detailInfo.help_file && !detailInfo.help_online"
-                        data-ng-click="downloadHelpPDF()" class="nav-item dropdown-toggle detail-doc-link">
-                        <span class="fa fa-file-pdf-o"></span> Documentaion
-                      </a>
-                      <a id="administration-links" data-ng-show="detailInfo.help_online && !detailInfo.help_file"
+                    <div class="display-inline-block">
+                      <a id="administration-links" data-ng-show="detailInfo.help_online"
                         href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"
                         class="nav-item dropdown-toggle detail-doc-link">
                         <i class="fa fa-globe"></i> Documentaion
                       </a>
                     </div>
-                    <ul class="nav navbar-nav display-inline-block"
-                      data-ng-show="detailInfo.help_file && detailInfo.help_online">
-                      <li class="dropdown" data-uib-dropdown data-uib-keyboard-nav>
-                        <a id="administration-links" href class="nav-item" data-uib-dropdown-toggle>
-                          <span class="fa fa-file-pdf-o"></span> Documentaion <span class="fa fa-caret-down"></span>
-                        </a>
-                        <ul id="administration-menu" class="dropdown-menu" role="menu"
-                          aria-labelledby="administration-menu">
-                          <li role="presentation" data-ng-show="detailInfo.help_file">
-                            <a href="#" title="Download Help PDF" data-ng-click="downloadHelpPDF()"><i
-                                class="fa fa-file-pdf-o"></i> Download PDF</a>
-                          </li>
-                          <li role="presentation" data-ng-show="detailInfo.help_online">
-                            <a href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"><i
-                                class="fa fa-globe"></i> View Article</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
