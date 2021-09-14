@@ -79,6 +79,7 @@
         
         $http.get(detailPath).then(function(response) {
           $scope.detailInfo = response;
+          $scope.detailInfo.display = detail.display;
           console.log(response);
         });
       };
