@@ -1,4 +1,5 @@
 <div class="col-md-12">
+    <p>Showing {{listItems.length}} of {{totalItems}} </p>
     <div class="pull-left text-center item-container" ng-repeat="item in listItems" ng-show="filter === 'all' || filter === item.type" ng-click="openDetails(item)">
         <div class="item-icon">
             <img ng-if="item.type !== 'connector'" src="assets/images/icon_large.png" />
