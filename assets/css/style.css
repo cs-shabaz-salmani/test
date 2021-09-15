@@ -321,7 +321,7 @@ hr {
 
 .item-container {
   width: 230px;
-  min-height: 138px;
+  min-height: 166px;
   border: 1px solid #cccccc;
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
@@ -333,6 +333,10 @@ hr {
   text-decoration: underline;
 }
 
+.item-container:hover .card-footer .card-link {
+  text-decoration: none;
+}
+
 .item-container .item-icon {
   width: 85px;
   height: 85px;
@@ -342,7 +346,7 @@ hr {
 .item-container .card-footer .card-link {
   color: #000000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .item-container .item-icon img {
