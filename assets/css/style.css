@@ -304,10 +304,15 @@ hr {
 .sidebar .sidebar-link {
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 
 .sidebar .sidebar-link.active {
   color: #3b75b8;
+}
+
+.sidebar .sidebar-link:hover {
+  text-decoration: underline;
 }
 
 .main {
