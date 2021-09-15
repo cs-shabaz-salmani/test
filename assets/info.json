@@ -186,8 +186,8 @@
      "rpm_full_name":"cyops-connector-alienvault-usm-central-1.0.1-5447.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Alienvault USM Central",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":13,
+     "stargazers_count":27,
      "iconLarge":"https://update.cybersponse.com/connectors/info/alienvault-usm-central_1.0.1/images/large.png"
   },
   {
@@ -202,8 +202,8 @@
      "rpm_full_name":"cyops-connector-alphasoc-1.0.0-6404.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AlphaSOC Network Behavior Analytics",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":11,
+     "stargazers_count":12,
      "iconLarge":"https://update.cybersponse.com/connectors/info/alphasoc_1.0.0/images/alphasoc_medium.png"
   },
   {
@@ -218,8 +218,8 @@
      "rpm_full_name":"cyops-connector-amazon-alexa-1.0.0-3424.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Amazon Alexa",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":13,
+     "stargazers_count":29,
      "iconLarge":"https://update.cybersponse.com/connectors/info/amazon-alexa_1.0.0/images/alexa_medium.png"
   },
   {
@@ -266,8 +266,8 @@
      "rpm_full_name":"cyops-connector-threatstream-2.2.1-5731.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Anomali ThreatStream",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":19,
+     "stargazers_count":2,
      "iconLarge":"https://update.cybersponse.com/connectors/info/threatstream_2.2.1/images/large.png"
   },
   {
@@ -298,7 +298,7 @@
      "rpm_full_name":"cyops-connector-arbor-aps-2.0.0-6437.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Arbor APS",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/arbor-aps_2.0.0/images/arbor_large.png"
   },
@@ -362,7 +362,7 @@
      "rpm_full_name":"cyops-connector-azure-active-directory-2.0.0-6281.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Azure Active Directory",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/azure-active-directory_2.0.0/images/large-azure.png"
   },
@@ -426,7 +426,7 @@
      "rpm_full_name":"cyops-connector-bmc-remedyforce-1.2.0-4452.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"BMC Remedyforce",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/bmc-remedyforce_1.2.0/images/large.png"
   },
@@ -490,7 +490,7 @@
      "rpm_full_name":"cyops-connector-blockade-io-1.0.0-2838.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Blockade.io",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/blockade-io_1.0.0/images/blockade_large.png"
   },
@@ -554,7 +554,7 @@
      "rpm_full_name":"cyops-connector-carbonblack-defense-3.0.0-6026.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"CarbonBlack Defense",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/carbonblack-defense_3.0.0/images/cb_large.png"
   },
@@ -634,7 +634,7 @@
      "rpm_full_name":"cyops-connector-checkpoint-firewall-1.1.0-5259.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Check Point Firewall",
-     "forks_count":10,
+     "forks_count":17,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/checkpoint-firewall_1.1.0/images/CheckPoint_80X80.png"
   },
@@ -698,7 +698,7 @@
      "rpm_full_name":"cyops-connector-cisco-amp-endpoints-1.0.0-1564.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco AMP For Endpoints",
-     "forks_count":10,
+     "forks_count":19,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cisco-amp-endpoints_1.0.0/images/cisco_large.png"
   },
@@ -762,7 +762,7 @@
      "rpm_full_name":"cyops-connector-cisco-cloudlock-1.0.0-4052.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco Cloudlock",
-     "forks_count":10,
+     "forks_count":19,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cisco-cloudlock_1.0.0/images/cisco_large.png"
   },
@@ -826,7 +826,7 @@
      "rpm_full_name":"cyops-connector-cisco-meraki-dashboard-1.0.0-3071.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco Meraki Dashboard",
-     "forks_count":10,
+     "forks_count":19,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cisco-meraki-dashboard_1.0.0/images/cisco_meraki_large.jpeg"
   },
@@ -890,7 +890,7 @@
      "rpm_full_name":"cyops-connector-cisco-spark-1.0.0-2941.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco Spark",
-     "forks_count":10,
+     "forks_count":19,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cisco-spark_1.0.0/images/cisco_spark_80X80.png"
   },
@@ -906,7 +906,7 @@
      "rpm_full_name":"cyops-connector-stealthwatch-2.0.0-6237.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco Stealthwatch",
-     "forks_count":10,
+     "forks_count":21,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/stealthwatch_2.0.0/images/Cisco_StealthWatch_80X80.png"
   },
@@ -970,7 +970,7 @@
      "rpm_full_name":"cyops-connector-cisco-umbrella-investigate-2.0.0-4076.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cisco Umbrella Investigate",
-     "forks_count":10,
+     "forks_count":21,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cisco-umbrella-investigate_2.0.0/images/cisco_large.png"
   },
@@ -986,7 +986,7 @@
      "rpm_full_name":"cyops-connector-clicksend-1.0.0-3444.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"ClickSend",
-     "forks_count":10,
+     "forks_count":7,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/clicksend_1.0.0/images/ClickSend_80X80.png"
   },
@@ -1050,7 +1050,7 @@
      "rpm_full_name":"cyops-connector-cofense-triage-1.0.0-5461.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cofense Triage",
-     "forks_count":10,
+     "forks_count":7,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cofense-triage_1.0.0/images/large_icon.png"
   },
@@ -1066,7 +1066,7 @@
      "rpm_full_name":"cyops-connector-connectwise-manage-2.1.1-5441.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"ConnectWise Manage",
-     "forks_count":10,
+     "forks_count":5,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/connectwise-manage_2.1.1/images/connectwise_large.png"
   },
@@ -1130,7 +1130,7 @@
      "rpm_full_name":"cyops-connector-cyber-triage-1.0.0-2769.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cyber Triage",
-     "forks_count":10,
+     "forks_count":5,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cyber-triage_1.0.0/images/Cyber_Triage_large.png"
   },
@@ -1194,7 +1194,7 @@
      "rpm_full_name":"cyops-connector-cyware-1.0.0-2246.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Cyware",
-     "forks_count":10,
+     "forks_count":5,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/cyware_1.0.0/images/cyware_large.png"
   },
@@ -1258,7 +1258,7 @@
      "rpm_full_name":"cyops-connector-dshield-1.0.0-2597.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"DShield",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/dshield_1.0.0/images/DSheild_large.png"
   },
@@ -1322,7 +1322,7 @@
      "rpm_full_name":"cyops-connector-devo-1.0.0-6417.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Devo",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/devo_1.0.0/images/medium.png"
   },
@@ -1386,7 +1386,7 @@
      "rpm_full_name":"cyops-connector-easyvista-1.0.0-2534.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"EasyVista",
-     "forks_count":10,
+     "forks_count":1,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/easyvista_1.0.0/images/large.png"
   },
@@ -1450,7 +1450,7 @@
      "rpm_full_name":"cyops-connector-emailrep-1.0.0-5152.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"EmailRep",
-     "forks_count":10,
+     "forks_count":13,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/emailrep_1.0.0/images/large.png"
   },
@@ -1514,7 +1514,7 @@
      "rpm_full_name":"cyops-connector-exabeam-1.0.0-5999.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Exabeam",
-     "forks_count":10,
+     "forks_count":13,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/exabeam_1.0.0/images/Exabeam_large.png"
   },
@@ -1594,7 +1594,7 @@
      "rpm_full_name":"cyops-connector-farsight-dnsdb-1.0.0-1646.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Farsight Security DNSDB",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/farsight-dnsdb_1.0.0/images/farsight-large.jpg"
   },
@@ -1658,7 +1658,7 @@
      "rpm_full_name":"cyops-connector-fireeye-etp-1.0.0-6413.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"FireEye ETP",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/fireeye-etp_1.0.0/images/fireeye_etp_large.png"
   },
@@ -1722,7 +1722,7 @@
      "rpm_full_name":"cyops-connector-fireeye-nx-1.0.0-5231.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"FireEye NX",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/fireeye-nx_1.0.0/images/large.png"
   },
@@ -1802,7 +1802,7 @@
      "rpm_full_name":"cyops-connector-foresight-1.1.0-5702.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Foresight",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/foresight_1.1.0/images/large.png"
   },
@@ -1898,7 +1898,7 @@
      "rpm_full_name":"cyops-connector-fortinet-forticasb-1.0.0-35.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Fortinet FortiCASB",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/fortinet-forticasb_1.0.0/images/large_icon.png"
   },
@@ -2010,7 +2010,7 @@
      "rpm_full_name":"cyops-connector-fortinet-fortimail-1.1.0-6150.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Fortinet FortiMail",
-     "forks_count":10,
+     "forks_count":3,
      "stargazers_count":20,
      "iconLarge":"https://update.cybersponse.com/connectors/info/fortinet-fortimail_1.1.0/images/fortimail-large.png"
   },
@@ -5643,7 +5643,7 @@
      "type":"widget",
      "display":"Access Control",
      "forks_count":10,
-     "stargazers_count":20
+     "stargazers_count":9
   },
   {
      "name":"incidentCorrelations",
@@ -5653,8 +5653,8 @@
      "published_date":"1601012189",
      "type":"widget",
      "display":"Incident Correlations",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":1,
+     "stargazers_count":10
   },
   {
      "name":"mobileSettings",
@@ -5679,8 +5679,8 @@
      },
      "type":"widget",
      "display":"Notify",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":11,
+     "stargazers_count":22
   },
   {
      "name":"recordSummary",
@@ -5694,8 +5694,8 @@
      },
      "type":"widget",
      "display":"Record Summary",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":2,
+     "stargazers_count":9
   },
   {
      "name":"slaCountDownClock",
@@ -5705,8 +5705,8 @@
      "published_date":"1601528772",
      "type":"widget",
      "display":"SLA Count Down Timer",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":9,
+     "stargazers_count":11
   },
   {
      "name":"taskManagement",
@@ -5720,8 +5720,8 @@
      },
      "type":"widget",
      "display":"Task Management",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":7,
+     "stargazers_count":2
   },
   {
      "name":"userAssignments",
@@ -5731,7 +5731,7 @@
      "published_date":"1616060803",
      "type":"widget",
      "display":"User Tile",
-     "forks_count":10,
-     "stargazers_count":20
+     "forks_count":17,
+     "stargazers_count":22
   }
 ]
