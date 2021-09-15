@@ -1,5 +1,4 @@
-{
-  {
+[{
      "name":"aws-assume-role",
      "label":"AWS Assume Role",
      "version":"1.0.0",
@@ -27,8 +26,8 @@
      "rpm_full_name":"cyops-connector-aws-athena-1.0.0-3373.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AWS Athena",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":1,
+     "stargazers_count":2,
      "iconLarge":"https://update.cybersponse.com/connectors/info/aws-athena_1.0.0/images/AWS-Athena_medium.png"
   },
   {
@@ -43,8 +42,8 @@
      "rpm_full_name":"cyops-connector-aws-3.1.1-6043.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AWS EC2",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":7,
+     "stargazers_count":0,
      "iconLarge":"https://update.cybersponse.com/connectors/info/aws_3.1.1/images/AWS-EC2_large.png"
   },
   {
@@ -75,8 +74,8 @@
      "rpm_full_name":"cyops-connector-awss3-3.0.1-5726.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AWS S3",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":3,
+     "stargazers_count":25,
      "iconLarge":"https://update.cybersponse.com/connectors/info/awss3_3.0.1/images/AWS-s3-medium.png"
   },
   {
@@ -91,8 +90,8 @@
      "rpm_full_name":"cyops-connector-aws-sqs-1.0.0-3008.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AWS SQS",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":14,
+     "stargazers_count":21,
      "iconLarge":"https://update.cybersponse.com/connectors/info/aws-sqs_1.0.0/images/AWS_SQS_medium.png"
   },
   {
@@ -123,8 +122,8 @@
      "rpm_full_name":"cyops-connector-activedirectory-2.2.0-6414.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"Active Directory",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":1,
+     "stargazers_count":25,
      "iconLarge":"https://update.cybersponse.com/connectors/info/activedirectory_2.2.0/images/large-activedirectory.png"
   },
   {
@@ -139,8 +138,8 @@
      "rpm_full_name":"cyops-connector-airwatch-1.0.0-2820.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AirWatch",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":13,
+     "stargazers_count":24,
      "iconLarge":"https://update.cybersponse.com/connectors/info/airwatch_1.0.0/images/large.png"
   },
   {
@@ -155,8 +154,8 @@
      "rpm_full_name":"cyops-connector-alienvault-usm-anywhere-1.0.1-6391.el7.centos.x86_64.rpm",
      "type":"connector",
      "display":"AlienVault USM Anywhere",
-     "forks_count":10,
-     "stargazers_count":20,
+     "forks_count":14,
+     "stargazers_count":29,
      "iconLarge":"https://update.cybersponse.com/connectors/info/alienvault-usm-anywhere_1.0.1/images/large.png"
   },
   {
@@ -5735,4 +5734,4 @@
      "forks_count":10,
      "stargazers_count":20
   }
-}
+]
