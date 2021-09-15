@@ -63,6 +63,7 @@
         console.log(error);
       }).finally(function () {
         listItemsBkp = angular.copy($scope.listItems);
+        $scope.totalItems = listItemsBkp.length;
       });
   
       $scope.applyFilter = function(type, event) {
