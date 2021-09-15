@@ -327,6 +327,8 @@ hr {
   margin: 10px 10px 15px 0px;
   padding: 10px 5px 5px 5px;
   cursor: pointer;
+  display: flex;
+  flex-flow: column;
 }
 
 .item-container:hover {
@@ -335,6 +337,15 @@ hr {
 
 .item-container:hover .card-footer .card-link {
   text-decoration: none;
+}
+
+.item-container:hover .card-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item-container:hover .card-footer .fa {
+  padding-right: 3px;
 }
 
 .item-container .item-icon {
