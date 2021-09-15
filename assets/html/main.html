@@ -5,5 +5,10 @@
             <img ng-if="item.type === 'connector'" data-ng-src="{{item.iconLarge}}" />
         </div>
         <h5>{{item.display}}</h5>
+        <div class="card-footer">
+          <a class="card-link" href="#" title="GitHub Page" target="_blank"> <span class="fa fa-github"></span></a>
+          <a class="card-link" href="#" title="Forks" target="_blank"> <span class="fa fa-code-branch"></span>{{item.forks_count}}</a>
+          <a class="card-link" href="#" title="Stargazers" target="_blank"> <span class="fa fa-star"></span>{{item.stargazers_count}}</a>
+        </div>
     </div>
 </div>
