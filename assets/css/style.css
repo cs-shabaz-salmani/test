@@ -339,6 +339,12 @@ hr {
   margin: auto;
 }
 
+.item-container .card-footer .card-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
 .item-container .item-icon img {
   width: 85px;
 }
