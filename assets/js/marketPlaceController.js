@@ -58,12 +58,11 @@
             }); 
           }, function (widgeterror) {
             console.log(widgeterror);
+          }).finally(function () {
+            $scope.totalItems = listItemsBkp.length;
           });
       }, function (error) {
         console.log(error);
-      }).finally(function () {
-        listItemsBkp = angular.copy($scope.listItems);
-        $scope.totalItems = listItemsBkp.length;
       });
   
       $scope.applyFilter = function(type, event) {
