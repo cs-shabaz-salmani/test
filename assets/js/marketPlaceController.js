@@ -35,6 +35,8 @@
           angular.forEach(response.data, function(connector){
             connector.type = 'connector';
             connector.display = connector.label;
+            connector.forks_count = 10;
+            connector.stargazers_count = 20;
             connector.iconLarge = yumRepo + 'connectors' + connector.path + connector.name + '_' + connector.version + '/images/' + connector.icon;
             $scope.listItems.push(connector);
             listItemsBkp = angular.copy($scope.listItems);
@@ -49,6 +51,8 @@
             angular.forEach(data.data, function(widget){
               widget.type = 'widget';
               widget.display = widget.title;
+              widget.forks_count = 10;
+              widget.stargazers_count = 20;
               $scope.listItems.push(widget);
               listItemsBkp = angular.copy($scope.listItems);
             }); 
@@ -81,7 +85,6 @@
           $scope.detailInfo = response.data;
           $scope.detailInfo.display = detail.display;
           $scope.detailInfo.type = detail.type;
-          console.log(response);
         });
       };
       
