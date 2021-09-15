@@ -80,6 +80,7 @@
         $http.get(detailPath).then(function(response) {
           $scope.detailInfo = response.data;
           $scope.detailInfo.display = detail.display;
+          $scope.detailInfo.type = detail.type;
           console.log(response);
         });
       };
