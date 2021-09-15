@@ -336,15 +336,15 @@ hr {
 }
 
 .item-container:hover .card-footer .card-link {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-.item-container:hover .card-footer {
+.item-container .card-footer {
   display: flex;
   justify-content: space-evenly;
 }
 
-.item-container:hover .card-footer .fa {
+.item-container .card-footer .fa {
   padding-right: 3px;
 }
 
