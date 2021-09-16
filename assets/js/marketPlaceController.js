@@ -91,7 +91,7 @@
       }
       
       function loadRepos(){
-        $http.get('https://github.com/orgs/fortinet-fortisoar/repos'.then(function(response) {
+        $http.get('https://github.com/orgs/fortinet-fortisoar/repos').then(function(response) {
           console.log(response);
           $scope.allRepos = response;
         });
