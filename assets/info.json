@@ -5777,5 +5777,60 @@
      "display":"VM Content Pack",
      "forks_count":4,
      "stargazers_count":1
+  },
+  {
+     "name":"mitreAttackCredentialAccess",
+     "title":"MITRE ATT&CK™-CREDENTIAL ACCESS",
+     "subTitle":"Shows required information related to the user.",
+     "version":"2.0.0",
+     "published_date":"1616060803",
+     "type":"use_case",
+     "display":"MITRE ATT&CK™-CREDENTIAL ACCESS",
+     "forks_count":20,
+     "stargazers_count":18
+  },
+  {
+     "name":"mitreAttackDefenseEvasion",
+     "title":"MITRE ATT&CK™-DEFENSE EVASION",
+     "subTitle":"Shows required information related to the user.",
+     "version":"2.0.0",
+     "published_date":"1616060803",
+     "type":"use_case",
+     "display":"MITRE ATT&CK™-DEFENSE EVASION",
+     "forks_count":12,
+     "stargazers_count":28
+  },
+  {
+     "name":"mitreAttackModulars",
+     "title":"MITRE ATT&CK™ Modulars",
+     "subTitle":"Shows required information related to the user.",
+     "version":"2.0.0",
+     "published_date":"1616060803",
+     "type":"use_case",
+     "display":"MITRE ATT&CK™ Modulars",
+     "forks_count":4,
+     "stargazers_count":19
+  },
+  {
+     "name":"mitreAttackPullTechniqueDetails",
+     "title":"MITRE ATT&CK™-Pull-Technique-Details",
+     "subTitle":"Shows required information related to the user.",
+     "version":"2.0.0",
+     "published_date":"1616060803",
+     "type":"use_case",
+     "display":"MITRE ATT&CK™-Pull-Technique-Details",
+     "forks_count":1,
+     "stargazers_count":1
+  },
+  {
+     "name":"mitreAttackProcessExecution",
+     "title":"MITRE ATT&CK™-PROCESS EXECUTION",
+     "subTitle":"Shows required information related to the user.",
+     "version":"2.0.0",
+     "published_date":"1616060803",
+     "type":"use_case",
+     "display":"MITRE ATT&CK™-PROCESS EXECUTION",
+     "forks_count":9,
+     "stargazers_count":13
   }
 ]
