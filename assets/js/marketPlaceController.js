@@ -91,7 +91,11 @@
       }
       
       function loadRepos(){
-        $http.get('https://github.com/orgs/fortinet-fortisoar/repos').then(function(response) {
+        $http.get('https://github.com/orgs/cs-shabaz-salmani/repos', {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'Access-Control-Allow-Origin': '*'
+          }}).then(function(response) {
           console.log(response);
           $scope.allRepos = response;
         });
