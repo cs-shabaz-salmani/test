@@ -27,7 +27,6 @@
       
       var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
       allItemsJson = JSON.parse(allItemsJson.responseText);
-//       document.write(allItemsJson.a);
       $scope.totalItems = allItemsJson.length;
       $scope.listItems = allItemsJson;
       listItemsBkp = angular.copy($scope.listItems);
@@ -42,16 +41,20 @@
       $scope.openDetails = function(detail) {
         $location.path('/detail');
         var detailPath;
+        var downloadPath;
         if(detail.type === 'connector'){
           detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/info.json';
+          downloadPath = yumRepo + 'connectors/x86_64/' + detail.rpm_full_name;
         } else if(detail.type === 'widget') {
           detailPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/info.json';
+          downloadPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/' + detail.name + '-' + detail.version + '.tgz';
         }
         
         $http.get(detailPath).then(function(response) {
           $scope.detailInfo = response.data;
           $scope.detailInfo.display = detail.display;
           $scope.detailInfo.type = detail.type;
+          $scope.detailInfo.downloadPath = downloadPath;
         });
       };
       
@@ -71,11 +74,7 @@
       
       $scope.downloadFile = function (detail) {
         var downloadFileElement = document.createElement('a');
-        if(detail.type === 'connector'){
-          downloadFileElement.href = yumRepo + 'connectors/x86_64/' + detail.rpm_full_name;
-        } else if(detail.type === 'widget') {
-          downloadFileElement.href = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/' + detail.name + '-' + detail.version + '.tgz';
-        }
+        downloadFileElement.href = detail.downloadPath;
         downloadFileElement.target = '_blank';
         downloadFileElement.download = detail.name + '-' + detail.version;
         document.body.appendChild(downloadFileElement);
