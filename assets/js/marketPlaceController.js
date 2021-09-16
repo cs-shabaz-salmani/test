@@ -27,7 +27,7 @@
       
       var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
       allItemsJson = JSON.parse(allItemsJson.responseText);
-      document.write(allItemsJson.a);
+//       document.write(allItemsJson.a);
       $scope.totalItems = allItemsJson.length;
       $scope.listItems = allItemsJson;
       listItemsBkp = angular.copy($scope.listItems);
