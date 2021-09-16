@@ -25,45 +25,12 @@
       $scope.filter = 'all';
       var listItemsBkp;
       
-      $http({
-        method: 'GET',
-        url: yumRepo + 'connectors/info/connectors.json',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        }
-      }).then(function (response) {
-          angular.forEach(response.data, function(connector){
-            connector.type = 'connector';
-            connector.display = connector.label;
-            connector.forks_count = 10;
-            connector.stargazers_count = 20;
-            connector.iconLarge = yumRepo + 'connectors' + connector.path + connector.name + '_' + connector.version + '/images/' + connector.icon;
-            $scope.listItems.push(connector);
-            listItemsBkp = angular.copy($scope.listItems);
-          });
-          $http({
-            method: 'GET',
-            url: yumRepo + 'fsr-widgets/widgets.json',
-            headers: {
-              'Content-Type': 'application/json;charset=utf-8'
-            }
-          }).then(function (data) {
-            angular.forEach(data.data, function(widget){
-              widget.type = 'widget';
-              widget.display = widget.title;
-              widget.forks_count = 10;
-              widget.stargazers_count = 20;
-              $scope.listItems.push(widget);
-              listItemsBkp = angular.copy($scope.listItems);
-            }); 
-          }, function (widgeterror) {
-            console.log(widgeterror);
-          }).finally(function () {
-            $scope.totalItems = listItemsBkp.length;
-          });
-      }, function (error) {
-        console.log(error);
-      });
+      var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
+      allItemsJson = JSON.parse(allItemsJson.responseText);
+      document.write(allItemsJson.a);
+      $scope.totalItems = allItemsJson.length;
+      $scope.listItems = allItemsJson;
+      listItemsBkp = angular.copy($scope.listItems);
   
       $scope.applyFilter = function(type, event) {
         $scope.filter = type;
