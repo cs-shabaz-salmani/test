@@ -78,7 +78,7 @@
         if(detail.type === 'connector'){
           detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/info.json';
         } else if(detail.type === 'widget') {
-          detailPath = yumRepo + 'widgets/' + detail.name + '-' + detail.version + '/info.json';
+          detailPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/info.json';
         }
         
         $http.get(detailPath).then(function(response) {
@@ -107,7 +107,7 @@
         if(detail.type === 'connector'){
           downloadFileElement.href = yumRepo + 'connectors/x86_64/cyops-connector-' + detail.name + '-' + detail.version + '-' + 'el7.centos.x86_64.rpm';
         } else if(detail.type === 'widget') {
-          downloadFileElement.href = yumRepo + 'widgets/' + detail.name + '-' + detail.version + '/' + detail.name + '-' + detail.version + '.tgz';
+          downloadFileElement.href = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/' + detail.name + '-' + detail.version + '.tgz';
         }
         downloadFileElement.target = '_blank';
         downloadFileElement.download = detail.name + '-' + detail.version;
