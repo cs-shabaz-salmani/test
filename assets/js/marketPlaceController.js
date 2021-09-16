@@ -14,6 +14,9 @@
       .when("/detail", {
         templateUrl : "assets/html/detail.html"
       })
+      .when("/repos", {
+        templateUrl : "assets/html/repos.html"
+      })
     };
     
     marketplaceController.$inject = ['$scope', '$http', '$location'];
@@ -33,7 +36,12 @@
   
       $scope.applyFilter = function(type, event) {
         $scope.filter = type;
-        $location.path('/');
+        if(type === 'repos') {
+          loadRepos();
+          $location.path('/repos');
+        } else {
+          $location.path('/');
+        }
         $("ul.sidebar-nav a").removeClass("active");
         $(event.target).addClass("active");
       };
@@ -80,6 +88,13 @@
         document.body.appendChild(downloadFileElement);
         downloadFileElement.click();
         document.body.removeChild(downloadFileElement);
+      }
+      
+      function loadRepos(){
+        $http.get('https://github.com/orgs/fortinet-fortisoar/repos'.then(function(response) {
+          console.log(response);
+          $scope.allRepos = response;
+        });
       }
         
       
