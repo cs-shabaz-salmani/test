@@ -90,5 +90,5 @@
     });
     var marketPlace = document.getElementById('marketplace-list');
     console.log(marketPlace);
-    marketPlace.append(allListItems);
+    marketPlace.html(allListItems);
   }
