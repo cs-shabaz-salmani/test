@@ -87,6 +87,8 @@
       allListItems += '</div><h5>' + listItem.display + '</h5><div class="card-footer"><a class="card-link" href="#" title="GitHub Page" target="_blank"> <span class="fa fa-github"></span></a>';
       allListItems += '<a class="card-link" href="#" title="Forks" target="_blank"> <span class="fa fa-code-fork"></span>' + listItem.forks_count + '</a>';
       allListItems += '<a class="card-link" href="#" title="Stargazers" target="_blank"> <span class="fa fa-star"></span>' + listItem.stargazers_count + '</a></div></div>';
-      document.getElementById("marketplace-list").appendChild(allListItems);
+      var marketPlace = document.getElementById('marketplace-list');
+      console.log(marketPlace);
+      marketPlace.append(allListItems);
     });
   }
