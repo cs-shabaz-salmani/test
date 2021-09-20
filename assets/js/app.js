@@ -88,7 +88,9 @@
       allListItems += "<a class='card-link' href='#' title='Forks' target='_blank'><span class='fa fa-code-fork'></span>" + listItem.forks_count + "</a>";
       allListItems += "<a class='card-link' href='#' title='Stargazers' target='_blank'><span class='fa fa-star'></span>" + listItem.stargazers_count + "</a></div></div>";
     });
-    var marketPlace = document.getElementById('marketplace-list');
-    console.log(marketPlace);
-    marketPlace.html(allListItems);
+//     var marketPlace = document.getElementById('marketplace-list');
+//     console.log(marketPlace);
+    var testVar = $("#marketplace-list");
+    console.log(testVar);
+    testVar.append($(allListItems).html());
   }
