@@ -26,7 +26,6 @@
         filteredListItems.push(item); 
       }
     });
-    
     buildListData(filteredListItems);
   }
 
