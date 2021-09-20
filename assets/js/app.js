@@ -26,6 +26,7 @@
         filteredListItems.push(item); 
       }
     });
+    
     buildListData(filteredListItems);
   }
 
@@ -61,6 +62,7 @@
     } else {
       listItems = listItemsBkp;
     }
+    
     buildListData(listItems);
   }
 
