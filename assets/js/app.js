@@ -78,7 +78,7 @@
     var allListItems;
     var marketPlace = $("#marketplace-list");
     listData.forEach(function(listItem) {
-      allListItems = "<div class='pull-left text-center item-container'>";
+      allListItems = "<a href='#' class='pull-left text-center item-container'>";
       allListItems += "<div class='item-icon'>";
       if(listItem.type !== 'connector'){
         allListItems += "<img src='assets/images/icon_large.png' />";
@@ -87,7 +87,7 @@
       }
       allListItems += "</div><h5>" + listItem.display + "</h5><div class='card-footer'><a class='card-link' href='#' title='GitHub Page' target='_blank'> <span class='fa fa-github'></span></a>";
       allListItems += "<a class='card-link' href='#' title='Forks' target='_blank'><span class='fa fa-code-fork'></span>" + listItem.forks_count + "</a>";
-      allListItems += "<a class='card-link' href='#' title='Stargazers' target='_blank'><span class='fa fa-star'></span>" + listItem.stargazers_count + "</a></div></div>";
+      allListItems += "<a class='card-link' href='#' title='Stargazers' target='_blank'><span class='fa fa-star'></span>" + listItem.stargazers_count + "</a></div></a>";
       marketPlace.append($(allListItems).html());
     });
   }
