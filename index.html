@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="fortinetMarketplace">
+<html>
     <head>
         <base href="/"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -31,13 +31,25 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
             </div>
             <div class="row">
                 <div class="col-md-3 sidebar">
-                    <div ng-include="'assets/html/sidebar.html'"></div>
+                    <nav id="sidebar">
+                        <div class="sidebar-content">
+                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
+                            <ul class="sidebar-nav list-unstyled">
+                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter('all', $event)">All</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('connector', $event)">Integrations</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('use_case', $event)">Use Cases</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('content_pack', $event)">Content Packs</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('widget', $event)">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('how_tos', $event)">How To's</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
                 <div class="main col-md-9">
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div ng-view></div>
+                                <div id="marketplace-list"></div>
                             </div>
                         </div>
                     </main>
@@ -45,11 +57,11 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>-->
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script src="assets/js/app.js"></script>
-        <script src="assets/js/marketPlaceController.js"></script>
+        <!--<script src="assets/js/marketPlaceController.js"></script>-->
     </body>
 </html>
