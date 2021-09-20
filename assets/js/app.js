@@ -9,7 +9,7 @@
   function init() {
     var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson.responseText);
-    totalItems = allItemsJson.length;
+    var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
     buildListData(listItems);
