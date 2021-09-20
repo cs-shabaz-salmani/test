@@ -13,7 +13,9 @@
     listItems = allItemsJson;
     listItemsBkp = listItems;
     buildListData(listItems);
-  }();
+  }
+
+  init();
 
   function applyFilter(type, event) {
     var filteredListItems = [];
@@ -26,7 +28,7 @@
     });
     
     buildListData(filteredListItems);
-  };
+  }
 
   function openDetails(detail) {
     var detailPath;
@@ -61,7 +63,7 @@
       listItems = listItemsBkp;
     }
     buildListData(listItems);
-  };
+  }
 
   function downloadFile(detail) {
     var downloadFileElement = document.createElement('a');
@@ -71,7 +73,7 @@
     document.body.appendChild(downloadFileElement);
     downloadFileElement.click();
     document.body.removeChild(downloadFileElement);
-  };
+  }
 
   function buildListData(listData) {
     var allListItems;
