@@ -78,7 +78,7 @@
   function buildListData(listData) {
     var allListItems;
     listData.forEach(function(listItem) {
-      allListItems = "<div class='pull-left text-center item-container' onClick='openDetails(" + listItem + ")'><div class='item-icon'>";
+      allListItems = "<div class='pull-left text-center item-container' onClick='openDetails()'><div class='item-icon'>";
       if(listItem.type !== 'connector'){
         allListItems += "<img src='assets/images/icon_large.png' />";
       } else {
