@@ -79,6 +79,10 @@
   text-align: left;
 }
 
+.main .content {
+  margin-top: 15px; 
+}
+
 .item-container {
   width: 230px;
   min-height: 168px;
@@ -90,10 +94,7 @@
   display: flex;
   flex-flow: column;
   text-decoration: none;
-}
-
-.main .content {
-  margin-top: 15px; 
+  position: relative;
 }
 
 .item-container:hover {
