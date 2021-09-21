@@ -79,16 +79,24 @@
   function buildListData(listData) {
     var allListItems;
     var marketPlace = $("#marketplace-list");
-//     marketPlace.remove();
+    $(".item-container").remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.href = "#";
+      aTaglistItem.href = "detail/" + detail.name + detail.version;
       aTaglistItem.className = "pull-left text-center item-container";
+      
+      var certifiedDiv = document.createElement('div');
+      certifiedDiv.className = "certified-icon";
+      var certifiedIcon = document.createElement('i');
+      certifiedIcon.className = "fa fa-check-circle-o";
+      certifiedDiv.appendChild(certifiedIcon);
+      aTaglistItem.appendChild(certifiedDiv);
+      
       var itemIconDiv = document.createElement('div');
       itemIconDiv.className = "item-icon";
       aTaglistItem.appendChild(itemIconDiv);
-      var imageElement = document.createElement('img');
       
+      var imageElement = document.createElement('img');
       if(listItem.type !== 'connector'){
         imageElement.src = "assets/images/icon_large.png";
       } else {
@@ -102,6 +110,7 @@
       
       var cardFooter = document.createElement('div');
       cardFooter.className = "card-footer";
+      
       var aTagGitHubPage = document.createElement('a');
       aTagGitHubPage.href = "#";
       aTagGitHubPage.className = "card-link";
@@ -135,6 +144,17 @@
       var stargazersCount = document.createTextNode(listItem.stargazers_count);
       aTagGitStargazers.appendChild(stargazersCount);
       cardFooter.appendChild(aTagGitStargazers);
+      
+      var aTagDocLink = document.createElement('a');
+      aTagDocLink.href = "#";
+      aTagDocLink.className = "card-link";
+      aTagDocLink.title = "Documentation";
+      aTagDocLink.target = "_blank";
+      var docLinkIcon = document.createElement('span');
+      docLinkIcon.className = "fa fa-globe";
+      aTagDocLink.appendChild(docLinkIcon);
+      cardFooter.appendChild(aTagDocLink);
+      
       aTaglistItem.appendChild(cardFooter);
       marketPlace.append(aTaglistItem);
     });
