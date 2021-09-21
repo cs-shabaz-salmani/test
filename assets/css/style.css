@@ -110,8 +110,8 @@
 }
 
 .item-container .item-icon {
-  width: 85px;
-  height: 85px;
+  width: 75px;
+  height: 75px;
   margin: auto;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .item-container .item-icon img {
-  width: 85px;
+  width: 75px;
 }
 
 .item-container h5{
