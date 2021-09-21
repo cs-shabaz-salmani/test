@@ -95,6 +95,7 @@
   flex-flow: column;
   text-decoration: none;
   position: relative;
+  z-index: -1;
 }
 
 .item-container:hover {
