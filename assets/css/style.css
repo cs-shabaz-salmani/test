@@ -58,6 +58,10 @@
   margin-top: 100px !important; 
 }
 
+.main .carousel {
+  margin-top: 15px;
+}
+
 .main .carousel .carousel-inner .carousel-item img {
   height: 300px;
   margin-left: 135px;
