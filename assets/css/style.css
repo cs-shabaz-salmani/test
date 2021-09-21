@@ -59,7 +59,12 @@
 }
 
 .main .carousel .carousel-inner .carousel-item img {
-  height: 300px; 
+  height: 300px;
+  margin-left: 135px;
+}
+
+.main .carousel .carousel-control-prev-icon, .main .carousel .carousel-control-next-icon {
+  background-color: #aba9a9;
 }
 
 .item-container {
@@ -104,11 +109,11 @@
 }
 
 .item-container .item-icon img {
-  font-size: 14px;
+  width: 85px;
 }
 
 .item-container h5{
-  width: 85px;
+  font-size: 14px;
 }
 
 .detail-content {
