@@ -92,6 +92,10 @@
   text-decoration: none;
 }
 
+.main-content {
+  margin-top: 15px; 
+}
+
 .item-container:hover {
   text-decoration: underline;
 }
