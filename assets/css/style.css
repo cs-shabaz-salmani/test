@@ -100,6 +100,22 @@
   text-decoration: underline;
 }
 
+.item-container .certified-flag {
+  border-left: 35px solid transparent;
+  width: 35px;
+  border-top: 35px solid #57a8f0 !important;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.item-container .certified-icon {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #ffffff;
+}
+
 .item-container:hover .card-footer .card-link {
   text-decoration: none !important;
 }
