@@ -89,8 +89,8 @@
       certifiedDiv.className = "certified-icon";
       var certifiedIcon = document.createElement('i');
       certifiedIcon.className = "fa fa-check-circle-o";
-      certifiedDiv.appendChild(certifiedIcon);
       aTaglistItem.appendChild(certifiedDiv);
+      aTaglistItem.appendChild(certifiedIcon);
       
       var itemIconDiv = document.createElement('div');
       itemIconDiv.className = "item-icon";
