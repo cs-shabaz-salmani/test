@@ -92,7 +92,7 @@
         imageElement.src = "assets/images/icon_large.png";
 //         allListItems += "<img src='assets/images/icon_large.png' />";
       } else {
-        imageElement.src = istItem.iconLarge;
+        imageElement.src = listItem.iconLarge;
 //         allListItems += "<img src=" +listItem.iconLarge + " />";
       }
       itemIconDiv.appendChild(imageElement);
