@@ -3,7 +3,6 @@
   const http = new XMLHttpRequest();
   var yumRepo = 'https://update.cybersponse.com/';
   var listItems = [];
-  var filter = 'all';
   var listItemsBkp;
 
   $(document).ready(function() {
@@ -26,13 +25,16 @@
   function applyFilter(event, type) {
     var filteredListItems = [];
     $("ul.sidebar-nav a").removeClass("active");
-    $(event.target).addClass("active");
-    listItems.forEach(function(item) {
-      if(item.type === type) {
-        filteredListItems.push(item); 
-      }
-    });
-    
+    $(event).addClass("active");
+    if(type !== 'all'){
+      listItems.forEach(function(item) {
+        if(item.type === type) {
+          filteredListItems.push(item); 
+        }
+      });
+    } else {
+      filteredListItems = listItemsBkp;
+    }
     buildListData(filteredListItems);
   }
 
