@@ -79,7 +79,7 @@
   function buildListData(listData) {
     var allListItems;
     var marketPlace = $("#marketplace-list");
-    marketPlace.remove();
+//     marketPlace.remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "#";
@@ -135,14 +135,7 @@
       var stargazersCount = document.createTextNode(listItem.stargazers_count);
       aTagGitStargazers.appendChild(stargazersCount);
       cardFooter.appendChild(aTagGitStargazers);
-      
       aTaglistItem.appendChild(cardFooter);
-      
-//       allListItems += "</div><h5>" + listItem.display + "</h5><div class='card-footer'><a class='card-link' href='#' title='GitHub Page' target='_blank'> <span class='fa fa-github'></span></a>";
-//       allListItems += "<a class='card-link' href='#' title='Forks' target='_blank'><span class='fa fa-code-fork'></span>" + listItem.forks_count + "</a>";
-//       allListItems += "<a class='card-link' href='#' title='Stargazers' target='_blank'><span class='fa fa-star'></span>" + listItem.stargazers_count + "</a></div>";
-      
-//       aTaglistItem.append($(allListItems).html());
       marketPlace.append(aTaglistItem);
     });
   }
