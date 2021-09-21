@@ -83,7 +83,7 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "#";
       aTaglistItem.class = "pull-left text-center item-container";
-      allListItems += "<div class='item-icon'>";
+      allListItems = "<div class='item-icon'>";
       if(listItem.type !== 'connector'){
         allListItems += "<img src='assets/images/icon_large.png' />";
       } else {
