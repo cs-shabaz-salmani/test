@@ -67,6 +67,13 @@
   background-color: #aba9a9;
 }
 
+.main .carousel .carousel-caption {
+  top: 75px;
+  left: 51%;
+  color: #000;
+  text-align: left;
+}
+
 .item-container {
   width: 230px;
   min-height: 168px;
