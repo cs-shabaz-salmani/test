@@ -130,7 +130,7 @@
       aTagGitStargazers.title = "Stargazers";
       aTagGitStargazers.target = "_blank";
       var gitHubStargazersIcon = document.createElement('span');
-      gitHubStargazersIcon.className = "fa fa-code-star";
+      gitHubStargazersIcon.className = "fa fa-star";
       aTagGitStargazers.appendChild(gitHubStargazersIcon);
       var stargazersCount = document.createTextNode(listItem.stargazers_count);
       aTagGitStargazers.appendChild(stargazersCount);
