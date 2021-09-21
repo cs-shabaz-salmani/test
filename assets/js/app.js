@@ -87,19 +87,56 @@
       itemIconDiv.className = "item-icon";
       aTaglistItem.appendChild(itemIconDiv);
       var imageElement = document.createElement('img');
-//       allListItems = "<div class='item-icon'>";
+      
       if(listItem.type !== 'connector'){
         imageElement.src = "assets/images/icon_large.png";
-//         allListItems += "<img src='assets/images/icon_large.png' />";
       } else {
         imageElement.src = listItem.iconLarge;
-//         allListItems += "<img src=" +listItem.iconLarge + " />";
       }
       itemIconDiv.appendChild(imageElement);
       var itemTitle = document.createElement('h5');
       var itemDisplay = document.createTextNode(listItem.display);
       itemTitle.appendChild(itemDisplay);
       aTaglistItem.appendChild(itemTitle);
+      
+      var cardFooter = document.createElement('div');
+      cardFooter.className = "card-footer";
+      var aTagGitHubPage = document.createElement('a');
+      aTagGitHubPage.href = "#";
+      aTagGitHubPage.className = "card-link";
+      aTagGitHubPage.title = "GitHub Page";
+      aTagGitHubPage.target = "_blank";
+      var gitHubIcon = document.createElement('span');
+      gitHubIcon.className = "fa fa-github";
+      aTagGitHubPage.appendChild(gitHubIcon);
+      cardFooter.appendChild(aTagGitHubPage);
+      
+      var aTagGitForks = document.createElement('a');
+      aTagGitForks.href = "#";
+      aTagGitForks.className = "card-link";
+      aTagGitForks.title = "Forks";
+      aTagGitForks.target = "_blank";
+      var gitHubForksIcon = document.createElement('span');
+      gitHubForksIcon.className = "fa fa-code-fork";
+      aTagGitForks.appendChild(gitHubForksIcon);
+      var forksCount = document.createTextNode(listItem.forks_count);
+      aTagGitForks.appendChild(forksCount);
+      cardFooter.appendChild(aTagGitForks);
+      
+      var aTagGitStargazers = document.createElement('a');
+      aTagGitStargazers.href = "#";
+      aTagGitStargazers.className = "card-link";
+      aTagGitStargazers.title = "Stargazers";
+      aTagGitStargazers.target = "_blank";
+      var gitHubStargazersIcon = document.createElement('span');
+      gitHubStargazersIcon.className = "fa fa-code-star";
+      aTagGitStargazers.appendChild(gitHubStargazersIcon);
+      var stargazersCount = document.createTextNode(listItem.stargazers_count);
+      aTagGitStargazers.appendChild(stargazersCount);
+      cardFooter.appendChild(aTagGitStargazers);
+      
+      aTaglistItem.appendChild(cardFooter);
+      
 //       allListItems += "</div><h5>" + listItem.display + "</h5><div class='card-footer'><a class='card-link' href='#' title='GitHub Page' target='_blank'> <span class='fa fa-github'></span></a>";
 //       allListItems += "<a class='card-link' href='#' title='Forks' target='_blank'><span class='fa fa-code-fork'></span>" + listItem.forks_count + "</a>";
 //       allListItems += "<a class='card-link' href='#' title='Stargazers' target='_blank'><span class='fa fa-star'></span>" + listItem.stargazers_count + "</a></div>";
