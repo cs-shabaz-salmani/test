@@ -30,7 +30,22 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3 sidebar">
+                    <nav id="sidebar">
+                        <div class="sidebar-content">
+                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
+                            <ul class="sidebar-nav list-unstyled">
+                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter(this, 'all')">All</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="main col-md-9">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -69,25 +84,6 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                         <span class="visually-hidden">Next</span>
                       </button>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 sidebar">
-                    <nav id="sidebar">
-                        <div class="sidebar-content">
-                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
-                            <ul class="sidebar-nav list-unstyled">
-                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter(this, 'all')">All</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div class="main col-md-9">
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
