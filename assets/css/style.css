@@ -58,6 +58,10 @@
   margin-top: 100px !important; 
 }
 
+.main .carousel .carousel-inner .carousel-item img {
+  height: 300px; 
+}
+
 .item-container {
   width: 230px;
   min-height: 168px;
@@ -100,6 +104,10 @@
 }
 
 .item-container .item-icon img {
+  font-size: 14px;
+}
+
+.item-container h5{
   width: 85px;
 }
 
