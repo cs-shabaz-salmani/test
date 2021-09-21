@@ -6,6 +6,12 @@
   var filter = 'all';
   var listItemsBkp;
 
+  $(document).ready(function() {
+    if (window.location.href.indexOf("/detail/") > -1) {
+      alert("your url contains detail");
+    }
+  });
+
   function init() {
     var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson.responseText);
