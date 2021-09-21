@@ -79,6 +79,7 @@
   function buildListData(listData) {
     var allListItems;
     var marketPlace = $("#marketplace-list");
+    marketPlace.remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "#";
