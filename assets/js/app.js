@@ -17,7 +17,7 @@
 
   init();
 
-  function applyFilter(type, event) {
+  function applyFilter(event, type) {
     var filteredListItems = [];
     $("ul.sidebar-nav a").removeClass("active");
     $(event.target).addClass("active");
