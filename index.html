@@ -35,12 +35,12 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                         <div class="sidebar-content">
                             <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
                             <ul class="sidebar-nav list-unstyled">
-                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter('all', $event)">All</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('connector', $event)">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('use_case', $event)">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('content_pack', $event)">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('widget', $event)">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter('how_tos', $event)">How To's</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter(this, 'all')">All</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
                             </ul>
                         </div>
                     </nav>
