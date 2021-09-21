@@ -86,9 +86,9 @@
       aTaglistItem.className = "pull-left text-center item-container";
       
       var certifiedDiv = document.createElement('div');
-      certifiedDiv.className = "certified-icon";
+      certifiedDiv.className = "certified-flag";
       var certifiedIcon = document.createElement('i');
-      certifiedIcon.className = "fa fa-check-circle-o";
+      certifiedIcon.className = "fa fa-check-circle-o certified-icon";
       aTaglistItem.appendChild(certifiedDiv);
       aTaglistItem.appendChild(certifiedIcon);
       
