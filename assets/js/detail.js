@@ -28,9 +28,9 @@
       imgTag.src = detailInfo.iconLarge || 'assets/images/icon_large.png';
       imgTag.alt = detailInfo.display;
       $("#detail-img-container").append(imgTag);
-      document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
-      document.getElementById("detail-title").innerHTML = detailInfo.display;
-      document.getElementById("detail-version").innerHTML = detailVersion;     
+      $("#detail-heading").innerHTML = "About the " + detailInfo.display;
+      $("#detail-title").innerHTML = detailInfo.display;
+      $("#detail-version").innerHTML = detailVersion;     
     });
   };
 
