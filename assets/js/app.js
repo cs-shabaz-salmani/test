@@ -1,15 +1,8 @@
 'use strict';
 
-  const http = new XMLHttpRequest();
   var yumRepo = 'https://update.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
-
-  $(document).ready(function() {
-    if (window.location.href.indexOf("/detail/") > -1) {
-      alert("your url contains detail");
-    }
-  });
 
   function init() {
     var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
@@ -72,7 +65,6 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "pull-left text-center item-container";
-      aTaglistItem.onClick = openDetails;
       
       var certifiedDiv = document.createElement('div');
       certifiedDiv.className = "certified-flag";
