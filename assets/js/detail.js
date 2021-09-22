@@ -35,6 +35,4 @@
     }
     http.open("GET", theUrl, true);
     http.send(null);
-  }
-
-}
+  };
