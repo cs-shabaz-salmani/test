@@ -23,8 +23,15 @@
 
     httpGetAsync(detailPath, function(response) {
       detailInfo = response;
-//       detailInfo.display = detail.display;
+      detailInfo.display = detailInfo.name || detailInfo.title;
       detailInfo.type = detailType;
+      var imgTag = document.createElement('img');
+      imgTag.src = detailInfo.iconLarge || 'assets/images/icon_large.png';
+      imgTag.alt = detailInfo.display;
+      $("#detail-img-container").append(imgTag);
+      $("#detail-heading").innerText("About the " + detailInfo.display);
+      $("#detail-title").innerText(detailInfo.display);
+            
     });
   };
 
