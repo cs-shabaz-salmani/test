@@ -38,26 +38,6 @@
     buildListData(filteredListItems);
   }
 
-  function openDetails(e) {
-    console.log('Details function called');
-    console.log(e);
-//     window.location.href = 'detail/detail.html';
-    var detailPath;
-    var downloadPath;
-    var detailInfo;
-    if(detail.type === 'connector'){
-      detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/info.json';
-    } else if(detail.type === 'widget') {
-      detailPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/info.json';
-    }
-
-    $http.get(detailPath).then(function(response) {
-      detailInfo = response.data;
-      detailInfo.display = detail.display;
-      detailInfo.type = detail.type;
-    });
-  };
-
   function submitSearch(searchText) {
     if(searchText.length >= 3) {
       var searchedListItems = [];
@@ -90,7 +70,7 @@
     $(".item-container").remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.href = "detail.html/?entity=" + listItem.name + "-" + listItem.version;
+      aTaglistItem.href = "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "pull-left text-center item-container";
       aTaglistItem.onClick = openDetails;
       
