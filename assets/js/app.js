@@ -38,23 +38,23 @@
     buildListData(filteredListItems);
   }
 
-  function openDetails(detail) {
+  function openDetails(e) {
+    console.log('Details function called');
+    console.log(e);
+    window.location.href = 'detail/detail.html';
     var detailPath;
     var downloadPath;
     var detailInfo;
     if(detail.type === 'connector'){
       detailPath = yumRepo + 'connectors/info/' + detail.name + '_' + detail.version + '/info.json';
-      downloadPath = yumRepo + 'connectors/x86_64/' + detail.rpm_full_name;
     } else if(detail.type === 'widget') {
       detailPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/info.json';
-      downloadPath = yumRepo + 'fsr-widgets/' + detail.name + '-' + detail.version + '/' + detail.name + '-' + detail.version + '.tgz';
     }
 
     $http.get(detailPath).then(function(response) {
       detailInfo = response.data;
       detailInfo.display = detail.display;
       detailInfo.type = detail.type;
-      detailInfo.downloadPath = downloadPath;
     });
   };
 
@@ -92,6 +92,7 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "detail/" + listItem.name + "-" + listItem.version;
       aTaglistItem.className = "pull-left text-center item-container";
+      aTaglistItem.setAttribute('onClick', openDetails);
       
       var certifiedDiv = document.createElement('div');
       certifiedDiv.className = "certified-flag";
