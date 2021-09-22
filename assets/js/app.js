@@ -90,7 +90,7 @@
     $(".item-container").remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.href = "detail/" + listItem.name + listItem.version;
+      aTaglistItem.href = "detail/" + listItem.name + "-" + listItem.version;
       aTaglistItem.className = "pull-left text-center item-container";
       
       var certifiedDiv = document.createElement('div');
