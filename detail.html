@@ -51,13 +51,12 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                       <div class="detail-container">
                         <div class="row">
                           <div class="col-md-12 col-sm-12">
-                            <h2>About the {{detailInfo.type}}</h2>
+                            <h2 id="detail-heading"></h2>
                             <div class="detail-summary">
-                              <div class="pull-left">
-                                <img src="{{detailInfo.iconLarge || 'assets/images/icon_large.png'}}" alt="{{detailInfo.display}}" />
+                              <div class="pull-left" id="detail-img-container">
                               </div>
                               <div class="pull-left">
-                                <h3 class="detail-title">{{detailInfo.display}}</h3>
+                                <h3 id="detail-title class="detail-title">{{detailInfo.display}}</h3>
                                 <p data-ng-if="detailInfo.version" class="detail-properties">
                                   <span class="detail-properties grey-text">Version</span>
                                   <span>{{detailInfo.version}}</span>
@@ -79,21 +78,10 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                                   <div class="row">
                                     <div class="col-md-12">
                                       <div class="display-inline-block">
-                                        <a data-ng-show="detailInfo.help_online"
-                                          href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"
+                                        <a href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"
                                           class="nav-item detail-doc-link">
                                           <i class="fa fa-globe"></i> Documentation
                                         </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-12">
-                                      <div class="display-inline-block" style="margin-top: 10px;">
-                                        <button ng-click="downloadFile(detailInfo)"
-                                          class="btn btn-success">
-                                          <i class="fa fa-download"></i> Download
-                                        </button>
                                       </div>
                                     </div>
                                   </div>
@@ -105,7 +93,7 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                         </div>
                         <div class="row detail-container-bottom">
                           <div class="col-md-12">
-                            <div class="grey-text detail-properties detail-description">{{detailInfo.description}}</div>
+                            <div class="grey-text detail-properties detail-description" id="detail-description"></div>
                           </div>
                         </div>
                       </div>
