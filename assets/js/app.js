@@ -92,7 +92,7 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "detail/" + listItem.name + "-" + listItem.version;
       aTaglistItem.className = "pull-left text-center item-container";
-      aTaglistItem.setAttribute('onClick', openDetails);
+      aTaglistItem.onClick = openDetails(listItem);
       
       var certifiedDiv = document.createElement('div');
       certifiedDiv.className = "certified-flag";
