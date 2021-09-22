@@ -22,7 +22,7 @@
     }
 
     httpGetAsync(detailPath, function(response) {
-      detailInfo = response.data;
+      detailInfo = response;
 //       detailInfo.display = detail.display;
       detailInfo.type = detailType;
     });
@@ -31,7 +31,7 @@
   function httpGetAsync(theUrl, callback){
     http.onreadystatechange = function() { 
         if (http.readyState == 4 && http.status == 200) {
-          callback(http.responseText);
+          callback(JSON.parse(http.responseText));
         }
     }
     http.open("GET", theUrl, true);
