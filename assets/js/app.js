@@ -41,7 +41,7 @@
   function openDetails(e) {
     console.log('Details function called');
     console.log(e);
-    window.location.href = 'detail/detail.html';
+//     window.location.href = 'detail/detail.html';
     var detailPath;
     var downloadPath;
     var detailInfo;
@@ -92,7 +92,7 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "detail/" + listItem.name + "-" + listItem.version;
       aTaglistItem.className = "pull-left text-center item-container";
-      aTaglistItem.onClick = openDetails(listItem);
+      aTaglistItem.onClick = openDetails;
       
       var certifiedDiv = document.createElement('div');
       certifiedDiv.className = "certified-flag";
