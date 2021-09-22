@@ -11,9 +11,9 @@
     var detailPath;
     var detailInfo;
     
-    detailType = urlSearchParams.get('type');
-    detailName = urlSearchParams.get('entity');
-    detailVersion = urlSearchParams.get('version');
+    var detailType = urlSearchParams.get('type');
+    var detailName = urlSearchParams.get('entity');
+    var detailVersion = urlSearchParams.get('version');
     
     if(detailType === 'connector'){
       detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/info.json';
