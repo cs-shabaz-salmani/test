@@ -7,7 +7,6 @@
   init();
 
   function init() {
-    console.log('Details function called');
     var detailPath;
     var detailInfo;
     
@@ -30,9 +29,9 @@
       imgTag.alt = detailInfo.display;
       $("#detail-img-container").append(imgTag);
       var detailHeading = $("#detail-heading");
-      detailHeading.innerText("About the " + detailInfo.display);
-      $("#detail-title").innerText(detailInfo.display);
-      $("#detail-version").innerText(detailVersion);     
+      detailHeading.innerText = "About the " + detailInfo.display;
+      $("#detail-title").innerText = detailInfo.display;
+      $("#detail-version").innerText = detailVersion;     
     });
   };
 
