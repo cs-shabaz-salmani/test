@@ -112,22 +112,13 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                               <div class="pull-left" id="detail-img-container">
                               </div>
                               <div class="pull-left">
-                                <h3 id="detail-title" class="detail-title"></h3>
+                                <h5 id="detail-title" class="detail-title"></h5>
                                 <p class="detail-properties">
                                   <span class="detail-properties grey-text">Version</span>
                                   <span id="detail-version"></span>
                                 </p>
-                                <p class="detail-properties"><span class="grey-text">Certified:</span>
-                                  {{detailInfo.cs_approved ? 'Yes' : 'No' }}</p>
-                                <p class="detail-properties" data-ng-show="detailInfo.publisher !== ''">
-                                  <span class="grey-text">Publisher:</span>
-                                  <span class="detail-properties"
-                                    data-ng-show="(detailInfo.publisher | lowercase) === 'fortinet' || (detailInfo.publisher | lowercase) === 'cybersponse'">Fortinet
-                                  </span>
-                                  <span class="detail-properties"
-                                    data-ng-show="(detailInfo.publisher | lowercase) !== 'fortinet' && (detailInfo.publisher | lowercase) !== 'cybersponse'">{{detailInfo.publisher}}
-                                  </span>
-                                </p>
+                                <p class="detail-properties"><span class="grey-text">Certified:</span><span id="detail-certified"></span></p>
+                                <p class="detail-properties"><span class="grey-text">Publisher:</span><span class="detail-properties" id="detail-publisher"></span></p>
                               </div>
                               <div class="pull-right">
                                 <div class="detail-properties">
