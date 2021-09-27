@@ -15,7 +15,7 @@
     var detailVersion = urlSearchParams.get('version');
     
     if(detailType === 'connector'){
-      detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/info.json';
+      detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion;
     } else if(detailType === 'widget') {
       detailPath = yumRepo + 'fsr-widgets/' + detailName + '-' + detailVersion + '/info.json';
     }
