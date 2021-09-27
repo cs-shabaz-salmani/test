@@ -49,34 +49,70 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                             </ul>
                             <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
                               <div class="btn-group" role="group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Dropdown 1
+                                <button id="btnGroupCategory" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Categories (5)
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupCategory">
+                                    <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
                                 </ul>
                               </div>
+                                
                               <div class="btn-group" role="group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Dropdown 2
+                                <button id="btnGroupDropIntegrations" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Integrations
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDropIntegrations">
+                                  <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
                                 </ul>
                               </div>
 
                               <div class="btn-group" role="group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Dropdown 3
+                                <button id="btnGroupDropUseCases" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Use Cases
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDropUseCases">
+                                  <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
                                 </ul>
                               </div>
-                            </div>
+                                
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDropCp" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Content Packs
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDropCp">
+                                  <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                                </ul>
+                              </div>
+                                
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDropWidgets" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Widgets
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDropWidgets">
+                                  <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                                </ul>
+                              </div>
+                                
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDropHowTos" type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                  How To's
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDropHowTos">
+                                  <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                                </ul>
+                              </div>
+                                
+                            </div> <!-- End of Filter  -->
+                            
                         </div>
                     </nav>
                 </div>
