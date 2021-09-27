@@ -9,13 +9,15 @@
   function init() {
     var detailPath;
     var detailInfo;
+    var mdFilepath;
     
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
     
     if(detailType === 'connector'){
-      detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion;
+      detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/info.json';
+      mdFilepath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/release_notes.md';
     } else if(detailType === 'widget') {
       detailPath = yumRepo + 'fsr-widgets/' + detailName + '-' + detailVersion + '/info.json';
     }
@@ -34,6 +36,9 @@
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
+      httpGetAsync(mdFilepath, function(fileResponse) {
+        document.getElementById("detail-release-notes").innerHTML = fileResponse;
+      });
     });
   };
 
