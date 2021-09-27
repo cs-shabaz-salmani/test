@@ -16,7 +16,9 @@
   init();
 
   function applyFilter(event, type) {
-    window.location.href = "/";
+    if (window.location.href.indexOf('detail.html') > -1) {
+      window.location.href = "#";
+    }
     var filteredListItems = [];
     $("ul.sidebar-nav a").removeClass("active");
     $(event).addClass("active");
