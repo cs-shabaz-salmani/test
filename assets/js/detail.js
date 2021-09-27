@@ -37,7 +37,7 @@
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
       var mdContentTag = document.createElement('zero-md');
-      mdContentTag.src = mdFilepath;
+      mdContentTag.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(mdContentTag);
 //       httpGetAsync(mdFilepath, function(fileResponse) {
 //         document.getElementById("detail-release-notes").innerHTML = fileResponse;
