@@ -68,6 +68,7 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "pull-left text-center item-container";
+      aTaglistItem.setAttribute("rel", "canonical");
       
       var certifiedDiv = document.createElement('div');
       certifiedDiv.className = "certified-flag";
