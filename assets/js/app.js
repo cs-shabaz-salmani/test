@@ -1,6 +1,7 @@
 'use strict';
 
   var yumRepo = 'https://update.cybersponse.com/';
+  var basePath = 'http://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
 
@@ -66,7 +67,7 @@
     $(".item-container").remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.href = "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
+      aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "pull-left text-center item-container";
       aTaglistItem.setAttribute("rel", "canonical");
       
@@ -87,6 +88,7 @@
       } else {
         imageElement.src = listItem.iconLarge;
       }
+      imageElement.width = "75";
       itemIconDiv.appendChild(imageElement);
       var itemTitle = document.createElement('h5');
       var itemDisplay = document.createTextNode(listItem.display);
