@@ -10,7 +10,8 @@
   font-size: 30px;
   font-weight: 700;
   padding: 20px 10px 25px 40px;
-  background: #eaeaea; 
+  background: #000000;
+  color: #ffffff;
 }
 
 .sidebar #sidebar {
