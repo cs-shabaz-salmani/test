@@ -123,7 +123,13 @@
 }
 
 .item-container .card-description {
-  background-color: #aba9a9;
+  background-color: #dbdbdb;
+  text-align: left;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 5px 10px;
+  line-height: 13px;
+  color: #424242;
 }
 
 .item-container .card-footer {
