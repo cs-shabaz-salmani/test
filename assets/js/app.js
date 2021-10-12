@@ -97,7 +97,7 @@
       
       var cardDescription = document.createElement('div');
       cardDescription.className = "card-description";
-      var itemDescription = document.createTextNode(listItem.description.substring(0, 25) + '...');
+      var itemDescription = document.createTextNode(listItem.description.substring(0, 75) + '...');
       cardDescription.appendChild(itemDescription);
       aTaglistItem.appendChild(cardDescription);
       
