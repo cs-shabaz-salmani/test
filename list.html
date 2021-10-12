@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <base href="/"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Fortinet FortiSOAR Marketplace" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="robots" content="index, follow" />
+        <title>FortiSOAR Marketplace</title>
+        <link rel="shortcut icon" type="image/x-icon" href="" />
+        <link rel="canonical" href="http://marketplace.cybersponse.com">
+        <!-- CSS only -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-54P2HBP');</script>
+        <!-- End Google Tag Manager -->
+        <script id='_webengage_script_tag' type='text/javascript'>
+var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
+arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i < l.length;i++)o(r,[l[i]]);for(i=0;i < a.length;i++){for(r[a[i]]={},s=0;s < c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s < p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i < u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://widgets.in.webengage.com":"http://widgets.in.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");webengage.init("in~aa131835");
+</script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54P2HBP"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="topbar-container">
+                        <h1>FortiSOAR Marketplace</h1>
+                    </div>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><a href="#">Home</a></li>
+                      </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 sidebar">
+                    <nav id="sidebar">
+                        <div class="sidebar-content">
+                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
+                            <ul class="sidebar-nav list-unstyled">
+                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter(this, 'all')">All Content</a></li>
+                            </ul>
+                            <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              Categories (5)
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupCategory">
+                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
+                            </ul>
+
+                            <button id="btnGroupDropIntegrations" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              Integrations
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropIntegrations">
+                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                            </ul>
+
+                            <button id="btnGroupDropUseCases" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              Use Cases
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropUseCases">
+                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                            </ul>
+
+                            <button id="btnGroupDropCp" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              Content Packs
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropCp">
+                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                            </ul>
+
+                            <button id="btnGroupDropWidgets" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              Widgets
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropWidgets">
+                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                            </ul>
+
+                            <button id="btnGroupDropHowTos" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
+                              How To's
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropHowTos">
+                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+                            </ul><!-- End of Filter  -->
+                            
+                        </div>
+                    </nav>
+                </div>
+                <div class="main col-md-9">
+                    <main class="content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div id="marketplace-list"></div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
