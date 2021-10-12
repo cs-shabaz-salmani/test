@@ -86,7 +86,6 @@
 
 .item-container {
   width: 230px;
-  min-height: 168px;
   border: 1px solid #cccccc;
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
@@ -130,6 +129,7 @@
   padding: 5px 10px;
   line-height: 13px;
   color: #424242;
+  height: 50px;
 }
 
 .item-container .card-footer {
@@ -160,6 +160,7 @@
 .item-container h5{
   font-size: 13px;
   color: #000000;
+  min-height: 30px;
 }
 
 .detail-content {
