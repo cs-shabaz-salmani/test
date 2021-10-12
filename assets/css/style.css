@@ -90,7 +90,7 @@
   border: 1px solid #cccccc;
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
-  padding: 10px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
   cursor: pointer;
   display: flex;
   flex-flow: column;
@@ -134,7 +134,7 @@
 .item-container .item-icon {
   width: 75px;
   height: 75px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .item-container .card-footer .card-link {
