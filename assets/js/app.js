@@ -95,6 +95,12 @@
       itemTitle.appendChild(itemDisplay);
       aTaglistItem.appendChild(itemTitle);
       
+      var cardDescription = document.createElement('div');
+      cardDescription.className = "card-description";
+      var itemDescription = document.createTextNode(listItem.description);
+      cardDescription.appendChild(itemDescription);
+      aTaglistItem.appendChild(cardDescription);
+      
       var cardFooter = document.createElement('div');
       cardFooter.className = "card-footer";
       
