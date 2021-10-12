@@ -122,6 +122,10 @@
   text-decoration: none !important;
 }
 
+.item-container .card-description {
+  background-color: #aba9a9;
+}
+
 .item-container .card-footer {
   display: flex;
   justify-content: space-evenly;
