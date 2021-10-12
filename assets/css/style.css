@@ -88,7 +88,7 @@
   width: 230px;
   border: 1px solid #cccccc;
   border-radius: 3px;
-  margin: 10px 10px 15px 0px;
+  margin: 10px 20px 15px 0px;
   padding: 5px 0px 0px 0px;
   cursor: pointer;
   display: flex;
@@ -97,7 +97,7 @@
   position: relative;
 }
 
-.item-container:hover {
+.item-container:hover h5 {
   text-decoration: underline;
 }
 
@@ -115,10 +115,6 @@
   top: 3px;
   right: 3px;
   color: #ffffff;
-}
-
-.item-container:hover .card-footer .card-link {
-  text-decoration: none !important;
 }
 
 .item-container .card-description {
