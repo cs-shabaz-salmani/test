@@ -90,7 +90,7 @@
   border: 1px solid #cccccc;
   border-radius: 3px;
   margin: 10px 10px 15px 0px;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 0px 0px 0px;
   cursor: pointer;
   display: flex;
   flex-flow: column;
