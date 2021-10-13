@@ -35,7 +35,7 @@
   border-color: #a7a7a7;
 }
 
-.sidebar #sidebar .btn-outline-secondary.dropdown-toggle {
+.sidebar #sidebar .btn-outline-secondary.dropdown-toggle:after {
   float: right;
   margin-top: 10px;
   margin-right: 5px;
