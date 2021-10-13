@@ -25,10 +25,6 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-54P2HBP');</script>
         <!-- End Google Tag Manager -->
-        <script id='_webengage_script_tag' type='text/javascript'>
-var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
-arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i < l.length;i++)o(r,[l[i]]);for(i=0;i < a.length;i++){for(r[a[i]]={},s=0;s < c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s < p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i < u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://widgets.in.webengage.com":"http://widgets.in.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");webengage.init("in~aa131835");
-</script>
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
@@ -49,73 +45,7 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 sidebar">
-                    <nav id="sidebar">
-                        <div class="sidebar-content">
-                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
-                            <ul class="sidebar-nav list-unstyled">
-                                <li class="sidebar-item"><a class="sidebar-link active" onClick="applyFilter(this, 'all')">All Content</a></li>
-                                <!--<li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" onClick="applyFilter(this, 'how_tos')">How To's</a></li>-->
-                            </ul>
-                            <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              Categories (5)
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupCategory">
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropIntegrations" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              Integrations
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropIntegrations">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropUseCases" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              Use Cases
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropUseCases">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropCp" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              Content Packs
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropCp">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropWidgets" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              Widgets
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropWidgets">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropHowTos" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start" data-bs-toggle="dropdown" aria-expanded="false">
-                              How To's
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropHowTos">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul><!-- End of Filter  -->
-                            
-                        </div>
-                    </nav>
-                </div>
-                <div class="main col-md-9">
+                <div class="main col-md-12">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -157,7 +87,15 @@ arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z)
                     <main class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div id="marketplace-list"></div>
+                                <div class="col-md-12">
+                                    <ul class="dropdown-menu w-100">
+                                        <li class="category-item"><a class="category-link" onClick="loadCategoryList('connector')">Integrations</a></li>
+                                        <li class="category-item"><a class="category-link" onClick="loadCategoryList('use_case')">Use Cases</a></li>
+                                        <li class="category-item"><a class="category-link" onClick="loadCategoryList('content_pack')">Content Packs</a></li>
+                                        <li class="category-item"><a class="category-link" onClick="loadCategoryList('widget')">Widgets</a></li>
+                                        <li class="category-item"><a class="category-link" onClick="loadCategoryList('how_tos')">How To's</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </main>
