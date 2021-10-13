@@ -35,6 +35,12 @@
   border-color: #a7a7a7;
 }
 
+.sidebar #sidebar .btn-outline-secondary.dropdown-toggle {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
 .sidebar .sidebar-content {
   padding: 30px 40px 20px 40px;
 }
