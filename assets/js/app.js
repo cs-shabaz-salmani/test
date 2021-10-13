@@ -23,13 +23,23 @@
 
   init();
 
+  function loadCategoryList(type) {
+    window.location.href = "/list.html";
+    filterContent(type);
+    $("#" + type).addClass("active");
+  }
+
   function applyFilter(event, type) {
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html";
     }
-    var filteredListItems = [];
     $("ul.sidebar-nav a").removeClass("active");
     $(event).addClass("active");
+    filterContent(type);
+  }
+
+  function filterContent(type) {
+    var filteredListItems = [];
     if(type !== 'all'){
       listItems.forEach(function(item) {
         if(item.type === type) {
