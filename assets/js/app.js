@@ -71,7 +71,6 @@
   function buildListData(listData) {
     var allListItems;
     var marketPlace = $("#marketplace-list");
-    var itemDescription;
     $(".item-container").remove();
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
@@ -105,11 +104,8 @@
       
       var cardDescription = document.createElement('div');
       cardDescription.className = "card-description";
-      if(listItem.description){
-        itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
-      } else {
-        itemDescription = 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
-      }
+      listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
+      var itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
       cardDescription.appendChild(itemDescription);
       aTaglistItem.appendChild(cardDescription);
       
