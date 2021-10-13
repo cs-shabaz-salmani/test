@@ -152,6 +152,8 @@
 
 .item-container .item-icon img {
   width: 75px;
+  height: auto;
+  max-height: 75px;
 }
 
 .item-container h5{
