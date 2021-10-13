@@ -23,6 +23,18 @@
   background: #f7f7f7;
 }
 
+.sidebar #sidebar .btn-outline-secondary.active,
+.sidebar #sidebar .btn-outline-secondary.dropdown-toggle.show,
+.sidebar #sidebar .btn-outline-secondary:active,
+.sidebar #sidebar .btn-outline-secondary:hover {
+  color: #000000;
+  border-color: #6c757d;
+}
+
+.sidebar #sidebar .btn-outline-secondary {
+  border-color: #a7a7a7;
+}
+
 .sidebar .sidebar-content {
   padding: 30px 40px 20px 40px;
 }
