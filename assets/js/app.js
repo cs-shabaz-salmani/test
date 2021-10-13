@@ -5,6 +5,13 @@
   var listItems = [];
   var listItemsBkp;
 
+  $(document).ready(function() {
+    var navBar = $('#sidebar');
+    if(navBar){
+      navBar.load('assets/html/sidebar.html');
+    }
+  });
+
   function init() {
     var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson.responseText);
