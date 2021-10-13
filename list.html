@@ -47,68 +47,6 @@
             <div class="row">
                 <div class="col-md-3 sidebar">
                     <nav id="sidebar">
-                        <div class="sidebar-content">
-                            <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch($event)"/>
-                            
-                            <button class="btn btn-outline-secondary w-100 mt-5 mb-2 text-lg-start bg-white" onClick="applyFilter(this, 'all')">
-                              All
-                            </button>
-                            <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              Categories (5)
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupCategory">
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropIntegrations" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              Integrations
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropIntegrations">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropUseCases" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              Use Cases
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropUseCases">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropCp" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              Content Packs
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropCp">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropWidgets" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              Widgets
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropWidgets">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul>
-
-                            <button id="btnGroupDropHowTos" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-                              How To's
-                            </button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDropHowTos">
-                              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-                              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-                            </ul><!-- End of Filter  -->
-
-                            <a href="connect.html" class="btn btn-outline-secondary w-100 mt-5 bg-white">
-                              Let's Connect
-                            </a>
-                            
-                        </div>
                     </nav>
                 </div>
                 <div class="main col-md-9">
