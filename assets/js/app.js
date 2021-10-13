@@ -24,7 +24,7 @@
   init();
 
   function applyFilter(event, type) {
-    if (window.location.href.indexOf('detail.html') > -1) {
+    if (window.location.href.indexOf('list.html') == 0) {
       window.location.href = "/list.html";
     }
     var filteredListItems = [];
