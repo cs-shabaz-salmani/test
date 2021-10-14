@@ -204,7 +204,19 @@
 }
 
 .category-container .category-item {
-  
+  border: 1px solid #545454;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.category-container .category-item .category-link {
+  color: #545454;
+  text-decoration: none;
+}
+
+.category-container .category-item:hover .category-link {
+  color: #424242;
 }
 
 .main-carousel-container .carousel-indicators {
