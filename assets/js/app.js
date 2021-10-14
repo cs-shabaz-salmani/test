@@ -21,7 +21,9 @@
     buildListData(listItems);
   }
 
-  init();
+  if (window.location.href.indexOf('list.html') > -1) {
+    init();
+  }
 
   function loadCategoryList(type) {
     window.location.href = "/list.html";
