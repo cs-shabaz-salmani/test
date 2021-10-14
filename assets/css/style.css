@@ -78,6 +78,10 @@
   margin-top: 100px !important; 
 }
 
+.main.main-carousel-container {
+  margin-top: 65px !important; 
+}
+
 .main .carousel {
   z-index: -1;
 }
