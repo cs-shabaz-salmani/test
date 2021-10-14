@@ -255,7 +255,6 @@
   width: 27px;
   height: 27px;
   position: relative;
-  top: 1px;
 }
 
 .category-integration {
@@ -265,20 +264,40 @@
 
 .category-use-case {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -22px;
+  background-position: -22px -160px;
 }
 
 .category-content-pack {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -22px;
+  background-position: -22px -70px;
 }
 
 .category-widget {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -22px;
+  background-position: -22px -116px;
 }
 
 .category-how-to {
   background: url("../images/spritesheet.png") no-repeat;
+  background-position: -22px -200px;
+}
+
+.category-integration-link:hover .category-integration {
   background-position: -22px -22px;
+}
+
+.category-use-case-link:hover .category-use-case {
+  background-position: -22px -160px;
+}
+
+.category-content-pack-link:hover .category-content-pack {
+  background-position: -22px -70px;
+}
+
+.category-widget-link:hover .category-widget {
+  background-position: -22px -116px;
+}
+
+.category-how-to-link:hover .category-how-to {
+  background-position: -22px -200px;
 }
