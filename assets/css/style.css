@@ -230,19 +230,24 @@
 }
 
 .main-carousel-container .carousel-indicators [data-bs-target] {
-    box-sizing: unset !important;
-    flex: unset !important;
-    width: 10px;
-    height: 10px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    text-indent: unset !important;
-    background-color: #121111;
-    background-clip: unset !important;
-    border: 1px solid #000000;
-    border-top: unset !important;
-    border-bottom: unset !important;
-    border-radius: 50%; 
+  box-sizing: unset !important;
+  flex: unset !important;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-indent: unset !important;
+  background-color: #121111;
+  background-clip: unset !important;
+  border: 1px solid #000000;
+  border-top: unset !important;
+  border-bottom: unset !important;
+  border-radius: 50%; 
+}
+
+.category-title {
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 .category-icon {
@@ -250,7 +255,6 @@
   height: 27px;
   position: relative;
   top: 1px;
-  display: inline-block;
 }
 
 .category-integration {
