@@ -246,7 +246,7 @@
 }
 
 .category-integration {
-  background: url("../assets/images/spritesheet.png") no-repeat;
+  background: url("./../assets/images/spritesheet.png") no-repeat;
   background-position: -50px -50px;
 }
 
