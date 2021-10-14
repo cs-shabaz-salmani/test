@@ -213,6 +213,7 @@
 .category-container .category-item .category-link {
   color: #545454;
   text-decoration: none;
+  display: flex;
 }
 
 .category-container .category-item:hover .category-link {
