@@ -203,3 +203,33 @@
   color: #212121;
   margin-top: 15px;
 }
+
+.category-container .category-item {
+  
+}
+
+.main-carousel-container .carousel-indicators {
+  right: 0;
+  left: unset !important;
+  bottom: unset !important;
+  flex-direction: column;
+  padding: 0;
+  margin-right: 20px;
+  top: 125px;
+}
+
+.main-carousel-container .carousel-indicators [data-bs-target] {
+    box-sizing: unset !important;
+    flex: unset !important;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-indent: unset !important;
+    background-color: #121111;
+    background-clip: unset !important;
+    border: 1px solid #000000;
+    border-top: unset !important;
+    border-bottom: unset !important;
+    border-radius: 50%; 
+}
