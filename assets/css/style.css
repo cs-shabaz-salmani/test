@@ -257,6 +257,11 @@
   position: relative;
 }
 
+.category-container {
+  background: #f1f1f1;
+  padding: 1px 0px 40px 0px; 
+}
+
 .category-integration {
   background: url("../images/spritesheet.png") no-repeat;
   background-position: -22px -22px;
