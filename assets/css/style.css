@@ -312,6 +312,11 @@
   background-position: -83px -200px;
 }
 
+.latest-updates-suggestions-content {
+  background: #e3e3e3;
+  border-top: 2px solid #ffffff;
+}
+
 .latest-updates-container {
   background: #efefef;
   border-radius: 3px;
