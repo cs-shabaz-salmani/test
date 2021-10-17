@@ -364,3 +364,7 @@
   line-height: 16px;
   color: #505050;
 }
+
+.contribute-container {
+  background: url("../images/collaborate.jpeg") no-repeat;
+}
