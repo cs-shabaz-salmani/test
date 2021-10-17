@@ -379,3 +379,29 @@
   left: 0px;
   color: #ffffff;
 }
+
+footer {
+  clear: both;
+  background: rgba(0,0,0,.85);
+  padding: 10px;
+}
+
+footer ul.links {
+  padding-left: 0;
+}
+
+footer ul.links li {
+  float: left;
+}
+
+footer ul.links li a{
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+footer ul.links li:not(:last-child) a{
+  border-right: 2px #fff solid;
+}
