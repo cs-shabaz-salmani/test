@@ -322,7 +322,7 @@
   padding-left: 8.33333333%;
 }
 
-.latest-updates-suggestions-content .nav.nav-tabs .nav-link.active {
+.latest-updates-suggestions-content .nav.nav-tabs .nav-link.active li {
   background-color: #cfcfcf;
 }
 
