@@ -10,6 +10,10 @@
     if(navBar){
       navBar.load('assets/html/sidebar.html');
     }
+    var footer = $('#footer-container');
+    if(footer){
+      footer.load('assets/html/footer.html');
+    }
   });
 
   function init() {
