@@ -320,7 +320,6 @@
 .latest-updates-suggestions-content .nav.nav-tabs li:first-child .nav-link {
   border-right: 2px solid #ffffff;
   padding-left: 8.33333333%;
-  color: #495057;
 }
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-link.active {
@@ -334,6 +333,7 @@
 .latest-updates-suggestions-content .nav.nav-tabs .nav-link {
   border-radius: 0px;
   border: none;
+  color: #495057;
 }
 
 .latest-updates-container {
