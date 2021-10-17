@@ -317,7 +317,11 @@
   border-top: 2px solid #ffffff;
 }
 
-.latest-updates-suggestions-content .nav.nav-tabs li:first-child {
+.latest-updates-suggestions-content .nav.nav-tabs .nav-item {
+  display: contents;
+}
+
+.latest-updates-suggestions-content .nav.nav-tabs li:first-child .nav-link {
   border-right: 2px solid #ffffff;
   padding-left: 8.33333333%;
 }
