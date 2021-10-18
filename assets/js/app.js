@@ -11,15 +11,15 @@
     var navBar = $('#sidebar');
     if(navBar){
       navBar.load('assets/html/sidebar.html');
+      if (window.location.href.indexOf('connect.html') > -1) {
+        $("#lets_connect_link").addClass("active");
+      } else {
+        $("#lets_connect_link").removeClass("active");
+      }
     }
     var footer = $('#footer-container');
     if(footer){
       footer.load('assets/html/footer.html');
-    }
-    if (window.location.href.indexOf('connect.html') > -1) {
-      $("#lets_connect_link").addClass("active");
-    } else {
-      $("#lets_connect_link").removeClass("active");
     }
   });
 
