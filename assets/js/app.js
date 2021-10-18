@@ -53,8 +53,8 @@
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html";
     }
-    $("ul.sidebar-nav a").removeClass("active");
-    $(event).addClass("active");
+    $(".sidebar-content .btn").removeClass("active");
+    $("#" + event + "_filter_btn").addClass("active");
     filterContent(type);
   }
 
