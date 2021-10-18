@@ -32,6 +32,13 @@
   border-right: 1px solid #dfdede;
 }
 
+.sidebar #sidebar .navbar-toggler {
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 20px;
+}
+
 .sidebar #sidebar .btn-outline-secondary.active,
 .sidebar #sidebar .btn-outline-secondary.dropdown-toggle.show,
 .sidebar #sidebar .btn-outline-secondary:active,
@@ -460,4 +467,22 @@ footer ul.links li:not(:last-child) a{
 
 .right-sidebar-container #carouselConnect {
   margin-top: 30px; 
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 400px) {
+    .sidebar #sidebar {
+      position: relative;
+      top: unset;
+      left: unset;
+      right: unset%;
+      bottom: unset;
+      background: transparent;
+      border-right: none;
+    }
+    
+    .sidebar-content {
+      padding: 0px; 
+    }
 }
