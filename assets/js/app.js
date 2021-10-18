@@ -16,6 +16,11 @@
     if(footer){
       footer.load('assets/html/footer.html');
     }
+    if (window.location.href.indexOf('connect.html') > -1) {
+      $("#lets_connect_link").addClass("active");
+    } else {
+      $("#lets_connect_link").removeClass("active");
+    }
   });
 
   function init() {
@@ -28,9 +33,8 @@
     var categoryType = urlSearchParams.get('category');
     if(categoryType){
       filterContent(categoryType);
-      var categoryTypeId = "#" + categoryType + "_filter_btn";
       setTimeout(function(){
-        $(categoryTypeId).addClass("active");
+        $("#" + categoryType + "_filter_btn").addClass("active");
       }, 1000);
     }
   }
