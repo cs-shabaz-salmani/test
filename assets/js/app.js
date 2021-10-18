@@ -78,7 +78,7 @@
   }
 
   function submitSearch(event) {
-    console.log(event.val());
+    console.log(event);
     var searchText = $("#searchText").val();
     if(searchText.length >= 3) {
       var searchedListItems = [];
