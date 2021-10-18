@@ -28,7 +28,8 @@
     var categoryType = urlSearchParams.get('category');
     if(categoryType){
       filterContent(categoryType);
-      $("#" + categoryType + '_filter_btn').addClass("active");
+      var categoryTypeId = "#" + categoryType + "_filter_btn";
+      $(categoryTypeId).addClass("active");
     }
   }
 
