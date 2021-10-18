@@ -21,6 +21,7 @@
   right: 75%;
   bottom: 0px;
   background: #f7f7f7;
+  border-right: 1px solid #dfdede;
 }
 
 .sidebar #sidebar .btn-outline-secondary.active,
