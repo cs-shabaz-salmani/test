@@ -53,7 +53,7 @@
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?category=" + type;
     } else {
-      window.history.replaceState(null, null, "?category=" + type);
+      window.history.replaceState(null, null, "/list.html?category=" + type);
     }
     $(".sidebar-content .btn").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
