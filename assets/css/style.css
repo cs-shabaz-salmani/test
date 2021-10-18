@@ -24,12 +24,13 @@
 
 .sidebar #sidebar {
   position: fixed;
-  top: 80px;
+  top: 81px;
   left: 0px;
   right: 75%;
   bottom: 0px;
   background: #f7f7f7;
   border-right: 1px solid #dfdede;
+  z-index: -1;
 }
 
 .sidebar #sidebar .btn-outline-secondary.active,
@@ -40,7 +41,6 @@
   border-color: #555c62;
   background-color: #e9e9e9 !important;
 }
-
 
 .sidebar #sidebar .btn-outline-secondary {
   border-color: #a7a7a7;
@@ -407,6 +407,8 @@ footer {
   clear: both;
   background: rgba(0,0,0,.85);
   padding: 10px;
+  z-index: 1;
+  position: relative;
 }
 
 footer ul.links {
