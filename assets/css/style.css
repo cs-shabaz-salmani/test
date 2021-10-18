@@ -108,7 +108,7 @@
 }
 
 .sidebar .sidebar-link.active {
-  color: #3b75b8;
+  background-color: #adadad;
 }
 
 .sidebar .sidebar-link:hover {
