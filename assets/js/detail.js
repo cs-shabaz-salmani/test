@@ -1,7 +1,6 @@
 'use strict';
 
   const http = new XMLHttpRequest();
-  const urlSearchParams = new URLSearchParams(window.location.search);
   var yumRepo = 'https://update.cybersponse.com/';
 
   init();
