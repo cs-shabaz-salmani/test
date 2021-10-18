@@ -258,6 +258,10 @@
   flex-basis: 0;
 }
 
+.category-container .category-content {
+  display: flex;
+}
+
 .category-container .category-item:not(:last-child) {
   margin-right: 20px;
 }
@@ -491,11 +495,11 @@ footer ul.links li:not(:last-child) a{
   and (max-device-width: 400px) {
     
     .custom-left-offset-1 {
-      padding-left: 0px !important; 
+      padding-left: 20px !important; 
     }
     
     .custom-right-offset-1 {
-      padding-right: 0px !important; 
+      padding-right: 20px !important; 
     }
     
     .sidebar #sidebar {
@@ -510,6 +514,10 @@ footer ul.links li:not(:last-child) a{
     
     .sidebar-content {
       padding: 0px; 
+    }
+    
+    .category-container .category-content {
+      display: block;
     }
     
     .latest-updates-suggestions-content .nav.nav-tabs .nav-link h4 {
