@@ -27,8 +27,8 @@
     buildListData(listItems);
     var categoryType = urlSearchParams.get('category');
     if(categoryType){
-      filterContent(type);
-      $("#" + type).addClass("active");
+      filterContent(categoryType);
+      $("#" + categoryType).addClass("active");
     }
   }
 
