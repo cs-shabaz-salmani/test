@@ -420,3 +420,28 @@ footer ul.links li a{
 footer ul.links li:not(:last-child) a{
   border-right: 2px #fff solid;
 }
+
+.right-sidebar-container .carousel-item {
+  background: #e3e3e3;
+  padding: 20px 40px;
+}
+
+.right-sidebar-container .carousel-item img {
+  width: 70%;
+}
+
+.right-sidebar-container .carousel-item .carousel-caption {
+  position: relative;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #222222;
+  text-align: left;
+}
+
+.right-sidebar-container .carousel-item .carousel-caption p {
+  font-size: 14px;
+  line-height: 16px;
+}
