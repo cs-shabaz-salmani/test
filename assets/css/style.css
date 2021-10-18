@@ -461,6 +461,11 @@ footer ul.links li:not(:last-child) a{
   border-right: 2px #fff solid;
 }
 
+.right-sidebar-container {
+  height: 100%;
+  border-left: 1px solid #cccccc;
+}
+
 .right-sidebar-container .carousel-item {
   background: #e3e3e3;
   padding: 20px 40px;
@@ -526,5 +531,9 @@ footer ul.links li:not(:last-child) a{
     
     .latest-updates-suggestions-content .nav.nav-tabs .nav-link p {
        font-size: 12px;
+    }
+    
+    .right-sidebar-container {
+      height: auto;
     }
 }
