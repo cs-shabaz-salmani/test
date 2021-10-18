@@ -7,11 +7,11 @@
 }
 
 .custom-left-offset-1 {
-  padding-left: 8.33333333%;
+  padding-left: 8.33333333% !important; 
 }
 
 .custom-right-offset-1 {
-  padding-right: 8.33333333%;
+  padding-right: 8.33333333% !important; 
 }
 
 .topbar-container {
@@ -491,11 +491,11 @@ footer ul.links li:not(:last-child) a{
   and (max-device-width: 400px) {
     
     .custom-left-offset-1 {
-      padding-left: 0px; 
+      padding-left: 0px !important; 
     }
     
     .custom-right-offset-1 {
-      padding-right: 0px; 
+      padding-right: 0px !important; 
     }
     
     .sidebar #sidebar {
