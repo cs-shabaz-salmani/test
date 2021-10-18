@@ -14,12 +14,12 @@
         <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
           Categories (5)
         </button>
-        <ul class="dropdown-menu w-100" aria-labelledby="btnGroupCategory">
-            <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-            <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-            <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-            <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-            <li class="sidebar-item"><a class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
+        <ul class="dropdown-menu w-75 btnGroupCategory" aria-labelledby="btnGroupCategory">
+            <li class="sidebar-item"><a id="connector_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+            <li class="sidebar-item"><a id="use_case_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+            <li class="sidebar-item"><a id="content_pack_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+            <li class="sidebar-item"><a id="widget_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+            <li class="sidebar-item"><a id="how_tos_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
         </ul>
 
         <button id="connector_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
