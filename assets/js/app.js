@@ -31,7 +31,7 @@
       var categoryTypeId = "#" + categoryType + "_filter_btn";
       setTimeout(function(){
         $(categoryTypeId).addClass("active");
-      }, 10);
+      }, 1000);
     }
   }
 
