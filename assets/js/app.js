@@ -23,6 +23,11 @@
     listItems = allItemsJson;
     listItemsBkp = listItems;
     buildListData(listItems);
+    var categoryType = urlSearchParams.get('category');
+    if(categoryType){
+      filterContent(type);
+      $("#" + type).addClass("active");
+    }
   }
 
   if (window.location.href.indexOf('list.html') > -1) {
@@ -30,9 +35,7 @@
   }
 
   function loadCategoryList(type) {
-    window.location.href = "/list.html";
-    filterContent(type);
-    $("#" + type).addClass("active");
+    window.location.href = "/list.html?category=" + type;
   }
 
   function applyFilter(event, type) {
