@@ -33,8 +33,6 @@
 }
 
 
-}
-
 .sidebar #sidebar .btn-outline-secondary {
   border-color: #a7a7a7;
 }
@@ -55,9 +53,21 @@
   font-weight: 700;
 }
 
-.sidebar .sidebar-content .form-control {
+.sidebar .sidebar-content .searchInput{
+  position: relative;
+}
+
+.sidebar .sidebar-content .searchInput .form-control {
   height: 35px;
   font-size: 14px;
+  padding-right: 35px;
+}
+
+.sidebar .sidebar-content .searchInput .searchIcon {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  opacity: 30%;
 }
 
 .sidebar .sidebar-item {
