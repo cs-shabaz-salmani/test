@@ -11,11 +11,13 @@
     var navBar = $('#sidebar');
     if(navBar){
       navBar.load('assets/html/sidebar.html');
-      if (window.location.href.indexOf('connect.html') > -1) {
-        $("#lets_connect_link").addClass("active");
-      } else {
-        $("#lets_connect_link").removeClass("active");
-      }
+      setTimeout(function(){
+        if (window.location.href.indexOf('connect.html') > -1) {
+          $("#lets_connect_link").addClass("active");
+        } else {
+          $("#lets_connect_link").removeClass("active");
+        }
+      }, 1000);
     }
     var footer = $('#footer-container');
     if(footer){
