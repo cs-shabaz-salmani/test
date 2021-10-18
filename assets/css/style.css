@@ -254,6 +254,12 @@
   border-radius: 3px;
   cursor: pointer;
   background: #ffffff;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.category-container .category-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .category-container .category-item .category-link {
