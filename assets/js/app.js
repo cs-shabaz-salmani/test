@@ -84,7 +84,7 @@
       var searchedListItems = [];
       listItems.forEach(function(item) {
         if(paramCategoryType && paramCategoryType !== 'all'){
-          if(paramCategoryType === item.type) {
+          if(paramCategoryType === item.type && item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
             searchedListItems.push(item);
           }
         } else {
