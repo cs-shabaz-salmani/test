@@ -32,7 +32,7 @@
   border-right: 1px solid #dfdede;
 }
 
-.sidebar #sidebar .navbar-expand-lg {
+.sidebar #sidebar .navbar-expand-lg .navbar-collapse {
   display: block;  
 }
 
