@@ -1,5 +1,7 @@
 'use strict';
 
+  const urlSearchParams = new URLSearchParams(window.location.search);
+
   var yumRepo = 'https://update.cybersponse.com/';
   var basePath = 'http://marketplace.cybersponse.com/';
   var listItems = [];
