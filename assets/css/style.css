@@ -484,8 +484,12 @@ footer ul.links li:not(:last-child) a{
   and (min-device-width: 320px) 
   and (max-device-width: 400px) {
     
-    .custom-offset-1 {
+    .custom-left-offset-1 {
       padding-left: 0px; 
+    }
+    
+    .custom-right-offset-1 {
+      padding-right: 0px; 
     }
     
     .sidebar #sidebar {
