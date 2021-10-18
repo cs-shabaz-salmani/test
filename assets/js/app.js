@@ -29,7 +29,9 @@
     if(categoryType){
       filterContent(categoryType);
       var categoryTypeId = "#" + categoryType + "_filter_btn";
-      $(categoryTypeId).addClass("active");
+      setTimeout(function(){
+        $(categoryTypeId).addClass("active");
+      }, 10);
     }
   }
 
