@@ -33,7 +33,7 @@
 }
 
 .sidebar #sidebar .navbar-expand-lg .navbar-collapse {
-  display: block;  
+  display: block !important;  
 }
 
 .sidebar #sidebar .navbar-toggler {
