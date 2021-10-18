@@ -30,7 +30,6 @@
   bottom: 0px;
   background: #f7f7f7;
   border-right: 1px solid #dfdede;
-  z-index: -1;
 }
 
 .sidebar #sidebar .btn-outline-secondary.active,
@@ -408,7 +407,8 @@ footer {
   background: rgba(0,0,0,.85);
   padding: 10px;
   z-index: 1;
-  position: relative;
+  position: sticky;
+  bottom: 0px;
 }
 
 footer ul.links {
