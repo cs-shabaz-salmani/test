@@ -54,7 +54,7 @@
       window.location.href = "/list.html";
     }
     $(".sidebar-content .btn").removeClass("active");
-    $("#" + event + "_filter_btn").addClass("active");
+    $("#" + type + "_filter_btn").addClass("active");
     filterContent(type);
   }
 
