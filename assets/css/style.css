@@ -6,8 +6,12 @@
   padding-right: 0px !important; 
 }
 
-.custom-offset-1 {
+.custom-left-offset-1 {
   padding-left: 8.33333333%;
+}
+
+.custom-right-offset-1 {
+  padding-right: 8.33333333%;
 }
 
 .topbar-container {
