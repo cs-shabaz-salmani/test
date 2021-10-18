@@ -32,6 +32,10 @@
   border-right: 1px solid #dfdede;
 }
 
+.sidebar #sidebar .navbar-expand-lg {
+  display: block;  
+}
+
 .sidebar #sidebar .navbar-toggler {
   position: fixed;
   z-index: 1;
