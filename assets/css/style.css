@@ -407,8 +407,10 @@ footer {
   background: rgba(0,0,0,.85);
   padding: 10px;
   z-index: 1;
-  position: sticky;
+  position: fixed;
   bottom: 0px;
+  right: 0px;
+  left: 0px;
 }
 
 footer ul.links {
