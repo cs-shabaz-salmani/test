@@ -77,7 +77,7 @@
     buildListData(filteredListItems);
   }
 
-  function submitSearch(searchText) {
+  function submitSearch() {
     var searchText = $("#searchText").val();
     if(searchText.length >= 3) {
       var searchedListItems = [];
