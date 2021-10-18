@@ -37,6 +37,7 @@
       filterContent(categoryType);
       setTimeout(function(){
         $("#" + categoryType + "_filter_btn").addClass("active");
+        $("#" + categoryType + "_sidebar_link").addClass("active");
       }, 1000);
     }
   }
@@ -56,7 +57,9 @@
       window.history.replaceState(null, null, "/list.html?category=" + type);
     }
     $(".sidebar-content .btn").removeClass("active");
+    $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
+    $("#" + type + "_sidebar_link").addClass("active");
     filterContent(type);
   }
 
