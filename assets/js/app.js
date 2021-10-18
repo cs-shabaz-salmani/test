@@ -78,16 +78,18 @@
   }
 
   function submitSearch(event) {
-    console.log(event);
+    console.log(event.val());
     var searchText = $("#searchText").val();
     if(searchText.length >= 3) {
       var searchedListItems = [];
       listItems.forEach(function(item) {
-        if(item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
-          if(paramCategoryType && paramCategoryType !== 'all' && paramCategoryType === item.type) {
+        if(paramCategoryType && paramCategoryType !== 'all'){
+          if(paramCategoryType === item.type) {
             searchedListItems.push(item);
-          } else {
-            searchedListItems.push(item);
+          }
+        } else {
+          if(item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+             searchedListItems.push(item);
           }
         }
       });
