@@ -538,6 +538,18 @@ footer ul.links li:not(:last-child) a{
       padding-right: 20px !important; 
     }
     
+    .main .carousel .carousel-inner {
+      padding-top: 20px;
+    }
+    
+    .main .carousel .carousel-inner .carousel-item {
+      margin-left: 10px; 
+    }
+    
+    .main-carousel-container .carousel-indicators {
+      margin-right: 0px;
+    }
+    
     .sidebar #sidebar {
       position: relative;
       top: unset;
@@ -570,5 +582,22 @@ footer ul.links li:not(:last-child) a{
     
     .category-container .category-item:not(:last-child) {
       margin-right: 0px;
+    }
+    
+    .contribute-container {
+      background-size: auto;
+    }
+    
+    .contribute-container .contribute-content {
+      top: 15px;
+      left: 15px;
+    }
+    
+    .contribute-container .contribute-content h3{
+      font-size: 17px;
+    }
+    
+    .contribute-container .contribute-content em {
+      font-size: 13px;
     }
 }
