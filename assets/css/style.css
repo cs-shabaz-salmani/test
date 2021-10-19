@@ -120,15 +120,16 @@
 }
 
 .main.main-carousel-container {
-  margin-top: 65px !important; 
+  margin-top: 40px !important; 
 }
 
 .main .carousel {
   z-index: -1;
+  background: url(../images/slider_bg.png) no-repeat;
 }
 
-.main .carousel .carousel-inner .carousel-item img {
-  height: 300px;
+.main .carousel .carousel-inner .carousel-item {
+  min-height: 350px;
   margin-left: 135px;
 }
 
@@ -367,7 +368,9 @@
 
 .content-icon {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -25px;
+  background-position: -155px -125px;
+  height: 180px;
+  width: 180px;
 }
 
 .people-icon {
