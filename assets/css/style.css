@@ -538,6 +538,15 @@ footer ul.links li:not(:last-child) a{
       padding-right: 20px !important; 
     }
     
+    .topbar-container h1 {
+      font-size: 22px;
+      padding: 20px 10px 25px 25px;
+    }
+    
+    .main.main-carousel-container {
+      margin-top: 10px !important;
+    }
+    
     .main .carousel .carousel-inner {
       padding-top: 20px;
     }
