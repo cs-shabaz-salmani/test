@@ -365,6 +365,11 @@
   background-position: -92px -205px;
 }
 
+.latest-updates-suggestions-container .tab-content {
+  background: #f2f5f9;
+  padding-top: 20px;
+}
+
 .latest-updates-suggestions-content {
   background: #ffffff;
   border-top: 2px solid #ffffff;
