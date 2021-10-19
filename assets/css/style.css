@@ -249,11 +249,6 @@
 }
 
 .category-container .category-item {
-  border: 1px solid #545454;
-  padding: 10px 15px;
-  border-radius: 3px;
-  cursor: pointer;
-  background: #ffffff;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -270,10 +265,17 @@
   color: #545454;
   text-decoration: none;
   display: flex;
+  border: 1px solid #c4c4c5;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #f5f8fb;
 }
 
-.category-container .category-item:hover .category-link {
-  color: #01a1c0;
+.category-container .category-item .category-link:hover {
+  color: #ffffff;
+  background: #30a3ff;
+  border-color: #30a3ff;
 }
 
 .main-carousel-container .carousel-indicators {
@@ -320,47 +322,47 @@
 
 .category-integration {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -22px;
+  background-position: -31px -25px;
 }
 
 .category-use-case {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -160px;
+  background-position: -31px -165px;
 }
 
 .category-content-pack {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -70px;
+  background-position: -31px -75px;
 }
 
 .category-widget {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -116px;
+  background-position: -31px -121px;
 }
 
 .category-how-to {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -22px -200px;
+  background-position: -31px -205px;
 }
 
 .category-integration-link:hover .category-integration {
-  background-position: -83px -22px;
+  background-position: -92px -22px;
 }
 
 .category-use-case-link:hover .category-use-case {
-  background-position: -83px -160px;
+  background-position: -92px -160px;
 }
 
 .category-content-pack-link:hover .category-content-pack {
-  background-position: -83px -70px;
+  background-position: -92px -70px;
 }
 
 .category-widget-link:hover .category-widget {
-  background-position: -83px -116px;
+  background-position: -92px -116px;
 }
 
 .category-how-to-link:hover .category-how-to {
-  background-position: -83px -200px;
+  background-position: -92px -200px;
 }
 
 .latest-updates-suggestions-content {
@@ -447,7 +449,7 @@ footer ul.links li {
 }
 
 footer ul.links li a{
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   line-height: 1;
   padding: 0 10px;
@@ -532,5 +534,9 @@ footer ul.links li:not(:last-child) a{
     
     .right-sidebar-container {
       height: auto;
+    }
+    
+    .category-container .category-item:not(:last-child) {
+      margin-right: 0px;
     }
 }
