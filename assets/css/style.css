@@ -14,6 +14,12 @@
   padding-right: 8.33333333% !important; 
 }
 
+.custom-btn-bg {
+  background-color: #30a3ff;
+  border-color: #30a3ff;
+  color: #ffffff;
+}
+
 .topbar-container {
   position: fixed;
   top: 0px;
@@ -174,7 +180,7 @@
 .item-container .certified-flag {
   border-left: 35px solid transparent;
   width: 35px;
-  border-top: 35px solid #57a8f0 !important;
+  border-top: 35px solid #30a3ff !important;
   position: absolute;
   right: 0px;
   top: 0px;
