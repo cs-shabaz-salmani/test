@@ -15,9 +15,9 @@
 }
 
 .custom-btn-bg {
-  background-color: #30a3ff;
-  border-color: #30a3ff;
-  color: #ffffff;
+  background-color: #30a3ff !important; 
+  border-color: #30a3ff !important; 
+  color: #ffffff !important; 
 }
 
 .topbar-container {
