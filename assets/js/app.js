@@ -33,13 +33,14 @@
     listItems = allItemsJson;
     listItemsBkp = listItems;
     buildListData(listItems);
-    if(paramCategoryType){
-      filterContent(paramCategoryType);
-      setTimeout(function(){
+    setTimeout(function(){
+      if(paramCategoryType){
+        filterContent(paramCategoryType);
         $("#" + paramCategoryType + "_filter_btn").addClass("active");
         $("#" + paramCategoryType + "_sidebar_link").addClass("active");
-      }, 1000);
-    }
+      }
+      $("#totalContentCount").html(totalItems);
+    }, 1000);
   }
 
   if (window.location.href.indexOf('list.html') > -1) {
@@ -115,6 +116,7 @@
     var allListItems;
     var marketPlace = $("#marketplace-list");
     $(".item-container").remove();
+    $("#filteredContentCount").html(listData.length);
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
