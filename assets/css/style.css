@@ -395,15 +395,15 @@
 }
 
 .latest-updates-container {
-  background: #efefef;
+  background: #ffffff;
   border-radius: 3px;
-  border: 1px solid #ccc;
-  padding: 15px 10px;
+  border: 1px solid #c4c4c5;
+  padding: 25px 15px;
   margin-top: 20px;
 }
 
 .latest-updates-container h5 {
-  color: #dd8f00;
+  color: #30a3ff;
   font-size: 16px;
   margin-bottom: 2px;
 }
