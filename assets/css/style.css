@@ -133,6 +133,10 @@
   margin-top: 40px !important; 
 }
 
+.main.item-detail-column {
+  margin-top: 73px !important; 
+}
+
 .main .carousel {
   z-index: -1;
   background: url(../images/slider_bg.png) no-repeat;
@@ -244,6 +248,10 @@
 .content-count {
   font-size: 12px;
   color: #5a5a5a;
+}
+
+.dropdown-version-content {
+  margin: 0px 20px 20px 20px;
 }
 
 .detail-content {
