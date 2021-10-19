@@ -372,7 +372,10 @@
 
 .people-icon {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -25px;
+  background-position: -172px -12px;
+  height: 110px;
+  width: 110px;
+  display: inline-block;
 }
 
 .latest-updates-suggestions-container .tab-content {
