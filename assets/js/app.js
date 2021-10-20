@@ -24,6 +24,8 @@
     if(footer){
       footer.load('assets/html/footer.html');
     }
+    $('.dropdown-toggle').dropdown();
+    $('.nav-tabs').tab();
   });
 
   function init() {
