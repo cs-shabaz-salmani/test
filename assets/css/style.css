@@ -294,7 +294,7 @@
 }
 
 .category-container .category-item .category-all-link {
-  padding: 12px 15px;
+  padding: 12px 15px !important;
 }
 
 .category-container .category-content {
@@ -350,7 +350,7 @@
 
 .category-title {
   font-size: 18px;
-  margin: 5px 0px 0px 15px;
+  margin: 5px 15px 0px 15px;
 }
 
 .category-icon {
