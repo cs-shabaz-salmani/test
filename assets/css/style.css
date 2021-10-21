@@ -288,6 +288,15 @@
   flex-basis: 0;
 }
 
+.category-container .category-item:last-child {
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+.category-container .category-item .category-all-link {
+  padding: 12px 15px;
+}
+
 .category-container .category-content {
   display: flex;
 }
