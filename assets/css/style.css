@@ -333,7 +333,7 @@
   text-indent: unset !important;
   background-color: #121111;
   background-clip: unset !important;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   border-top: unset !important;
   border-bottom: unset !important;
   border-radius: 50%; 
