@@ -36,6 +36,11 @@
   color: #ffffff;
 }
 
+.topbar-container h1 span {
+  font-weight: 200;
+  margin-left: 5px;
+}
+
 .sidebar #sidebar {
   position: fixed;
   top: 81px;
