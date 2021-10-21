@@ -75,6 +75,10 @@
   border-color: #a7a7a7;
 }
 
+.sidebar #sidebar .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: unset;
+}
+
 .sidebar #sidebar .btn-outline-secondary.dropdown-toggle:after {
   float: right;
   margin-top: 10px;
