@@ -130,6 +130,18 @@
   position: relative;
 }
 
+.navbar-btn-container .dropdown-toggle.show {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.navbar-btn-container .dropdown-menu.show {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  left: 0px;
+  right: 0px;
+}
+
 .main {
   margin-top: 100px !important; 
 }
