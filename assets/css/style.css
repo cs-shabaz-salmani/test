@@ -437,13 +437,27 @@
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-link.active h4 {
   color: #30a3ff;
+  font-weight: 600;
+}
+
+.latest-updates-suggestions-content .nav.nav-tabs .nav-link.active p {
+  color: #000000;
+}
+
+.latest-updates-suggestions-content .nav.nav-tabs .nav-link h4 {
+  font-weight: 400;
+}
+
+.latest-updates-suggestions-content .nav.nav-tabs .nav-link p {
+  font-size: 14px;
 }
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-link {
   border-radius: 0px;
   border: none;
-  color: #495057;
+  color: #6b747c;
   padding-left: 30px;
+  padding-top: 15px;
 }
 
 .latest-updates-container {
