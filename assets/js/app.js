@@ -14,9 +14,9 @@
       navBar.load('assets/html/sidebar.html');
       setTimeout(function(){
         if (window.location.href.indexOf('connect.html') > -1) {
-          $("#lets_connect_link").addClass("active");
+          $("#lets_connect_link").addClass("d-none");
         } else {
-          $("#lets_connect_link").removeClass("active");
+          $("#lets_connect_link").removeClass("d-none");
         }
       }, 1000);
     }
