@@ -43,7 +43,7 @@
 
 .sidebar #sidebar {
   position: fixed;
-  top: 81px;
+  top: 70px;
   left: 0px;
   right: 75%;
   bottom: 0px;
@@ -123,7 +123,8 @@
 }
 
 .sidebar .sidebar-link.active {
-  background-color: #adadad;
+  background-color: #dbe6ee;
+  color: #ffffff;
 }
 
 .sidebar .sidebar-link:hover {
