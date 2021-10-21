@@ -149,6 +149,10 @@
   border: 1px solid #9ab7cd;
 }
 
+.navbar-btn-container .dropdown-menu li a:hover {
+  background-color: #dbe6ee !important;
+}
+
 .main {
   margin-top: 100px !important; 
 }
