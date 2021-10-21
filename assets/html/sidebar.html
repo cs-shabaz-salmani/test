@@ -7,63 +7,64 @@
             <input class="form-control" type="text" id="searchText" name="searchText" placeholder="Search In Marketplace" onChange="submitSearch(this)"/>
             <i class="fa fa-search searchIcon"></i>
         </div>
+        <div class="navbar-btn-container">
+            <button id="all_filter_btn" class="btn btn-outline-secondary w-100 mt-5 mb-2 text-lg-start bg-white" onClick="applyFilter(this, 'all')">
+              All
+            </button>
+            <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories (5)
+            </button>
+            <ul class="dropdown-menu w-75 btnGroupCategory" aria-labelledby="btnGroupCategory">
+                <li class="sidebar-item"><a id="connector_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
+                <li class="sidebar-item"><a id="use_case_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
+                <li class="sidebar-item"><a id="content_pack_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
+                <li class="sidebar-item"><a id="widget_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
+                <li class="sidebar-item"><a id="how_tos_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
+            </ul>
 
-        <button id="all_filter_btn" class="btn btn-outline-secondary w-100 mt-5 mb-2 text-lg-start bg-white" onClick="applyFilter(this, 'all')">
-          All
-        </button>
-        <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          Categories (5)
-        </button>
-        <ul class="dropdown-menu w-75 btnGroupCategory" aria-labelledby="btnGroupCategory">
-            <li class="sidebar-item"><a id="connector_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'connector')">Integrations</a></li>
-            <li class="sidebar-item"><a id="use_case_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'use_case')">Use Cases</a></li>
-            <li class="sidebar-item"><a id="content_pack_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'content_pack')">Content Packs</a></li>
-            <li class="sidebar-item"><a id="widget_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'widget')">Widgets</a></li>
-            <li class="sidebar-item"><a id="how_tos_sidebar_link" class="sidebar-link dropdown-item" onClick="applyFilter(this, 'how_tos')">How To's</a></li>
-        </ul>
+            <button id="connector_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Integrations
+            </button>
+            <ul class="dropdown-menu w-75" aria-labelledby="connector">
+              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+            </ul>
 
-        <button id="connector_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          Integrations
-        </button>
-        <ul class="dropdown-menu w-75" aria-labelledby="connector">
-          <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-        </ul>
+            <button id="use_case_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Use Cases
+            </button>
+            <ul class="dropdown-menu w-75" aria-labelledby="use_case">
+              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+            </ul>
 
-        <button id="use_case_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          Use Cases
-        </button>
-        <ul class="dropdown-menu w-75" aria-labelledby="use_case">
-          <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-        </ul>
+            <button id="content_pack_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Content Packs
+            </button>
+            <ul class="dropdown-menu w-75" aria-labelledby="content_pack">
+              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+            </ul>
 
-        <button id="content_pack_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          Content Packs
-        </button>
-        <ul class="dropdown-menu w-75" aria-labelledby="content_pack">
-          <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-        </ul>
+            <button id="widget_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Widgets
+            </button>
+            <ul class="dropdown-menu w-75" aria-labelledby="widget">
+              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+            </ul>
 
-        <button id="widget_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          Widgets
-        </button>
-        <ul class="dropdown-menu w-75" aria-labelledby="widget">
-          <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-        </ul>
+            <button id="how_tos_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
+              How To's
+            </button>
+            <ul class="dropdown-menu w-75" aria-labelledby="how_tos">
+              <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
+            </ul><!-- End of Filter  -->
 
-        <button id="how_tos_filter_btn" type="button" class="btn btn-outline-secondary dropdown-toggle w-100 mb-2 text-lg-start bg-white" data-bs-toggle="dropdown" aria-expanded="false">
-          How To's
-        </button>
-        <ul class="dropdown-menu w-75" aria-labelledby="how_tos">
-          <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-        </ul><!-- End of Filter  -->
-
-        <a href="connect.html" id="lets_connect_link" class="btn btn-outline-secondary w-100 mt-5 bg-white">
-          Let's Connect
-        </a>
+            <a href="connect.html" id="lets_connect_link" class="btn btn-outline-secondary w-100 mt-5 bg-white">
+              Let's Connect
+            </a>
+        </div>
     </div>
 </div>
