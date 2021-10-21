@@ -126,6 +126,10 @@
   text-decoration: underline;
 }
 
+.navbar-btn-container {
+  position: relative;
+}
+
 .main {
   margin-top: 100px !important; 
 }
