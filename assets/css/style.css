@@ -345,7 +345,7 @@
   border: 0px solid #000000;
   border-top: unset !important;
   border-bottom: unset !important;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .category-title {
@@ -456,7 +456,7 @@
   border-radius: 0px;
   border: none;
   color: #6b747c;
-  padding-left: 30px;
+  padding-left: 40px;
   padding-top: 15px;
 }
 
@@ -465,13 +465,14 @@
   border-radius: 3px;
   border: 1px solid #c4c4c5;
   padding: 25px 15px;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-right: 10px;
 }
 
 .latest-updates-container h5 {
   color: #30a3ff;
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
 .latest-updates-container h4 {
@@ -482,7 +483,7 @@
 .latest-updates-container p {
   font-size: 14px;
   line-height: 16px;
-  color: #505050;
+  color: #6b747c;
 }
 
 .contribute-container {
