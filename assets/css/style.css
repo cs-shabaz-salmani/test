@@ -340,8 +340,8 @@
 }
 
 .category-icon {
-  width: 27px;
-  height: 27px;
+  width: 34px;
+  height: 34px;
   position: relative;
 }
 
@@ -352,54 +352,47 @@
 
 .category-integration {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -25px;
+  background-position: -52px -77px;
 }
 
 .category-use-case {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -165px;
+  background-position: -52px -276px;
 }
 
 .category-content-pack {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -75px;
+  background-position: -52px -147px;
 }
 
 .category-widget {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -121px;
+  background-position: -52px -213px;
 }
 
 .category-how-to {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -31px -205px;
+  background-position: -52px -332px;
 }
 
 .category-integration-link:hover .category-integration {
-  background-position: -92px -25px;
+  background-position: -137px -77px;
 }
 
 .category-use-case-link:hover .category-use-case {
-  background-position: -92px -165px;
+  background-position: -137px -276px;
 }
 
 .category-content-pack-link:hover .category-content-pack {
-  background-position: -92px -75px;
+  background-position: -137px -147px;
 }
 
 .category-widget-link:hover .category-widget {
-  background-position: -92px -121px;
+  background-position: -137px -213px;
 }
 
 .category-how-to-link:hover .category-how-to {
-  background-position: -92px -205px;
-}
-
-.content-icon {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -155px -125px;
-  height: 180px;
-  width: 180px;
+  background-position: -137px -332px;
 }
 
 .people-icon {
