@@ -347,32 +347,32 @@
 
 .category-container {
   background: #d5dde3;
-  padding: 1px 0px 40px 0px; 
+  padding: 30px 0px; 
 }
 
 .category-integration {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -52px -77px;
+  background-position: -51px -77px;
 }
 
 .category-use-case {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -52px -276px;
+  background-position: -51px -276px;
 }
 
 .category-content-pack {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -52px -147px;
+  background-position: -51px -147px;
 }
 
 .category-widget {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -52px -213px;
+  background-position: -51px -213px;
 }
 
 .category-how-to {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -52px -332px;
+  background-position: -51px -332px;
 }
 
 .category-integration-link:hover .category-integration {
@@ -397,7 +397,7 @@
 
 .people-icon {
   background: url("../images/spritesheet.png") no-repeat;
-  background-position: -172px -12px;
+  background-position: -227px -76px;
   height: 110px;
   width: 110px;
   display: inline-block;
