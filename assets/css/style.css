@@ -592,6 +592,22 @@ footer ul.links li:not(:last-child) a{
   margin-top: 30px; 
 }
 
+.right-sidebar-container .carousel-indicators [data-bs-target]. {
+  box-sizing: unset !important;
+  flex: unset !important;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-indent: unset !important;
+  background-color: #121111;
+  background-clip: unset !important;
+  border: 0px solid #000000;
+  border-top: unset !important;
+  border-bottom: unset !important;
+  border-radius: 50%;
+}
+
 @media screen 
   and (min-device-width: 320px) 
   and (max-device-width: 400px) {
