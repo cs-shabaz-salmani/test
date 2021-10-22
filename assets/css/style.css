@@ -598,7 +598,7 @@ footer ul.links li:not(:last-child) a{
   margin-top: 30px; 
 }
 
-.right-sidebar-container .carousel-indicators [data-bs-target]. {
+.right-sidebar-container .carousel-indicators [data-bs-target] {
   box-sizing: unset !important;
   flex: unset !important;
   width: 10px;
