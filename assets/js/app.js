@@ -45,20 +45,14 @@
     }, 1000);
   }
 
-  if (window.location.href.indexOf('list.html') > -1) {
+  var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
+
+  if (!initLoad) {
     init();
   }
 
-  function loadCategoryList(type) {
-    window.location.href = "/list.html?category=" + type;
-  }
-
-  function applyFilter(event, type) {
-    if (window.location.href.indexOf('list.html') === -1) {
-      window.location.href = "/list.html?category=" + type;
-    } else {
-      window.history.replaceState(null, null, "/list.html?category=" + type);
-    }
+  function applyFilter(type) {
+    window.history.replaceState(null, null, "?category=" + type);
     $(".sidebar-content .btn").removeClass("active");
     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
@@ -104,15 +98,6 @@
     buildListData(listItems);
   }
 
-  function downloadFile(detail) {
-    var downloadFileElement = document.createElement('a');
-    downloadFileElement.href = detail.downloadPath;
-    downloadFileElement.target = '_blank';
-    downloadFileElement.download = detail.name + '-' + detail.version;
-    document.body.appendChild(downloadFileElement);
-    downloadFileElement.click();
-    document.body.removeChild(downloadFileElement);
-  }
 
   function buildListData(listData) {
     var allListItems;
