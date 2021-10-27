@@ -76,7 +76,7 @@
       
       listItems.forEach(function(item) {
         var timeStampToDate = new Date(item.published_date);
-        var time_difference = (item.published_date * 1000) - todaysDate;
+        var time_difference = todaysDate - (item.published_date * 1000);
         time_difference = time_difference / (1000 * 60 * 60 * 24);
         if(time_difference > 0 && time_difference <= 15){
           filteredListItems.push(item); 
