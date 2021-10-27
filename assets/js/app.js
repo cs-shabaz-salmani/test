@@ -34,15 +34,17 @@
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
-    buildListData(listItems);
-    setTimeout(function(){
-      if(paramCategoryType){
-        filterContent(paramCategoryType);
-        $("#" + paramCategoryType + "_filter_btn").addClass("active");
-        $("#" + paramCategoryType + "_sidebar_link").addClass("active");
-      }
-      $("#totalContentCount").html(totalItems);
-    }, 1000);
+    if(paramCategoryType){
+      filterContent(paramCategoryType);
+      setTimeout(function(){
+          filterContent(paramCategoryType);
+          $("#" + paramCategoryType + "_filter_btn").addClass("active");
+          $("#" + paramCategoryType + "_sidebar_link").addClass("active");
+        $("#totalContentCount").html(totalItems);
+      }, 1000);
+    } else {
+      filterContent('all', true);
+    }
   }
 
   var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
@@ -60,11 +62,23 @@
     filterContent(type);
   }
 
-  function filterContent(type) {
+  function filterContent(type, latest) {
     var filteredListItems = [];
     if(type !== 'all'){
       listItems.forEach(function(item) {
         if(item.type === type) {
+          filteredListItems.push(item); 
+        }
+      });
+    } else if(latest){
+      var todaysDate = new Date();
+      todaysDate = todaysDate.getTime();
+      
+      listItems.forEach(function(item) {
+        var timeStampToDate = new Date(item.published_date);
+        var time_difference = item.published_date - todaysDate;
+        time_difference = time_difference / (1000 * 60 * 60 * 24);
+        if(time_difference <= 15){
           filteredListItems.push(item); 
         }
       });
