@@ -29,7 +29,7 @@
   });
 
   function init() {
-    var allItemsJson = $.getJSON({'url': "assets/info.json", 'async': false});
+    var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson.responseText);
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
