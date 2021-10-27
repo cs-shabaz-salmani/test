@@ -78,7 +78,7 @@
         var timeStampToDate = new Date(item.published_date);
         var time_difference = item.published_date - todaysDate;
         time_difference = time_difference / (1000 * 60 * 60 * 24);
-        if(time_difference <= 15){
+        if(time_difference > 0 && time_difference <= 15){
           filteredListItems.push(item); 
         }
       });
