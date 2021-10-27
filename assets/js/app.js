@@ -40,11 +40,11 @@
           filterContent(paramCategoryType);
           $("#" + paramCategoryType + "_filter_btn").addClass("active");
           $("#" + paramCategoryType + "_sidebar_link").addClass("active");
-        $("#totalContentCount").html(totalItems);
       }, 1000);
     } else {
       filterContent('all', true);
     }
+    $("#totalContentCount").html(totalItems);
   }
 
   var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
