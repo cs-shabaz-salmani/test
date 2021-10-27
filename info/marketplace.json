@@ -11,7 +11,7 @@
      "git_repo":"",
      "stargazers_count":12,
      "repo_type":"private",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "iconLarge":"https://update.cybersponse.com/connectors/info/aws-assume-role_1.0.0/images/large.png"
   },
   {
@@ -4916,7 +4916,7 @@
      "git_repo":"",
      "stargazers_count":20,
      "repo_type":"private",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "iconLarge":"https://update.cybersponse.com/connectors/info/url-expander_1.0.0/images/large-url-expander.png"
   },
   {
@@ -5111,7 +5111,7 @@
      "git_repo":"",
      "stargazers_count":20,
      "repo_type":"private",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "iconLarge":"https://update.cybersponse.com/connectors/info/wigle_1.0.0/images/wigle_large.png"
   },
   {
@@ -5141,7 +5141,7 @@
      "git_repo":"",
      "stargazers_count":20,
      "repo_type":"private",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "iconLarge":"https://update.cybersponse.com/connectors/info/windows-defender-atp_2.1.0/images/large.png"
   },
   {
@@ -5186,7 +5186,7 @@
      "git_repo":"",
      "stargazers_count":20,
      "repo_type":"private",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "iconLarge":"https://update.cybersponse.com/connectors/info/zscaler_1.1.0/images/large-zscaler.png"
   },
   {
@@ -5336,7 +5336,7 @@
      "description":"Primarily designed to showcase a particular record’s highlights/summary, this widget houses multiple utility widgets within it to allow for customized uses.",
      "category":["SIEM"],
      "version":"2.0.0",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "type":"widget",
      "display":"Record Summary",
      "forks_count":2,
@@ -5375,7 +5375,7 @@
      "description":"Shows required information related to the user.",
      "category":["SIEM"],
      "version":"2.0.0",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "type":"widget",
      "display":"User Tile",
      "forks_count":17,
@@ -5466,7 +5466,7 @@
      "description":"Shows required information related to the user.",
      "category":["SIEM"],
      "version":"2.0.0",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "type":"use_case",
      "display":"MITRE ATT&CK™ Modulars",
      "forks_count":4,
@@ -5492,7 +5492,7 @@
      "description":"Shows required information related to the user.",
      "category":["SIEM"],
      "version":"2.0.0",
-     "published_date":"1616060803",
+     "published_date":"1635366117",
      "type":"use_case",
      "display":"MITRE ATT&CK™-PROCESS EXECUTION",
      "forks_count":9,
