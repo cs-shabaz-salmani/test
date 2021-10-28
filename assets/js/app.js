@@ -148,12 +148,12 @@
       itemTitle.appendChild(itemDisplay);
       aTaglistItem.appendChild(itemTitle);
       
-      var cardDescription = document.createElement('div');
-      cardDescription.className = "card-description";
-      listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
-      var itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
-      cardDescription.appendChild(itemDescription);
-      aTaglistItem.appendChild(cardDescription);
+      //var cardDescription = document.createElement('div');
+      //cardDescription.className = "card-description";
+      //listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
+      //var itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
+      //cardDescription.appendChild(itemDescription);
+      //aTaglistItem.appendChild(cardDescription);
       
       var cardFooter = document.createElement('div');
       cardFooter.className = "card-footer";
