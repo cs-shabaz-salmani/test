@@ -34,6 +34,7 @@
     xmlHttp.open( "GET", yumRepo + "marketplace/marketplace.json", false ); // false for synchronous request
     xmlHttp.send( null );
     var allItemsJson = xmlHttp.responseText;
+    console.log(allItemsJson);
 //     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
 //     allItemsJson = JSON.parse(allItemsJson.responseText);
     var totalItems = allItemsJson.length;
