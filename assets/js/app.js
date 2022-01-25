@@ -30,7 +30,11 @@
   });
 
   function init() {
-    var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", yumRepo + "marketplace/marketplace.json", false ); // false for synchronous request
+    xmlHttp.send( null );
+    var allItemsJson = xmlHttp.responseText;
+//     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson.responseText);
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
