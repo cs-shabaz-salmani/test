@@ -392,52 +392,9 @@
 
 .category-container {
   background: url(../images/category_bg.png) no-repeat;
-  padding: 30px 0px; 
-}
-
-.category-integration {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -51px -77px;
-}
-
-.category-use-case {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -51px -276px;
-}
-
-.category-content-pack {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -51px -147px;
-}
-
-.category-widget {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -51px -213px;
-}
-
-.category-how-to {
-  background: url("../images/spritesheet.png") no-repeat;
-  background-position: -51px -332px;
-}
-
-.category-integration-link:hover .category-integration {
-  background-position: -137px -77px;
-}
-
-.category-use-case-link:hover .category-use-case {
-  background-position: -137px -276px;
-}
-
-.category-content-pack-link:hover .category-content-pack {
-  background-position: -137px -147px;
-}
-
-.category-widget-link:hover .category-widget {
-  background-position: -137px -213px;
-}
-
-.category-how-to-link:hover .category-how-to {
-  background-position: -137px -332px;
+  padding: 50px 0px;
+  background-position: center;
+  background-size: cover;
 }
 
 .dashboard-icon {
