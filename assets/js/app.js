@@ -130,10 +130,14 @@
       carouselRow.appendChild(carouselColumn);
       
       var carouselHeading = document.createElement('h1');
+      carouselColumn.appendChild(carouselHeading);
+      
       var carouselHeadingText = document.createTextNode(banner.heading);
       carouselHeading.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
+      carouselColumn.appendChild(carouselSubHeading);
+      
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselHeading.appendChild(carouselSubHeadingText);
       
@@ -141,6 +145,7 @@
       carouselHyperLink.href = banner.hyperLink;
       carouselHyperLink.className = "pull-left text-center";
       carouselHyperLink.setAttribute("rel", "canonical");
+      carouselColumn.appendChild(carouselHyperLink);
       
       mainBanner.append(carouselDiv);
     });
