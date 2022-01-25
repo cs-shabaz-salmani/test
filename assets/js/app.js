@@ -26,6 +26,7 @@
     }
     $('.dropdown-toggle').dropdown();
     $('.nav-tabs').tab();
+    buildHomePageBanners();
   });
 
   function init() {
@@ -110,6 +111,39 @@
     }
     
     buildListData(listItems);
+  }
+
+  function buildHomePageBanners() {
+    var mainBanner = $("#main-carousel-content");
+    var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
+    bannersJson = JSON.parse(bannersJson.responseText);
+    bannersJson.mainBanner.forEach(function(banner) {
+      var carouselDiv = document.createElement('div');
+      carouselDiv.className = "carousel-item active custom-left-offset-1 custom-right-offset-1";
+      
+      var carouselRow = document.createElement('div');
+      carouselRow.className = "row";
+      carouselDiv.appendChild(carouselRow);
+      
+      var carouselColumn = document.createElement('div');
+      carouselColumn.className = "col-md-12";
+      carouselRow.appendChild(carouselColumn);
+      
+      var carouselHeading = document.createElement('h1');
+      var carouselHeadingText = document.createTextNode(banner.heading);
+      carouselHeading.appendChild(carouselHeadingText);
+      
+      var carouselSubHeading = document.createElement('p');
+      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
+      carouselHeading.appendChild(carouselSubHeadingText);
+      
+      var carouselHyperLink = document.createElement('a');
+      carouselHyperLink.href = banner.hyperLink;
+      carouselHyperLink.className = "pull-left text-center";
+      carouselHyperLink.setAttribute("rel", "canonical");
+      
+      mainBanner.append(carouselDiv);
+    });
   }
 
 
