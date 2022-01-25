@@ -119,7 +119,7 @@
     bannersJson = JSON.parse(bannersJson.responseText);
     bannersJson.mainBanner.forEach(function(banner) {
       var carouselDiv = document.createElement('div');
-      carouselDiv.className = "carousel-item active custom-left-offset-1 custom-right-offset-1";
+      carouselDiv.className = "carousel-item custom-left-offset-1 custom-right-offset-1";
       
       var carouselRow = document.createElement('div');
       carouselRow.className = "row";
