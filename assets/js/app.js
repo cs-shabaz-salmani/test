@@ -36,7 +36,7 @@
     var allItemsJson = xmlHttp.responseText;
     console.log(allItemsJson);
 //     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
-//     allItemsJson = JSON.parse(allItemsJson.responseText);
+    allItemsJson = JSON.parse(allItemsJson);
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
