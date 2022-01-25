@@ -115,14 +115,26 @@
 
   function buildHomePageBanners() {
     var mainBanner = $("#main-carousel-content");
+    var mainBannerIndicator = $("#main-carousel-indicators");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
     bannersJson.mainBanner.forEach(function(banner, index) {
+      var carouselId = "carouselMainCaptions" + index;
+      var carouselIndicatorButton = document.createElement('button');
+      carouselIndicatorButton.className = index === 0 ? "active" : "";
+      carouselIndicatorButton.setAttribute("type", "button");
+      carouselIndicatorButton.setAttribute("data-bs-target", carouselId);
+      carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
+      carouselIndicatorButton.setAttribute("aria-label", banner.heading);
+    
+      mainBannerIndicator.append(carouselIndicatorButton);
+      
       var carouselDiv = document.createElement('div');
       carouselDiv.className = index === 0 ? "carousel-item active custom-left-offset-1 custom-right-offset-1" : "carousel-item custom-left-offset-1 custom-right-offset-1";
       
       var carouselRow = document.createElement('div');
       carouselRow.className = "row";
+      carouselRow.setAttribute("id", carouselId);
       carouselDiv.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
