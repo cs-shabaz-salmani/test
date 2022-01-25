@@ -117,9 +117,9 @@
     var mainBanner = $("#main-carousel-content");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
-    bannersJson.mainBanner.forEach(function(banner) {
+    bannersJson.mainBanner.forEach(function(banner, index) {
       var carouselDiv = document.createElement('div');
-      carouselDiv.className = "carousel-item custom-left-offset-1 custom-right-offset-1";
+      carouselDiv.className = index === 0 ? "carousel-item active custom-left-offset-1 custom-right-offset-1" : "carousel-item custom-left-offset-1 custom-right-offset-1";
       
       var carouselRow = document.createElement('div');
       carouselRow.className = "row";
