@@ -167,7 +167,7 @@
 }
 
 .all-list-container .main {
-  margin-top: 65px !important; 
+  margin-top: 30px !important; 
   background: #f9f9f9;
 }
 
@@ -217,84 +217,6 @@
 .main .content {
   margin-top: 15px; 
 }
-
-/* .item-container {
-  width: 225px;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  margin: 10px 20px 15px 0px;
-  padding: 5px 0px 0px 0px;
-  cursor: pointer;
-  display: flex;
-  flex-flow: column;
-  text-decoration: none;
-  position: relative;
-  background: #ffffff;
-} */
-
-/* .item-container:hover h5 {
-  text-decoration: underline;
-}
-
-.item-container .certified-flag {
-  border-left: 35px solid transparent;
-  width: 35px;
-  border-top: 35px solid #30a3ff !important;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-.item-container .certified-icon {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  color: #ffffff;
-}
-
-.item-container .card-description {
-  background-color: #dbdbdb;
-  text-align: left;
-  text-decoration: none;
-  font-size: 11px;
-  padding: 5px 10px;
-  line-height: 13px;
-  color: #424242;
-  height: 50px;
-}
-
-.item-container .card-footer {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.item-container .card-footer .fa {
-  padding-right: 3px;
-}
-
-.item-container .item-icon {
-  width: 75px;
-  height: 75px;
-  margin: 0px auto;
-}
-
-.item-container .card-footer .card-link {
-  color: #000000;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.item-container .item-icon img {
-  width: 75px;
-  height: auto;
-  max-height: 75px;
-}
-
-.item-container h5{
-  font-size: 13px;
-  color: #000000;
-  min-height: 30px;
-} */
 
 .mp-tile-container {
   width: 255px;
