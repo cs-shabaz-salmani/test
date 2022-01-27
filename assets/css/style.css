@@ -55,7 +55,7 @@
   left: 0px;
   right: 75%;
   bottom: 0px;
-  background: #f7f7f7;
+  background: #f9f9f9;
   border-right: 1px solid #dfdede;
 }
 
@@ -168,6 +168,7 @@
 
 .all-list-container .main {
   margin-top: 65px !important; 
+  background: #f9f9f9;
 }
 
 .main.main-carousel-container {
