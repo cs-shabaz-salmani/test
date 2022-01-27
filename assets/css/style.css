@@ -10,6 +10,10 @@
   color: #e45c08;
 }
 
+.text-blue {
+ color: #00a3ff; 
+}
+
 .custom-left-offset-1 {
   padding-left: 8.33333333% !important; 
 }
