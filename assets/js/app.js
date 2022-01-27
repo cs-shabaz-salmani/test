@@ -184,15 +184,8 @@
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
-      aTaglistItem.className = "pull-left text-center item-container mp-tile-container"; //remove item-container class
+      aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
-      
-//       var certifiedDiv = document.createElement('div');
-//       certifiedDiv.className = "certified-flag";
-//       var certifiedIcon = document.createElement('i');
-//       certifiedIcon.className = "fa fa-check-circle-o certified-icon";
-//       aTaglistItem.appendChild(certifiedDiv);
-//       aTaglistItem.appendChild(certifiedIcon);
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
@@ -244,7 +237,7 @@
       aTaglistItem.appendChild(itemContentDiv);
       
       var itemIconDiv = document.createElement('div');
-      itemIconDiv.className = "item-icon mp-tile-image-container"; //remove item-icon class
+      itemIconDiv.className = "mp-tile-image-container";
       
       var imageElement;
       if(listItem.iconLarge) {
@@ -255,14 +248,9 @@
         imageElement = document.createElement('i');
         imageElement.className = "mp-tile-icon";
       }
-//       imageElement.width = "75";
+      
       itemIconDiv.appendChild(imageElement);
       aTaglistItem.appendChild(itemIconDiv);
-
-//       var itemTitle = document.createElement('h5');
-//       var itemDisplay = document.createTextNode(listItem.display);
-//       itemTitle.appendChild(itemDisplay);
-//       aTaglistItem.appendChild(itemTitle);
       
       var cardDescription = document.createElement('p');
       cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
@@ -270,55 +258,6 @@
       var itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
       cardDescription.appendChild(itemDescription);
       aTaglistItem.appendChild(cardDescription);
-      
-//       var cardFooter = document.createElement('div');
-//       cardFooter.className = "card-footer";
-      
-//       var aTagGitHubPage = document.createElement('a');
-//       aTagGitHubPage.href = "#";
-//       aTagGitHubPage.className = "card-link";
-//       aTagGitHubPage.title = "GitHub Page";
-//       aTagGitHubPage.target = "_blank";
-//       var gitHubIcon = document.createElement('span');
-//       gitHubIcon.className = "fa fa-github";
-//       aTagGitHubPage.appendChild(gitHubIcon);
-//       cardFooter.appendChild(aTagGitHubPage);
-      
-//       var aTagGitForks = document.createElement('a');
-//       aTagGitForks.href = "#";
-//       aTagGitForks.className = "card-link";
-//       aTagGitForks.title = "Forks";
-//       aTagGitForks.target = "_blank";
-//       var gitHubForksIcon = document.createElement('span');
-//       gitHubForksIcon.className = "fa fa-code-fork";
-//       aTagGitForks.appendChild(gitHubForksIcon);
-//       var forksCount = document.createTextNode(listItem.forks_count);
-//       aTagGitForks.appendChild(forksCount);
-//       cardFooter.appendChild(aTagGitForks);
-      
-//       var aTagGitStargazers = document.createElement('a');
-//       aTagGitStargazers.href = "#";
-//       aTagGitStargazers.className = "card-link";
-//       aTagGitStargazers.title = "Stargazers";
-//       aTagGitStargazers.target = "_blank";
-//       var gitHubStargazersIcon = document.createElement('span');
-//       gitHubStargazersIcon.className = "fa fa-star";
-//       aTagGitStargazers.appendChild(gitHubStargazersIcon);
-//       var stargazersCount = document.createTextNode(listItem.stargazers_count);
-//       aTagGitStargazers.appendChild(stargazersCount);
-//       cardFooter.appendChild(aTagGitStargazers);
-      
-//       var aTagDocLink = document.createElement('a');
-//       aTagDocLink.href = "#";
-//       aTagDocLink.className = "card-link";
-//       aTagDocLink.title = "Documentation";
-//       aTagDocLink.target = "_blank";
-//       var docLinkIcon = document.createElement('span');
-//       docLinkIcon.className = "fa fa-globe";
-//       aTagDocLink.appendChild(docLinkIcon);
-//       cardFooter.appendChild(aTagDocLink);
-      
-//       aTaglistItem.appendChild(cardFooter);
       marketPlace.append(aTaglistItem);
     });
   }
