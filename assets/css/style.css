@@ -6,6 +6,10 @@
   padding-right: 0px !important; 
 }
 
+.text-orange {
+  color: #e45c08;
+}
+
 .custom-left-offset-1 {
   padding-left: 8.33333333% !important; 
 }
