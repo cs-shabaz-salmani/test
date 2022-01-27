@@ -301,7 +301,10 @@
   background: #ffffff;
   margin: 20px 20px 0px 0px;
   border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  padding: 10px 15px;
   position: relative;
+  text-decoration: none;
 }
 
 .mp-tile-container .mp-content-type-icon {
@@ -347,7 +350,7 @@
 
 .mp-tile-container .mp-tile-description {
   overflow: hidden;
-  color: #c5d5e8;
+  color: #595c5d;
   font-size: 12px;
   line-height: 14px;
   margin: 20px 0px 5px 0px;
