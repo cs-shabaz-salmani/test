@@ -203,7 +203,7 @@
       
       var itemType = document.createElement('p');
       itemType.className = "mp-content-type display-inline-block";
-      var itemTypeText = document.createTextNode(listItem.type === 'solutionpack' ? 'solution pack' : listItem.type);
+      var itemTypeText = document.createTextNode(listItem.type);
       itemType.appendChild(itemTypeText);
       aTaglistItem.appendChild(itemType);
       
@@ -228,7 +228,7 @@
       itemVersion.appendChild(itemVersionTag);
       var itemVersionText = document.createTextNode(listItem.label || listItem.display);
       itemVersion.appendChild(itemVersionText);
-      itemContentDiv.appendChild(itemVersion);
+      itemDetailsDiv.appendChild(itemVersion);
       
       var itemPublisher = document.createElement('p');
       itemPublisher.className = "m-0";
@@ -239,7 +239,9 @@
       itemPublisher.appendChild(itemPublisherTag);
       var itemPublisherText = document.createTextNode(listItem.publisher);
       itemPublisher.appendChild(itemPublisherText);
-      itemContentDiv.appendChild(itemPublisher);
+      itemDetailsDiv.appendChild(itemPublisher);
+      itemContentDiv.appendChild(itemDetailsDiv);
+      aTaglistItem.appendChild(itemContentDiv);
       
       var itemIconDiv = document.createElement('div');
       itemIconDiv.className = "item-icon mp-tile-image-container"; //remove item-icon class
