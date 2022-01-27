@@ -214,7 +214,7 @@
       itemTitle.className = "mp-tile-title margin-top-4";
       var itemTitleText = document.createTextNode(listItem.label || listItem.display);
       itemTitle.appendChild(itemTitleText);
-      itemContentDiv.appendChild(itemType);
+      itemContentDiv.appendChild(itemTitle);
       
       var itemDetailsDiv = document.createElement('div');
       itemDetailsDiv.className = "mp-tile-details";
@@ -226,7 +226,7 @@
       var itemVersionTagText = document.createTextNode("Version:");
       itemVersionTag.appendChild(itemVersionTagText);
       itemVersion.appendChild(itemVersionTag);
-      var itemVersionText = document.createTextNode(listItem.label || listItem.display);
+      var itemVersionText = document.createTextNode(listItem.version);
       itemVersion.appendChild(itemVersionText);
       itemDetailsDiv.appendChild(itemVersion);
       
