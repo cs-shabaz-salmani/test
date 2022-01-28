@@ -186,9 +186,11 @@
    listData.forEach(function(listItem) {
       var listItemCard = document.createElement('div');
       listItemCard.className = "col-md-3";
+      var listItemCardContent = document.createElement('div');
+      listItemCardContent.className = "mp-update-tile-container";
+      listItemCard.append(listItemCardContent);
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
-      aTaglistItem.className = "mp-update-tile-container";
 
 
       var itemType = document.createElement('p');
@@ -229,7 +231,7 @@
       itemDetailsDiv.appendChild(itemPublisher);
       itemContentDiv.appendChild(itemDetailsDiv);
       aTaglistItem.appendChild(itemContentDiv);
-      listItemCard.append(aTaglistItem);
+      listItemCardContent.append(aTaglistItem);
 
       marketPlaceUpdates.append(listItemCard);
     }); 
