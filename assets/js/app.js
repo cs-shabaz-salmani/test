@@ -232,6 +232,9 @@
       itemDetailsDiv.appendChild(itemPublisher);
       itemContentDiv.appendChild(itemDetailsDiv);
       aTaglistItem.appendChild(itemContentDiv);
+      var itemButton = document.createElement('button');
+      itemPublisher.className = "btn mt-3 mb-5";
+      aTaglistItem.appendChild(itemButton);
       listItemCardContent.append(aTaglistItem);
 
       marketPlaceUpdates.append(listItemCard);
