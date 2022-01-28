@@ -64,7 +64,6 @@
     } else {
       window.history.replaceState(null, null, "/list.html?category=" + type);
     }
-//     window.history.replaceState(null, null, "?category=" + type);
     $(".sidebar-content .btn").removeClass("active");
     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
@@ -207,7 +206,7 @@
       
       var itemType = document.createElement('p');
       itemType.className = "mp-content-type d-inline-block";
-      var itemTypeText = document.createTextNode(listItem.type);
+      var itemTypeText = document.createTextNode(listItem.type === 'solutionpack' ? 'Solution Pack' : listItem.type);
       itemType.appendChild(itemTypeText);
       aTaglistItem.appendChild(itemType);
       
