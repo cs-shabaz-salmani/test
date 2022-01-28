@@ -41,7 +41,7 @@
       document.getElementById("detail-release-notes").append(releaseNotes);
       var docContent = document.createElement('zero-md');
       docContent.setAttribute("src", detailInfo.help);
-      document.getElementById("detail-docs-content").append(docContent);
+      document.getElementById("detail-docs-content").append("https://raw.githubusercontent.com/fortinet-fortisoar/solution-pack-symantec-solutions/develop/README.md");
 //       httpGetAsync(mdFilepath, function(fileResponse) {
 //         document.getElementById("detail-release-notes").innerHTML = fileResponse;
 //       });
