@@ -323,9 +323,10 @@
   background: #ffffff;
   border-radius: 10px;
   border: 1px solid #e2e2e2;
-  padding: 10px 15px;
+  padding: 20px;
   position: relative;
   text-decoration: none;
+  margin: 10px 0px 20px 0px;
 }
 
 .content-count {
