@@ -91,6 +91,9 @@
 .icon-widget-large:before {
   content: "\e915";
 }
+.icon-solutionpack-large:before {
+  content: "\e910";
+}
 .icon-home:before {
   content: "\e916";
 }
