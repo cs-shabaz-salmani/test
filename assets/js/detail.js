@@ -29,9 +29,12 @@
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
-      var mdContentTag = document.createElement('zero-md');
-      mdContentTag.setAttribute("src", mdFilepath);
-      document.getElementById("detail-release-notes").append(mdContentTag);
+      var releaseNotes = document.createElement('zero-md');
+      releaseNotes.setAttribute("src", mdFilepath);
+      document.getElementById("detail-release-notes").append(releaseNotes);
+      var docContent = document.createElement('zero-md');
+      docContent.setAttribute("src", mdFilepath);
+      document.getElementById("detail-docs-content").append(docContent);
 //       httpGetAsync(mdFilepath, function(fileResponse) {
 //         document.getElementById("detail-release-notes").innerHTML = fileResponse;
 //       });
