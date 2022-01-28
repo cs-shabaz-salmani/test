@@ -28,70 +28,70 @@
 .icon-connector-type:before {
   content: "\e900";
 }
-.icon-connector-2:before {
+.icon-connector:before {
   content: "\e901";
 }
-.icon-connector-3:before {
+.icon-connector-border:before {
   content: "\e902";
 }
 .icon-dashboard-type:before {
   content: "\e903";
 }
-.icon-dashboard-2:before {
+.icon-dashboard:before {
   content: "\e904";
 }
-.icon-dashboard-3:before {
+.icon-dashboard-border:before {
   content: "\e905";
 }
 .icon-howtovideos-type:before {
   content: "\e906";
 }
-.icon-how_to_videos-2:before {
+.icon-howtovideos:before {
   content: "\e907";
 }
-.icon-how_to_videos-3:before {
+.icon-howtovideos-border:before {
   content: "\e908";
 }
 .icon-playbook-type:before {
   content: "\e909";
 }
-.icon-playbook-2:before {
+.icon-playbook:before {
   content: "\e90a";
 }
-.icon-playbook-3:before {
+.icon-playbook-border:before {
   content: "\e90b";
 }
 .icon-report-type:before {
   content: "\e90c";
 }
-.icon-report-2:before {
+.icon-report:before {
   content: "\e90d";
 }
-.icon-report-3:before {
+.icon-report-border:before {
   content: "\e90e";
 }
 .icon-solutionpack-type:before {
   content: "\e90f";
 }
-.icon-solutionpack-2:before {
+.icon-solutionpack:before {
   content: "\e910";
 }
-.icon-solutionpack-3:before {
+.icon-solutionpack-border:before {
   content: "\e911";
 }
 .icon-widget-type:before {
   content: "\e912";
 }
-.icon-widget-2:before {
+.icon-widget:before {
   content: "\e913";
 }
-.icon-widget-3:before {
+.icon-widget-border:before {
   content: "\e914";
 }
-.icon-widget_01:before {
+.icon-widget-large:before {
   content: "\e915";
 }
-.icon-home-1:before {
+.icon-home:before {
   content: "\e916";
 }
 .icon-github:before {
