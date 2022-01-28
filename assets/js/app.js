@@ -186,10 +186,13 @@
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
-//       var infoPath = listItem.infoPath;
-//       var infoPathElement = document.createElement('span');
-//       infoPathElement.className = "mp-tile-info-path";
-//       aTaglistItem.appendChild(infoPathElement);
+      var infoPath = listItem.infoPath;
+      var infoPathElement = document.createElement('input');
+      infoPathElement.setAttribute("type", "hidden");
+      infoPathElement.setAttribute("name", listItem.name);
+      infoPathElement.setAttribute("value", listItem.infoPath);
+      infoPathElement.className = "mp-tile-info-path";
+      aTaglistItem.appendChild(infoPathElement);
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
@@ -274,6 +277,7 @@
   }
 
   function setDetailsInLocal(data){
+    console.log(data);
     window.localStorage.removeItem('detailInfoPath');
     window.localStorage.setItem('detailInfoPath', data);
   }
