@@ -190,10 +190,10 @@
 //       aTaglistItem.onClick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
-      aTaglistItem.addEventListener("click", function() {
-       setDetailsInLocal(infoPath);
-      });
-//       aTaglistItem.setAttribute("onClick", "setDetailsInLocal(infoPath)");
+//       aTaglistItem.addEventListener("click", function() {
+//        setDetailsInLocal(infoPath);
+//       });
+      aTaglistItem.setAttribute("onClick", "setDetailsInLocal(infoPath)");
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
