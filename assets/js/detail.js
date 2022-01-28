@@ -46,6 +46,9 @@
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         document.getElementById("detail-docs-content").append(docContent);
+        var docLinkBlock = document.getElementById("doc-content-block");
+        docLinkBlock.classList.add("d-block");
+        docLinkBlock.classList.remove("d-none");
       } else {
         var docLink = document.createElement('a');
         docLink.href = docLink;
@@ -59,6 +62,8 @@
         var docLinkText = document.createTextNode("Documentation");
         docLink.append(docLinkText);
         document.getElementById("detail-doc-link").append(docLink);
+        docLinkBlock.classList.remove("d-block");
+        docLinkBlock.classList.add("d-none");
       }
     });
   };
