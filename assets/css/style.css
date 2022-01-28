@@ -282,12 +282,12 @@
   min-height: 107px;
 }
 
-.mp-tile-container .mp-content-fixed-height .mp-tile-title {
+.mp-tile-container .mp-content-fixed-height .mp-tile-title, .mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
   color: #000000;
   font-size: 20px;
 }
 
-.mp-tile-container .mp-content-fixed-height .mp-tile-details p {
+.mp-tile-container .mp-content-fixed-height .mp-tile-details p, .mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
   color: #000000;
   font-size: 12px;
   opacity: 75%;
@@ -327,6 +327,10 @@
   position: relative;
   text-decoration: none;
   margin: 10px 0px 20px 0px;
+}
+
+.mp-update-tile-container .mp-content-fixed-height {
+  min-height: 70px;
 }
 
 .content-count {
