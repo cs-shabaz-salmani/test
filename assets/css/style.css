@@ -292,10 +292,11 @@
 
 .mp-tile-container .mp-tile-description {
   overflow: hidden;
-  color: #595c5d;
+  color: #7e7e7e;
   font-size: 12px;
   line-height: 14px;
   margin: 20px 0px 5px 0px;
+  height: 30px;
 }
 
 .content-count {
