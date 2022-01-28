@@ -178,7 +178,7 @@
 
   function buildListData(listData) {
     var allListItems;
-    var allListItemsPath = {};
+    var allListItemsPath = [];
     var marketPlace = $("#marketplace-list");
     $(".item-container").remove();
     $("#filteredContentCount").html(listData.length);
