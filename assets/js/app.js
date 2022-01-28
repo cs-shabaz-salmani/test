@@ -187,7 +187,7 @@
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
       aTaglistItem.onClick = function() {
-        setDetailsInLocal(listItem);
+        setDetailsInLocal(JSON.stringify(listItem));
       };
 //       aTaglistItem.setAttribute("onClick", "setDetailsInLocal(listItem)");
       
@@ -267,5 +267,5 @@
   }
 
   function setDetailsInLocal(data){
-    window.localStorage.setItem('detailInfo', JSON.stringify(data));
+    window.localStorage.setItem('detailInfo', data);
   }
