@@ -186,6 +186,7 @@
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
+      aTaglistItem.onClick = setDetailsInLocal(listItem);
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
@@ -260,4 +261,8 @@
       aTaglistItem.appendChild(cardDescription);
       marketPlace.append(aTaglistItem);
     });
+  }
+
+  function setDetailsInLocal(data){
+    window.localStorage.setItem('detailInfo', data);
   }
