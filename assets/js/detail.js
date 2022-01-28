@@ -9,7 +9,6 @@
     var detailInfo;
     
     var infoPath = window.localStorage.getItem('detailInfoPath');
-    console.log(infoPath);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
@@ -33,7 +32,7 @@
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
       var docContent = document.createElement('zero-md');
-      docContent.setAttribute("src", mdFilepath);
+      docContent.setAttribute("src", detailInfo.help);
       document.getElementById("detail-docs-content").append(docContent);
 //       httpGetAsync(mdFilepath, function(fileResponse) {
 //         document.getElementById("detail-release-notes").innerHTML = fileResponse;
