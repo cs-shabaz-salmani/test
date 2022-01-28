@@ -9,12 +9,13 @@
     var detailInfo;
     
     var info = window.localStorage.getItem('detailInfo');
-    info = info.toString();
+    info = JSON.stringify(info);
+    console.log(info);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
-    var detailPath = yumRepo + 'detailInfo/infoPath/info.json';
-    var mdFilepath = yumRepo + 'connectors/info/release_notes.md';
+    var detailPath = yumRepo + 'info/infoPath/info.json';
+    var mdFilepath = yumRepo + 'info/infoPath/release_notes.md';
 
     httpGetAsync(detailPath, function(response) {
       detailInfo = response;
