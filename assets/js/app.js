@@ -183,7 +183,6 @@
     $("#filteredContentCount").html(listData.length);
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.addEventListener("click", setDetailsInLocal);
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
       var infoPath = listItem.infoPath;
@@ -196,7 +195,7 @@
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
-//       aTaglistItem.setAttribute("onclick", setDetailsInLocal);
+      aTaglistItem.setAttribute("onclick", setDetailsInLocal);
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
