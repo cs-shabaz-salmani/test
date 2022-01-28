@@ -190,6 +190,7 @@
       listItemCardContent.className = "mp-update-tile-container";
       listItemCard.append(listItemCardContent);
       var aTaglistItem = document.createElement('a');
+      aTaglistItem.className = "text-decoration-none";
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
 
 
