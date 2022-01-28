@@ -231,12 +231,25 @@
 }
 
 .mp-tile-container .mp-content-type-icon {
-  padding: 0px 4px 1px 6px;
+  padding: 0px 1px 1px 0px;
   border-radius: 2px;
-  margin-right: 7px;
+  margin-right: 5px;
   width: 23px;
   height: 23px;
-  color: #FFFFFF;
+  margin-top: 1px;
+  font-size: 20px;
+}
+
+.icon-connector-type {
+  color: #00a3ff;
+}
+
+.icon-widget-type {
+  color: #6e7dff;
+}
+
+.icon-solutionpack-type {
+  color: #ff4751;
 }
 
 .mp-tile-container .mp-content-type {
