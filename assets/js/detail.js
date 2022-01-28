@@ -2,6 +2,7 @@
 
   const http = new XMLHttpRequest();
   var yumRepo = 'https://update.cybersponse.com';
+  var basePath = 'http://marketplace.cybersponse.com/';
 
   init();
 
@@ -30,12 +31,17 @@
       var imgTag = document.createElement('img');
       imgTag.src = yumRepo + detailInfo.iconLarge || 'assets/images/icon_large.png';
       imgTag.alt = detailInfo.display;
+      document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
       detailInfo.availableVersions.forEach(function(version) {
-        var versionTag = document.createElement('a');
-        var versionText = document.createTextNode("Version - " + version);
-        versionTag.append(versionText);
-        detailAvailableVersions.append(versionTag);
+        if(version !=== detailInfo.version){
+          var versionTag = document.createElement('a');
+          versionTag.className = "dropdown-item";
+          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
+          var versionText = document.createTextNode("Version - " + version);
+          versionTag.append(versionText);
+          detailAvailableVersions.append(versionTag);
+        }
       });
       document.getElementById("detail-img-container").append(imgTag);
       document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
