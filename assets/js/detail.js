@@ -39,12 +39,27 @@
       var releaseNotes = document.createElement('zero-md');
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
-      var docContent = document.createElement('zero-md');
-      docContent.setAttribute("src", "https://raw.githubusercontent.com/fortinet-fortisoar/solution-pack-symantec-solutions/develop/README.md");
-      document.getElementById("detail-docs-content").append(docContent); 
-//       httpGetAsync(mdFilepath, function(fileResponse) {
-//         document.getElementById("detail-release-notes").innerHTML = fileResponse;
-//       });
+      var docLink = detailPath.help;
+      if(docLink.match('readme.md')){
+        docLink = docLink.replace("github.com", "raw.githubusercontent.com");
+        docLink = docLink.replace("/blob", "");
+        var docContent = document.createElement('zero-md');
+        docContent.setAttribute("src", docLink);
+        document.getElementById("detail-docs-content").append(docContent);
+      } else {
+        var docLink = document.createElement('a');
+        docLink.href = docLink;
+        docLink.className = "nav-item detail-doc-link";
+        docLink.setAttribute("title", "Online Help");
+        docLink.setAttribute("target", "_blank");
+        docLink.setAttribute("rel", "noopener noreferrer");
+        var docIcon = document.createElement('i');
+        docIcon.className = "fa fa-globe";
+        docLink.append(docIcon);
+        var docLinkText = document.createTextNode("Documentation");
+        docLink.append(docLinkText);
+        document.getElementById("detail-doc-link").append(docLink);
+      }
     });
   };
 
