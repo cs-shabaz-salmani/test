@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="noindex" />
         <title>FortiSOAR Marketplace</title>
         <link rel="shortcut icon" type="image/x-icon" href="" />
         <link rel="canonical" href="http://marketplace.cybersponse.com">
@@ -47,40 +47,8 @@
             <div class="row">
                 <div class="main col-md-12 main-carousel-container">
                     <div id="carouselExampleCaptions" class="carousel slide custom-left-offset-1 custom-right-offset-1" data-bs-ride="carousel">
-                      <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      </div>
-                      <div class="carousel-inner custom-left-offset-1 custom-right-offset-1">
-                        <div class="carousel-item active custom-left-offset-1 custom-right-offset-1">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1>Unified Incident <span>Response Management</span></h1>
-                                    <p>Centralize security processes to orchestrate, automate, and respond to threats using existing tools for real-time responses at machine speed.</p>
-                                    <button class="btn btn-md btn-outline-dark">View Content Pack</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item custom-left-offset-1 custom-right-offset-1">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1>Alert Triage Automation</h1>
-                                    <p>Dynamically detect false positives with prioritization powered by artificial intelligence. Automatically group similar alerts and incidents into a consolidated timeline for investigations, which helps reduce alert fatigue and missed threats.</p>
-                                    <button class="btn btn-md btn-outline-dark">View Content Pack</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item custom-left-offset-1 custom-right-offset-1">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1>SOC Cross-Collaboration</h1>
-                                    <p>Expedite remediation and improve team and cross-functional collaboration by connecting analysts to critical information and other teams and stakeholders for full end-to-end control and visibility.</p>
-                                    <button class="btn btn-md btn-outline-dark">View Content Pack</button>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
+                      <div class="carousel-indicators" id="main-carousel-indicators"></div>
+                      <div class="carousel-inner custom-left-offset-1 custom-right-offset-1" id="main-carousel-content"></div>
                     </div>
                     <div class="carousel-gradient"></div>
                     <main class="content m-0">
@@ -88,23 +56,56 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="category-content custom-left-offset-1 custom-right-offset-1">
-                                        <div class="category-item">
-                                            <a class="category-link category-integration-link" onClick="applyFilter('connector')"><span class="category-icon category-integration"></span><span class="category-title">Integrations</span></a>
+                                        <div class="row text-center text-white">
+                                            <div class="col-md-12">
+                                                <h3 class="fw-normal">Categories</h3>
+                                                <h1 class="fw-lighter mt-4">1000+ Resources</h1>
+                                                <h5 class="fw-light">From our partners and our community</h5>
+                                            </div>
                                         </div>
-                                        <div class="category-item">
-                                            <a class="category-link category-use-case-link" onClick="applyFilter('use_case')"><span class="category-icon category-use-case"></span><span class="category-title">Use Cases</span></a>
+                                        <div class="row mt-5">
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('connector')"><span class="category-icon connector-icon-border"></span><span class="category-title">Connectors</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('use_case')"><span class="category-icon playbook-icon-border"></span><span class="category-title">Playbooks</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('widget')"><span class="category-icon widget-icon-border"></span><span class="category-title">Widgets</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('dashboard')"><span class="category-icon dashboard-icon-border"></span><span class="category-title">Dashboards</span></a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="category-item">
-                                            <a class="category-link category-content-pack-link" onClick="applyFilter('content_pack')"><span class="category-icon category-content-pack"></span><span class="category-title">Content Packs</span></a>
-                                        </div>
-                                        <div class="category-item">
-                                            <a class="category-link category-widget-link" onClick="applyFilter('widget')"><span class="category-icon category-widget"></span><span class="category-title">Widgets</span></a>
-                                        </div>
-                                        <div class="category-item">
-                                            <a class="category-link category-how-to-link" onClick="applyFilter('how_tos')"><span class="category-icon category-how-to"></span><span class="category-title">How To's</span></a>
-                                        </div>
-                                        <div class="category-item">
-                                            <a class="category-link category-all-link" onClick="applyFilter('all')"><span class="category-title">View All</span></a>
+                                        <div class="row mt-4">
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('report')"><span class="category-icon report-icon-border"></span><span class="category-title">Reports</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('solutionpack')"><span class="category-icon solution-pack-icon-border"></span><span class="category-title">Solution Packs</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('how_tos')"><span class="category-icon how-to-icon-border"></span><span class="category-title">How To Videos</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="category-item">
+                                                    <a class="category-link" onClick="applyFilter('all')"><span class="category-title">View All</span></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -112,48 +113,46 @@
                         </div>
                         <div class="latest-updates-suggestions-container">
                             <div class="latest-updates-suggestions-content">
-                                <ul class="nav nav-tabs">
-                                  <li class="nav-item">
-                                    <a class="nav-link active custom-left-offset-1 custom-right-offset-1" href="#latest-hub-updates" data-toggle="tab" role="tab" aria-controls="latest-hub-updates" aria-selected="true">
-                                        <h4 class="mb-0 mt-1">Latest Hub Updates</h4>
-                                        <p class="mb-1">New Content Latest Updates</p>
-                                    </a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#suggestions-for-you" data-toggle="tab" role="tab" aria-controls="suggestions-for-you" aria-selected="false">
-                                        <h4 class="mb-0 mt-1">Suggestions For You</h4>
-                                        <p class="mb-1">Meaningful Recommendations, Update Notifications</p>
-                                    </a>
-                                  </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="tab-content custom-left-offset-1 custom-right-offset-1" id="pills-tabContent">
-                                      <div class="tab-pane fade show active" id="latest-hub-updates" role="tabpanel" aria-labelledby="latest-hub-updates-tab">
-                                        <div class="row">
-                                            <!--<p class="content-count">Showing <span id="filteredContentCount">0</span> of <span id="totalContentCount">0</span> Results</p>-->
-                                            <div id="marketplace-list"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="m-4 text-center">Latest Updates</h4>
+                                        <div class="custom-left-offset-1 custom-right-offset-1">
+                                          <div id="latest-hub-updates">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                </div>
+                                            </div>
+                                          </div>
                                         </div>
-                                      </div>
-                                      <div class="tab-pane fade" id="suggestions-for-you" role="tabpanel" aria-labelledby="suggestions-for-you-tab">
-                                        
-                                      </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="build-it-yourself-container">
+                            <div class="row text-center">
+                                <div class="col-md-12">
+                                    <h3 class="fw-normal text-white mt-5">Did you find what you want?</h3>
+                                    <h1 class="fst-italic fw-light text-orange">Build it yourself</h1>
+                                    <h5 class="fw-lighter text-white mt-2 mb-1">Write a custom connector that can retrieve data from custom sources. You can then use the connector either standalone or within</h5>
+                                    <h5 class="fw-lighter text-white m-0 mb-1">FortiSOAR playbooks and perform automated operations. You can also write a custom connector manually, or you can use the</h5>
+                                    <h5 class="fw-lighter text-white m-0">FortiSOAR Connector SDK to develop your custom connector.</h5>
+                                    <br /><a class="btn custom-btn-bg mb-5" href="connect.html">Submit Your Connector</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-updates-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="m-4 text-center">Product Updates</h4>
+                                </div>
+                            </div>
+                        </div>
                         <div class="contribute-container">
-                            <div class="contribute-content">
-                                <div class="row">
-                                    <div class="col-md-1 mt-3 offset-1 text-center d-none d-md-block">
-                                        <i class="people-icon"></i>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <h3>Contribute To The Hub</h3>
-                                        <em>This featured content pack contains various spear phishing use case playbooks that work effectively using the ML-enabled FSR Email Classifier to detect, triage and help respond to spear phishing threats</em>
-                                        <br /><a class="btn btn-sm custom-btn-bg mt-4" href="connect.html">Learn More <i class="fa fa-angle-right p-1"></i></a>
-                                    </div>
+                            <div class="row text-center">
+                                <div class="col-md-12">
+                                    <h1 class="fw-lighter mt-5 text-white">Get Inside The Hustle</h3>
+                                    <h1><span class="text-white">Join our </span><em class="fw-light text-blue">Vibrent Community</em></h1>
+                                    <br /><a class="btn custom-btn-bg" href="connect.html">Join Now</a>
                                 </div>
                             </div>
                         </div>

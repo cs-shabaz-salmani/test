@@ -26,11 +26,17 @@
     }
     $('.dropdown-toggle').dropdown();
     $('.nav-tabs').tab();
+    buildHomePageBanners();
   });
 
   function init() {
-    var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
-    allItemsJson = JSON.parse(allItemsJson.responseText);
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", yumRepo + "marketplace-test/marketplace.json", false ); // false for synchronous request
+    xmlHttp.send( null );
+    var allItemsJson = xmlHttp.responseText;
+    console.log(allItemsJson);
+//     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
+    allItemsJson = JSON.parse(allItemsJson);
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
@@ -54,7 +60,12 @@
   }
 
   function applyFilter(type) {
-    window.history.replaceState(null, null, "?category=" + type);
+    if (window.location.href.indexOf('list.html') === -1) {
+      window.location.href = "/list.html?category=" + type;
+    } else {
+      window.history.replaceState(null, null, "/list.html?category=" + type);
+    }
+//     window.history.replaceState(null, null, "?category=" + type);
     $(".sidebar-content .btn").removeClass("active");
     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
@@ -112,97 +123,160 @@
     buildListData(listItems);
   }
 
+  function buildHomePageBanners() {
+    var mainBanner = $("#main-carousel-content");
+    var mainBannerIndicator = $("#main-carousel-indicators");
+    var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
+    bannersJson = JSON.parse(bannersJson.responseText);
+    bannersJson.mainBanner.forEach(function(banner, index) {
+      var carouselId = "carouselMainCaptions" + index;
+      var carouselIndicatorButton = document.createElement('button');
+      carouselIndicatorButton.className = index === 0 ? "active" : "";
+      carouselIndicatorButton.setAttribute("type", "button");
+      carouselIndicatorButton.setAttribute("data-bs-target", carouselId);
+      carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
+      carouselIndicatorButton.setAttribute("aria-label", banner.heading);
+    
+      mainBannerIndicator.append(carouselIndicatorButton);
+      
+      var carouselDiv = document.createElement('div');
+      carouselDiv.className = index === 0 ? "carousel-item active custom-left-offset-1 custom-right-offset-1" : "carousel-item custom-left-offset-1 custom-right-offset-1";
+      
+      var carouselRow = document.createElement('div');
+      carouselRow.className = "row";
+      carouselRow.setAttribute("id", carouselId);
+      carouselDiv.appendChild(carouselRow);
+      
+      var carouselColumn = document.createElement('div');
+      carouselColumn.className = "col-md-12";
+      carouselRow.appendChild(carouselColumn);
+      
+      var carouselHeading = document.createElement('h1');
+      carouselColumn.appendChild(carouselHeading);
+      
+      var carouselHeadingText = document.createTextNode(banner.heading);
+      carouselHeading.appendChild(carouselHeadingText);
+      
+      var carouselSubHeading = document.createElement('p');
+      carouselColumn.appendChild(carouselSubHeading);
+      
+      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
+      carouselSubHeading.appendChild(carouselSubHeadingText);
+      
+      var carouselHyperLink = document.createElement('a');
+      carouselHyperLink.href = banner.hyperLink;
+      carouselHyperLink.className = "pull-left text-center btn btn-md btn-outline-dark";
+      carouselHyperLink.setAttribute("rel", "canonical");
+      var carouselHyperLinkText = document.createTextNode("View");
+      carouselHyperLink.appendChild(carouselHyperLinkText);
+      carouselColumn.appendChild(carouselHyperLink);
+      
+      mainBanner.append(carouselDiv);
+    });
+  }
+
 
   function buildListData(listData) {
     var allListItems;
+    var allListItemsPath = [];
     var marketPlace = $("#marketplace-list");
     $(".item-container").remove();
     $("#filteredContentCount").html(listData.length);
     listData.forEach(function(listItem) {
+      allListItemsPath.push({"name": listItem.name, "version": listItem.version, "infoPath": listItem.infoPath});
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
-      aTaglistItem.className = "pull-left text-center item-container";
-      aTaglistItem.setAttribute("rel", "canonical");
+      aTaglistItem.className = "mp-tile-container";
+//       var infoPath = listItem.infoPath;
+//       var infoPathElement = document.createElement('input');
+//       infoPathElement.setAttribute("type", "hidden");
+//       infoPathElement.setAttribute("name", listItem.name);
+//       infoPathElement.setAttribute("value", listItem.infoPath);
+//       infoPathElement.className = "mp-tile-info-path";
+//       aTaglistItem.appendChild(infoPathElement);
+//       aTaglistItem.onclick = function() {
+//        setDetailsInLocal(infoPath);
+//       };
+//       aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
       
-      var certifiedDiv = document.createElement('div');
-      certifiedDiv.className = "certified-flag";
-      var certifiedIcon = document.createElement('i');
-      certifiedIcon.className = "fa fa-check-circle-o certified-icon";
-      aTaglistItem.appendChild(certifiedDiv);
-      aTaglistItem.appendChild(certifiedIcon);
+      var itemIconSpan = document.createElement('span');
+      itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
+      var itemIcon = document.createElement('i');
+      itemIcon.className = "icon font-size-11";
+      itemIconSpan.appendChild(itemIcon);
+      aTaglistItem.appendChild(itemIconSpan);
+      
+      var itemType = document.createElement('p');
+      itemType.className = "mp-content-type display-inline-block";
+      var itemTypeText = document.createTextNode(listItem.type);
+      itemType.appendChild(itemTypeText);
+      aTaglistItem.appendChild(itemType);
+      
+      var itemContentDiv = document.createElement('div');
+      itemContentDiv.className = "mp-content-fixed-height";
+      
+      var itemTitle = document.createElement('h4');
+      itemTitle.className = "mp-tile-title margin-top-4";
+      var itemTitleText = document.createTextNode(listItem.label || listItem.display);
+      itemTitle.appendChild(itemTitleText);
+      itemContentDiv.appendChild(itemTitle);
+      
+      var itemDetailsDiv = document.createElement('div');
+      itemDetailsDiv.className = "mp-tile-details";
+
+      var itemVersion = document.createElement('p');
+      itemVersion.className = "m-0";
+      var itemVersionTag = document.createElement('span');
+      itemVersionTag.className = "muted";
+      var itemVersionTagText = document.createTextNode("Version:");
+      itemVersionTag.appendChild(itemVersionTagText);
+      itemVersion.appendChild(itemVersionTag);
+      var itemVersionText = document.createTextNode(listItem.version);
+      itemVersion.appendChild(itemVersionText);
+      itemDetailsDiv.appendChild(itemVersion);
+      
+      var itemPublisher = document.createElement('p');
+      itemPublisher.className = "m-0";
+      var itemPublisherTag = document.createElement('span');
+      itemPublisherTag.className = "muted";
+      var itemPublisherTagText = document.createTextNode("Published By:");
+      itemPublisherTag.appendChild(itemPublisherTagText);
+      itemPublisher.appendChild(itemPublisherTag);
+      var itemPublisherText = document.createTextNode(listItem.publisher);
+      itemPublisher.appendChild(itemPublisherText);
+      itemDetailsDiv.appendChild(itemPublisher);
+      itemContentDiv.appendChild(itemDetailsDiv);
+      aTaglistItem.appendChild(itemContentDiv);
       
       var itemIconDiv = document.createElement('div');
-      itemIconDiv.className = "item-icon";
+      itemIconDiv.className = "mp-tile-image-container";
+      
+      var imageElement;
+      if(listItem.iconLarge) {
+        imageElement = document.createElement('img');
+        imageElement.className = "mp-tile-image";
+        imageElement.src = yumRepo + listItem.iconLarge;
+      } else {
+        imageElement = document.createElement('i');
+        imageElement.className = "mp-tile-icon";
+      }
+      
+      itemIconDiv.appendChild(imageElement);
       aTaglistItem.appendChild(itemIconDiv);
       
-      var imageElement = document.createElement('img');
-      if(listItem.type !== 'connector'){
-        imageElement.src = "assets/images/icon_large.png";
-      } else {
-        imageElement.src = listItem.iconLarge;
-      }
-      imageElement.width = "75";
-      itemIconDiv.appendChild(imageElement);
-      var itemTitle = document.createElement('h5');
-      var itemDisplay = document.createTextNode(listItem.display);
-      itemTitle.appendChild(itemDisplay);
-      aTaglistItem.appendChild(itemTitle);
-      
-      var cardDescription = document.createElement('div');
-      cardDescription.className = "card-description";
+      var cardDescription = document.createElement('p');
+      cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
       listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
       var itemDescription = document.createTextNode(listItem.description.substring(0, 90) + '...');
       cardDescription.appendChild(itemDescription);
       aTaglistItem.appendChild(cardDescription);
-      
-      var cardFooter = document.createElement('div');
-      cardFooter.className = "card-footer";
-      
-      var aTagGitHubPage = document.createElement('a');
-      aTagGitHubPage.href = "#";
-      aTagGitHubPage.className = "card-link";
-      aTagGitHubPage.title = "GitHub Page";
-      aTagGitHubPage.target = "_blank";
-      var gitHubIcon = document.createElement('span');
-      gitHubIcon.className = "fa fa-github";
-      aTagGitHubPage.appendChild(gitHubIcon);
-      cardFooter.appendChild(aTagGitHubPage);
-      
-      var aTagGitForks = document.createElement('a');
-      aTagGitForks.href = "#";
-      aTagGitForks.className = "card-link";
-      aTagGitForks.title = "Forks";
-      aTagGitForks.target = "_blank";
-      var gitHubForksIcon = document.createElement('span');
-      gitHubForksIcon.className = "fa fa-code-fork";
-      aTagGitForks.appendChild(gitHubForksIcon);
-      var forksCount = document.createTextNode(listItem.forks_count);
-      aTagGitForks.appendChild(forksCount);
-      cardFooter.appendChild(aTagGitForks);
-      
-      var aTagGitStargazers = document.createElement('a');
-      aTagGitStargazers.href = "#";
-      aTagGitStargazers.className = "card-link";
-      aTagGitStargazers.title = "Stargazers";
-      aTagGitStargazers.target = "_blank";
-      var gitHubStargazersIcon = document.createElement('span');
-      gitHubStargazersIcon.className = "fa fa-star";
-      aTagGitStargazers.appendChild(gitHubStargazersIcon);
-      var stargazersCount = document.createTextNode(listItem.stargazers_count);
-      aTagGitStargazers.appendChild(stargazersCount);
-      cardFooter.appendChild(aTagGitStargazers);
-      
-      var aTagDocLink = document.createElement('a');
-      aTagDocLink.href = "#";
-      aTagDocLink.className = "card-link";
-      aTagDocLink.title = "Documentation";
-      aTagDocLink.target = "_blank";
-      var docLinkIcon = document.createElement('span');
-      docLinkIcon.className = "fa fa-globe";
-      aTagDocLink.appendChild(docLinkIcon);
-      cardFooter.appendChild(aTagDocLink);
-      
-      aTaglistItem.appendChild(cardFooter);
       marketPlace.append(aTaglistItem);
     });
+    setDetailsInLocal(allListItemsPath);
+  }
+
+  function setDetailsInLocal(data){
+    console.log(data); 
+    window.localStorage.removeItem('detailInfoPath');
+    window.localStorage.setItem('detailInfoPath', JSON.stringify(data));
   }

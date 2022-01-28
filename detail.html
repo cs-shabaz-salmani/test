@@ -57,7 +57,6 @@
                               <div class="pull-left" id="detail-img-container">
                               </div>
                               <div class="pull-left">
-                                <h5 id="detail-title" class="detail-title"></h5>
                                 <p class="detail-properties">
                                   <span class="detail-properties grey-text">Version </span>
                                   <span id="detail-version"></span>
@@ -69,11 +68,7 @@
                                 <div class="detail-properties">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      <div class="display-inline-block">
-                                        <a href="{{detailInfo.help_online}}" title="Online Help" target="_blank" rel="noopener noreferrer"
-                                          class="nav-item detail-doc-link">
-                                          <i class="fa fa-globe"></i> Documentation
-                                        </a>
+                                      <div class="display-inline-block" id="detail-doc-link">
                                       </div>
                                     </div>
                                   </div>
@@ -92,6 +87,12 @@
                           <div class="col-md-12">
                               <strong class="d-block fs-5 mt-3 text-decoration-underline">Release Notes</strong>
                             <div class="grey-text detail-properties detail-description" id="detail-release-notes"></div>
+                          </div>
+                        </div>
+                        <div class="row detail-container-bottom">
+                          <div class="col-md-12">
+                              <strong class="d-block fs-5 mt-3 text-decoration-underline">Documents</strong>
+                            <div class="grey-text detail-properties detail-description" id="detail-docs-content"></div>
                           </div>
                         </div>
                       </div>
