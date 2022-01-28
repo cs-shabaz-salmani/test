@@ -187,7 +187,7 @@
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
       var infoPath = listItem.infoPath;
-      aTaglistItem.setAttribute("onClick", "setDetailsInLocal(infoPath)");
+      aTaglistItem.setAttribute("onClick", setDetailsInLocal(infoPath));
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
