@@ -6,20 +6,15 @@
   init();
 
   function init() {
-    var detailPath;
     var detailInfo;
-    var mdFilepath;
+    
+    var info = window.localStorage.getItem('detailInfo');
     
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
-    
-    if(detailType === 'connector'){
-      detailPath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/info.json';
-      mdFilepath = yumRepo + 'connectors/info/' + detailName + '_' + detailVersion + '/release_notes.md';
-    } else if(detailType === 'widget') {
-      detailPath = yumRepo + 'fsr-widgets/' + detailName + '-' + detailVersion + '/info.json';
-    }
+    var detailPath = yumRepo + 'detailInfo/infoPath/info.json';
+    var mdFilepath = yumRepo + 'connectors/info/release_notes.md';
 
     httpGetAsync(detailPath, function(response) {
       detailInfo = response;
