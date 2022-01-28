@@ -193,7 +193,7 @@
 //       aTaglistItem.addEventListener("click", function() {
 //        setDetailsInLocal(infoPath);
 //       });
-      aTaglistItem.setAttribute("onClick", function() {
+      aTaglistItem.setAttribute("onclick", function() {
        setDetailsInLocal(infoPath);
       });
       
