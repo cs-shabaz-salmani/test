@@ -30,7 +30,6 @@
       imgTag.alt = detailInfo.display;
       document.getElementById("detail-img-container").append(imgTag);
       document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
-      document.getElementById("detail-title").innerHTML = detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
