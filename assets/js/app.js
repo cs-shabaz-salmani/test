@@ -187,9 +187,12 @@
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
       var infoPath = listItem.infoPath;
-      aTaglistItem.onClick = function() {
+//       aTaglistItem.onClick = function() {
+//        setDetailsInLocal(infoPath);
+//       };
+      aTaglistItem.addEventListener("click", function() {
        setDetailsInLocal(infoPath);
-      }
+      });
 //       aTaglistItem.setAttribute("onClick", "setDetailsInLocal(infoPath)");
       
       var itemIconSpan = document.createElement('span');
