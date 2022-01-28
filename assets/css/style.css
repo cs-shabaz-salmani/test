@@ -256,6 +256,22 @@
   color: #ff4751;
 }
 
+.icon-playbook-type, .icon-playbook-border, .icon-playbook, .icon-playbook-large {
+  color: #57d388;
+}
+
+.icon-report-type, .icon-report-border, .icon-report, .icon-report-large {
+  color: #a57ffe;
+}
+
+.icon-dashboard-type, .icon-dashboard-border, .icon-dashboard, .icon-dashboard-large {
+  color: #feb800;
+}
+
+.icon-howtovideos-type, .icon-howtovideos-border, .icon-howtovideos, .icon-howtovideos-large {
+  color: #41c9d7;
+}
+
 .mp-tile-container .mp-content-type {
   text-transform: uppercase;
   color: #000000;
