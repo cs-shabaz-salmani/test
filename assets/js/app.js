@@ -183,9 +183,9 @@
     $("#filteredContentCount").html(listData.length);
     listData.forEach(function(listItem) {
       var aTaglistItem = document.createElement('a');
+      aTaglistItem.addEventListener("click", setDetailsInLocal);
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
-      aTaglistItem.setAttribute("rel", "canonical");
       var infoPath = listItem.infoPath;
       var infoPathElement = document.createElement('input');
       infoPathElement.setAttribute("type", "hidden");
@@ -196,7 +196,6 @@
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
-      aTaglistItem.addEventListener("click", setDetailsInLocal);
 //       aTaglistItem.setAttribute("onclick", setDetailsInLocal);
       
       var itemIconSpan = document.createElement('span');
