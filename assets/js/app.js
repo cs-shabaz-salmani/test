@@ -265,5 +265,6 @@
   }
 
   function setDetailsInLocal(data){
+    window.localStorage.removeItem('detailInfoPath');
     window.localStorage.setItem('detailInfoPath', data);
   }
