@@ -8,10 +8,17 @@
   function init() {
     var detailInfo;
     
-    var infoPath = window.localStorage.getItem('detailInfoPath');
+    var allInfoPath = window.localStorage.getItem('detailInfoPath');
+    console.log(allInfoPath);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
+    var infoPath = allInfoPath.find(function(item, index) {
+      if(item.name === detailName && item.version === detailVersion){
+        return true;
+      }
+    });
+    infoPath = infoPath.infoPath;
     var detailPath = yumRepo + infoPath + '/info.json';
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
 
