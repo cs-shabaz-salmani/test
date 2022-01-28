@@ -39,7 +39,7 @@
       var releaseNotes = document.createElement('zero-md');
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
-      var docLink = detailPath.help;
+      var docLink = detailInfo.help;
       if(docLink.match('readme.md')){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
