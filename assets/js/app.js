@@ -187,15 +187,16 @@
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
       var infoPath = listItem.infoPath;
+      var infoPathElement = document.createElement('span');
+      infoPathElement.className = "mp-tile-info-path";
+      aTaglistItem.appendChild(infoPathElement);
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
 //       aTaglistItem.addEventListener("click", function() {
 //        setDetailsInLocal(infoPath);
 //       });
-      aTaglistItem.setAttribute("onclick", function() {
-       setDetailsInLocal(infoPath);
-      });
+      aTaglistItem.setAttribute("onclick", setDetailsInLocal);
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
