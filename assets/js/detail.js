@@ -9,7 +9,7 @@
     var detailInfo;
     
     var info = window.localStorage.getItem('detailInfo');
-    info = JSON.parse(info);
+    info = JSON.stringify(info);
     console.log(info);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
