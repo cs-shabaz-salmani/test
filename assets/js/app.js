@@ -276,7 +276,7 @@
   }
 
   function setDetailsInLocal(data){
-    console.log(data);
+    console.log(data); 
     window.localStorage.removeItem('detailInfoPath');
     window.localStorage.setItem('detailInfoPath', JSON.stringify(data));
   }
