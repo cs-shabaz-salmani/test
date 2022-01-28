@@ -196,10 +196,8 @@
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
-//       aTaglistItem.addEventListener("click", function() {
-//        setDetailsInLocal(infoPath);
-//       });
-      aTaglistItem.setAttribute("onclick", setDetailsInLocal);
+      aTaglistItem.addEventListener("click", setDetailsInLocal);
+//       aTaglistItem.setAttribute("onclick", setDetailsInLocal);
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
