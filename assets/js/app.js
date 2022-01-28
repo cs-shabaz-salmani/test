@@ -178,24 +178,26 @@
 
   function buildListData(listData) {
     var allListItems;
+    var allListItemsPath = {};
     var marketPlace = $("#marketplace-list");
     $(".item-container").remove();
     $("#filteredContentCount").html(listData.length);
     listData.forEach(function(listItem) {
+      allListItemsPath.push({"name": listItem.name, "version": listItem.version, "infoPath": listItem.infoPath});
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
-      var infoPath = listItem.infoPath;
-      var infoPathElement = document.createElement('input');
-      infoPathElement.setAttribute("type", "hidden");
-      infoPathElement.setAttribute("name", listItem.name);
-      infoPathElement.setAttribute("value", listItem.infoPath);
-      infoPathElement.className = "mp-tile-info-path";
-      aTaglistItem.appendChild(infoPathElement);
+//       var infoPath = listItem.infoPath;
+//       var infoPathElement = document.createElement('input');
+//       infoPathElement.setAttribute("type", "hidden");
+//       infoPathElement.setAttribute("name", listItem.name);
+//       infoPathElement.setAttribute("value", listItem.infoPath);
+//       infoPathElement.className = "mp-tile-info-path";
+//       aTaglistItem.appendChild(infoPathElement);
 //       aTaglistItem.onclick = function() {
 //        setDetailsInLocal(infoPath);
 //       };
-      aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
+//       aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
@@ -270,6 +272,7 @@
       aTaglistItem.appendChild(cardDescription);
       marketPlace.append(aTaglistItem);
     });
+    setDetailsInLocal(allListItemsPath);
   }
 
   function setDetailsInLocal(data){
