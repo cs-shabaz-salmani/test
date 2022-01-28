@@ -202,7 +202,7 @@
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
       var itemIcon = document.createElement('i');
-      itemIcon.className = "icon font-size-11";
+      itemIcon.className = "icon-" + listItem.type + "-type icon";
       itemIconSpan.appendChild(itemIcon);
       aTaglistItem.appendChild(itemIconSpan);
       
