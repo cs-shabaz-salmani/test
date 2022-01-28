@@ -204,7 +204,7 @@
       itemIconDiv.className = "mp-tile-image-container";
 
       var imageElement = document.createElement('i');
-      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-type";
       itemIconDiv.appendChild(imageElement);
       aTaglistItem.appendChild(itemIconDiv);
 
