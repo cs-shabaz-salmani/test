@@ -256,7 +256,7 @@
         imageElement.src = yumRepo + listItem.iconLarge;
       } else {
         imageElement = document.createElement('i');
-        imageElement.className = "mp-tile-icon icon-" + listItem.type + "-border";
+        imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
       }
       
       itemIconDiv.appendChild(imageElement);
