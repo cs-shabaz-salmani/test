@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-connector-1:before {
+.icon-connector-type:before {
   content: "\e900";
 }
 .icon-connector-2:before {
@@ -34,7 +34,7 @@
 .icon-connector-3:before {
   content: "\e902";
 }
-.icon-dashboard-1:before {
+.icon-dashboard-type:before {
   content: "\e903";
 }
 .icon-dashboard-2:before {
@@ -43,7 +43,7 @@
 .icon-dashboard-3:before {
   content: "\e905";
 }
-.icon-how_to_videos-1:before {
+.icon-howtovideos-type:before {
   content: "\e906";
 }
 .icon-how_to_videos-2:before {
@@ -52,7 +52,7 @@
 .icon-how_to_videos-3:before {
   content: "\e908";
 }
-.icon-playbook-1:before {
+.icon-playbook-type:before {
   content: "\e909";
 }
 .icon-playbook-2:before {
@@ -61,25 +61,25 @@
 .icon-playbook-3:before {
   content: "\e90b";
 }
-.icon-reports-1:before {
+.icon-report-type:before {
   content: "\e90c";
 }
-.icon-reports-2:before {
+.icon-report-2:before {
   content: "\e90d";
 }
-.icon-reports-3:before {
+.icon-report-3:before {
   content: "\e90e";
 }
-.icon-solution_pack-1:before {
+.icon-solutionpack-type:before {
   content: "\e90f";
 }
-.icon-solution_pack-2:before {
+.icon-solutionpack-2:before {
   content: "\e910";
 }
-.icon-solution_pack-3:before {
+.icon-solutionpack-3:before {
   content: "\e911";
 }
-.icon-widget-1:before {
+.icon-widget-type:before {
   content: "\e912";
 }
 .icon-widget-2:before {
