@@ -320,10 +320,7 @@
 }
 
 .mp-update-tile-container {
-  width: 255px;
-  float: left;
   background: #ffffff;
-  margin: 20px 20px 0px 0px;
   border-radius: 10px;
   border: 1px solid #e2e2e2;
   padding: 10px 15px;
