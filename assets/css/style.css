@@ -240,15 +240,15 @@
   font-size: 20px;
 }
 
-.icon-connector-type {
+.icon-connector-type, .icon-connector-border, .icon-connector{
   color: #00a3ff;
 }
 
-.icon-widget-type {
+.icon-widget-type, .icon-widget-border, .icon-widget {
   color: #6e7dff;
 }
 
-.icon-solutionpack-type {
+.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack {
   color: #ff4751;
 }
 
@@ -282,6 +282,12 @@
   max-height: 85px;
   width: 85px;
   border-radius: 5px;
+}
+
+.mp-tile-container .mp-tile-image-container .mp-tile-icon {
+  font-size: 65px;
+  width: 80px;
+  height: 80px;
 }
 
 .mp-tile-container .mp-tile-description {
