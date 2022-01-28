@@ -40,8 +40,8 @@
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
       var docContent = document.createElement('zero-md');
-      docContent.setAttribute("src", detailInfo.help);
-      document.getElementById("detail-docs-content").append("https://raw.githubusercontent.com/fortinet-fortisoar/solution-pack-symantec-solutions/develop/README.md");
+      docContent.setAttribute("src", "https://raw.githubusercontent.com/fortinet-fortisoar/solution-pack-symantec-solutions/develop/README.md");
+      document.getElementById("detail-docs-content").append(docContent);
 //       httpGetAsync(mdFilepath, function(fileResponse) {
 //         document.getElementById("detail-release-notes").innerHTML = fileResponse;
 //       });
