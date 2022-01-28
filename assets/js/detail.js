@@ -34,7 +34,7 @@
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
       detailInfo.availableVersions.forEach(function(version) {
-        if(version !=== detailInfo.version){
+        if(version !== detailInfo.version){
           var versionTag = document.createElement('a');
           versionTag.className = "dropdown-item";
           versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
