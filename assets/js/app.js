@@ -36,6 +36,14 @@
     var allItemsJson = xmlHttp.responseText;
 //     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson);
+    var updatesList = [];
+    allItemsJson.forEach(function(item, index) {
+      if(index === 0 || index === 100 || index === 150 || index === 200 || index === 250 || index === 300 || index === 350 || index === 400){
+         updatesList.push(item); 
+      }
+    });
+    buildUpdatesAvailableList(updatesList);
+    
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
@@ -83,7 +91,7 @@
       var todaysDate = new Date();
       todaysDate = todaysDate.getTime();
       
-      listItems.forEach(function(item) {
+      listItems.forEach(function(item, index) {
         var timeStampToDate = new Date(item.published_date);
         var time_difference = todaysDate - (item.published_date * 1000);
         time_difference = time_difference / (1000 * 60 * 60 * 24);
@@ -171,6 +179,57 @@
       
       mainBanner.append(carouselDiv);
     });
+  }
+
+  function buildUpdatesAvailableList(listData){
+   var marketPlaceUpdates = $("#latest-hub-updates");
+   listData.forEach(function(listItem) {
+      var aTaglistItem = document.createElement('a');
+      aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
+      aTaglistItem.className = "mp-update-tile-container";
+
+
+      var itemType = document.createElement('p');
+      itemType.className = "mp-content-type";
+      var itemTypeText = document.createTextNode(listItem.type === 'solutionpack' ? 'Solution Pack' : listItem.type);
+      itemType.appendChild(itemTypeText);
+      aTaglistItem.appendChild(itemType);
+     
+      var itemIconDiv = document.createElement('div');
+      itemIconDiv.className = "mp-tile-image-container";
+
+      var imageElement = document.createElement('i');
+      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+      itemIconDiv.appendChild(imageElement);
+      aTaglistItem.appendChild(itemIconDiv);
+
+      var itemContentDiv = document.createElement('div');
+      itemContentDiv.className = "mp-content-fixed-height";
+
+      var itemTitle = document.createElement('h4');
+      itemTitle.className = "mp-tile-title";
+      var itemTitleText = document.createTextNode(listItem.label || listItem.display);
+      itemTitle.appendChild(itemTitleText);
+      itemContentDiv.appendChild(itemTitle);
+
+      var itemDetailsDiv = document.createElement('div');
+      itemDetailsDiv.className = "mp-tile-details";
+
+      var itemPublisher = document.createElement('p');
+      itemPublisher.className = "m-0";
+      var itemPublisherTag = document.createElement('span');
+      itemPublisherTag.className = "muted";
+      var itemPublisherTagText = document.createTextNode("Published By:");
+      itemPublisherTag.appendChild(itemPublisherTagText);
+      itemPublisher.appendChild(itemPublisherTag);
+      var itemPublisherText = document.createTextNode(listItem.publisher);
+      itemPublisher.appendChild(itemPublisherText);
+      itemDetailsDiv.appendChild(itemPublisher);
+      itemContentDiv.appendChild(itemDetailsDiv);
+      aTaglistItem.appendChild(itemContentDiv);
+
+      marketPlaceUpdates.append(aTaglistItem);
+    }); 
   }
 
 
