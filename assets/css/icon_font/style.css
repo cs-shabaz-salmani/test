@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'marketplace_fortisoar';
+  src:  url('fonts/marketplace_fortisoar.eot?8yjpbq');
+  src:  url('fonts/marketplace_fortisoar.eot?8yjpbq#iefix') format('embedded-opentype'),
+    url('fonts/marketplace_fortisoar.ttf?8yjpbq') format('truetype'),
+    url('fonts/marketplace_fortisoar.woff?8yjpbq') format('woff'),
+    url('fonts/marketplace_fortisoar.svg?8yjpbq#marketplace_fortisoar') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'marketplace_fortisoar' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-connector-1:before {
+  content: "\e900";
+}
+.icon-connector-2:before {
+  content: "\e901";
+}
+.icon-connector-3:before {
+  content: "\e902";
+}
+.icon-dashboard-1:before {
+  content: "\e903";
+}
+.icon-dashboard-2:before {
+  content: "\e904";
+}
+.icon-dashboard-3:before {
+  content: "\e905";
+}
+.icon-how_to_videos-1:before {
+  content: "\e906";
+}
+.icon-how_to_videos-2:before {
+  content: "\e907";
+}
+.icon-how_to_videos-3:before {
+  content: "\e908";
+}
+.icon-playbook-1:before {
+  content: "\e909";
+}
+.icon-playbook-2:before {
+  content: "\e90a";
+}
+.icon-playbook-3:before {
+  content: "\e90b";
+}
+.icon-reports-1:before {
+  content: "\e90c";
+}
+.icon-reports-2:before {
+  content: "\e90d";
+}
+.icon-reports-3:before {
+  content: "\e90e";
+}
+.icon-solution_pack-1:before {
+  content: "\e90f";
+}
+.icon-solution_pack-2:before {
+  content: "\e910";
+}
+.icon-solution_pack-3:before {
+  content: "\e911";
+}
+.icon-widget-1:before {
+  content: "\e912";
+}
+.icon-widget-2:before {
+  content: "\e913";
+}
+.icon-widget-3:before {
+  content: "\e914";
+}
+.icon-widget_01:before {
+  content: "\e915";
+}
+.icon-home-1:before {
+  content: "\e916";
+}
+.icon-github:before {
+  content: "\e917";
+}
+.icon-documentation:before {
+  content: "\e918";
+}
