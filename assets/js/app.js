@@ -186,10 +186,7 @@
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
-      aTaglistItem.onClick = function() {
-        setDetailsInLocal(listItem.infoPath);
-      };
-//       aTaglistItem.setAttribute("onClick", "setDetailsInLocal(listItem)");
+      aTaglistItem.setAttribute("onClick", "setDetailsInLocal(listItem.infoPath)");
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
