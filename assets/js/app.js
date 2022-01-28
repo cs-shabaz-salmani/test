@@ -231,7 +231,7 @@
       aTaglistItem.appendChild(itemContentDiv);
       listItemCard.append(aTaglistItem);
 
-      marketPlaceUpdates.append(aTaglistItem);
+      marketPlaceUpdates.append(listItemCard);
     }); 
   }
 
