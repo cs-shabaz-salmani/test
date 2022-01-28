@@ -34,7 +34,6 @@
     xmlHttp.open( "GET", yumRepo + "marketplace-test/marketplace.json", false ); // false for synchronous request
     xmlHttp.send( null );
     var allItemsJson = xmlHttp.responseText;
-    console.log(allItemsJson);
 //     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson);
     var totalItems = allItemsJson.length;
@@ -200,14 +199,14 @@
 //       aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
       
       var itemIconSpan = document.createElement('span');
-      itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
+      itemIconSpan.className = "mp-content-type-icon pull-left";
       var itemIcon = document.createElement('i');
       itemIcon.className = "icon-" + listItem.type + "-type icon";
       itemIconSpan.appendChild(itemIcon);
       aTaglistItem.appendChild(itemIconSpan);
       
       var itemType = document.createElement('p');
-      itemType.className = "mp-content-type display-inline-block";
+      itemType.className = "mp-content-type d-inline-block";
       var itemTypeText = document.createTextNode(listItem.type);
       itemType.appendChild(itemTypeText);
       aTaglistItem.appendChild(itemType);
@@ -216,7 +215,7 @@
       itemContentDiv.className = "mp-content-fixed-height";
       
       var itemTitle = document.createElement('h4');
-      itemTitle.className = "mp-tile-title margin-top-4";
+      itemTitle.className = "mp-tile-title";
       var itemTitleText = document.createTextNode(listItem.label || listItem.display);
       itemTitle.appendChild(itemTitleText);
       itemContentDiv.appendChild(itemTitle);
@@ -276,7 +275,6 @@
   }
 
   function setDetailsInLocal(data){
-    console.log(data); 
     window.localStorage.removeItem('detailInfoPath');
     window.localStorage.setItem('detailInfoPath', JSON.stringify(data));
   }
