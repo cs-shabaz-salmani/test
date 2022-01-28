@@ -9,7 +9,7 @@
     var detailInfo;
     
     var info = window.localStorage.getItem('detailInfo');
-    
+    info = info.toString();
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
