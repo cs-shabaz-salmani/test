@@ -267,5 +267,5 @@
   }
 
   function setDetailsInLocal(data){
-    window.localStorage.setItem('detailInfo', data);
+    window.localStorage.setItem('detailInfo', JSON.stringify(data));
   }
