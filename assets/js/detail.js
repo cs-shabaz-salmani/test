@@ -8,14 +8,13 @@
   function init() {
     var detailInfo;
     
-    var info = window.localStorage.getItem('detailInfo');
-    info = JSON.parse(info);
-    console.log(info);
+    var infoPath = window.localStorage.getItem('detailInfoPath');
+    console.log(infoPath);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
-    var detailPath = yumRepo + info.infoPath + '/info.json';
-    var mdFilepath = yumRepo + info.infoPath + '/release_notes.md';
+    var detailPath = yumRepo + infoPath + '/info.json';
+    var mdFilepath = yumRepo + infoPath + '/release_notes.md';
 
     httpGetAsync(detailPath, function(response) {
       detailInfo = response;
