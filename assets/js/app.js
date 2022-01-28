@@ -243,7 +243,7 @@
       if(listItem.iconLarge) {
         imageElement = document.createElement('img');
         imageElement.className = "mp-tile-image";
-        imageElement.src = listItem.iconLarge;
+        imageElement.src = yumRepo + listItem.iconLarge;
       } else {
         imageElement = document.createElement('i');
         imageElement.className = "mp-tile-icon";
