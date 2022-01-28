@@ -187,13 +187,13 @@
       aTaglistItem.className = "mp-tile-container";
       aTaglistItem.setAttribute("rel", "canonical");
       var infoPath = listItem.infoPath;
-//       aTaglistItem.onClick = function() {
-//        setDetailsInLocal(infoPath);
-//       };
+      aTaglistItem.onclick = function() {
+       setDetailsInLocal(infoPath);
+      };
 //       aTaglistItem.addEventListener("click", function() {
 //        setDetailsInLocal(infoPath);
 //       });
-      aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
+//       aTaglistItem.setAttribute("onclick", setDetailsInLocal(infoPath));
       
       var itemIconSpan = document.createElement('span');
       itemIconSpan.className = "mp-content-type-icon pull-left margin-top-2";
