@@ -240,15 +240,15 @@
   font-size: 20px;
 }
 
-.icon-connector-type, .icon-connector-border, .icon-connector{
+.icon-connector-type, .icon-connector-border, .icon-connector, .icon-connector-large{
   color: #00a3ff;
 }
 
-.icon-widget-type, .icon-widget-border, .icon-widget {
+.icon-widget-type, .icon-widget-border, .icon-widget, .icon-widget-large {
   color: #6e7dff;
 }
 
-.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack {
+.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack, .icon-solutionpack-large {
   color: #ff4751;
 }
 
