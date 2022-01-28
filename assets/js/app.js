@@ -184,6 +184,8 @@
   function buildUpdatesAvailableList(listData){
    var marketPlaceUpdates = $("#latest-hub-updates");
    listData.forEach(function(listItem) {
+      var listItemCard = document.createElement('div');
+      listItemCard.className = "col-md-3";
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-update-tile-container";
@@ -227,6 +229,7 @@
       itemDetailsDiv.appendChild(itemPublisher);
       itemContentDiv.appendChild(itemDetailsDiv);
       aTaglistItem.appendChild(itemContentDiv);
+      listItemCard.append(aTaglistItem);
 
       marketPlaceUpdates.append(aTaglistItem);
     }); 
