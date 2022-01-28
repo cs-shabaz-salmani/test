@@ -1,7 +1,7 @@
 'use strict';
 
   const http = new XMLHttpRequest();
-  var yumRepo = 'https://update.cybersponse.com/';
+  var yumRepo = 'https://update.cybersponse.com';
 
   init();
 
