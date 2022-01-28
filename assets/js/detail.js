@@ -30,6 +30,13 @@
       var imgTag = document.createElement('img');
       imgTag.src = yumRepo + detailInfo.iconLarge || 'assets/images/icon_large.png';
       imgTag.alt = detailInfo.display;
+      var detailAvailableVersions = document.getElementById("detail-available-versions");
+      detailInfo.availableVersions.forEach(function(version) {
+        var versionTag = document.createElement('a');
+        var versionText = document.createTextNode("Version - " + version);
+        versionTag.append(versionText);
+        detailAvailableVersions.append(versionTag);
+      });
       document.getElementById("detail-img-container").append(imgTag);
       document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
