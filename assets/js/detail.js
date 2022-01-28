@@ -28,7 +28,7 @@
       detailInfo.display = detailInfo.label || detailInfo.title;
       detailInfo.type = detailType;
       var imgTag = document.createElement('img');
-      imgTag.src = detailInfo.iconLarge || 'assets/images/icon_large.png';
+      imgTag.src = yumRepo + detailInfo.iconLarge || 'assets/images/icon_large.png';
       imgTag.alt = detailInfo.display;
       document.getElementById("detail-img-container").append(imgTag);
       document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
