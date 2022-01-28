@@ -233,7 +233,7 @@
       itemContentDiv.appendChild(itemDetailsDiv);
       aTaglistItem.appendChild(itemContentDiv);
       var itemButton = document.createElement('button');
-      itemButton.className = "btn mt-3 mb-5";
+      itemButton.className = "btn p-0 btn-link";
       var itemButtonText = document.createTextNode("Know More");
       itemButton.appendChild(itemButtonText);
       aTaglistItem.appendChild(itemButton);
