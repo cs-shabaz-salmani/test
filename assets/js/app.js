@@ -234,6 +234,8 @@
       aTaglistItem.appendChild(itemContentDiv);
       var itemButton = document.createElement('button');
       itemPublisher.className = "btn mt-3 mb-5";
+      var itemButtonText = document.createTextNode("Know More");
+      itemButton.appendChild(itemButtonText);
       aTaglistItem.appendChild(itemButton);
       listItemCardContent.append(aTaglistItem);
 
