@@ -69,7 +69,7 @@
 
 .sidebar #sidebar {
   position: fixed;
-  top: 70px;
+  top: 105px;
   left: 0px;
   right: 75%;
   bottom: 0px;
@@ -185,12 +185,12 @@
 }
 
 .all-list-container .main {
-  margin-top: 30px !important; 
+  margin-top: 105px !important; 
   background: #f9f9f9;
 }
 
 .main.main-carousel-container {
-  margin-top: 40px !important; 
+  margin-top: 65px !important; 
 }
 
 .main.item-detail-column {
