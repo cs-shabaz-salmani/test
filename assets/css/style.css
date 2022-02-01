@@ -69,12 +69,14 @@
 
 .sidebar #sidebar {
   position: fixed;
-  top: 105px;
-  left: 0px;
-  right: 75%;
+  top: 107px;
+  left: 8.3333%;
+  right: 70%;
   bottom: 0px;
-  background: #f9f9f9;
+  background: #ffff;
   border-right: 1px solid #dfdede;
+  margin-left: 20px;
+  border-left: 1px solid #dfdede;
 }
 
 .sidebar #sidebar .navbar-expand-lg .navbar-collapse {
