@@ -59,6 +59,11 @@
   left: 0px;
   right: 0px;
   z-index: 1;
+  border-bottom: 1px solid #ececec;
+}
+
+.top-breadcrumb .breadcrumb {
+  margin-left: 20px; 
 }
 
 .sidebar #sidebar {
