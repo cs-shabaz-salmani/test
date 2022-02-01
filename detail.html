@@ -31,13 +31,17 @@
                         </a>
                     </div>
                 </div>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item" aria-current="page"><a href="/" class="text-decoration-none"><i class="fa fa-home"></i></a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a onclick="history.back()">Categories</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><span id="detail-current-breadcrumb"></span></li>
-                    </ol>
-                </nav>
+                <div class="top-breadcrumb">
+                    <div class="custom-left-offset-1 custom-right-offset-1">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page"><a href="/" class="text-decoration-none"><i class="fa fa-home"></i></a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a onclick="history.back()">Categories</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span id="detail-current-breadcrumb"></span></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -62,15 +66,15 @@
                                         <div class="detail-summary">
                                             <div class="pull-left" id="detail-img-container">
                                             </div>
-                                            <div class="pull-left">
-                                                <p class="detail-properties">
-                                                    <span class="detail-properties grey-text">Version </span>
+                                            <div class="pull-left m-3">
+                                                <p class="detail-properties mb-0">
+                                                    <span class="grey-text">Version </span>
                                                     <span id="detail-version"></span>
                                                 </p>
-                                                <p class="detail-properties"><span class="grey-text">Certified:
+                                                <p class="detail-properties mb-0"><span class="grey-text">Certified:
                                                     </span><span id="detail-certified"></span></p>
                                                 <p class="detail-properties"><span class="grey-text">Publisher:
-                                                    </span><span class="detail-properties" id="detail-publisher"></span>
+                                                    </span><span id="detail-publisher"></span>
                                                 </p>
                                             </div>
                                             <div class="pull-right">
