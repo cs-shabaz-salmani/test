@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <base href="/"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <title>FortiSOAR Marketplace</title>
-        <link rel="shortcut icon" type="image/x-icon" href="" />
-        <!-- CSS only -->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/icon_font/style.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="topbar-container">
-                        <a href="/" class="text-decoration-none"><h1>FortiSOAR <span>Marketplace</span></h1></a>
-                    </div>
-                    <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
+
+<head>
+    <base href="/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>FortiSOAR Marketplace</title>
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icon_font/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="topbar-container">
+                    <a href="/" class="text-decoration-none">
+                        <h1>FortiSOAR <span>Marketplace</span></h1>
+                    </a>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
                         <li class="breadcrumb-item" aria-current="page">Home</li>
                         <li class="breadcrumb-item active" aria-current="page">Details</li>
-                      </ol>
-                    </nav>
-                </div>
+                    </ol>
+                </nav>
             </div>
-            <div class="row">
-                <!--<div class="col-md-3 sidebar">
+        </div>
+        <div class="row">
+            <!--<div class="col-md-3 sidebar">
                     <nav id="sidebar">
                     </nav>
                 </div>-->
-                <div class="main col-md-12 item-detail-column">
+            <div class="main col-md-12 item-detail-column">
+                <div class="custom-left-offset-1 custom-right-offset-1">
                     <div class="dropdown show dropdown-version-content">
-                      <a class="btn btn-sm btn-secondary dropdown-toggle" role="button" id="dropdownVersionLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownVersionLink" id="detail-available-versions"></div>
+                        <a class="btn btn-sm btn-secondary dropdown-toggle" role="button" id="dropdownVersionLink"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownVersionLink" id="detail-available-versions">
+                        </div>
                     </div>
-                  <div class="col-md-12">
-                    <div class="detail-content">
-                      <div class="detail-container">
-                        <div class="row">
-                          <div class="col-md-12 col-sm-12">
-                            <h2 id="detail-heading"></h2>
-                            <div class="detail-summary">
-                              <div class="pull-left" id="detail-img-container">
-                              </div>
-                              <div class="pull-left">
-                                <p class="detail-properties">
-                                  <span class="detail-properties grey-text">Version </span>
-                                  <span id="detail-version"></span>
-                                </p>
-                                <p class="detail-properties"><span class="grey-text">Certified: </span><span id="detail-certified"></span></p>
-                                <p class="detail-properties"><span class="grey-text">Publisher: </span><span class="detail-properties" id="detail-publisher"></span></p>
-                              </div>
-                              <div class="pull-right">
-                                <div class="detail-properties">
-                                  <div class="row">
-                                    <div class="col-md-12">
-<!--                                       <div class="display-inline-block" id="detail-doc-link"></div> -->
+                    <div class="col-md-12">
+                        <div class="detail-content">
+                            <div class="detail-container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <h2 id="detail-heading"></h2>
+                                        <div class="detail-summary">
+                                            <div class="pull-left" id="detail-img-container">
+                                            </div>
+                                            <div class="pull-left">
+                                                <p class="detail-properties">
+                                                    <span class="detail-properties grey-text">Version </span>
+                                                    <span id="detail-version"></span>
+                                                </p>
+                                                <p class="detail-properties"><span class="grey-text">Certified:
+                                                    </span><span id="detail-certified"></span></p>
+                                                <p class="detail-properties"><span class="grey-text">Publisher:
+                                                    </span><span class="detail-properties" id="detail-publisher"></span>
+                                                </p>
+                                            </div>
+                                            <div class="pull-right">
+                                                <div class="detail-properties">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <!--<div class="display-inline-block" id="detail-doc-link"></div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                                <div class="row detail-container-bottom">
+                                    <div class="col-md-12">
+                                        <div class="grey-text detail-properties detail-description"
+                                            id="detail-description"></div>
+                                    </div>
+                                </div>
+                                <div class="row detail-container-bottom d-none" id="release-notes-block">
+                                    <div class="col-md-12">
+                                        <strong class="d-block fs-5 mt-3 text-decoration-underline">Release
+                                            Notes</strong>
+                                        <div class="grey-text detail-properties detail-description"
+                                            id="detail-release-notes"></div>
+                                    </div>
+                                </div>
+                                <div class="row detail-container-bottom d-none mb-5" id="doc-content-block">
+                                    <div class="col-md-12">
+                                        <strong class="d-block fs-5 mt-3 text-decoration-underline">Documents</strong>
+                                        <div class="grey-text detail-properties detail-description pb-5"
+                                            id="detail-docs-content"></div>
+                                    </div>
+                                </div>
+                                <div class="row detail-container-bottom d-none mb-5" id="detail-doc-link">
+                                    <div class="col-md-12">
+                                        <strong
+                                            class="d-block fs-5 mt-3 text-decoration-underline">Documentation</strong>
+                                        <p class="grey-text detail-properties detail-description pb-5">View the document
+                                            <span id="detail-doc-link-here"></span></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="clearfix"></div>
-                          </div>
                         </div>
-                        <div class="row detail-container-bottom">
-                          <div class="col-md-12">
-                            <div class="grey-text detail-properties detail-description" id="detail-description"></div>
-                          </div>
-                        </div>
-                        <div class="row detail-container-bottom" id="release-notes-block">
-                          <div class="col-md-12">
-                            <strong class="d-block fs-5 mt-3 text-decoration-underline">Release Notes</strong>
-                            <div class="grey-text detail-properties detail-description" id="detail-release-notes"></div>
-                          </div>
-                        </div>
-                        <div class="row detail-container-bottom d-none" id="doc-content-block">
-                          <div class="col-md-12">
-                            <strong class="d-block fs-5 mt-3 text-decoration-underline">Documents</strong>
-                            <div class="grey-text detail-properties detail-description" id="detail-docs-content"></div>
-                          </div>
-                        </div>
-                        <div class="row detail-container-bottom d-none" id="detail-doc-link">
-                          <div class="col-md-12">
-                            <strong class="d-block fs-5 mt-3 text-decoration-underline">Documentation</strong>
-                            <p class="grey-text detail-properties detail-description">View the document <span id="detail-doc-link-here"></span></p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="footer-container" id="footer-container"></div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-        <script src="assets/js/detail.js"></script>
-    </body>
+    </div>
+    <footer>
+        <div class="footer-container" id="footer-container"></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <script src="assets/js/detail.js"></script>
+</body>
+
 </html>
