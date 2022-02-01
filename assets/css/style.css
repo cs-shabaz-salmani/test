@@ -53,6 +53,14 @@
   margin-left: 5px;
 }
 
+.top-breadcrumb {
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
 .sidebar #sidebar {
   position: fixed;
   top: 70px;
@@ -180,7 +188,7 @@
 }
 
 .main.item-detail-column {
-  margin-top: 60px !important; 
+  margin-top: 110px !important; 
 }
 
 .main .carousel {
