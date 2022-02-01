@@ -60,7 +60,7 @@
       document.getElementById("detail-release-notes").append(releaseNotes);
       var docLink = detailInfo.help;
       var docLinkBlock = document.getElementById("doc-content-block");
-      if(docLink.match('readme.md')){
+      if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
