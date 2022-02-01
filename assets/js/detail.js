@@ -37,6 +37,7 @@
         imageElement = document.createElement('i');
         imageElement.className = "mp-tile-icon icon-" + detailInfo.type + "-large";
       }
+      document.getElementById("detail-current-breadcrumb").innerHTML = detailInfo.name;
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
       detailInfo.availableVersions.forEach(function(version) {
