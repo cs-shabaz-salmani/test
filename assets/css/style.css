@@ -43,14 +43,12 @@
 
 .topbar-container h1 {
   font-size: 30px;
-  font-weight: 700;
   padding: 15px 10px 20px 20px;
   color: #000000;
   background: #ffffff;
 }
 
 .topbar-container h1 span {
-  font-weight: 200;
   margin-left: 5px;
 }
 
