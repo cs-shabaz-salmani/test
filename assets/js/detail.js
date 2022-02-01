@@ -75,12 +75,12 @@
         docLink.setAttribute("title", "Online Help");
         docLink.setAttribute("target", "_blank");
         docLink.setAttribute("rel", "noopener noreferrer");
-        var docIcon = document.createElement('i');
-        docIcon.className = "fa fa-globe";
-        docLink.append(docIcon);
-        var docLinkText = document.createTextNode("Documentation");
+//         var docIcon = document.createElement('i');
+//         docIcon.className = "fa fa-globe";
+//         docLink.append(docIcon);
+        var docLinkText = document.createTextNode("here");
         docLink.append(docLinkText);
-        document.getElementById("detail-doc-link").append(docLink);
+        document.getElementById("detail-doc-link-here").append(docLink);
         docLinkBlock.classList.remove("d-block");
         docLinkBlock.classList.add("d-none");
       }
