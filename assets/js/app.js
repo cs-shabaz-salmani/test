@@ -126,11 +126,11 @@
     var searchedListItems = [];
     listItems.forEach(function(item) {
       if(paramCategoryType && paramCategoryType !== 'all'){
-        if(paramCategoryType === item.type && item.display.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+        if(paramCategoryType === item.type && item.name.toLowerCase().indexOf(match.toLowerCase()) > -1) {
           searchedListItems.push(item);
         }
       } else {
-        if(item.display.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+        if(item.name.toLowerCase().indexOf(match.toLowerCase()) > -1) {
            searchedListItems.push(item);
         }
       }
