@@ -53,13 +53,13 @@
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
       var docLink = detailInfo.help;
+      var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink.match('readme.md')){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         document.getElementById("detail-docs-content").append(docContent);
-        var docLinkBlock = document.getElementById("doc-content-block");
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
       } else {
