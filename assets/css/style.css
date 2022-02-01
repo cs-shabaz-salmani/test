@@ -38,6 +38,7 @@
   left: 0px;
   right: 0px;
   z-index: 2;
+  background: #ffffff;
   box-shadow: 0px 1px 5px #cecece;
 }
 
@@ -45,7 +46,6 @@
   font-size: 30px;
   padding: 15px 10px 15px 20px;
   color: #000000;
-  background: #ffffff;
 }
 
 .top-breadcrumb {
