@@ -7,6 +7,7 @@
   var listItems = [];
   var listItemsBkp;
   var paramCategoryType = urlSearchParams.get('category');
+  var searchContent = urlSearchParams.get('searchContent');
 
   $(document).ready(function() {
     var navBar = $('#sidebar');
@@ -17,6 +18,9 @@
           $("#lets_connect_link").addClass("d-none");
         } else {
           $("#lets_connect_link").removeClass("d-none");
+        }
+        if (window.location.href.indexOf('list.html') > -1 && searchContent) {
+          searchContentData(searchContent);
         }
       }, 1000);
     }
@@ -105,33 +109,34 @@
     buildListData(filteredListItems);
   }
 
-  function submitSearch(event) {
-    console.log(event);
-    if (window.location.href.indexOf('list.html') === -1) {
-      window.location.href = "/list.html?category=all"
-    } else {
-      window.history.replaceState(null, null, "/list.html?category=all");
-    }
+  function submitSearch() {
     var searchText = $("#searchText").val();
     if(searchText.length >= 3) {
-      var searchedListItems = [];
-      listItems.forEach(function(item) {
-        if(paramCategoryType && paramCategoryType !== 'all'){
-          if(paramCategoryType === item.type && item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
-            searchedListItems.push(item);
-          }
-        } else {
-          if(item.display.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
-             searchedListItems.push(item);
-          }
-        }
-      });
-      listItems = searchedListItems;
+      if (window.location.href.indexOf('list.html') === -1) {
+        window.location.href = "/list.html?category=all&searchContent=" + searchText;
+      } else {
+        window.history.replaceState(null, null, "/list.html?category=all&searchContent=" + searchText);
+      }
     } else {
-      listItems = listItemsBkp;
+      console.log('Enter atleast 3 chars');
     }
+  }
+
+  function searchContentData(match) {
+    var searchedListItems = [];
+    listItems.forEach(function(item) {
+      if(paramCategoryType && paramCategoryType !== 'all'){
+        if(paramCategoryType === item.type && item.display.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+          searchedListItems.push(item);
+        }
+      } else {
+        if(item.display.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+           searchedListItems.push(item);
+        }
+      }
+    });
     
-    buildListData(listItems);
+    buildListData(searchedListItems);
   }
 
   function buildHomePageBanners() {
