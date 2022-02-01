@@ -11,7 +11,6 @@
     
     var allInfoPath = window.localStorage.getItem('detailInfoPath');
     allInfoPath = JSON.parse(allInfoPath);
-    console.log(allInfoPath);
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
@@ -28,9 +27,16 @@
       detailInfo = response;
       detailInfo.display = detailInfo.label || detailInfo.title;
       detailInfo.type = detailType;
-      var imgTag = document.createElement('img');
-      imgTag.src = yumRepo + detailInfo.iconLarge || 'assets/images/icon_large.png';
-      imgTag.alt = detailInfo.display;
+      var imageElement;
+      if(detailInfo.iconLarge) {
+        imageElement = document.createElement('img');
+        imageElement.className = "mp-tile-image";
+        imageElement.src = yumRepo + detailInfo.iconLarge;
+        imageElement.alt = detailInfo.display;
+      } else {
+        imageElement = document.createElement('i');
+        imageElement.className = "mp-tile-icon icon-" + detailInfo.type + "-large";
+      }
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
       detailInfo.availableVersions.forEach(function(version) {
@@ -43,7 +49,7 @@
           detailAvailableVersions.append(versionTag);
         }
       });
-      document.getElementById("detail-img-container").append(imgTag);
+      document.getElementById("detail-img-container").append(imageElement);
       document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
