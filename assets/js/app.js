@@ -107,6 +107,11 @@
 
   function submitSearch(event) {
     console.log(event);
+    if (window.location.href.indexOf('list.html') === -1) {
+      window.location.href = "/list.html?category=all"
+    } else {
+      window.history.replaceState(null, null, "/list.html?category=all");
+    }
     var searchText = $("#searchText").val();
     if(searchText.length >= 3) {
       var searchedListItems = [];
