@@ -19,9 +19,6 @@
         } else {
           $("#lets_connect_link").removeClass("d-none");
         }
-        if (window.location.href.indexOf('list.html') > -1 && searchContent) {
-          searchContentData(searchContent);
-        }
       }, 1000);
     }
     var footer = $('#footer-container');
@@ -51,13 +48,15 @@
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
-    if(paramCategoryType){
+    if(paramCategoryType && !searchContent){
       filterContent(paramCategoryType);
       setTimeout(function(){
           filterContent(paramCategoryType);
           $("#" + paramCategoryType + "_filter_btn").addClass("active");
           $("#" + paramCategoryType + "_sidebar_link").addClass("active");
       }, 1000);
+    } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
+      searchContentData(searchContent);
     } else {
       filterContent('all', true);
     }
