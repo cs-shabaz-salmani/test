@@ -19,6 +19,9 @@
         } else {
           $("#lets_connect_link").removeClass("d-none");
         }
+        if(searchContent) {
+          $("#searchText").val(searchContent);
+        }
       }, 1000);
     }
     var footer = $('#footer-container');
@@ -110,11 +113,12 @@
 
   function submitSearch() {
     var searchText = $("#searchText").val();
-    if(searchText.length >= 3) {
+    if(searchText.length >= 3 || searchText.length === 0) {
+      var searchParams = searchText.length >= 3 ? "&searchContent=" + searchText : "";
       if (window.location.href.indexOf('list.html') === -1) {
-        window.location.href = "/list.html?category=all&searchContent=" + searchText;
+        window.location.href = "/list.html?category=all" + searchParams;
       } else {
-        window.history.replaceState(null, null, "/list.html?category=all&searchContent=" + searchText);
+        window.history.replaceState(null, null, "/list.html?category=all" + searchParams);
       }
     } else {
       console.log('Enter atleast 3 chars');
