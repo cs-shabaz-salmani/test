@@ -1,54 +1,93 @@
 <div class="sidebar-content navbar-expand-lg">
-  <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion accordion-flush" id="accordionFilter">
+    <!--Content Type-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
+      <h2 class="accordion-header" id="filterByContentType">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Accordion Item #1
+          data-bs-target="#collapseContentType" aria-expanded="false" aria-controls="collapseContentType">
+          Content Type
         </button>
       </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-          <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+      <div id="collapseContentType" class="accordion-collapse collapse" aria-labelledby="filterByContentType"
+        data-bs-parent="#accordionFilter">
+        <div class="accordion-body">
+          <ul class="dropdown-menu btnGroupCategory" aria-labelledby="btnGroupCategory">
+            <li class="sidebar-item"><input type="checkbox" id="connector_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'connector')" />Integrations</li>
+            <li class="sidebar-item"><input type="checkbox" id="use_case_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'use_case')" />Use Cases</li>
+            <li class="sidebar-item"><input type="checkbox" id="content_pack_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'content_pack')" />Content Packs</li>
+            <li class="sidebar-item"><input type="checkbox" id="widget_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'widget')" />Widgets</li>
+            <li class="sidebar-item"><input type="checkbox" id="how_tos_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'how_tos')" />How To's</li>
+          </ul>
+        </div>
       </div>
     </div>
+    <!--Content Type Ends-->
+    <!--Category-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
+      <h2 class="accordion-header" id="filterByCategory">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Accordion Item #2
+          data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+          Category
         </button>
       </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-          <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled
-          with some actual content.</div>
+      <div id="collapseCategory" class="accordion-collapse collapse" aria-labelledby="filterByCategory"
+        data-bs-parent="#accordionFilter">
+        <div class="accordion-body">
+          <ul class="dropdown-menu btnGroupCategory" aria-labelledby="btnGroupCategory">
+            <li class="sidebar-item"><input type="checkbox" id="connector_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'connector')" />Integrations</li>
+            <li class="sidebar-item"><input type="checkbox" id="use_case_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'use_case')" />Use Cases</li>
+            <li class="sidebar-item"><input type="checkbox" id="content_pack_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'content_pack')" />Content Packs</li>
+            <li class="sidebar-item"><input type="checkbox" id="widget_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'widget')" />Widgets</li>
+            <li class="sidebar-item"><input type="checkbox" id="how_tos_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'how_tos')" />How To's</li>
+          </ul>
+        </div>
       </div>
     </div>
+    <!--Category Ends-->
+    <!--Publisher-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
+      <h2 class="accordion-header" id="filterByPublisher">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Accordion Item #3
+          data-bs-target="#collapsePublisher" aria-expanded="false" aria-controls="collapsePublisher">
+          Publisher
         </button>
       </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-          <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening
-          here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more
-          representative of how this would look in a real-world application.</div>
+      <div id="collapsePublisher" class="accordion-collapse collapse" aria-labelledby="filterByPublisher"
+        data-bs-parent="#accordionFilter">
+        <div class="accordion-body">
+          <ul class="dropdown-menu btnGroupCategory" aria-labelledby="btnGroupCategory">
+            <li class="sidebar-item"><input type="checkbox" id="connector_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'connector')" />Integrations</li>
+            <li class="sidebar-item"><input type="checkbox" id="use_case_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'use_case')" />Use Cases</li>
+            <li class="sidebar-item"><input type="checkbox" id="content_pack_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'content_pack')" />Content Packs</li>
+            <li class="sidebar-item"><input type="checkbox" id="widget_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'widget')" />Widgets</li>
+            <li class="sidebar-item"><input type="checkbox" id="how_tos_sidebar_link" class="sidebar-link dropdown-item"
+                onClick="applyFilter(this, 'how_tos')" />How To's</li>
+          </ul>
+        </div>
       </div>
     </div>
+    <!--Publisher Ends-->
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseableContent"
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseableContent"
     aria-controls="navbarCollapseableContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapseableContent">
+  </button> -->
+  <!-- <div class="collapse navbar-collapse" id="navbarCollapseableContent">
     <div class="navbar-btn-container">
       <button id="all_filter_btn" class="btn btn-outline-secondary w-100 mb-2 text-lg-start bg-white"
         onClick="applyFilter(this, 'all')">
@@ -120,11 +159,11 @@
       <ul class="dropdown-menu" aria-labelledby="how_tos">
         <li><a class="dropdown-item" href="#">Dropdown link 1</a></li>
         <li><a class="dropdown-item" href="#">Dropdown link 2</a></li>
-      </ul><!-- End of Filter  -->
+      </ul>
 
       <a href="connect.html" id="lets_connect_link" class="btn btn-outline-secondary w-100 mt-5 bg-white">
         Let's Connect
       </a>
     </div>
-  </div>
+  </div> -->
 </div>
