@@ -160,6 +160,7 @@
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .sidebar .sidebar-link.active {
