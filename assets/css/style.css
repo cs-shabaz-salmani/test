@@ -63,8 +63,20 @@
   margin-left: 20px; 
 }
 
+.top-breadcrumb .breadcrumb-item.active {
+  color: #3c3c3c;
+}
+
+.top-breadcrumb .breadcrumb-item+.breadcrumb-item {
+  padding-left: 15px;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
 .top-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
   content: var(--bs-breadcrumb-divider, ">");
+  padding-right: 15px;
+  color: #a9a9a9;
 }
 
 .sidebar #sidebar {
