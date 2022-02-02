@@ -304,8 +304,8 @@
       var itemVersion = document.createElement('p');
       itemVersion.className = "m-0";
       var itemVersionTag = document.createElement('span');
-      itemVersionTag.className = "muted";
-      var itemVersionTagText = document.createTextNode("Version:");
+      itemVersionTag.className = "text-black-50";
+      var itemVersionTagText = document.createTextNode("Version: ");
       itemVersionTag.appendChild(itemVersionTagText);
       itemVersion.appendChild(itemVersionTag);
       var itemVersionText = document.createTextNode(listItem.version);
@@ -315,8 +315,8 @@
       var itemPublisher = document.createElement('p');
       itemPublisher.className = "m-0";
       var itemPublisherTag = document.createElement('span');
-      itemPublisherTag.className = "muted";
-      var itemPublisherTagText = document.createTextNode("Published By:");
+      itemPublisherTag.className = "text-black-50";
+      var itemPublisherTagText = document.createTextNode("Published By: ");
       itemPublisherTag.appendChild(itemPublisherTagText);
       itemPublisher.appendChild(itemPublisherTag);
       var itemPublisherText = document.createTextNode(listItem.publisher);
