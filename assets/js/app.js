@@ -41,7 +41,7 @@
 //     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson);
     var updatesList = [];
-    allItemsJson.forEach(function(item, index) {
+    _.each(allItemsJson, function(item, index) {
       if(index === 0 || index === 100 || index === 150 || index === 200 || index === 250 || index === 300 || index === 350 || index === 400){
          updatesList.push(item); 
       }
