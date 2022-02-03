@@ -313,8 +313,12 @@
   margin-top: 15px; 
 }
 
-.product-updates-content {
+.latest-updates-suggestions-content {
   background: #f9f9f9;
+}
+
+.product-updates-content {
+  padding: 0px 10px; 
 }
 
 .product-updates-content .product-updates-image {
@@ -324,7 +328,17 @@
 }
 
 .product-updates-content h1 {
-  padding: 0px 10px; 
+  padding: 15px 10px;
+  font-size: 20px;
+  margin: 0px;
+  color: #4c4c4c;
+}
+
+.product-updates-content p{
+  padding: 0px 10px;
+  font-size: 13px;
+  color: #787878;
+  margin-bottom: 10px; 
 }
 
 .mp-tile-container {
