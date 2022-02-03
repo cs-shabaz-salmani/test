@@ -224,18 +224,29 @@
       
       mainBanner.append(carouselDiv);
     });
+    
     _.each(bannersJson.mainBanner, function(banner, index) {
       
       var carouselDiv = document.createElement('div');
-      carouselDiv.className = "";
+      carouselDiv.className = "product-updates-content";
       
       var carouselRow = document.createElement('div');
       carouselRow.className = "row";
       carouselDiv.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
-      carouselColumn.className = "col-md-12";
+      carouselColumn.className = "col-md-3";
       carouselRow.appendChild(carouselColumn);
+      
+      var itemIconDiv = document.createElement('div');
+      itemIconDiv.className = "product-updates-image-container";
+      
+      var imageElement = document.createElement('img');
+      imageElement.className = "product-updates-image";
+      imageElement.src = "/assets/images/product_updates.png";
+      
+      itemIconDiv.appendChild(imageElement);
+      carouselColumn.appendChild(itemIconDiv);
       
       var carouselHeading = document.createElement('h1');
       carouselColumn.appendChild(carouselHeading);
@@ -248,14 +259,6 @@
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
-      
-      var carouselHyperLink = document.createElement('a');
-      carouselHyperLink.href = banner.hyperLink;
-      carouselHyperLink.className = "pull-left text-center btn btn-md btn-outline-dark";
-      carouselHyperLink.setAttribute("rel", "canonical");
-      var carouselHyperLinkText = document.createTextNode("View");
-      carouselHyperLink.appendChild(carouselHyperLinkText);
-      carouselColumn.appendChild(carouselHyperLink);
       
       updatesBanner.append(carouselDiv);
     });
