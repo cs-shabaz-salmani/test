@@ -11,6 +11,10 @@
       <div id="collapseContentType" class="accordion-collapse collapse" aria-labelledby="filterByContentType"
         data-bs-parent="#accordionFilter">
         <div class="accordion-body">
+          <div class="global-search-input pull-right mt-3 w-50">
+              <input class="form-control" type="text" id="searchContent" name="searchContent" placeholder="Search" onChange="submitSearchContent(this)"/>
+              <i class="fa fa-search searchIcon"></i>
+          </div>
           <ul class="filter-list-input">
             <li class="sidebar-item list-unstyled"><input type="checkbox" id="connector_sidebar_link" class="sidebar-link"
                 onClick="applyFilter('connector')" />Connectors</li>
