@@ -251,13 +251,13 @@
       carouselTextContent.appendChild(carouselHeading);
       
       var carouselHeadingText = document.createTextNode(banner.heading);
-      carouselTextContent.appendChild(carouselHeadingText);
+      carouselHeadingText.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
       carouselTextContent.appendChild(carouselSubHeading);
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
-      carouselTextContent.appendChild(carouselSubHeadingText);
+      carouselSubHeading.appendChild(carouselSubHeadingText);
       carouselColumn.appendChild(carouselTextContent);
       
       updatesBanner.append(carouselDiv);
