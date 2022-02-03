@@ -5,7 +5,7 @@
   var basePath = 'http://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
-  var paramCategoryType = urlSearchParams.get('category');
+  var paramCategoryType = urlSearchParams.get('contentType');
   var searchContent = urlSearchParams.get('searchContent');
 
   $(document).ready(function() {
@@ -75,7 +75,7 @@
     console.log(event);
     console.log(event.val());
     if (window.location.href.indexOf('list.html') === -1) {
-      window.location.href = "/list.html?category=" + type;
+      window.location.href = "/list.html?contentType=" + type;
     } else {
       window.history.replaceState(null, null, "/list.html?category=" + type);
     }
@@ -117,7 +117,7 @@
     if(searchText.length >= 3 || searchText.length === 0) {
       var searchParams = searchText.length >= 3 ? "&searchContent=" + searchText : "";
       if (window.location.href.indexOf('list.html') === -1) {
-        window.location.href = "/list.html?category=all" + searchParams;
+        window.location.href = "/list.html?contentType=all" + searchParams;
       } else {
         window.history.replaceState(null, null, "/list.html?category=all" + searchParams);
       }
