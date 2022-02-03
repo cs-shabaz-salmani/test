@@ -244,17 +244,21 @@
       itemIconDiv.appendChild(imageElement);
       carouselColumn.appendChild(itemIconDiv);
       
+      var carouselTextContent = document.createElement('div');
+      carouselTextContent.className = "product-updates-text-container";
+      
       var carouselHeading = document.createElement('h1');
-      carouselColumn.appendChild(carouselHeading);
+      carouselTextContent.appendChild(carouselHeading);
       
       var carouselHeadingText = document.createTextNode(banner.heading);
-      carouselHeading.appendChild(carouselHeadingText);
+      carouselTextContent.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
-      carouselColumn.appendChild(carouselSubHeading);
+      carouselTextContent.appendChild(carouselSubHeading);
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
-      carouselSubHeading.appendChild(carouselSubHeadingText);
+      carouselTextContent.appendChild(carouselSubHeadingText);
+      carouselColumn.appendChild(carouselTextContent);
       
       updatesBanner.append(carouselDiv);
     });
