@@ -111,7 +111,7 @@
 
   function filterContent(types, latest) {
     var filteredListItems = [];
-    if(!latest){
+    if(types){
       _.each(listItems, function(item) {
         _.each(types, function(type) {
           if(item.type === type) {
@@ -119,7 +119,7 @@
           }
         });
       });
-    } else {
+    } else if(latest) {
       var todaysDate = new Date();
       todaysDate = todaysDate.getTime();
       
