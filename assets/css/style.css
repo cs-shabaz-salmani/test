@@ -313,6 +313,20 @@
   margin-top: 15px; 
 }
 
+.product-updates-content {
+  background: #f9f9f9;
+}
+
+.product-updates-content .product-updates-image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-updates-content h1 {
+  padding: 0px 10px; 
+}
+
 .mp-tile-container {
   width: 255px;
   float: left;
@@ -529,7 +543,7 @@
 }
 
 .latest-updates-suggestions-content {
-  background: #ffffff;
+  background: #f9f9f9;
 }
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-item {
