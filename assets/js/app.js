@@ -227,11 +227,12 @@
     
     _.each(bannersJson.mainBanner, function(banner, index) {
       
-      var carouselColumn = document.createElement('div');
-      carouselColumn.className = "col-md-3";
-      
       var carouselDiv = document.createElement('div');
+      carouselDiv.className = "col-md-3";
+      
+      var carouselColumn = document.createElement('div');
       carouselColumn.className = "product-updates-content";
+      carouselDiv.appendChild(carouselColumn);
       
       var itemIconDiv = document.createElement('div');
       itemIconDiv.className = "product-updates-image-container";
@@ -255,7 +256,7 @@
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
       
-      updatesBanner.append(carouselColumn);
+      updatesBanner.append(carouselDiv);
     });
   }
 
