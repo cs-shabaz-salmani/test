@@ -87,7 +87,7 @@
   function filterContent(type, latest) {
     var filteredListItems = [];
     if(type !== 'all'){
-      listItems.forEach(function(item) {
+      _.each(listItems, function(item) {
         if(item.type === type) {
           filteredListItems.push(item); 
         }
@@ -96,7 +96,7 @@
       var todaysDate = new Date();
       todaysDate = todaysDate.getTime();
       
-      listItems.forEach(function(item, index) {
+      _.each(listItems, function(item, index) {
         var timeStampToDate = new Date(item.published_date);
         var time_difference = todaysDate - (item.published_date * 1000);
         time_difference = time_difference / (1000 * 60 * 60 * 24);
@@ -126,7 +126,7 @@
 
   function searchContentData(match) {
     var searchedListItems = [];
-    listItems.forEach(function(item) {
+    _.each(listItems, function(item) {
       if(paramCategoryType && paramCategoryType !== 'all'){
         if(paramCategoryType === item.type && item.name.toLowerCase().indexOf(match.toLowerCase()) > -1) {
           searchedListItems.push(item);
@@ -146,7 +146,7 @@
     var mainBannerIndicator = $("#main-carousel-indicators");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
-    bannersJson.mainBanner.forEach(function(banner, index) {
+    _.each(bannersJson.mainBanner, function(banner, index) {
       var carouselId = "carouselMainCaptions" + index;
       var carouselIndicatorButton = document.createElement('button');
       carouselIndicatorButton.className = index === 0 ? "active" : "";
@@ -195,7 +195,7 @@
 
   function buildUpdatesAvailableList(listData){
    var marketPlaceUpdates = $("#latest-hub-updates");
-   listData.forEach(function(listItem) {
+   _.each(listData, function(listItem) {
       var listItemCard = document.createElement('div');
       listItemCard.className = "col-md-3";
       var listItemCardContent = document.createElement('div');
@@ -204,7 +204,6 @@
       var aTaglistItem = document.createElement('a');
       aTaglistItem.className = "text-decoration-none";
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
-
 
       var itemType = document.createElement('p');
       itemType.className = "mp-content-type";
@@ -261,7 +260,7 @@
     var marketPlace = $("#marketplace-list");
     $(".item-container").remove();
     $("#filteredContentCount").html(listData.length);
-    listData.forEach(function(listItem) {
+    _.each(listData, function(listItem) {
       var aTaglistItem = document.createElement('a');
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
       aTaglistItem.className = "mp-tile-container";
