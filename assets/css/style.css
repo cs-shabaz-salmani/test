@@ -343,6 +343,8 @@
 
 .product-updates-content .product-updates-text-container {
   background: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
