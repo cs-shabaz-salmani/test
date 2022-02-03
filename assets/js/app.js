@@ -179,6 +179,8 @@
     var mainBannerIndicator = $("#main-carousel-indicators");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
+    
+    //Main Banner
     _.each(bannersJson.mainBanner, function(banner, index) {
       var carouselId = "carouselMainCaptions" + index;
       var carouselIndicatorButton = document.createElement('button');
@@ -225,6 +227,7 @@
       mainBanner.append(carouselDiv);
     });
     
+    //Updates banner
     _.each(bannersJson.mainBanner, function(banner, index) {
       
       var carouselDiv = document.createElement('div');
