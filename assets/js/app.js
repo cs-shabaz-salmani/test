@@ -175,6 +175,7 @@
 
   function buildHomePageBanners() {
     var mainBanner = $("#main-carousel-content");
+    var updatesBanner = $("#product-updates");
     var mainBannerIndicator = $("#main-carousel-indicators");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
@@ -222,6 +223,41 @@
       carouselColumn.appendChild(carouselHyperLink);
       
       mainBanner.append(carouselDiv);
+    });
+    _.each(bannersJson.mainBanner, function(banner, index) {
+      
+      var carouselDiv = document.createElement('div');
+      carouselDiv.className = "";
+      
+      var carouselRow = document.createElement('div');
+      carouselRow.className = "row";
+      carouselDiv.appendChild(carouselRow);
+      
+      var carouselColumn = document.createElement('div');
+      carouselColumn.className = "col-md-12";
+      carouselRow.appendChild(carouselColumn);
+      
+      var carouselHeading = document.createElement('h1');
+      carouselColumn.appendChild(carouselHeading);
+      
+      var carouselHeadingText = document.createTextNode(banner.heading);
+      carouselHeading.appendChild(carouselHeadingText);
+      
+      var carouselSubHeading = document.createElement('p');
+      carouselColumn.appendChild(carouselSubHeading);
+      
+      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
+      carouselSubHeading.appendChild(carouselSubHeadingText);
+      
+      var carouselHyperLink = document.createElement('a');
+      carouselHyperLink.href = banner.hyperLink;
+      carouselHyperLink.className = "pull-left text-center btn btn-md btn-outline-dark";
+      carouselHyperLink.setAttribute("rel", "canonical");
+      var carouselHyperLinkText = document.createTextNode("View");
+      carouselHyperLink.appendChild(carouselHyperLinkText);
+      carouselColumn.appendChild(carouselHyperLink);
+      
+      updatesBanner.append(carouselDiv);
     });
   }
 
