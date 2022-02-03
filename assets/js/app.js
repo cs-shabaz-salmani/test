@@ -98,6 +98,7 @@
 
   function updateFilterParams(data, item, method) {
     if(method === 'add') {
+      data = data.isArray ? data : [data];
       data.push(item);
     } else {
       var index = data.indexOf(item);
