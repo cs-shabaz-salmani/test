@@ -73,6 +73,7 @@
 
   function applyFilter(event, type) {
     console.log(event);
+    console.log(event.val());
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?category=" + type;
     } else {
