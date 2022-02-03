@@ -126,7 +126,7 @@
 }
 
 .sidebar .sidebar-content {
-  padding: 30px 40px 20px 40px;
+  padding: 30px 0px 20px 0px;
 }
 
 .sidebar .sidebar-nav {
@@ -137,6 +137,10 @@
 
 .global-search-input{
   position: relative;
+}
+
+.global-search-input-sm{
+  margin-left: 15px;
 }
 
 .global-search-input .form-control {
@@ -150,6 +154,16 @@
   top: 8px;
   right: 15px;
   opacity: 30%;
+}
+
+.global-search-input-sm .form-control {
+  height: 25px !important;
+  font-size: 12px !important;
+}
+
+.global-search-input-sm .searchIcon {
+  opacity: 15% !important;
+  top: 2px !important;
 }
 
 .sidebar .sidebar-item {
@@ -190,6 +204,12 @@
   height: 0px;
   margin-left: 0px;
   background-image: unset;
+}
+
+.sidebar-content .accordion-button:not(.collapsed) {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: none;
 }
 
 .navbar-btn-container {
