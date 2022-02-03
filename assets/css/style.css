@@ -327,19 +327,24 @@
   border-top-right-radius: 10px;
 }
 
-.product-updates-content h1 {
+.product-updates-content .product-updates-text-container h1 {
   padding: 15px 10px;
   font-size: 20px;
   margin: 0px;
   color: #4c4c4c;
 }
 
-.product-updates-content p{
+.product-updates-content .product-updates-text-container p{
   padding: 0px 10px;
   font-size: 13px;
   color: #787878;
   margin-bottom: 10px; 
 }
+
+.product-updates-content .product-updates-text-container {
+  background: #ffffff;
+}
+
 
 .mp-tile-container {
   width: 255px;
