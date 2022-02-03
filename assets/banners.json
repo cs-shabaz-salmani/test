@@ -53,5 +53,61 @@
     "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
     "hyperLink": "",
     "imagePath": ""
+  }],
+"updatesBanner": [{
+    "heading": "Lorem ipsum dolor sit amet",
+    "subHeading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Consectetur adipiscing elit",
+    "subHeading": "Excepteur sint occaecat cupidatat non proident",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Sed do eiusmod tempor incididunt",
+    "subHeading": "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Ut labore et dolore magna aliqua",
+    "subHeading": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  }],
+  "updatesBanner": [{
+    "heading": "Lorem ipsum dolor sit amet",
+    "subHeading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Consectetur adipiscing elit",
+    "subHeading": "Excepteur sint occaecat cupidatat non proident",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Sed do eiusmod tempor incididunt",
+    "subHeading": "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
+  },
+  {
+    "heading": "Ut labore et dolore magna aliqua",
+    "subHeading": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "hyperLink": "",
+    "imagePath": ""
   }]
 }
