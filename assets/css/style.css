@@ -126,7 +126,11 @@
 }
 
 .sidebar .sidebar-content {
-  padding: 30px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
+}
+
+.sidebar .sidebar-title {
+  margin: 10px 15px 15px 20px; 
 }
 
 .sidebar .accordion-flush .accordion-item:first-child {
