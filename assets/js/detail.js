@@ -1,6 +1,7 @@
 'use strict';
 
   const http = new XMLHttpRequest();
+  var _ = require('underscore');
   var yumRepo = 'https://update.cybersponse.com';
   var basePath = 'http://marketplace.cybersponse.com/';
 
