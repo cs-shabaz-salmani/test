@@ -272,7 +272,7 @@
 
 .main .carousel {
   z-index: -1;
-  background: url(../images/slider_bg.png) no-repeat;
+  background: url(../images/main_banner.png) no-repeat;
 }
 
 .main .carousel .carousel-inner {
