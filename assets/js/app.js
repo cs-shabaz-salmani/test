@@ -71,28 +71,53 @@
     init();
   }
 
-  function applyFilter(event, type) {
-    console.log(event);
-    console.log(event.val());
-    if (window.location.href.indexOf('list.html') === -1) {
-      window.location.href = "/list.html?contentType=" + type;
+  function applyFilter(item, type, filterType) {
+    var contentType = urlSearchParams.get('contentType') || [];
+    console.log(item);
+    var contentTypeParams;
+    if(item.checked) {
+      if(filterType === 'contentType'){
+        contentTypeParams = updateFilterParams(contentType, type, 'add');
+      }
     } else {
-      window.history.replaceState(null, null, "/list.html?category=" + type);
+      if(filterType === 'contentType'){
+        contentTypeParams = updateFilterParams(contentType, type, 'remove');
+      }
+    }
+    if (window.location.href.indexOf('list.html') === -1) {
+      window.location.href = "/list.html?contentType=" + contentType;
+    } else {
+      window.history.replaceState(null, null, "/list.html?contentType=" + contentType);
     }
     $(".sidebar-content .btn").removeClass("active");
     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
     $("#" + type + "_filter_btn").addClass("active");
     $("#" + type + "_sidebar_link").addClass("active");
-    filterContent(type);
+    filterContent(contentType);
   }
 
-  function filterContent(type, latest) {
+  function updateFilterParams(data, item, method) {
+    if(method === 'add') {
+      data.push(item);
+    } else {
+      var index = data.indexOf(item);
+      if (index > -1) {
+        data.splice(index, 1);
+      }
+    }
+    return data;
+    
+  }
+
+  function filterContent(types, latest) {
     var filteredListItems = [];
     if(type !== 'all'){
       _.each(listItems, function(item) {
-        if(item.type === type) {
-          filteredListItems.push(item); 
-        }
+        _.each(types, function(type) {
+          if(item.type === type) {
+            filteredListItems.push(item); 
+          }
+        });
       });
     } else if(latest){
       var todaysDate = new Date();
