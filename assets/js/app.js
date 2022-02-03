@@ -71,17 +71,21 @@
     init();
   }
 
-  function applyFilter(item, type, filterType) {
+  function applyFilter(item, type, filterType, page) {
     var contentType = urlSearchParams.get('contentType') || [];
     console.log(item);
     var contentTypeParams;
-    if(item.checked) {
-      if(filterType === 'contentType'){
-        contentTypeParams = updateFilterParams(contentType, type, 'add');
-      }
+    if(page === 'main') {
+      contentTypeParams = updateFilterParams(contentType, type, 'add');
     } else {
-      if(filterType === 'contentType'){
-        contentTypeParams = updateFilterParams(contentType, type, 'remove');
+      if(item.checked) {
+        if(filterType === 'contentType'){
+          contentTypeParams = updateFilterParams(contentType, type, 'add');
+        }
+      } else {
+        if(filterType === 'contentType'){
+          contentTypeParams = updateFilterParams(contentType, type, 'remove');
+        }
       }
     }
     if (window.location.href.indexOf('list.html') === -1) {
@@ -98,7 +102,7 @@
 
   function updateFilterParams(data, item, method) {
     if(method === 'add') {
-      data = data.isArray ? data : [data];
+//       data = data.isArray ? data : [data];
       data.push(item);
     } else {
       var index = data.indexOf(item);
