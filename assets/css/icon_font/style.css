@@ -103,12 +103,12 @@
 .icon-documentation:before {
   content: "\e918";
 }
-.icon-view-all-type:before {
+.icon-view-all-border:before {
   content: "\e919";
 }
 .icon-view-all:before {
   content: "\e920";
 }
-.icon-view-all-border:before {
+.icon-view-all-type:before {
   content: "\e921";
 }
