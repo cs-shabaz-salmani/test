@@ -5,7 +5,7 @@
   var basePath = 'http://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
-  var paramCategoryType = urlSearchParams.get('contentType');
+  var paramCategoryType = urlSearchParams.get('contentType[]');
   var searchContent = urlSearchParams.get('searchContent');
 
   $(document).ready(function() {
@@ -72,7 +72,7 @@
   }
 
   function applyFilter(item, type, filterType, page) {
-    var contentType = urlSearchParams.get('contentType') || [];
+    var contentType = urlSearchParams.get('contentType[]') || [];
     console.log(item);
     var contentTypeParams;
     if(page === 'main') {
