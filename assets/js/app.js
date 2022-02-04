@@ -102,7 +102,7 @@
 
   function updateFilterParams(data, item, method) {
     if(method === 'add') {
-      if(data === 'all') {
+      if(data === 'all' || data === null) {
         data = item;
       } else {
         data = data + ', ' + item;
