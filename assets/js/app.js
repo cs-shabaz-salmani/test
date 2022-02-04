@@ -95,10 +95,6 @@
       urlSearchParams.set('contentType', contentTypeParams)
 //       window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
-//     $(".sidebar-content .btn").removeClass("active");
-//     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
-//     $("#" + type + "_filter_btn").addClass("active");
-//     $("#" + type + "_sidebar_link").addClass("active");
     filterContent(contentTypeParams);
   }
 
