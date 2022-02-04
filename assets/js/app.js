@@ -107,7 +107,7 @@
       if(data === 'all' || data === null) {
         data = item;
       } else {
-        data = data + ', ' + item;
+        data = data + ',' + item;
       }
     } else {
       var dataArray = data.split(',');
