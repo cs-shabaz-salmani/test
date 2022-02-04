@@ -105,7 +105,7 @@
       if(data === 'all') {
         data = item;
       } else {
-        data = data + ', ' item;
+        data = data + ', ' + item;
       }
 //       data = data.isArray ? data : [data];
 //       data.push(item);
