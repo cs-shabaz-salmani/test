@@ -101,7 +101,7 @@
   }
 
   function updateFilterParams(data, item, method) {
-    if(data === 'all' || data === null) {
+    if((data === 'all' || data === null) && method !== 'remove') {
       data = item;
     } else {
       var dataArray = data.split(',');
