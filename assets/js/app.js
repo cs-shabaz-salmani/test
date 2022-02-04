@@ -51,7 +51,7 @@
     listItems = allItemsJson;
     listItemsBkp = listItems;
     if(paramCategoryType && !searchContent){
-      filterContent(paramCategoryType);
+      filterContent(null, paramCategoryType, 'contentType', 'main');
       setTimeout(function(){
           filterContent(paramCategoryType);
           $("#" + paramCategoryType + "_filter_btn").addClass("active");
