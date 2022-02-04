@@ -94,11 +94,11 @@
     } else {
       window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
-    $(".sidebar-content .btn").removeClass("active");
-    $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
-    $("#" + type + "_filter_btn").addClass("active");
-    $("#" + type + "_sidebar_link").addClass("active");
-    filterContent(contentType);
+//     $(".sidebar-content .btn").removeClass("active");
+//     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
+//     $("#" + type + "_filter_btn").addClass("active");
+//     $("#" + type + "_sidebar_link").addClass("active");
+    filterContent(contentTypeParams);
   }
 
   function updateFilterParams(data, item, method) {
@@ -108,8 +108,6 @@
       } else {
         data = data + ', ' + item;
       }
-//       data = data.isArray ? data : [data];
-//       data.push(item);
     } else {
       var dataArray = data.split(',');
       var index = dataArray.indexOf(item);
@@ -123,8 +121,8 @@
 
   function filterContent(types, latest) {
     var filteredListItems = [];
-    var types = types.split(',');
-    if(types){
+    if(types !== 'all'){
+      types = types.split(',');
       _.each(listItems, function(item) {
         _.each(types, function(type) {
           if(item.type === type) {
