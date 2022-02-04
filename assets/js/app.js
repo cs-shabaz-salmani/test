@@ -101,15 +101,15 @@
   }
 
   function updateFilterParams(data, item, method) {
+    var dataArray = data.split(',');
+    var index = dataArray.indexOf(item);
     if(method === 'add') {
       if(data === 'all' || data === null) {
         data = item;
-      } else {
+      } else if (index === -1) {
         data = data + ',' + item;
       }
     } else {
-      var dataArray = data.split(',');
-      var index = dataArray.indexOf(item);
       if (index > -1) {
         dataArray.splice(index, 1);
       }
