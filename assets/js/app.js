@@ -77,19 +77,17 @@
   function applyFilter(item, type, filterType, page) {
     var contentType = urlSearchParams.get('contentType');
     var contentTypeParams;
-    if(page === 'main') {
-      contentTypeParams = updateFilterParams(contentType, type, 'add');
+    
+    if(item.checked) {
+      if(filterType === 'contentType'){
+        contentTypeParams = updateFilterParams(contentType, type, 'add');
+      }
     } else {
-      if(item.checked) {
-        if(filterType === 'contentType'){
-          contentTypeParams = updateFilterParams(contentType, type, 'add');
-        }
-      } else {
-        if(filterType === 'contentType'){
-          contentTypeParams = updateFilterParams(contentType, type, 'remove');
-        }
+      if(filterType === 'contentType'){
+        contentTypeParams = updateFilterParams(contentType, type, 'remove');
       }
     }
+
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?contentType=" + contentTypeParams;
     } else {
