@@ -52,7 +52,7 @@
     listItemsBkp = listItems;
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
-          applyFilter(null, null, 'contentType', 'main');
+          filterContent(paramCategoryType);
           var types = paramCategoryType.split(',');
           _.each(types, function(type) {
             var checkedContentType = $("#" + type + "_sidebar_link");
