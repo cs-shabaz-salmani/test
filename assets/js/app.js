@@ -92,7 +92,8 @@
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?contentType=" + contentTypeParams;
     } else {
-      window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
+      urlSearchParams.set('contentType', contentTypeParams)
+//       window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
 //     $(".sidebar-content .btn").removeClass("active");
 //     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
