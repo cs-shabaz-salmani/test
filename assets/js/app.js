@@ -56,6 +56,7 @@
           var types = paramCategoryType.split(',');
           _.each(types, function(type) {
             var checkedContentType = $("#" + type + "_sidebar_link");
+            checkedContentType[0].checked = true;
             console.log(checkedContentType);
           });
       }, 1000);
