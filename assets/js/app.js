@@ -55,7 +55,8 @@
           applyFilter(null, paramCategoryType, 'contentType', 'main');
           var types = paramCategoryType.split(',');
           _.each(types, function(type) {
-//             $("#" + type + "_sidebar_link").checked(true);
+            var checkedContentType = $("#" + type + "_sidebar_link");
+            console.log(checkedContentType);
           });
       }, 1000);
     } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
