@@ -94,8 +94,8 @@
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?contentType=" + contentTypeParams;
     } else {
-      urlSearchParams.set('contentType', contentTypeParams)
-//       window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
+//       urlSearchParams.set('contentType', contentTypeParams)
+      window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
     filterContent(contentTypeParams);
   }
@@ -113,7 +113,7 @@
       if (index > -1) {
         dataArray.splice(index, 1);
       }
-      data = dataArray.join(',');
+      data = dataArray.length > 0 ? dataArray.join(',') : 'all';
     }
     return data;
   }
