@@ -53,7 +53,8 @@
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
           applyFilter(null, paramCategoryType, 'contentType', 'main');
-          _.each(paramCategoryType, function(type) {
+          var types = paramCategoryType.split(',');
+          _.each(types, function(type) {
 //             $("#" + type + "_sidebar_link").checked(true);
           });
       }, 1000);
@@ -118,11 +119,11 @@
       data = dataArray.join(',');
     }
     return data;
-    
   }
 
   function filterContent(types, latest) {
     var filteredListItems = [];
+    var types = types.split(',');
     if(types){
       _.each(listItems, function(item) {
         _.each(types, function(type) {
