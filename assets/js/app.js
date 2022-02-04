@@ -37,7 +37,6 @@
     xmlHttp.open( "GET", yumRepo + "marketplace-test/marketplace.json", false ); // false for synchronous request
     xmlHttp.send( null );
     var allItemsJson = xmlHttp.responseText;
-//     var allItemsJson = $.getJSON({'url': "info/marketplace.json", 'async': false});
     allItemsJson = JSON.parse(allItemsJson);
     var updatesList = [];
     _.each(allItemsJson, function(item, index) {
@@ -55,9 +54,10 @@
           filterContent(paramCategoryType);
           var types = paramCategoryType.split(',');
           _.each(types, function(type) {
-            var checkedContentType = $("#" + type + "_sidebar_link");
-            checkedContentType[0].checked = true;
-            console.log(checkedContentType);
+            if(type !== 'all') {
+              var checkedContentType = $("#" + type + "_sidebar_link");
+              checkedContentType[0].checked = true;
+            }
           });
       }, 1000);
     } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
@@ -76,7 +76,6 @@
 
   function applyFilter(item, type, filterType, page) {
     var contentType = urlSearchParams.get('contentType');
-    console.log(item);
     var contentTypeParams;
     if(page === 'main') {
       contentTypeParams = updateFilterParams(contentType, type, 'add');
@@ -94,7 +93,6 @@
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?contentType=" + contentTypeParams;
     } else {
-//       urlSearchParams.set('contentType', contentTypeParams)
       window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
     filterContent(contentTypeParams);
