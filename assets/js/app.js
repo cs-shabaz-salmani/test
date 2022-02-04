@@ -337,7 +337,7 @@
   function buildListData(listData) {
     var allListItems;
     var marketPlace = $("#marketplace-list");
-    $(".item-container").remove();
+    $(".mp-tile-container").remove();
     $("#filteredContentCount").html(listData.length);
     _.each(listData, function(listItem) {
       var aTaglistItem = document.createElement('a');
