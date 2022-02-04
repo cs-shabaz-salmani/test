@@ -51,11 +51,11 @@
     listItems = allItemsJson;
     listItemsBkp = listItems;
     if(paramCategoryType && !searchContent){
-      filterContent(null, paramCategoryType, 'contentType', 'main');
       setTimeout(function(){
-          filterContent(paramCategoryType);
-          $("#" + paramCategoryType + "_filter_btn").addClass("active");
-          $("#" + paramCategoryType + "_sidebar_link").addClass("active");
+          filterContent(null, paramCategoryType, 'contentType', 'main');
+          _.each(paramCategoryType, function(type) {
+            $("#" + type + "_sidebar_link").checked(true);
+          });
       }, 1000);
     } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
       searchContentData(searchContent);
