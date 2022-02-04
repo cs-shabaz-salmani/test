@@ -52,7 +52,7 @@
     listItemsBkp = listItems;
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
-          filterContent(null, paramCategoryType, 'contentType', 'main');
+          applyFilter(null, paramCategoryType, 'contentType', 'main');
           _.each(paramCategoryType, function(type) {
 //             $("#" + type + "_sidebar_link").checked(true);
           });
