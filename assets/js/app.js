@@ -101,19 +101,19 @@
   }
 
   function updateFilterParams(data, item, method) {
-    var dataArray = data.split(',');
-    var index = dataArray.indexOf(item);
-    if(method === 'add') {
-      if(data === 'all' || data === null) {
-        data = item;
-      } else if (index === -1) {
-        data = data + ',' + item;
-      }
+    if(data === 'all' || data === null) {
+      data = item;
     } else {
-      if (index > -1) {
-        dataArray.splice(index, 1);
+      var dataArray = data.split(',');
+      var index = dataArray.indexOf(item);
+      if(method === 'add' && index === -1) {
+        data = data + ',' + item;
+      } else if(method === 'remove') {
+        if (index > -1) {
+          dataArray.splice(index, 1);
+        }
+        data = dataArray.length > 0 ? dataArray.join(',') : 'all';
       }
-      data = dataArray.length > 0 ? dataArray.join(',') : 'all';
     }
     return data;
   }
