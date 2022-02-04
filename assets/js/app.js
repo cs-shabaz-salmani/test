@@ -76,7 +76,13 @@
   }
 
   function getContentCount(listData) {
-    var solutionPackCount, connectorCount, widgetCount, reportCount, dashboardCount, howToVideosCount, playbookCount = 0;
+    var solutionPackCount = 0;
+    var connectorCount = 0;
+    var widgetCount = 0;
+    var reportCount = 0;
+    var dashboardCount = 0;
+    var howToVideosCount = 0;
+    var playbookCount = 0;
     _.each(listData, function(listItem) {
       if(listItem.type === 'solutionpack'){
         solutionPackCount = solutionPackCount + 1;
@@ -102,7 +108,7 @@
       document.getElementById("dashboard_category_count").innerHTML = dashboardCount;
       document.getElementById("report_category_count").innerHTML = reportCount;
       document.getElementById("how_tos_category_count").innerHTML = howToVideosCount;
-      document.getElementById("hplaybook_category_count").innerHTML = playbookCount;
+      document.getElementById("playbook_category_count").innerHTML = playbookCount;
     }, 1000);
   }
 
