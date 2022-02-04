@@ -348,7 +348,6 @@
   min-height: 130px;
 }
 
-
 .mp-tile-container {
   width: 255px;
   float: left;
@@ -506,7 +505,7 @@
   text-decoration: none;
   display: flex;
   border: 1px solid #c4c4c5;
-  padding: 10px 15px;
+  padding: 20px;
   border-radius: 3px;
   cursor: pointer;
   background: #f5f8fb;
