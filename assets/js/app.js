@@ -49,6 +49,7 @@
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
+    getContentCount(listItemsBkp);
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
           filterContent(paramCategoryType);
@@ -72,6 +73,29 @@
 
   if (!initLoad) {
     init();
+  }
+
+  function getContentCount(listData) {
+    var solutionPackCount, connectorCount, widgetCount, reportCount, dashboardCount, howToVideosCount = 0;
+    _.each(listData, function(listItem) {
+      if(listItem.type === 'solutionpack'){
+        solutionPackCount = solutionPackCount + 1;
+      } else if(listItem.type === 'widget'){
+        widgetCount = widgetCount + 1;
+      } else if(listItem.type === 'connector'){
+        connectorCount = connectorCount + 1;
+      } else if(listItem.type === 'dashboard'){
+        dashboardCount = dashboardCount + 1;
+      } else if(listItem.type === 'report'){
+        reportCount = reportCount + 1;
+      } else if(listItem.type === 'how_to_videos'){
+        howToVideosCount = howToVideosCount + 1;
+      }
+    });
+    
+    setTimeout(function(){
+//       $("#_sidebar_link");
+    }, 1000);
   }
 
   function applyFilter(item, type, filterType) {
