@@ -74,7 +74,7 @@
     init();
   }
 
-  function applyFilter(item, type, filterType, page) {
+  function applyFilter(item, type, filterType) {
     var contentType = urlSearchParams.get('contentType');
     var contentTypeParams;
     
