@@ -54,7 +54,7 @@
       setTimeout(function(){
           filterContent(null, paramCategoryType, 'contentType', 'main');
           _.each(paramCategoryType, function(type) {
-            $("#" + type + "_sidebar_link").checked(true);
+//             $("#" + type + "_sidebar_link").checked(true);
           });
       }, 1000);
     } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
