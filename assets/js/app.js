@@ -76,7 +76,7 @@
   }
 
   function getContentCount(listData) {
-    var solutionPackCount, connectorCount, widgetCount, reportCount, dashboardCount, howToVideosCount = 0;
+    var solutionPackCount, connectorCount, widgetCount, reportCount, dashboardCount, howToVideosCount, playbookCount = 0;
     _.each(listData, function(listItem) {
       if(listItem.type === 'solutionpack'){
         solutionPackCount = solutionPackCount + 1;
@@ -90,11 +90,19 @@
         reportCount = reportCount + 1;
       } else if(listItem.type === 'how_to_videos'){
         howToVideosCount = howToVideosCount + 1;
+      } else if(listItem.type === 'playbook'){
+        playbookCount = playbookCount + 1;
       }
     });
     
     setTimeout(function(){
-//       $("#_sidebar_link");
+      document.getElementById("solutionpack_category_count").innerHTML = solutionPackCount;
+      document.getElementById("widget_category_count").innerHTML = widgetCount;
+      document.getElementById("connector_category_count").innerHTML = connectorCount;
+      document.getElementById("dashboard_category_count").innerHTML = dashboardCount;
+      document.getElementById("report_category_count").innerHTML = reportCount;
+      document.getElementById("how_tos_category_count").innerHTML = howToVideosCount;
+      document.getElementById("hplaybook_category_count").innerHTML = playbookCount;
     }, 1000);
   }
 
