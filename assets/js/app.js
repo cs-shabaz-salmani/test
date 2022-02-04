@@ -78,7 +78,7 @@
     var contentType = urlSearchParams.get('contentType');
     var contentTypeParams;
     
-    if(item.checked) {
+    if(item.checked || !item) {
       if(filterType === 'contentType'){
         contentTypeParams = updateFilterParams(contentType, type, 'add');
       }
