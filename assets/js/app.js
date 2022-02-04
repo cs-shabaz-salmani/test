@@ -5,7 +5,7 @@
   var basePath = 'http://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
-  var paramCategoryType = urlSearchParams.get('contentType[]');
+  var paramCategoryType = urlSearchParams.get('contentType');
   var searchContent = urlSearchParams.get('searchContent');
 
   $(document).ready(function() {
@@ -72,7 +72,7 @@
   }
 
   function applyFilter(item, type, filterType, page) {
-    var contentType = urlSearchParams.get('contentType[]') || [];
+    var contentType = urlSearchParams.get('contentType');
     console.log(item);
     var contentTypeParams;
     if(page === 'main') {
@@ -89,9 +89,9 @@
       }
     }
     if (window.location.href.indexOf('list.html') === -1) {
-      window.location.href = "/list.html?contentType[]=" + contentTypeParams;
+      window.location.href = "/list.html?contentType=" + contentTypeParams;
     } else {
-      window.history.replaceState(null, null, "/list.html?contentType[]=" + contentTypeParams);
+      window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
     }
     $(".sidebar-content .btn").removeClass("active");
     $("ul.btnGroupCategory .sidebar-item a").removeClass("active");
@@ -102,13 +102,20 @@
 
   function updateFilterParams(data, item, method) {
     if(method === 'add') {
-//       data = data.isArray ? data : [data];
-      data.push(item);
-    } else {
-      var index = data.indexOf(item);
-      if (index > -1) {
-        data.splice(index, 1);
+      if(data === 'all') {
+        data = item;
+      } else {
+        data = data + ', ' item;
       }
+//       data = data.isArray ? data : [data];
+//       data.push(item);
+    } else {
+      var dataArray = data.split(',');
+      var index = dataArray.indexOf(item);
+      if (index > -1) {
+        dataArray.splice(index, 1);
+      }
+      data = dataArray.join(',');
     }
     return data;
     
@@ -149,7 +156,7 @@
       if (window.location.href.indexOf('list.html') === -1) {
         window.location.href = "/list.html?contentType=all" + searchParams;
       } else {
-        window.history.replaceState(null, null, "/list.html?category=all" + searchParams);
+        window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
       }
     } else {
       console.log('Enter atleast 3 chars');
