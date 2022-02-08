@@ -77,6 +77,25 @@
         docLinkBlock.classList.remove("d-block");
         docLinkBlock.classList.add("d-none");
       }
+      
+      var githubLinkDiv = document.getElementById("detail-github-link");
+      if(detailInfo.scm.type === 'public'){
+        var githubLink = document.createElement('a');
+        githubLink.href = detailInfo.scm.url;
+        githubLink.className = "detail-github-link";
+        githubLink.setAttribute("title", "Online Help");
+        githubLink.setAttribute("target", "_blank");
+        githubLink.setAttribute("rel", "noopener noreferrer");
+        var githubLinkIcon = document.createElement("i");
+        githubLinkIcon.className = "icon-github";
+        githubLink.append(githubLinkIcon);
+        githubLinkDiv.append(githubLink);
+        githubLinkDiv.classList.add("d-block");
+        githubLinkDiv.classList.remove("d-none");
+      } else {
+        githubLinkDiv.classList.remove("d-block");
+        githubLinkDiv.classList.add("d-none");
+      }
     });
   };
 
