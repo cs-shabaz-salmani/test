@@ -68,9 +68,6 @@
         docLink.setAttribute("title", "Online Help");
         docLink.setAttribute("target", "_blank");
         docLink.setAttribute("rel", "noopener noreferrer");
-//         var docIcon = document.createElement('i');
-//         docIcon.className = "fa fa-globe";
-//         docLink.append(docIcon);
         var docLinkText = document.createTextNode("here");
         docLink.append(docLinkText);
         document.getElementById("detail-doc-link-here").append(docLink);
@@ -83,7 +80,7 @@
         var githubLink = document.createElement('a');
         githubLink.href = detailInfo.scm.url;
         githubLink.className = "detail-github-link fs-4 text-black text-decoration-none";
-        githubLink.setAttribute("title", "Online Help");
+        githubLink.setAttribute("title", "Github Repo");
         githubLink.setAttribute("target", "_blank");
         githubLink.setAttribute("rel", "noopener noreferrer");
         var githubLinkIcon = document.createElement("i");
