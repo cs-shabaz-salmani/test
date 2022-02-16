@@ -179,7 +179,7 @@
 
 .global-search-input-sm .searchIcon {
   opacity: 15% !important;
-  top: 2px !important;
+  top: 4px !important;
 }
 
 .sidebar .sidebar-item {
@@ -580,6 +580,7 @@
 
 .latest-updates-suggestions-content {
   background: #f9f9f9;
+  padding-bottom: 40px;
 }
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-item {
