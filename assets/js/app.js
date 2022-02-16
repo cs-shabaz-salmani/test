@@ -2,7 +2,7 @@
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   var yumRepo = 'https://update.cybersponse.com/';
-  var basePath = 'http://marketplace.cybersponse.com/';
+  var basePath = 'https://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
   var paramCategoryType = urlSearchParams.get('contentType');
@@ -236,7 +236,7 @@
       
       var carouselDiv = document.createElement('div');
       carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
-      carouselDiv.style.backgroundImage = "url("+banner.imagePath+")";
+      carouselDiv.style.backgroundImage = "url("+ basePath + banner.imagePath+")";
       
       var carouselContainer = document.createElement('div');
       carouselContainer.className = "custom-left-offset-1 custom-right-offset-1";
