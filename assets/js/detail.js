@@ -32,16 +32,23 @@
       document.getElementById("detail-current-breadcrumb").innerHTML = detailInfo.display;
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
-      detailInfo.availableVersions.forEach(function(version) {
-        if(version !== detailInfo.version){
-          var versionTag = document.createElement('a');
-          versionTag.className = "dropdown-item";
-          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
-          var versionText = document.createTextNode("Version - " + version);
-          versionTag.append(versionText);
-          detailAvailableVersions.append(versionTag);
-        }
-      });
+      if(detailInfo.availableVersions.length > 0){
+        detailAvailableVersions.classList.add("d-block");
+        detailAvailableVersions.classList.remove("d-none");
+        _.each(detailInfo.availableVersions, function(version) {
+          if(version !== detailInfo.version){
+            var versionTag = document.createElement('a');
+            versionTag.className = "dropdown-item";
+            versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
+            var versionText = document.createTextNode("Version - " + version);
+            versionTag.append(versionText);
+            detailAvailableVersions.append(versionTag);
+          }
+        });
+      } else {
+        detailAvailableVersions.classList.remove("d-block");
+        detailAvailableVersions.classList.add("d-none");
+      }
       document.getElementById("detail-img-container").append(imageElement);
       document.getElementById("detail-heading").innerHTML = detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
