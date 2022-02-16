@@ -236,7 +236,7 @@
       
       var carouselDiv = document.createElement('div');
       carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
-      carouselDiv.style.backgroundImage = "url(banner.imagePath)";
+      carouselDiv.style.backgroundImage = "url("+banner.imagePath+")";
       
       var carouselContainer = document.createElement('div');
       carouselContainer.className = "custom-left-offset-1 custom-right-offset-1";
