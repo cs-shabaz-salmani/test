@@ -29,7 +29,6 @@
     }
     $('.dropdown-toggle').dropdown();
     $('.nav-tabs').tab();
-    buildHomePageBanners();
   });
 
   function init() {
@@ -44,13 +43,13 @@
          updatesList.push(item); 
       }
     });
-    buildUpdatesAvailableList(updatesList);
-    
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
     if (window.location.href.indexOf('list.html') === -1) {
       getContentCount(listItemsBkp);
+      buildUpdatesAvailableList(updatesList);
+      buildHomePageBanners();
     }
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
