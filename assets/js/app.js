@@ -235,12 +235,17 @@
       mainBannerIndicator.append(carouselIndicatorButton);
       
       var carouselDiv = document.createElement('div');
-      carouselDiv.className = index === 0 ? "carousel-item active custom-left-offset-1 custom-right-offset-1" : "carousel-item custom-left-offset-1 custom-right-offset-1";
+      carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+      carouselDiv.style.backgroundImage = "url(banner.imagePath)|none|initial|inherit"
+      
+      var carouselContainer = document.createElement('div');
+      carouselContainer.className = "custom-left-offset-1 custom-right-offset-1";
+      carouselDiv.appendChild(carouselContainer);
       
       var carouselRow = document.createElement('div');
       carouselRow.className = "row";
       carouselRow.setAttribute("id", carouselId);
-      carouselDiv.appendChild(carouselRow);
+      carouselContainer.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
       carouselColumn.className = "col-md-12";
@@ -262,7 +267,7 @@
       carouselHyperLink.href = banner.hyperLink;
       carouselHyperLink.className = "pull-left text-center btn btn-md btn-outline-dark";
       carouselHyperLink.setAttribute("rel", "canonical");
-      var carouselHyperLinkText = document.createTextNode("View");
+      var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
       carouselColumn.appendChild(carouselHyperLink);
       
