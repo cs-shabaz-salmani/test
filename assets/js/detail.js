@@ -22,7 +22,7 @@
       var imageElement;
       if(detailInfo.iconLarge) {
         imageElement = document.createElement('img');
-        imageElement.className = "mp-tile-image";
+        imageElement.className = "mp-tile-image border-0";
         imageElement.src = yumRepo + detailInfo.iconLarge;
         imageElement.alt = detailInfo.display;
       } else {
