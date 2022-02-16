@@ -360,6 +360,11 @@
   text-decoration: none;
 }
 
+.mp-tile-container:hover {
+  border-color: #d1d1d1;
+  background: #f9f9f9;
+}
+
 .mp-tile-container .mp-content-type-icon {
   padding: 0px 1px 1px 0px;
   border-radius: 2px;
