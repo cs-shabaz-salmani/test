@@ -375,31 +375,31 @@
   font-size: 20px;
 }
 
-.icon-connector-type, .icon-connector-border, .icon-connector, .icon-connector-large{
+.icon-connector-type, .icon-connector-border, .icon-connector, .icon-connector-large, .mp-tile-connector-container .btn-link {
   color: #00a3ff;
 }
 
-.icon-widget-type, .icon-widget-border, .icon-widget, .icon-widget-large {
+.icon-widget-type, .icon-widget-border, .icon-widget, .icon-widget-large, .mp-tile-connector-container .btn-link {
   color: #6e7dff;
 }
 
-.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack, .icon-solutionpack-large {
+.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack, .icon-solutionpack-large, .mp-tile-solutionpack-container .btn-link {
   color: #ff4751;
 }
 
-.icon-playbook-type, .icon-playbook-border, .icon-playbook, .icon-playbook-large {
+.icon-playbook-type, .icon-playbook-border, .icon-playbook, .icon-playbook-large, .mp-tile-playbook-container .btn-link {
   color: #57d388;
 }
 
-.icon-report-type, .icon-report-border, .icon-report, .icon-report-large {
+.icon-report-type, .icon-report-border, .icon-report, .icon-report-large, .mp-tile-report-container .btn-link {
   color: #a57ffe;
 }
 
-.icon-dashboard-type, .icon-dashboard-border, .icon-dashboard, .icon-dashboard-large {
+.icon-dashboard-type, .icon-dashboard-border, .icon-dashboard, .icon-dashboard-large, .mp-tile-dashboard-container .btn-link {
   color: #feb800;
 }
 
-.icon-howtovideos-type, .icon-howtovideos-border, .icon-howtovideos, .icon-howtovideos-large {
+.icon-howtovideos-type, .icon-howtovideos-border, .icon-howtovideos, .icon-howtovideos-large, .mp-tile-howtovideos-container .btn-link {
   color: #41c9d7;
 }
 
