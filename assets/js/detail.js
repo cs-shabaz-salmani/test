@@ -102,7 +102,7 @@
       }
       var tagsContainer = document.getElementById("detail-tags-container");
       var tagsDiv = document.getElementById("detail-tags");
-      if(detailInfo.tags.length > 0){
+      if(detailInfo.tags && detailInfo.tags.length > 0){
         tagsContainer.classList.add("d-block");
         tagsContainer.classList.remove("d-none");
         _.each(detailInfo.tags, function(tag){
