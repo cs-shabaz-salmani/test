@@ -315,7 +315,7 @@
       var mpCard = buildCardHtml(listItem);
      
       var itemButton = document.createElement('span');
-      itemButton.className = "btn p-0 btn-link";
+      itemButton.className = "btn p-0 btn-link text-decoration-none";
       var itemButtonText = document.createTextNode("Learn More");
       itemButton.appendChild(itemButtonText);
       mpCard.appendChild(itemButton);
