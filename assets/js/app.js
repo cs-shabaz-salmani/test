@@ -48,7 +48,9 @@
     listItemsBkp = listItems;
     if (window.location.href.indexOf('list.html') === -1) {
       getContentCount(listItemsBkp);
-      buildUpdatesAvailableList(updatesList);
+      setTimeout(function(){
+        buildUpdatesAvailableList(updatesList);
+      }, 100);
       buildHomePageBanners();
     }
     if(paramCategoryType && !searchContent){
