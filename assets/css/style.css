@@ -414,8 +414,8 @@
 }
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-title, .mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
-  color: #000000;
-  font-size: 20px;
+  color: #585858;
+  font-size: 18px;
 }
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-details p, .mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
