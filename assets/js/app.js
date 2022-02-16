@@ -49,7 +49,9 @@
     var totalItems = allItemsJson.length;
     listItems = allItemsJson;
     listItemsBkp = listItems;
-    getContentCount(listItemsBkp);
+    if (window.location.href.indexOf('list.html') === -1) {
+      getContentCount(listItemsBkp);
+    }
     if(paramCategoryType && !searchContent){
       setTimeout(function(){
           filterContent(paramCategoryType);
