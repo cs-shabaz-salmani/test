@@ -272,15 +272,15 @@
 
 .main .carousel {
   z-index: -1;
-  background: url(../images/main_banner.png) no-repeat;
+/*   background: url(../images/main_banner.png) no-repeat;
   background-position: right;
   background-size: initial;
   padding-top: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 50px; */
 }
 
 .main .carousel .carousel-inner {
-  padding-top: 85px;
+/*   padding-top: 85px; */
 }
 
 .main .carousel .carousel-inner .carousel-item {
