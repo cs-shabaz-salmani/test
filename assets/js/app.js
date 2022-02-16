@@ -409,7 +409,7 @@
     var cardDescription = document.createElement('p');
     cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
     listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
-    var itemDescription = document.createTextNode(listItem.description.substring(0, 120) + '...');
+    var itemDescription = document.createTextNode(listItem.description.substring(0, 110) + '...');
     cardDescription.appendChild(itemDescription);
     aTaglistItem.appendChild(cardDescription);
     return aTaglistItem;
