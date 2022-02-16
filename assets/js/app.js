@@ -310,46 +310,51 @@
   function buildUpdatesAvailableList(listData){
    var marketPlaceUpdates = $("#latest-hub-updates");
    _.each(listData, function(listItem) {
-      var listItemCard = document.createElement('div');
-      listItemCard.className = "col-md-3";
-      var listItemCardContent = document.createElement('div');
-      listItemCardContent.className = "mp-update-tile-container";
-      listItemCard.append(listItemCardContent);
       var aTaglistItem = document.createElement('a');
-      aTaglistItem.className = "text-decoration-none";
       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
-
+      aTaglistItem.className = "mp-tile-container";
+      
+      var itemIconSpan = document.createElement('span');
+      itemIconSpan.className = "mp-content-type-icon pull-left";
+      var itemIcon = document.createElement('i');
+      itemIcon.className = "icon-" + listItem.type + "-type icon";
+      itemIconSpan.appendChild(itemIcon);
+      aTaglistItem.appendChild(itemIconSpan);
+      
       var itemType = document.createElement('p');
-      itemType.className = "mp-content-type";
+      itemType.className = "mp-content-type d-inline-block";
       var itemTypeText = document.createTextNode(listItem.type === 'solutionpack' ? 'Solution Pack' : listItem.type);
       itemType.appendChild(itemTypeText);
       aTaglistItem.appendChild(itemType);
-     
-      var itemIconDiv = document.createElement('div');
-      itemIconDiv.className = "mp-tile-image-container";
-
-      var imageElement = document.createElement('i');
-      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-type";
-      itemIconDiv.appendChild(imageElement);
-      aTaglistItem.appendChild(itemIconDiv);
-
+      
       var itemContentDiv = document.createElement('div');
       itemContentDiv.className = "mp-content-fixed-height";
-
+      
       var itemTitle = document.createElement('h4');
       itemTitle.className = "mp-tile-title";
       var itemTitleText = document.createTextNode(listItem.label || listItem.display);
       itemTitle.appendChild(itemTitleText);
       itemContentDiv.appendChild(itemTitle);
-
+      
       var itemDetailsDiv = document.createElement('div');
       itemDetailsDiv.className = "mp-tile-details";
 
+      var itemVersion = document.createElement('p');
+      itemVersion.className = "m-0";
+      var itemVersionTag = document.createElement('span');
+      itemVersionTag.className = "text-black-50";
+      var itemVersionTagText = document.createTextNode("Version: ");
+      itemVersionTag.appendChild(itemVersionTagText);
+      itemVersion.appendChild(itemVersionTag);
+      var itemVersionText = document.createTextNode(listItem.version);
+      itemVersion.appendChild(itemVersionText);
+      itemDetailsDiv.appendChild(itemVersion);
+      
       var itemPublisher = document.createElement('p');
       itemPublisher.className = "m-0";
       var itemPublisherTag = document.createElement('span');
-      itemPublisherTag.className = "muted";
-      var itemPublisherTagText = document.createTextNode("Published By:");
+      itemPublisherTag.className = "text-black-50";
+      var itemPublisherTagText = document.createTextNode("Published By: ");
       itemPublisherTag.appendChild(itemPublisherTagText);
       itemPublisher.appendChild(itemPublisherTag);
       var itemPublisherText = document.createTextNode(listItem.publisher);
@@ -357,14 +362,85 @@
       itemDetailsDiv.appendChild(itemPublisher);
       itemContentDiv.appendChild(itemDetailsDiv);
       aTaglistItem.appendChild(itemContentDiv);
+      
+      var itemIconDiv = document.createElement('div');
+      itemIconDiv.className = "mp-tile-image-container";
+      
+      var imageElement;
+      if(listItem.iconLarge) {
+        imageElement = document.createElement('img');
+        imageElement.className = "mp-tile-image";
+        imageElement.src = yumRepo + listItem.iconLarge;
+      } else {
+        imageElement = document.createElement('i');
+        imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+      }
+      
+      itemIconDiv.appendChild(imageElement);
+      aTaglistItem.appendChild(itemIconDiv);
+      
+      var cardDescription = document.createElement('p');
+      cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
+      listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
+      var itemDescription = document.createTextNode(listItem.description.substring(0, 145) + '...');
+      cardDescription.appendChild(itemDescription);
+      aTaglistItem.appendChild(cardDescription);
+     
+//       var listItemCard = document.createElement('div');
+//       listItemCard.className = "col-md-3";
+//       var listItemCardContent = document.createElement('div');
+//       listItemCardContent.className = "mp-update-tile-container";
+//       listItemCard.append(listItemCardContent);
+//       var aTaglistItem = document.createElement('a');
+//       aTaglistItem.className = "text-decoration-none";
+//       aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
+
+//       var itemType = document.createElement('p');
+//       itemType.className = "mp-content-type";
+//       var itemTypeText = document.createTextNode(listItem.type === 'solutionpack' ? 'Solution Pack' : listItem.type);
+//       itemType.appendChild(itemTypeText);
+//       aTaglistItem.appendChild(itemType);
+     
+//       var itemIconDiv = document.createElement('div');
+//       itemIconDiv.className = "mp-tile-image-container";
+
+//       var imageElement = document.createElement('i');
+//       imageElement.className = "mp-tile-icon icon-" + listItem.type + "-type";
+//       itemIconDiv.appendChild(imageElement);
+//       aTaglistItem.appendChild(itemIconDiv);
+
+//       var itemContentDiv = document.createElement('div');
+//       itemContentDiv.className = "mp-content-fixed-height";
+
+//       var itemTitle = document.createElement('h4');
+//       itemTitle.className = "mp-tile-title";
+//       var itemTitleText = document.createTextNode(listItem.label || listItem.display);
+//       itemTitle.appendChild(itemTitleText);
+//       itemContentDiv.appendChild(itemTitle);
+
+//       var itemDetailsDiv = document.createElement('div');
+//       itemDetailsDiv.className = "mp-tile-details";
+
+//       var itemPublisher = document.createElement('p');
+//       itemPublisher.className = "m-0";
+//       var itemPublisherTag = document.createElement('span');
+//       itemPublisherTag.className = "muted";
+//       var itemPublisherTagText = document.createTextNode("Published By:");
+//       itemPublisherTag.appendChild(itemPublisherTagText);
+//       itemPublisher.appendChild(itemPublisherTag);
+//       var itemPublisherText = document.createTextNode(listItem.publisher);
+//       itemPublisher.appendChild(itemPublisherText);
+//       itemDetailsDiv.appendChild(itemPublisher);
+//       itemContentDiv.appendChild(itemDetailsDiv);
+//       aTaglistItem.appendChild(itemContentDiv);
+     
       var itemButton = document.createElement('button');
       itemButton.className = "btn p-0 btn-link";
       var itemButtonText = document.createTextNode("Learn More");
       itemButton.appendChild(itemButtonText);
       aTaglistItem.appendChild(itemButton);
-      listItemCardContent.append(aTaglistItem);
 
-      marketPlaceUpdates.append(listItemCard);
+      marketPlaceUpdates.append(aTaglistItem);
     }); 
   }
 
