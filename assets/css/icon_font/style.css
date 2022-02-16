@@ -112,3 +112,9 @@
 .icon-view-all-type:before {
   content: "\e921";
 }
+.icon-solutionpack-02:before {
+  content: "\e922";
+}
+.icon-solutionpack-01:before {
+  content: "\e923";
+}
