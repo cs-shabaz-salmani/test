@@ -43,7 +43,7 @@
         }
       });
       document.getElementById("detail-img-container").append(imageElement);
-      document.getElementById("detail-heading").innerHTML = "About the " + detailInfo.display;
+      document.getElementById("detail-heading").innerHTML = detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
@@ -92,6 +92,22 @@
       } else {
         githubLinkDiv.classList.remove("d-block");
         githubLinkDiv.classList.add("d-none");
+      }
+      var tagsContainer = document.getElementById("detail-tags-container");
+      var tagsDiv = document.getElementById("detail-tags");
+      if(detailInfo.tags.length > 0){
+        tagsContainer.classList.add("d-block");
+        tagsContainer.classList.remove("d-none");
+        _.each(detailInfo.tags, function(tag){
+          var tagCard = document.createElement('span');
+          tagCard.className = "detail-tag-card";
+          var tagText = document.createTextNode(tag);
+          tagCard.append(tagText);
+          tagsDiv.append(tagCard);
+        });
+      } else {
+        tagsContainer.classList.remove("d-block");
+        tagsContainer.classList.add("d-none");
       }
     });
   };
