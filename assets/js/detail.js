@@ -32,6 +32,7 @@
       document.getElementById("detail-current-breadcrumb").innerHTML = detailInfo.display;
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
+      var dropdownVersionLink = document.getElementById("dropdownVersionLink");
       if(detailInfo.availableVersions.length > 0){
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
@@ -45,6 +46,7 @@
           }
         });
       } else {
+        dropdownVersionLink.classList.remove("dropdown-toggle");
         detailAvailableVersions.classList.add("d-none");
       }
       document.getElementById("detail-img-container").append(imageElement);
