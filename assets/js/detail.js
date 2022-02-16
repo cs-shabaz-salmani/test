@@ -33,7 +33,6 @@
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
       var detailAvailableVersions = document.getElementById("detail-available-versions");
       if(detailInfo.availableVersions.length > 0){
-        detailAvailableVersions.classList.add("d-block");
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
           if(version !== detailInfo.version){
@@ -46,7 +45,6 @@
           }
         });
       } else {
-        detailAvailableVersions.classList.remove("d-block");
         detailAvailableVersions.classList.add("d-none");
       }
       document.getElementById("detail-img-container").append(imageElement);
