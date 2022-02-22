@@ -840,13 +840,13 @@ footer ul.links li:not(:last-child) a{
       position: absolute;
       top: 50px;
       z-index: 1;
-      width: 90%;
-      background: #fff;
+      width: 90% !important;
+      background: #ffffff;
       box-shadow: 1px 1px 5px #ccc;
       border-radius: 10px;
       left: 5%;
       right: 5%;
-      padding: 0px; 
+      padding: 0px !important; 
     }
     
     .sidebar #sidebar {
@@ -1001,7 +1001,7 @@ footer ul.links li:not(:last-child) a{
     
     .mobile-view-filter-btn .filter-btn {
       background: #299be3;
-      color: #fff;
+      color: #ffffff;
       margin-top: 5px;
       padding: 6px 10px 7px 10px; 
     }
