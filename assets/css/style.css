@@ -870,7 +870,7 @@ footer ul.links li:not(:last-child) a{
       margin-bottom: 30px;
     }
     
-    #latest-hub-updates .mp-tile-container {
+    .mp-tile-container {
       float: unset;
       display: block;
       margin-left: auto;
