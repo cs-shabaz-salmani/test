@@ -589,9 +589,8 @@
 
 .lets-connect-bg {
   background: url(../images/lets_connect.png) no-repeat;
-  padding: 50px 0px;
-  background-position: center;
-  background-size: cover;
+  height: 100%;
+  margin-top: 65px;
 }
 
 .latest-updates-suggestions-container .tab-content {
