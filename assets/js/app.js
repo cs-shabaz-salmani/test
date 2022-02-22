@@ -248,7 +248,7 @@
       carouselContainer.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
-      carouselColumn.className = "col-md-5";
+      carouselColumn.className = "col-auto carousel-col";
       carouselRow.appendChild(carouselColumn);
       
       var carouselHeading = document.createElement('h1');
