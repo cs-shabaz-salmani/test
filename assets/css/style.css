@@ -915,4 +915,10 @@ footer ul.links li:not(:last-child) a{
     .contribute-container .contribute-content em {
       font-size: 13px;
     }
+    
+    .build-it-yourself-container {
+      min-height: 200px;
+      background-size: cover;
+      padding: 0px 10px 70px 10px;
+    }
 }
