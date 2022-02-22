@@ -824,6 +824,27 @@ footer ul.links li:not(:last-child) a{
       margin-right: 0px;
     }
     
+    .category-container .category-item .category-link {
+      padding: 10px;
+    }
+    
+    .category-title {
+      font-size: 16px;
+      margin: 0px 0px 3px 10px;
+      line-height: 18px;
+    }
+    
+    .category-count {
+      margin: 0px 5px 0px 10px;
+      font-size: 10px;
+    }
+    
+    .category-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+    }
+    
     .contribute-container {
       background-size: auto;
     }
