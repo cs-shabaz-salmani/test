@@ -975,4 +975,11 @@ footer ul.links li:not(:last-child) a{
     .content-count {
       margin-bottom: 0px; 
     }
+    
+    .mobile-view-filter-btn .filter-btn {
+      background: #299be3;
+      color: #fff;
+      margin-top: 5px;
+      padding: 6px 10px 7px 10px; 
+    }
 }
