@@ -21,6 +21,11 @@
         if(searchContent) {
           $("#searchText").val(searchContent);
         }
+        $(window).resize(function(){
+          if ($(window).width() <= 450){  
+              $('#searchText').removeAttr('placeholder');
+          }   
+        });
       }, 1000);
     }
     var footer = $('#footer-container');
