@@ -502,8 +502,17 @@
   font-size: 20px;
 }
 
+.category-container .category-content h1 {
+  margin-top: 30px; 
+}
+
+.category-container .category-content h5 {
+  margin-bottom: 50px; 
+}
+
 .category-container .category-content .category-col {
-  width: 25%; 
+  width: 25%;
+  margin-bottom: 20px;
 }
 
 .category-container .category-item .category-all-link {
