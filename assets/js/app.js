@@ -22,8 +22,8 @@
           $("#searchText").val(searchContent);
         }
         if ($(window).width() <= 450){
-          console.log('mobile view');
           $('#sidebar').addClass('d-none');
+          $('.mobile-view-filter-btn').removeClass('d-none');
         }
       }, 1000);
     }
@@ -33,7 +33,6 @@
     }
     console.log($(window).width());
     if ($(window).width() <= 450){
-      console.log('mobile view');
       $('#searchText').removeAttr('placeholder');
     }
     $('.dropdown-toggle').dropdown();
