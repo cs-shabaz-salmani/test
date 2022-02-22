@@ -786,6 +786,10 @@ footer ul.links li:not(:last-child) a{
       color: #fff;
     }
     
+    .top-breadcrumb {
+      top: 45px;
+    }
+    
     .main.main-carousel-container {
       margin-top: 10px !important;
     }
@@ -868,6 +872,10 @@ footer ul.links li:not(:last-child) a{
       font-size: 15px;
       margin-top: 0px;
       margin-bottom: 30px;
+    }
+    
+    .all-list-container .main {
+      margin-top: 85px !important;
     }
     
     .mp-tile-container {
