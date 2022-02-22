@@ -153,6 +153,8 @@
 
 .global-search-input{
   position: relative;
+  width: 25%;
+  margin-top: 15px;
 }
 
 .global-search-input-sm{
@@ -765,8 +767,23 @@ footer ul.links li:not(:last-child) a{
       padding: 10px 10px 10px 0px;
     }
     
-    .global-search-input #searchText::placeholder {
-/*       color: transparent; */
+    .global-search-input {
+      margin-top: 4px;
+      width: 35px;
+    }
+    
+    .global-search-input .form-control {
+      padding-right: 0px;
+      background-color: #299be3;
+      background-clip: padding-box;
+      border: 1px solid #30a8f4;
+      color: #ffffff;
+    }
+    
+    .global-search-input .searchIcon {
+      right: 10px;
+      opacity: 70%;
+      color: #fff;
     }
     
     .main.main-carousel-container {
@@ -945,5 +962,9 @@ footer ul.links li:not(:last-child) a{
     .footer-container .col-md-auto {
       padding: 0px;
       width: 50%;
+    }
+    
+    .content-count {
+      margin-bottom: 0px; 
     }
 }
