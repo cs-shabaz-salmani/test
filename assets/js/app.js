@@ -430,6 +430,12 @@
 
   function toggleFilter(event) {
     console.log(event);
-    $('.sidebar').removeClass('d-none');
+    if(event.hasClass('active')){
+      event.removeClass('active');
+      $('.sidebar').addClass('d-none');
+    } else {
+      event.addClass('active');
+      $('.sidebar').removeClass('d-none');
+    }
   }
 
