@@ -21,6 +21,13 @@
         if(searchContent) {
           $("#searchText").val(searchContent);
         }
+        
+        $(window).resize(function(){
+          if ($(window).width() <= 450){
+            console.log('mobile view');
+            $('#searchText').removeAttr('placeholder');
+          }   
+        });
       }, 1000);
     }
     var footer = $('#footer-container');
@@ -28,6 +35,7 @@
       footer.load('assets/html/footer.html');
     }
     $(window).resize(function(){
+      console.log($(window).width());
       if ($(window).width() <= 450){
         console.log('mobile view');
         $('#searchText').removeAttr('placeholder');
