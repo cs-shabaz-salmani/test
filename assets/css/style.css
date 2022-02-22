@@ -587,6 +587,13 @@
   background-size: cover;
 }
 
+.lets-connect-bg {
+  background: url(../images/lets_connect.png) no-repeat;
+  padding: 50px 0px;
+  background-position: center;
+  background-size: cover;
+}
+
 .latest-updates-suggestions-container .tab-content {
   background: #f2f5f9;
   padding: 20px 0px 45px 0px;
@@ -1019,5 +1026,9 @@ footer ul.links li:not(:last-child) a{
     
     .mobile-view-filter-btn .filter-btn:focus {
       box-shadow: none !important;
+    }
+    
+    .lets-connect-bg {
+      display: none; 
     }
 }
