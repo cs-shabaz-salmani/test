@@ -272,15 +272,6 @@
 
 .main .carousel {
   z-index: -1;
-/*   background: url(../images/main_banner.png) no-repeat;
-  background-position: right;
-  background-size: initial;
-  padding-top: 150px;
-  padding-bottom: 50px; */
-}
-
-.main .carousel .carousel-inner {
-/*   padding-top: 85px; */
 }
 
 .main .carousel .carousel-inner .carousel-item {
@@ -547,9 +538,9 @@
   margin-top: 3px;
   margin-bottom: 3px;
   text-indent: unset !important;
-  background-color: #121111;
+  background-color: #30a8f4;
   background-clip: unset !important;
-  border: 0px solid #000000;
+  border: 0px solid #30a8f4;
   border-top: unset !important;
   border-bottom: unset !important;
   border-radius: 50%;
@@ -767,7 +758,7 @@ footer ul.links li:not(:last-child) a{
     
     .topbar-container h1 {
       font-size: 22px;
-      padding: 20px 10px 25px 0px;
+      padding: 10px 10px 10px 0px;
     }
     
     .main.main-carousel-container {
@@ -775,7 +766,7 @@ footer ul.links li:not(:last-child) a{
     }
     
     .main .carousel .carousel-inner {
-      padding-top: 60px;
+      padding-top: 40px;
     }
     
     .main .carousel .carousel-inner .carousel-item {
@@ -786,6 +777,13 @@ footer ul.links li:not(:last-child) a{
     
     .main-carousel-container .carousel-indicators {
       margin-right: 0px;
+      margin-left: 20px;
+    }
+    
+    .main-carousel-container .carousel-indicators [data-bs-target] {
+      width: 5px;
+      height: 5px;
+      margin-right: 5px;
     }
     
     .main .carousel .carousel-inner .carousel-item h1 {
@@ -794,9 +792,10 @@ footer ul.links li:not(:last-child) a{
     }
     
     .main .carousel .carousel-inner .carousel-item p {
-      font-size: 12px;
+      font-size: 10px;
       margin-top: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      line-height: 13px;
     }
     
     .main .carousel .carousel-inner .carousel-item a {
