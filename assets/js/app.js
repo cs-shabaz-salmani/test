@@ -23,7 +23,7 @@
         }
         $(window).resize(function(){
           if ($(window).width() <= 450){
-            console.log('mobile view);
+            console.log('mobile view');
             $('#searchText').removeAttr('placeholder');
           }   
         });
