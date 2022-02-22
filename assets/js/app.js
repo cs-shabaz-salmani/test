@@ -21,26 +21,21 @@
         if(searchContent) {
           $("#searchText").val(searchContent);
         }
-        
-        $(window).resize(function(){
-          if ($(window).width() <= 450){
-            console.log('mobile view');
-            $('#searchText').removeAttr('placeholder');
-          }   
-        });
+        if ($(window).width() <= 450){
+          console.log('mobile view');
+          $('#sidebar').addClass('d-none');
+        }
       }, 1000);
     }
     var footer = $('#footer-container');
     if(footer){
       footer.load('assets/html/footer.html');
     }
-    $(window).resize(function(){
-      console.log($(window).width());
-      if ($(window).width() <= 450){
-        console.log('mobile view');
-        $('#searchText').removeAttr('placeholder');
-      }   
-    });
+    console.log($(window).width());
+    if ($(window).width() <= 450){
+      console.log('mobile view');
+      $('#searchText').removeAttr('placeholder');
+    }
     $('.dropdown-toggle').dropdown();
     $('.nav-tabs').tab();
   });
