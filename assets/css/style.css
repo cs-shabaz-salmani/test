@@ -839,10 +839,22 @@ footer ul.links li:not(:last-child) a{
     
     .category-container .category-content h1 {
       font-size: 20px;
+      margin-bottom: 3px;
+      margin-top: 15px;
     }
     
     .category-container .category-content h5 {
-      font-size: 15px; 
+      font-size: 15px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+    
+    #latest-hub-updates .mp-tile-container {
+      float: unset;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
     }
     
     .latest-updates-suggestions-content .nav.nav-tabs .nav-link h4 {
@@ -857,12 +869,17 @@ footer ul.links li:not(:last-child) a{
       height: auto;
     }
     
+    .category-container {
+      padding: 20px 0px;
+    }
+    
     .category-container .category-item:not(:last-child) {
       margin-right: 0px;
     }
     
     .category-container .category-item .category-link {
       padding: 10px;
+      margin-bottom: 15px;
     }
     
     .category-title {
