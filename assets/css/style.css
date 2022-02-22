@@ -765,6 +765,10 @@ footer ul.links li:not(:last-child) a{
       padding: 10px 10px 10px 0px;
     }
     
+    .global-search-input #searchText::placeholder {
+      color: transparent;
+    }
+    
     .main.main-carousel-container {
       margin-top: 10px !important;
     }
