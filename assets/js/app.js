@@ -22,7 +22,7 @@
           $("#searchText").val(searchContent);
         }
         if ($(window).width() <= 450){
-          $('#sidebar').addClass('d-none');
+          $('.sidebar').addClass('d-none');
           $('.mobile-view-filter-btn').removeClass('d-none');
         }
       }, 1000);
@@ -426,5 +426,10 @@
     cardDescription.appendChild(itemDescription);
     aTaglistItem.appendChild(cardDescription);
     return aTaglistItem;
+  }
+
+  function toggleFilter(event) {
+    console.log(event);
+    $('.sidebar').removeClass('d-none');
   }
 
