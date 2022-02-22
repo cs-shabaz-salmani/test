@@ -766,7 +766,7 @@ footer ul.links li:not(:last-child) a{
     }
     
     .global-search-input #searchText::placeholder {
-      color: transparent;
+/*       color: transparent; */
     }
     
     .main.main-carousel-container {
