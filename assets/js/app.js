@@ -428,8 +428,9 @@
     return aTaglistItem;
   }
 
-  function toggleFilter(event) {
-    console.log(event);
+  function toggleFilter(this) {
+    console.log(this);
+    var event = $(this);
     if(event.hasClass('active')){
       event.removeClass('active');
       $('.sidebar').addClass('d-none');
