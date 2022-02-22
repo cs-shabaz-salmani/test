@@ -754,9 +754,10 @@ footer ul.links li:not(:last-child) a{
 
 .build-it-yourself-container {
   background: url("../images/build_yourself_bg.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   min-height: 320px;
   position: relative;
+  padding-bottom: 30px;
 }
 
 @media screen 
