@@ -836,18 +836,41 @@ footer ul.links li:not(:last-child) a{
       padding: 2px 10px;
     }
     
+    .sidebar {
+      position: absolute;
+      top: 50px;
+      z-index: 1;
+      width: 90%;
+      background: #fff;
+      box-shadow: 1px 1px 5px #ccc;
+      border-radius: 10px;
+      left: 5%;
+      right: 5%;
+      padding: 0px; 
+    }
+    
     .sidebar #sidebar {
       position: relative;
       top: unset;
       left: unset;
-      right: unset%;
+      right: unset;
       bottom: unset;
       background: transparent;
       border-right: none;
+      margin-left: 0px;
+      border-left: none;
     }
     
-    .sidebar-content {
-      padding: 0px; 
+    .sidebar .sidebar-title {
+      font-size: 15px;
+    }
+    
+    .sidebar .sidebar-content .accordion-button {
+      font-size: 13px;
+    }
+    
+    .sidebar .sidebar-content {
+      padding: 0px 0px 5px 0px; 
     }
     
     .category-container .category-content {
