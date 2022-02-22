@@ -505,6 +505,10 @@
   font-size: 20px;
 }
 
+.category-container .category-content .category-col {
+  width: 25%; 
+}
+
 .category-container .category-item .category-all-link {
   padding: 12px 15px !important;
 }
@@ -798,6 +802,10 @@ footer ul.links li:not(:last-child) a{
     
     .category-container .category-content {
       display: block;
+    }
+    
+    .category-container .category-content .category-col {
+      width: 50%; 
     }
     
     .latest-updates-suggestions-content .nav.nav-tabs .nav-link h4 {
