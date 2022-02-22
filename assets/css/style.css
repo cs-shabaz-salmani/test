@@ -921,4 +921,20 @@ footer ul.links li:not(:last-child) a{
       background-size: cover;
       padding: 0px 10px 70px 10px;
     }
+    
+    .build-it-yourself-container h3{
+      font-size: 18px;
+    }
+    
+    .build-it-yourself-container h1{
+      font-size: 24px;
+    }
+    
+    .build-it-yourself-container h5{
+      font-size: 13px;
+    }
+    
+    .build-it-yourself-container 1{
+      font-size: 12px;
+    }
 }
