@@ -805,13 +805,13 @@ footer ul.links li:not(:last-child) a{
     }
     
     .main .carousel .carousel-inner {
-      padding-top: 40px;
+      padding-top: 35px;
     }
     
     .main .carousel .carousel-inner .carousel-item {
       margin-left: 10px;
-      min-height: 250px;
-      padding-bottom: 50px;
+      min-height: 200px;
+      padding-bottom: 10px;
     }
     
     .main-carousel-container .carousel-indicators {
@@ -826,11 +826,12 @@ footer ul.links li:not(:last-child) a{
     }
     
     .main .carousel .carousel-inner .carousel-item .carousel-col {
-      width: 55%;
+      width: 45%;
+      padding 0px;
     }
     
     .main .carousel .carousel-inner .carousel-item h1 {
-      margin-top: 30px;
+      margin-top: 15px;
       font-size: 15px;
     }
     
@@ -941,7 +942,6 @@ footer ul.links li:not(:last-child) a{
     
     .category-container .category-item .category-link {
       padding: 10px;
-      margin-bottom: 15px;
     }
     
     .category-title {
