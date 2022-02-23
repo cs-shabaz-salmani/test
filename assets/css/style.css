@@ -887,6 +887,9 @@ footer ul.links li:not(:last-child) a{
 
 .main-loader .main-loader-inner > div.page {
 /*   transform: scale(40);  */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 
 .main-loader .main-loader-page-load {
