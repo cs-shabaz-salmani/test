@@ -1029,6 +1029,14 @@ footer ul.links li:not(:last-child) a{
   margin-bottom: 10px;
 }
 
+#carouselProductUpdates .carousel-item span.item-image {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+}
+
 @media screen 
   and (min-device-width: 320px) 
   and (max-device-width: 450px) {
