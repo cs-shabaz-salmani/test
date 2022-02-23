@@ -73,15 +73,15 @@
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
       } else {
-        var docLink = document.createElement('a');
-        docLink.href = docLink;
-        docLink.className = "nav-item detail-doc-link";
-        docLink.setAttribute("title", "Online Help");
-        docLink.setAttribute("target", "_blank");
-        docLink.setAttribute("rel", "noopener noreferrer");
+        var docLinkTag = document.createElement('a');
+        docLinkTag.href = docLink;
+        docLinkTag.className = "nav-item detail-doc-link";
+        docLinkTag.setAttribute("title", "Online Help");
+        docLinkTag.setAttribute("target", "_blank");
+        docLinkTag.setAttribute("rel", "noopener noreferrer");
         var docLinkText = document.createTextNode("here");
-        docLink.append(docLinkText);
-        document.getElementById("detail-doc-link-here").append(docLink);
+        docLinkTag.append(docLinkText);
+        document.getElementById("detail-doc-link-here").append(docLinkTag);
         document.getElementById("detail-doc-link").classList.remove("d-none");
         docLinkBlock.classList.remove("d-block");
         docLinkBlock.classList.add("d-none");
