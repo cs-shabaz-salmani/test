@@ -1327,11 +1327,11 @@ footer ul.links li:not(:last-child) a{
       width: 100%;
     }
     
-    #carouselProductUpdates .carousel .carousel-inner {
+    #carouselProductUpdates .carousel-inner {
       padding-top: 0px;
     }
     
-    #carouselProductUpdates .carousel .carousel-item {
+    #carouselProductUpdates .carousel-item {
       margin-left: 0px;
     }
     
