@@ -595,18 +595,23 @@
   width: 40%;
   height: 100%;
   float: left;
+  margin-top: 60px;
 }
 
 .lets-connect-form-content {
   width: 60%;
   float: right;
+  border: 1px solid #ccc;
+  padding: 40px 20px 30px 70px;
+  margin-top: 60px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 5px 5px 15px #eee;
 }
 
 .lets-connect-bg {
   background: url(../images/lets_connect.png) no-repeat;
   height: 100%;
-  margin-top: 65px;
-  margin-left: 30px;
   width: 100%;
   background-size: contain;
 }
