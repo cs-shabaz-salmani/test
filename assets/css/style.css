@@ -39,7 +39,7 @@
   right: 0px;
   z-index: 2;
   background: #30a8f4;
-  box-shadow: 0px 1px 5px #cecece;
+  box-shadow: 0px 1px 5px rgba(29, 31, 51, 0.7);
 }
 
 .topbar-container h1 {
