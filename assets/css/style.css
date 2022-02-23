@@ -157,6 +157,15 @@
   margin-top: 15px;
 }
 
+.filter-search-input {
+  width: 80%;
+  margin-top: 0px;
+}
+
+.filter-list-input {
+  padding-left: 15px;
+}
+
 .global-search-input-sm{
   margin-left: 15px;
 }
@@ -1081,8 +1090,8 @@ footer ul.links li:not(:last-child) a{
     
     .sidebar {
       position: absolute;
-      top: 50px;
-      z-index: 1;
+      top: 45px;
+      z-index: 11;
       width: 90% !important;
       background: #ffffff;
       box-shadow: 1px 1px 5px #ccc;
