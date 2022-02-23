@@ -587,10 +587,19 @@
   background-size: cover;
 }
 
+.lets-connect-bg-content {
+  width: 40%; 
+}
+
+.lets-connect-form-content {
+  width: 60%;
+}
+
 .lets-connect-bg {
   background: url(../images/lets_connect.png) no-repeat;
   height: 100%;
   margin-top: 65px;
+  margin-left: 30px;
 }
 
 .latest-updates-suggestions-container .tab-content {
