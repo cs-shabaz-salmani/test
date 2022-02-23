@@ -1322,4 +1322,49 @@ footer ul.links li:not(:last-child) a{
       width: 100%;
       float: unset;
     }
+    
+    #carouselProductUpdates {
+      width: 100%;
+    }
+    
+    #carouselProductUpdates .carousel .carousel-inner {
+      padding-top: 0px;
+    }
+    
+    #carouselProductUpdates .carousel .carousel-item {
+      margin-left: 0px;
+    }
+    
+    #carouselProductUpdates .carousel-item .carousel-col {
+      width: 90%; 
+    }
+    
+    #carouselProductUpdates .carousel-control-prev, #carouselProductUpdates .carousel-control-next {
+      display: none; 
+    }
+    
+    #carouselProductUpdates .carousel-item span.item-image {
+      width: 160px;
+      height: 80px;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+    
+    #carouselProductUpdates .carousel-item h3 {
+      font-size: 15px;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    
+    #carouselProductUpdates .carousel-item p {
+      font-size: 10px;
+      margin-top: 3px;
+      line-height: 12px;
+      margin-bottom: 2px;
+    }
+    
+    #carouselProductUpdates .carousel .carousel-inner .carousel-item a {
+      font-size: 10px;
+      padding: 0px;
+    }
 }
