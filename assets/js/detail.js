@@ -82,6 +82,7 @@
         var docLinkText = document.createTextNode("here");
         docLink.append(docLinkText);
         document.getElementById("detail-doc-link-here").append(docLink);
+        document.getElementById("detail-doc-link").classList.remove("d-none");
         docLinkBlock.classList.remove("d-block");
         docLinkBlock.classList.add("d-none");
       }
