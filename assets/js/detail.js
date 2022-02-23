@@ -69,6 +69,7 @@
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         document.getElementById("detail-docs-content").append(docContent);
+        $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
       } else {
