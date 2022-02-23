@@ -1000,6 +1000,18 @@ footer ul.links li:not(:last-child) a{
   }
 }
 
+#carouselProductUpdates {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#carouselProductUpdates .carousel-item .carousel-col{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen 
   and (min-device-width: 320px) 
   and (max-device-width: 450px) {
