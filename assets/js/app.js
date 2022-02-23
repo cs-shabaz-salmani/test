@@ -55,9 +55,9 @@
             $('.main-loader-page-load').addClass('off');
             $('.main-page-content').removeClass('d-none');
             mainPageLoader.addClass('d-none');
-          }, 700);
-        }, 700);
-      }, 1600);
+          }, 400);
+        }, 400);
+      }, 1200);
     }
   });
 
