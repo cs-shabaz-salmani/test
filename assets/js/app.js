@@ -77,6 +77,7 @@
           }, 400);
         }, 400);
       }, 1200);
+      $('#carouselProductUpdates').carousel({ interval: 10000 });
     }
   });
 
