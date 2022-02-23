@@ -886,7 +886,7 @@ footer ul.links li:not(:last-child) a{
 }
 
 .main-loader .main-loader-inner > div.page {
-  transform: scale(40); 
+/*   transform: scale(40);  */
 }
 
 .main-loader .main-loader-page-load {
