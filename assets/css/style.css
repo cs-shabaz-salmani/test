@@ -771,12 +771,12 @@ footer ul.links li:not(:last-child) a{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #cccccc;
+  background: #f9f9f9;
 }
 .list-loading .center .wave {
   width: 5px;
   height: 100px;
-  background: linear-gradient(45deg, cyan, #fff);
+  background: linear-gradient(45deg, #30a8f4, #ffffff);
   margin: 10px;
   animation: wave 1s linear infinite;
   border-radius: 20px;
