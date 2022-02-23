@@ -268,6 +268,10 @@
   margin-top: 100px !important; 
 }
 
+.main.lets-connect-main {
+  margin-top: 150px !important; 
+}
+
 .all-list-container .main {
   margin-top: 105px !important; 
   background: #f9f9f9;
@@ -1367,5 +1371,9 @@ footer ul.links li:not(:last-child) a{
     #carouselProductUpdates .carousel-item a {
       font-size: 10px;
       padding: 0px;
+    }
+    
+    .main.lets-connect-main {
+      margin-top: 100px !important; 
     }
 }
