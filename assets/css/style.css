@@ -1388,4 +1388,8 @@ footer ul.links li:not(:last-child) a{
     .main.lets-connect-main {
       margin-top: 60px !important; 
     }
+    
+    .main.item-detail-column {
+      margin-top: 110px !important;
+    }
 }
