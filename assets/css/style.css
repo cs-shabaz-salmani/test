@@ -833,7 +833,7 @@ footer ul.links li:not(:last-child) a{
     
     .main .carousel .carousel-inner .carousel-item .carousel-col {
       width: 45%;
-      padding 0px;
+      padding: 0px;
     }
     
     .main .carousel .carousel-inner .carousel-item h1 {
