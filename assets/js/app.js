@@ -37,6 +37,13 @@
     }
     $('.dropdown-toggle').dropdown();
     $('.nav-tabs').tab();
+    
+    setTimeout(function(){
+      if (window.location.href.indexOf('list.html') > -1) {
+          $('.list-loading').addClass('d-none');
+          $('.all-list-content').removeClass('d-none');
+      }
+     }, 1000);
   });
 
   function init() {
