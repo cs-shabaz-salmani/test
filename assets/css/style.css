@@ -616,6 +616,7 @@
   width: 40%;
   height: 100%;
   float: left;
+  min-height: 600px;
 }
 
 .lets-connect-form-content {
@@ -626,6 +627,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 5px 5px 15px #eee;
+  min-height: 600px;
 }
 
 .lets-connect-bg {
@@ -1328,6 +1330,7 @@ footer ul.links li:not(:last-child) a{
       border: none;
       margin-top: 0px;
       box-shadow: none;
+      min-height: unset;
     }
     
     #carouselProductUpdates {
