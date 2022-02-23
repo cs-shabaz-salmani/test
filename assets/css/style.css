@@ -1053,6 +1053,12 @@ footer ul.links li:not(:last-child) a{
   margin-right: 20px;
 }
 
+.item-github-content {
+  border-left: 2px solid #b5b5b5;
+  padding-left: 30px;
+  margin-left: 15px; 
+}
+
 @media screen 
   and (min-device-width: 320px) 
   and (max-device-width: 450px) {
