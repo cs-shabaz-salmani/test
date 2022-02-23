@@ -44,6 +44,19 @@
           $('.all-list-content').removeClass('d-none');
       }
      }, 1000);
+    
+    var mainPageLoader = $('.main-loader');
+    if(mainPageLoader){
+      setTimeout(function() {
+        $('.main-loader-inner div').addClass('done'); 
+        setTimeout(function() {
+          $('.main-loader-inner div').addClass('page'); 
+          setTimeout(function() {
+            $('.main-loader-page-load').addClass('off');
+          }, 500);
+        }, 500);
+      }, 1500);
+    }
   });
 
   function init() {
