@@ -69,7 +69,7 @@
     allItemsJson = JSON.parse(allItemsJson);
     var updatesList = [];
     _.each(allItemsJson, function(item, index) {
-      if(index === 0 || index === 100 || index === 150 || index === 200 || index === 250 || index === 300 || index === 350 || index === 400){
+      if(index === 0 || index === 10 || index === 112 || index === 351 || index === 390){
          updatesList.push(item); 
       }
     });
