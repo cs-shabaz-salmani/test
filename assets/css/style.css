@@ -151,7 +151,7 @@
   font-weight: 700;
 }
 
-.global-search-input{
+.global-search-input, .filter-search-input {
   position: relative;
   width: 25%;
   margin-top: 15px;
@@ -161,13 +161,13 @@
   margin-left: 15px;
 }
 
-.global-search-input .form-control {
+.global-search-input .form-control, .filter-search-input .form-control {
   height: 38px;
   font-size: 14px;
   padding-right: 35px;
 }
 
-.global-search-input .searchIcon {
+.global-search-input .searchIcon, .filter-search-input .searchIcon {
   position: absolute;
   top: 11px;
   right: 15px;
