@@ -43,7 +43,7 @@
           var categoryText = document.createTextNode(category);
           categoryLi.appendChild(categoryText);
           
-          categoryListUl.appendChild(categoryLi);
+          categoryListUl.append(categoryLi);
         });
       }, 1000);
     }
