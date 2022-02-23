@@ -1362,7 +1362,8 @@ footer ul.links li:not(:last-child) a{
       line-height: 12px;
       margin-bottom: 2px;
     }
-    #carouselProductUpdates .carousel .carousel-inner .carousel-item a {
+    
+    #carouselProductUpdates .carousel-item a {
       font-size: 10px;
       padding: 0px;
     }
