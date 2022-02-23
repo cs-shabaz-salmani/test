@@ -54,6 +54,7 @@
           setTimeout(function() {
             $('.main-loader-page-load').addClass('off');
             $('.main-page-content').removeClass('d-none');
+            mainPageLoader.addClass('d-none');
           }, 500);
         }, 500);
       }, 1500);
