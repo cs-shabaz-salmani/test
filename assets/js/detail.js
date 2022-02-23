@@ -58,6 +58,9 @@
       var releaseNotes = document.createElement('zero-md');
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
+      if(detailInfo.type === "connector") {
+        document.getElementById("release-notes-block").classList.remove("d-none");
+      }
       var docLink = detailInfo.help;
       var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink.match(/readme.md/gi)){
