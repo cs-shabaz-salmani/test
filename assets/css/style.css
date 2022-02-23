@@ -587,12 +587,19 @@
   background-size: cover;
 }
 
+.lets-connect-container {
+  display: contents; 
+}
+
 .lets-connect-bg-content {
-  width: 40%; 
+  width: 40%;
+  height: 100%;
+  float: left;
 }
 
 .lets-connect-form-content {
   width: 60%;
+  float: right;
 }
 
 .lets-connect-bg {
@@ -600,6 +607,8 @@
   height: 100%;
   margin-top: 65px;
   margin-left: 30px;
+  width: 100%;
+  background-size: contain;
 }
 
 .latest-updates-suggestions-container .tab-content {
@@ -1232,11 +1241,16 @@ footer ul.links li:not(:last-child) a{
       box-shadow: none !important;
     }
     
-    .lets-connect-bg {
+    .lets-connect-bg-content {
       display: none; 
     }
     
     .top-breadcrumb .breadcrumb {
       margin-left: 12px;
+    }
+    
+    .lets-connect-form-content {
+      width: 100%;
+      float: unset;
     }
 }
