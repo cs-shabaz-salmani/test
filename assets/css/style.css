@@ -1321,6 +1321,9 @@ footer ul.links li:not(:last-child) a{
     .lets-connect-form-content {
       width: 100%;
       float: unset;
+      border: none;
+      margin-top: 0px;
+      box-shadow: none;
     }
     
     #carouselProductUpdates {
