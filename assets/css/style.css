@@ -1009,13 +1009,14 @@ footer ul.links li:not(:last-child) a{
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
 
 #carouselProductUpdates .carousel-item .carousel-col{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  z-index: 1;
+  display: flex;
 }
 
 #carouselProductUpdates .carousel-item {
