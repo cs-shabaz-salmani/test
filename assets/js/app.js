@@ -56,8 +56,8 @@
             $('.main-page-content').removeClass('d-none');
             mainPageLoader.addClass('d-none');
           }, 700);
-        }, 800);
-      }, 1500);
+        }, 700);
+      }, 1600);
     }
   });
 
