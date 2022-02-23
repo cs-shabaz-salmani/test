@@ -26,6 +26,25 @@
           $('.sidebar').addClass('d-none');
           $('.mobile-view-filter-btn').removeClass('d-none');
         }
+        
+        var categoryListUl = $("#filter-category-list");
+        _.each(categoryList, function(category) {
+          var categoryLi = document.createElement('li');
+          categoryLi.className = "sidebar-item list-unstyled fw-light";
+
+          var categoryInput = document.createElement('input');
+          categoryInput.className = "sidebar-link";
+          categoryInput.setAttribute("type", "checkbox");
+          categoryInput.onclick = function () {
+            applyCategoryFilter(category);
+          };
+          categoryLi.appendChild(categoryInput);
+
+          var categoryText = document.createTextNode(category);
+          categoryLi.appendChild(categoryText);
+          
+          categoryListUl.appendChild(categoryLi);
+        });
       }, 1000);
     }
     var footer = $('#footer-container');
