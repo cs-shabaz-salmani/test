@@ -766,7 +766,7 @@ footer ul.links li:not(:last-child) a{
   padding-bottom: 30px;
 }
 
-.main-loader .inner {
+.main-loader .main-loader-inner {
   position: absolute; 
   margin: auto; 
   width: 50px; 
@@ -777,7 +777,7 @@ footer ul.links li:not(:last-child) a{
   right: 0px; 
 }
 
-.main-loader .inner > div {
+.main-loader .main-loader-inner > div {
   width: 50px; 
   height: 50px; 
   background-color: rgba(255, 255, 255, 0.7); 
@@ -786,24 +786,24 @@ footer ul.links li:not(:last-child) a{
   transition: all 0.5s ease; 
 }
 
-.main-loader .inner > div:first-child {
+.main-loader .main-loader-inner > div:first-child {
   margin-left: -27px; 
   animation: one 1.5s linear 1; 
 }
 
-.main-loader .inner > div:nth-child(2) {
+.main-loader .main-loader-inner > div:nth-child(2) {
   margin-left: 27px; 
   animation: two 1.5s linear 1; 
 }
 
-.main-loader .inner > div:nth-child(3) {
-	margin-top: 54px; 
+.main-loader .imain-loader-nner > div:nth-child(3) {
+  margin-top: 54px; 
   margin-left: -27px; 
   animation: four 1.5s linear 1; 
 }
 
-.main-loader .inner > div:nth-child(4) {
-	margin-top: 54px; 
+.main-loader .main-loader-inner > div:nth-child(4) {
+  margin-top: 54px; 
   margin-left: 27px; 
   animation: three 1.5s linear 1; 
 }
@@ -813,7 +813,7 @@ footer ul.links li:not(:last-child) a{
     transform: scale(1);
   }
   25% {
-  	transform: scale(0.3);
+    transform: scale(0.3);
   }
   50% {
     transform: scale(1);
@@ -831,7 +831,7 @@ footer ul.links li:not(:last-child) a{
     transform: scale(1.4);
   }
   25% {
-  	transform: scale(1);
+    transform: scale(1);
   }
   50% {
     transform: scale(0.3);
@@ -849,7 +849,7 @@ footer ul.links li:not(:last-child) a{
     transform: scale(1);
   }
   25% {
-  	transform: scale(1.4);
+    transform: scale(1.4);
   }
   50% {
     transform: scale(1);
@@ -867,7 +867,7 @@ footer ul.links li:not(:last-child) a{
     transform: scale(0.3);
   }
   25% {
-  	transform: scale(1);
+    transform: scale(1);
   }
   50% {
     transform: scale(1.4);
@@ -880,16 +880,16 @@ footer ul.links li:not(:last-child) a{
   }
 }
 
-.main-loader .inner > div.done {
+.main-loader .main-loader-inner > div.done {
   margin-left: 0px; 
   margin-top:  27px; 
 }
 
-.main-loader .inner > div.page {
+.main-loader .main-loader-inner > div.page {
   transform: scale(40); 
 }
 
-.main-loader .pageLoad {
+.main-loader .main-loader-page-load {
   position: fixed;  
   top: 0px; 
   left: 0px;  
@@ -900,7 +900,7 @@ footer ul.links li:not(:last-child) a{
   z-index: 2; 
 }
 
-.main-loader .pageLoad.off {
+.main-loader .main-loader-page-load.off {
   opacity: 0; 
   pointer-events: none; 
 }
