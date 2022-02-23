@@ -895,7 +895,9 @@ footer ul.links li:not(:last-child) a{
     }
     
     .category-container .category-content .category-col {
-      width: 50%; 
+      width: 50%;
+      padding: 0px 5px;
+      margin-bottom: 10px;
     }
     
     .category-container .category-content h3 {
@@ -951,7 +953,7 @@ footer ul.links li:not(:last-child) a{
     }
     
     .category-title {
-      font-size: 16px;
+      font-size: 15px;
       margin: 0px 0px 3px 10px;
       line-height: 18px;
     }
