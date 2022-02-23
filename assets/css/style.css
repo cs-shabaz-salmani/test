@@ -1002,7 +1002,7 @@ footer ul.links li:not(:last-child) a{
 
 #product-updates-slider {
   background-color: #f5f8f9;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #carouselProductUpdates {
@@ -1033,15 +1033,17 @@ footer ul.links li:not(:last-child) a{
 #carouselProductUpdates .carousel-item p {
   font-size: 16px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  line-height: 18px;
+  margin-bottom: 5px;
 }
 
 #carouselProductUpdates .carousel-item span.item-image {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 125px;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 25px;
+  margin-right: 20px;
 }
 
 @media screen 
