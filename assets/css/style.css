@@ -632,7 +632,9 @@
   background: url(../images/lets_connect.png) no-repeat;
   height: 100%;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .latest-updates-suggestions-container .tab-content {
