@@ -295,7 +295,7 @@
       
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = banner.hyperLink;
-      carouselHyperLink.className = "pull-left text-center btn btn-md btn-outline-dark";
+      carouselHyperLink.className = "pull-left text-center btn btn-md";
       carouselHyperLink.setAttribute("rel", "canonical");
       var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
