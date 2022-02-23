@@ -7,6 +7,7 @@
   var listItemsBkp;
   var paramCategoryType = urlSearchParams.get('contentType');
   var searchContent = urlSearchParams.get('searchContent');
+  var categoryList = {'Analytics and SIEM', 'Authentication', 'Case Management', 'Threat Intelligence', 'Database', 'Deception', 'Email', 'Gateway', 'Endpoint Security', 'Identity and Access Management', 'Authentication', 'Insider Threat', 'IT Services', 'Network Security', 'Utilities', 'Vulnerability and Risk Management', 'OT & IoT Security ', 'Communication and Coordination', 'Compliance and Reporting', 'FortiSOAR Essentials', 'Monitoring', 'Firewall and Network Protection', 'Threat Hunting and Search', 'Web Application', 'Task Management', 'Enterprise mobility management', 'Digital assistant', 'Automation controller', 'Logging', 'Query Service', 'Threat Detection', 'Breach and Attack Simulation (BAS)', 'ML Service', 'Message Queueing Service', 'Security Posture Management', 'Compute Platform', 'Storage', 'Asset Management', 'Container Services', 'IT Service Management', 'Attack surface management', 'Malware Analysis', 'Cloud access security broker (CASB)', 'Cloud Security', 'Email Server', 'Email Security', 'DevOps and Digital Operations and Digital Operations', 'Ticket Management'};
 
   $(document).ready(function() {
     var navBar = $('#sidebar');
@@ -31,7 +32,6 @@
     if(footer){
       footer.load('assets/html/footer.html');
     }
-    console.log($(window).width());
     if ($(window).width() <= 450){
       $('#searchText').removeAttr('placeholder');
     }
