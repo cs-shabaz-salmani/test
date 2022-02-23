@@ -519,7 +519,7 @@
 }
 
 .detail-container .markdown-body h1 {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .category-container .category-content h1 {
