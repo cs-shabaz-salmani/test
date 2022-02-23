@@ -53,6 +53,7 @@
           $('.main-loader-inner div').addClass('page'); 
           setTimeout(function() {
             $('.main-loader-page-load').addClass('off');
+            $('.main-page-content').removeClass('d-none');
           }, 500);
         }, 500);
       }, 1500);
