@@ -83,7 +83,7 @@
 
   function init() {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", yumRepo + "marketplace-test/marketplace.json", false ); // false for synchronous request
+    xmlHttp.open( "GET", yumRepo + "content-hub/content-hub.json", false ); // false for synchronous request
     xmlHttp.send( null );
     var allItemsJson = xmlHttp.responseText;
     allItemsJson = JSON.parse(allItemsJson);
