@@ -1,26 +1,26 @@
 {"mainBanner": [{
-    "heading": "Gartner Peer Insights Reviews",
-    "subHeading": "Many enterprise customers realize the power and effectiveness of FortiSOAR and have provided positive feedback on Gartner Peer Insights.",
+    "heading": "Discover Curated Solutions",
+    "subHeading": "FortiSOAR Content Hub is a collection of solution extensions that help you to derive more meaning from your FortiSOAR application",
     "description": "",
-    "hyperLink": "",
+    "hyperLink": "/list.html?contentType=all",
     "imagePath": "assets/images/main_banner.png",
-    "hyperLinkText": "View Reviews"
+    "hyperLinkText": "Explore Content Hub"
   },
   {
-    "heading": "Gartner Peer Insights Reviews",
-    "subHeading": "Many enterprise customers realize the power and effectiveness of FortiSOAR and have provided positive feedback on Gartner Peer Insights.",
+    "heading": "Featured - SOC Essentials Solution Pack",
+    "subHeading": "A well-researched and community vetted solution pack to streamline and accelerate your SOC journey.",
     "description": "",
-    "hyperLink": "",
+    "hyperLink": "/detail.html?entity=socSimulator&version=1.0.1&type=solutionpack",
     "imagePath": "assets/images/main_banner.png",
-    "hyperLinkText": "View Reviews"
+    "hyperLinkText": "Explore SOC Essentials Pack"
   },
   {
-    "heading": "Gartner Peer Insights Reviews",
-    "subHeading": "Many enterprise customers realize the power and effectiveness of FortiSOAR and have provided positive feedback on Gartner Peer Insights.",
+    "heading": "Featured - Threat Intelligence Management Solution Pack",
+    "subHeading": "Allows you to imbibe and adapt to threat intel management workflows and best practices and build a threat intel fused incident investigation process",
     "description": "",
-    "hyperLink": "",
+    "hyperLink": "/detail.html?entity=threat-intel-management&version=1.0.0&type=solutionpack",
     "imagePath": "assets/images/main_banner.png",
-    "hyperLinkText": "View Reviews"
+    "hyperLinkText": "Explore Threat Intel Management Pack"
   },
   {
     "heading": "Gartner Peer Insights Reviews",
@@ -31,59 +31,27 @@
     "hyperLinkText": "View Reviews"
   }],
 "updatesBanner": [{
-    "heading": "Lorem ipsum dolor sit amet",
-    "subHeading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
+    "heading": "FortiSOAR Solution Highlights",
+    "subHeading": "FortiSOAR helps to streamline your SOC and empowering it to orchestrate and automate accelerated and informed threat responses.",
+    "description": "",
+    "hyperLink": "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/fortisoar.pdf",
+    "imagePath": "",
+    "hyperLinkText": "View Data Sheet"
   },
   {
-    "heading": "Consectetur adipiscing elit",
-    "subHeading": "Excepteur sint occaecat cupidatat non proident",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
+    "heading": "FortiSOAR Community - Technical Help and FAQs",
+    "subHeading": "Well curated and updated technical help and FAQs available for your reference.",
+    "description": "",
+    "hyperLink": "https://community.fortinet.com/t5/forums/searchpage/tab/message?searchString=fortisoar&from=0&sortby=post_time&orderBy=desc&pageNo=1&aggregations=%5B%5D&uid=8021d0dd-1517-11ec-b3e2-0242ac12000d&resultsPerPage=10&exactPhrase=&withOneOrMore=&withoutTheWords=&pageSize=10&language=en&state=2&suCaseCreate=false",
+    "imagePath": "",
+    "hyperLinkText": "Explore FAQs"
   },
   {
-    "heading": "Sed do eiusmod tempor incididunt",
-    "subHeading": "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
-  },
-  {
-    "heading": "Ut labore et dolore magna aliqua",
-    "subHeading": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
-  }],
-  "updatesBanner": [{
-    "heading": "Lorem ipsum dolor sit amet",
-    "subHeading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
-  },
-  {
-    "heading": "Consectetur adipiscing elit",
-    "subHeading": "Excepteur sint occaecat cupidatat non proident",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
-  },
-  {
-    "heading": "Sed do eiusmod tempor incididunt",
-    "subHeading": "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
-  },
-  {
-    "heading": "Ut labore et dolore magna aliqua",
-    "subHeading": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
-    "description": "Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "hyperLink": "",
-    "imagePath": ""
+    "heading": "FortiSOAR Community – Forums, Updates and Interactions",
+    "subHeading": "Participate in community discussions, request a feature, tune in to product updates and much more",
+    "description": "",
+    "hyperLink": "https://fusecommunity.fortinet.com/groups/community-home?CommunityKey=9f1420e8-e3c6-4535-8cae-3fa714da66d8",
+    "imagePath": "",
+    "hyperLinkText": "Explore Community"
   }]
 }
