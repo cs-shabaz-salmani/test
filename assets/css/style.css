@@ -1032,6 +1032,7 @@ footer ul.links li:not(:last-child) a{
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  padding-bottom: 25px;
 }
 
 #carouselProductUpdates .carousel-item {
@@ -1053,8 +1054,8 @@ footer ul.links li:not(:last-child) a{
 }
 
 #carouselProductUpdates .carousel-item span.item-image {
-  width: 190px;
-  height: 125px;
+  width: 80px;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 25px;
