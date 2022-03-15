@@ -361,7 +361,7 @@
       carouselSubHeading.appendChild(carouselSubHeadingText);
       
       var carouselHyperLink = document.createElement('a');
-      carouselHyperLink.href = banner.hyperLink;
+      carouselHyperLink.href = updateBanner.hyperLink;
       carouselHyperLink.className = "pull-left text-center btn-link";
       carouselHyperLink.setAttribute("rel", "canonical");
       var carouselHyperLinkText = document.createTextNode(updateBanner.hyperLinkText);
