@@ -331,7 +331,7 @@
       carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
       
       var carouselRow = document.createElement('div');
-      carouselColumn.className = "row";
+      carouselRow.className = "row";
       carouselDiv.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
