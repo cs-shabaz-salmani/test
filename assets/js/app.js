@@ -345,20 +345,18 @@
       
       var carouselContent = document.createElement('div');
       carouselContent.className = "d-inline-block";
-      carouselColumn.appendChild(carouselContent);
       
       var carouselHeading = document.createElement('h3');
-      carouselColumn.appendChild(carouselHeading);
+      carouselContent.appendChild(carouselHeading);
       
       var carouselHeadingText = document.createTextNode(banner.heading);
       carouselHeading.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
-      carouselColumn.appendChild(carouselSubHeading);
+      carouselContent.appendChild(carouselSubHeading);
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
-      carouselColumn.appendChild(carouselSubHeading);
       
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = banner.hyperLink;
@@ -366,7 +364,9 @@
       carouselHyperLink.setAttribute("rel", "canonical");
       var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
-      carouselColumn.appendChild(carouselHyperLink);
+      carouselContent.appendChild(carouselHyperLink);
+      
+      carouselColumn.appendChild(carouselContent);
       
       updatesBanner.append(carouselDiv);
     });
