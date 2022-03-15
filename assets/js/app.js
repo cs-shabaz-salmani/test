@@ -358,7 +358,7 @@
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
-      carouselColumn.appendChild(carouselTextContent);
+      carouselColumn.appendChild(carouselSubHeading);
       
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = banner.hyperLink;
