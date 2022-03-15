@@ -358,24 +358,6 @@
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
-      
-      itemIconDiv.appendChild(imageElement);
-      carouselColumn.appendChild(itemIconDiv);
-      
-      var carouselTextContent = document.createElement('div');
-      carouselTextContent.className = "product-updates-text-container";
-      
-      var carouselHeading = document.createElement('h1');
-      carouselTextContent.appendChild(carouselHeading);
-      
-      var carouselHeadingText = document.createTextNode(banner.heading);
-      carouselHeading.appendChild(carouselHeadingText);
-      
-      var carouselSubHeading = document.createElement('p');
-      carouselTextContent.appendChild(carouselSubHeading);
-      
-      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
-      carouselSubHeading.appendChild(carouselSubHeadingText);
       carouselColumn.appendChild(carouselTextContent);
       
       var carouselHyperLink = document.createElement('a');
