@@ -302,12 +302,14 @@
       carouselRow.appendChild(carouselColumn);
       
       var carouselHeading = document.createElement('h1');
+      carouselHeading.className = banner.backgroundColorType;
       carouselColumn.appendChild(carouselHeading);
       
       var carouselHeadingText = document.createTextNode(banner.heading);
       carouselHeading.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
+      carouselSubHeading.className = banner.backgroundColorType;
       carouselColumn.appendChild(carouselSubHeading);
       
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
