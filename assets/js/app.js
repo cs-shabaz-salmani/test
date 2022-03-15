@@ -318,6 +318,7 @@
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = banner.hyperLink;
       carouselHyperLink.className = "pull-left text-center btn btn-md";
+      carouselHyperLink.setAttribute("target", "_blank");
       carouselHyperLink.setAttribute("rel", "canonical");
       var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
@@ -363,6 +364,7 @@
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = updateBanner.hyperLink;
       carouselHyperLink.className = "pull-left text-center btn-link";
+      carouselHyperLink.setAttribute("target", "_blank");
       carouselHyperLink.setAttribute("rel", "canonical");
       var carouselHyperLinkText = document.createTextNode(updateBanner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
