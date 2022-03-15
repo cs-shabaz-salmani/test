@@ -325,7 +325,7 @@
     });
     
     //Updates banner
-    _.each(bannersJson.mainBanner, function(banner, index) {
+    _.each(bannersJson.updatesBanner, function(updateBanner, index) {
       
       var carouselDiv = document.createElement('div');
       carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
@@ -340,7 +340,7 @@
       
       var itemIconDiv = document.createElement('span');
       itemIconDiv.className = "d-inline-block item-image";
-      itemIconDiv.style.backgroundImage = "url("+ banner.imagePath+")";
+      itemIconDiv.style.backgroundImage = "url("+ updateBanner.imagePath+")";
       carouselColumn.appendChild(itemIconDiv);
       
       var carouselContent = document.createElement('div');
@@ -349,20 +349,20 @@
       var carouselHeading = document.createElement('h3');
       carouselContent.appendChild(carouselHeading);
       
-      var carouselHeadingText = document.createTextNode(banner.heading);
+      var carouselHeadingText = document.createTextNode(updateBanner.heading);
       carouselHeading.appendChild(carouselHeadingText);
       
       var carouselSubHeading = document.createElement('p');
       carouselContent.appendChild(carouselSubHeading);
       
-      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
+      var carouselSubHeadingText = document.createTextNode(updateBanner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
       
       var carouselHyperLink = document.createElement('a');
       carouselHyperLink.href = banner.hyperLink;
       carouselHyperLink.className = "pull-left text-center btn-link";
       carouselHyperLink.setAttribute("rel", "canonical");
-      var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
+      var carouselHyperLinkText = document.createTextNode(updateBanner.hyperLinkText);
       carouselHyperLink.appendChild(carouselHyperLinkText);
       carouselContent.appendChild(carouselHyperLink);
       
