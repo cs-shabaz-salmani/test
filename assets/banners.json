@@ -4,7 +4,8 @@
     "description": "",
     "hyperLink": "/list.html?contentType=all",
     "imagePath": "assets/images/main_banner_1.png",
-    "hyperLinkText": "Explore Content Hub"
+    "hyperLinkText": "Explore Content Hub",
+    "backgroundColorType": "dark"
   },
   {
     "heading": "Featured - SOC Essentials Solution Pack",
@@ -12,7 +13,8 @@
     "description": "",
     "hyperLink": "/detail.html?entity=socSimulator&version=1.0.1&type=solutionpack",
     "imagePath": "assets/images/main_banner_2.png",
-    "hyperLinkText": "Explore SOC Essentials Pack"
+    "hyperLinkText": "Explore SOC Essentials Pack",
+    "backgroundColorType": "dark"
   },
   {
     "heading": "Featured - Threat Intelligence Management Solution Pack",
@@ -20,7 +22,8 @@
     "description": "",
     "hyperLink": "/detail.html?entity=threat-intel-management&version=1.0.0&type=solutionpack",
     "imagePath": "assets/images/main_banner_3.png",
-    "hyperLinkText": "Explore Threat Intel Management Pack"
+    "hyperLinkText": "Explore Threat Intel Management Pack",
+    "backgroundColorType": "dark"
   },
   {
     "heading": "Gartner Peer Insights Reviews",
@@ -28,7 +31,8 @@
     "description": "",
     "hyperLink": "",
     "imagePath": "assets/images/main_banner.png",
-    "hyperLinkText": "View Reviews"
+    "hyperLinkText": "View Reviews",
+    "backgroundColorType": "light"
   }],
 "updatesBanner": [{
     "heading": "FortiSOAR Solution Highlights",
