@@ -305,12 +305,20 @@
   font-weight: 500;
 }
 
+.main .carousel .carousel-inner .carousel-item h1.dark {
+  color: #ffffff;
+}
+
 .main .carousel .carousel-inner .carousel-item p {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 70px;
   color: #727272;
+}
+
+.main .carousel .carousel-inner .carousel-item p.dark {
+  color: #dfdfdf;
 }
 
 .main .carousel .carousel-inner .carousel-item .btn {
