@@ -267,7 +267,7 @@
 
   function buildHomePageBanners() {
     var mainBanner = $("#main-carousel-content");
-    var updatesBanner = $("#product-updates");
+    var updatesBanner = $("#carousel-product-updates-content");
     var mainBannerIndicator = $("#main-carousel-indicators");
     var bannersJson = $.getJSON({'url': "assets/banners.json", 'async': false});
     bannersJson = JSON.parse(bannersJson.responseText);
@@ -328,18 +328,36 @@
     _.each(bannersJson.mainBanner, function(banner, index) {
       
       var carouselDiv = document.createElement('div');
-      carouselDiv.className = "col-md-3";
+      carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+      
+      var carouselRow = document.createElement('div');
+      carouselColumn.className = "row";
+      carouselDiv.appendChild(carouselRow);
       
       var carouselColumn = document.createElement('div');
-      carouselColumn.className = "product-updates-content";
-      carouselDiv.appendChild(carouselColumn);
+      carouselColumn.className = "col-auto carousel-col";
+      carouselRow.appendChild(carouselColumn);
       
-      var itemIconDiv = document.createElement('div');
-      itemIconDiv.className = "product-updates-image-container";
+      var itemIconDiv = document.createElement('span');
+      itemIconDiv.className = "d-inline-block item-image";
+      itemIconDiv.style.backgroundImage = "url("+ banner.imagePath+")";
+      carouselColumn.appendChild(itemIconDiv);
       
-      var imageElement = document.createElement('img');
-      imageElement.className = "product-updates-image";
-      imageElement.src = "/assets/images/product_updates.png";
+      var carouselContent = document.createElement('div');
+      carouselContent.className = "d-inline-block";
+      carouselColumn.appendChild(carouselContent);
+      
+      var carouselHeading = document.createElement('h3');
+      carouselColumn.appendChild(carouselHeading);
+      
+      var carouselHeadingText = document.createTextNode(banner.heading);
+      carouselHeading.appendChild(carouselHeadingText);
+      
+      var carouselSubHeading = document.createElement('p');
+      carouselColumn.appendChild(carouselSubHeading);
+      
+      var carouselSubHeadingText = document.createTextNode(banner.subHeading);
+      carouselSubHeading.appendChild(carouselSubHeadingText);
       
       itemIconDiv.appendChild(imageElement);
       carouselColumn.appendChild(itemIconDiv);
@@ -359,6 +377,14 @@
       var carouselSubHeadingText = document.createTextNode(banner.subHeading);
       carouselSubHeading.appendChild(carouselSubHeadingText);
       carouselColumn.appendChild(carouselTextContent);
+      
+      var carouselHyperLink = document.createElement('a');
+      carouselHyperLink.href = banner.hyperLink;
+      carouselHyperLink.className = "pull-left text-center btn-link";
+      carouselHyperLink.setAttribute("rel", "canonical");
+      var carouselHyperLinkText = document.createTextNode(banner.hyperLinkText);
+      carouselHyperLink.appendChild(carouselHyperLinkText);
+      carouselColumn.appendChild(carouselHyperLink);
       
       updatesBanner.append(carouselDiv);
     });
