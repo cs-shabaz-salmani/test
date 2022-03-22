@@ -36,14 +36,12 @@
       if(detailInfo.availableVersions.length > 0){
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
-          if(version !== detailInfo.version){
-            var versionTag = document.createElement('a');
-            versionTag.className = "dropdown-item";
-            versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
-            var versionText = document.createTextNode("Version - " + version);
-            versionTag.append(versionText);
-            detailAvailableVersions.append(versionTag);
-          }
+          var versionTag = document.createElement('a');
+          versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
+          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type;
+          var versionText = document.createTextNode("Version - " + version);
+          versionTag.append(versionText);
+          detailAvailableVersions.append(versionTag);
         });
       } else {
         dropdownVersionLink.classList.remove("dropdown-toggle");
