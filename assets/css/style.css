@@ -164,6 +164,8 @@
 
 .filter-list-input {
   padding-left: 15px;
+  max-height: 200px;
+  overflow: scroll;
 }
 
 .global-search-input-sm{
