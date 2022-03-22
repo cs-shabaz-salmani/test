@@ -7,12 +7,20 @@
   var listItemsBkp;
   var paramCategoryType = urlSearchParams.get('contentType');
   var searchContent = urlSearchParams.get('searchContent');
-  var categoryList = ['Analytics and SIEM', 'Authentication', 'Case Management', 'Threat Intelligence', 'Database', 'Deception', 'Email', 'Gateway', 'Endpoint Security', 'Identity and Access Management', 'Authentication', 'Insider Threat', 'IT Services', 'Network Security', 'Utilities', 'Vulnerability and Risk Management', 'OT & IoT Security ', 'Communication and Coordination', 'Compliance and Reporting', 'FortiSOAR Essentials', 'Monitoring', 'Firewall and Network Protection', 'Threat Hunting and Search', 'Web Application', 'Task Management', 'Enterprise mobility management', 'Digital assistant', 'Automation controller', 'Logging', 'Query Service', 'Threat Detection', 'Breach and Attack Simulation (BAS)', 'ML Service', 'Message Queueing Service', 'Security Posture Management', 'Compute Platform', 'Storage', 'Asset Management', 'Container Services', 'IT Service Management', 'Attack surface management', 'Malware Analysis', 'Cloud access security broker (CASB)', 'Cloud Security', 'Email Server', 'Email Security', 'DevOps and Digital Operations and Digital Operations', 'Ticket Management'];
+  var categoryList = [];
+  var publisherList = [];
 
   $(document).ready(function() {
     var navBar = $('#sidebar');
     if(navBar){
       navBar.load('assets/html/sidebar.html');
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", yumRepo + "content-hub/content-hub-filters.json", false ); // false for synchronous request
+      xmlHttp.send( null );
+      var allFiltersJson = xmlHttp.responseText;
+      allFiltersJson = JSON.parse(allFiltersJson);
+      categoryList = allFiltersJson.category;
+      publisherList = allFiltersJson.publisher;
       setTimeout(function(){
         if (window.location.href.indexOf('connect.html') > -1) {
           $("#lets_connect_link").addClass("d-none");
@@ -44,6 +52,25 @@
           categoryLi.appendChild(categoryText);
           
           categoryListUl.append(categoryLi);
+        });
+        
+        var publisherListUl = $("#filter-publisher-list");
+        _.each(publisherList, function(publisher) {
+          var publisherLi = document.createElement('li');
+          publisherLi.className = "sidebar-item list-unstyled fw-light";
+
+          var publisherInput = document.createElement('input');
+          publisherInput.className = "sidebar-link";
+          publisherInput.setAttribute("type", "checkbox");
+          publisherInput.onclick = function () {
+            applyPublisherFilter(publisher);
+          };
+          publisherLi.appendChild(publisherInput);
+
+          var publisherText = document.createTextNode(publisher);
+          publisherLi.appendChild(publisherText);
+          
+          publisherListUl.append(publisherLi);
         });
       }, 1000);
     }
