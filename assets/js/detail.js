@@ -11,7 +11,7 @@
     var detailType = urlSearchParams.get('type');
     var detailName = urlSearchParams.get('entity');
     var detailVersion = urlSearchParams.get('version');
-    var infoPath = "/marketplace-test/" + detailName + "-" + detailVersion;
+    var infoPath = "/content-hub/" + detailName + "-" + detailVersion;
     var detailPath = yumRepo + infoPath + '/info.json';
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
 
