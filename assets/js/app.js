@@ -1,14 +1,13 @@
 'use strict';
 
-const urlSearchParams = new URLSearchParams(window.location.search);
 var yumRepo = 'https://update.cybersponse.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
 var listItems = [];
 var listItemsBkp;
-var paramContentType = urlSearchParams.get('contentType');
-var searchContent = urlSearchParams.get('searchContent');
-var paramCategory = urlSearchParams.get('category');
-var paramPublisher = urlSearchParams.get('publisher');
+var paramContentType = getUrlParameter('contentType');
+var searchContent = getUrlParameter('searchContent');
+var paramCategory = getUrlParameter('category');
+var paramPublisher = getUrlParameter('publisher');
 var categoryList = [];
 var publisherList = [];
 
