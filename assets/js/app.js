@@ -1,6 +1,5 @@
 'use strict';
 
-const URI
 const urlSearchParams = new URLSearchParams(window.location.search);
 var yumRepo = 'https://update.cybersponse.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
