@@ -151,7 +151,7 @@ function init() {
   }
   if (paramContentType && !searchContent) {
     setTimeout(function () {
-      filterContent(paramContentType);
+      filterContentByParams(paramContentType, paramCategory, paramPublisher);
       var types = paramContentType.split(',');
       _.each(types, function (type) {
         if (type !== 'all') {
