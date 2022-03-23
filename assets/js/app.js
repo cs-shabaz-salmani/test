@@ -5,10 +5,10 @@ var yumRepo = 'https://update.cybersponse.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
 var listItems = [];
 var listItemsBkp;
-var paramContentType = urlSearchParams.get('contentType');
-var searchContent = urlSearchParams.get('searchContent');
-var paramCategory = urlSearchParams.get('category');
-var paramPublisher = urlSearchParams.get('publisher');
+var paramContentType = urlSearchParams.getAll('contentType');
+var searchContent = urlSearchParams.getAll('searchContent');
+var paramCategory = urlSearchParams.getAll('category');
+var paramPublisher = urlSearchParams.getAll('publisher');
 var categoryList = [];
 var publisherList = [];
 
@@ -209,9 +209,9 @@ function getContentCount(listData) {
 }
 
 function applyFilter(item, value, filterType) {
-  var contentType = urlSearchParams.get('contentType');
-  var category = urlSearchParams.get('category');
-  var publisher = urlSearchParams.get('publisher');
+  var contentType = urlSearchParams.getAll('contentType');
+  var category = urlSearchParams.getAll('category');
+  var publisher = urlSearchParams.getAll('publisher');
   var contentTypeParams;
   var categoryParams;
   var publisherParams;
