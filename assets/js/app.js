@@ -318,7 +318,7 @@ function submitSearch() {
       window.location.href = "/list.html?contentType=all" + searchParams;
     } else {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
-      searchContentData(searchParams);
+      searchContentData(searchText);
     }
   } else {
     console.log('Enter atleast 3 chars');
