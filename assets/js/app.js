@@ -286,18 +286,34 @@ function updateFilterParams(data, item, method, type) {
 function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
   var filteredListItems = [];
   if (contentTypeFilter || categoryFilter || publisherFilter) {
-    contentTypeFilter = contentTypeFilter ? contentTypeFilter.split(',') : [];
+    contentTypeFilter = contentTypeFilter === 'all' ? ['all'] : contentTypeFilter.split(',');
     categoryFilter = categoryFilter ? categoryFilter.split(',') : [];
     publisherFilter = publisherFilter ? publisherFilter.split(',') : [];
     _.each(listItems, function (item) {
       _.each(contentTypeFilter, function (type) {
         if (item.type === type) {
           if(categoryFilter.length > 0 || publisherFilter.length > 0){
-            _.each(categoryFilter, function (category) {
-              if (item.category === category) {
-                filteredListItems.push(item);
-              }
-            });
+            if(categoryFilter.length > 0){
+              _.each(categoryFilter, function (category) {
+                if (item.category === category) {
+                  if(publisherFilter.length > 0) {
+                    _.each(publisherFilter, function (publisher) {
+                      if (item.publisher === publisher) {
+                        filteredListItems.push(item);
+                      }
+                    });
+                  } else {
+                    filteredListItems.push(item);
+                  }
+                }
+              });
+            } else {
+              _.each(publisherFilter, function (publisher) {
+                if (item.publisher === publisher) {
+                  filteredListItems.push(item);
+                }
+              });
+            }
           } else {
             filteredListItems.push(item);
           }
