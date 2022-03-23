@@ -219,17 +219,29 @@ function applyFilter(item, value, filterType) {
   if (item.checked || item.className === 'category-link') {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(contentType, value, 'add', 'contentType');
+      categoryParams = category;
+      publisherParams = publisher;
     } else if (filterType === 'category') {
+      contentTypeParams = contentType;
       categoryParams = updateFilterParams(category, value, 'add', 'category');
+      publisherParams = publisher;
     } else if (filterType === 'publisher') {
+      contentTypeParams = contentType;
+      categoryParams = category;
       publisherParams = updateFilterParams(publisher, value, 'add', 'publisher');
     }
   } else {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(contentType, value, 'remove', 'contentType');
+      categoryParams = category;
+      publisherParams = publisher;
     } else if (filterType === 'category') {
+      contentTypeParams = contentType;
       categoryParams = updateFilterParams(category, value, 'remove', 'category');
+      publisherParams = publisher;
     } else if (filterType === 'publisher') {
+      contentTypeParams = contentType;
+      categoryParams = category;
       publisherParams = updateFilterParams(publisher, value, 'remove', 'publisher');
     }
   }
