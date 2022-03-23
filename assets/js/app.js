@@ -286,12 +286,12 @@ function updateFilterParams(data, item, method, type) {
 function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
   var filteredListItems = [];
   if (contentTypeFilter || categoryFilter || publisherFilter) {
-    contentTypeFilter = contentTypeFilter === 'all' ? ['all'] : contentTypeFilter.split(',');
+    contentTypeFilter = contentTypeFilter.split(',');
     categoryFilter = categoryFilter ? categoryFilter.split(',') : [];
     publisherFilter = publisherFilter ? publisherFilter.split(',') : [];
     _.each(listItems, function (item) {
       _.each(contentTypeFilter, function (type) {
-        if (item.type === type) {
+        if (item.type === type || type === 'all') {
           if(categoryFilter.length > 0 || publisherFilter.length > 0){
             if(categoryFilter.length > 0){
               _.each(categoryFilter, function (category) {
