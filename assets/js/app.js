@@ -39,10 +39,10 @@ $(document).ready(function () {
       var categoryListUl = $("#filter-category-list");
       _.each(categoryList, function (category) {
 
-        var paramCategoryArray = paramCategory.split(',');
-        var selectedCategory = _.find(paramCategoryArray, function (catItem) {
-          return catItem === category;
-        });
+        // var paramCategoryArray = paramCategory.split(',');
+        // var selectedCategory = _.find(paramCategoryArray, function (catItem) {
+        //   return catItem === category;
+        // });
         var categoryLi = document.createElement('li');
         categoryLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -50,9 +50,9 @@ $(document).ready(function () {
         categoryInput.className = "sidebar-link";
         categoryInput.setAttribute("type", "checkbox");
         categoryInput.setAttribute("value", category);
-        if(selectedCategory) {
-          categoryInput.setAttribute("checked", true);
-        }
+        // if(selectedCategory) {
+        //   categoryInput.setAttribute("checked", true);
+        // }
         categoryInput.addEventListener("click", function () {
           applyCategoryFilter(this, category);
         });
