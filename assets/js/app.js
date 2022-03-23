@@ -115,11 +115,13 @@ $(document).ready(function () {
 function applyCategoryFilter(event, category) {
   console.log(event);
   console.log(category);
+  applyFilter(event, category, 'category');
 }
 
 function applyPublisherFilter(event, publisher) {
   console.log(event);
   console.log(publisher);
+  applyFilter(event, publisher, 'publisher');
 }
 
 function init() {
@@ -206,24 +208,41 @@ function getContentCount(listData) {
   }, 1000);
 }
 
-function applyFilter(item, type, filterType) {
+function applyFilter(item, value, filterType) {
   var contentType = urlSearchParams.get('contentType');
   var contentTypeParams;
+  var categoryParams;
+  var publisherParams;
 
   if (item.checked || item.className === 'category-link') {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, type, 'add');
+      contentTypeParams = updateFilterParams(contentType, value, 'add');
+    } else if (filterType === 'category') {
+      categoryParams = updateFilterParams(paramCategory, value, 'add');
+    } else if (filterType === 'publisher') {
+      publisherParams = updateFilterParams(paramPublisher, value, 'add');
     }
   } else {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, type, 'remove');
+      contentTypeParams = updateFilterParams(contentType, value, 'remove');
+    } else if (filterType === 'category') {
+      categoryParams = updateFilterParams(paramCategory, value, 'remove');
+    } else if (filterType === 'publisher') {
+      publisherParams = updateFilterParams(paramPublisher, value, 'remove');
     }
   }
 
   if (window.location.href.indexOf('list.html') === -1) {
     window.location.href = "/list.html?contentType=" + contentTypeParams;
   } else {
-    window.history.replaceState(null, null, "/list.html?contentType=" + contentTypeParams);
+    var appendFilterToURL = "/list.html?contentType=" + contentTypeParams;
+    if(categoryParams) {
+      appendFilterToURL += "&category=" + categoryParams;
+    }
+    if(publisherParams) {
+      appendFilterToURL += "&publisher=" + publisherParams;
+    }
+    window.history.replaceState(null, null, appendFilterToURL);
   }
   filterContent(contentTypeParams);
 }
