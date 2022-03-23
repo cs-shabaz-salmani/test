@@ -210,6 +210,8 @@ function getContentCount(listData) {
 
 function applyFilter(item, value, filterType) {
   var contentType = urlSearchParams.get('contentType');
+  var category = urlSearchParams.get('category');
+  var publisher = urlSearchParams.get('publisher');
   var contentTypeParams;
   var categoryParams;
   var publisherParams;
@@ -218,17 +220,17 @@ function applyFilter(item, value, filterType) {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(contentType, value, 'add');
     } else if (filterType === 'category') {
-      categoryParams = updateFilterParams(paramCategory, value, 'add');
+      categoryParams = updateFilterParams(category, value, 'add');
     } else if (filterType === 'publisher') {
-      publisherParams = updateFilterParams(paramPublisher, value, 'add');
+      publisherParams = updateFilterParams(publisher, value, 'add');
     }
   } else {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(contentType, value, 'remove');
     } else if (filterType === 'category') {
-      categoryParams = updateFilterParams(paramCategory, value, 'remove');
+      categoryParams = updateFilterParams(category, value, 'remove');
     } else if (filterType === 'publisher') {
-      publisherParams = updateFilterParams(paramPublisher, value, 'remove');
+      publisherParams = updateFilterParams(publisher, value, 'remove');
     }
   }
 
