@@ -43,6 +43,8 @@
           var categoryInput = document.createElement('input');
           categoryInput.className = "sidebar-link";
           categoryInput.setAttribute("type", "checkbox");
+          categoryLi.setAttribute("onChange", applyCategoryFilter);
+          categoryInput.addEventListener("click", applyCategoryFilter, false);
           categoryLi.onClick = function () {
             applyCategoryFilter(category);
           };
