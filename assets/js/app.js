@@ -218,19 +218,19 @@ function applyFilter(item, value, filterType) {
 
   if (item.checked || item.className === 'category-link') {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, value, 'add');
+      contentTypeParams = updateFilterParams(contentType, value, 'add', 'contentType');
     } else if (filterType === 'category') {
-      categoryParams = updateFilterParams(category, value, 'add');
+      categoryParams = updateFilterParams(category, value, 'add', 'category');
     } else if (filterType === 'publisher') {
-      publisherParams = updateFilterParams(publisher, value, 'add');
+      publisherParams = updateFilterParams(publisher, value, 'add', 'publisher');
     }
   } else {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, value, 'remove');
+      contentTypeParams = updateFilterParams(contentType, value, 'remove', 'contentType');
     } else if (filterType === 'category') {
-      categoryParams = updateFilterParams(category, value, 'remove');
+      categoryParams = updateFilterParams(category, value, 'remove', 'category');
     } else if (filterType === 'publisher') {
-      publisherParams = updateFilterParams(publisher, value, 'remove');
+      publisherParams = updateFilterParams(publisher, value, 'remove', 'publisher');
     }
   }
 
@@ -249,7 +249,7 @@ function applyFilter(item, value, filterType) {
   filterContent(contentTypeParams);
 }
 
-function updateFilterParams(data, item, method) {
+function updateFilterParams(data, item, method, type) {
   if ((data === 'all' || data === null) && method !== 'remove') {
     data = item;
   } else {
@@ -261,7 +261,8 @@ function updateFilterParams(data, item, method) {
       if (index > -1) {
         dataArray.splice(index, 1);
       }
-      data = dataArray.length > 0 ? dataArray.join(',') : 'all';
+      var defaultValue = type === 'contentType' ? 'all' : null;
+      data = dataArray.length > 0 ? dataArray.join(',') : defaultValue;
     }
   }
   return data;
