@@ -43,7 +43,7 @@
           var categoryInput = document.createElement('input');
           categoryInput.className = "sidebar-link";
           categoryInput.setAttribute("type", "checkbox");
-          categoryInput.onChange = function () {
+          categoryLi.onClick = function () {
             applyCategoryFilter(category);
           };
           categoryLi.appendChild(categoryInput);
@@ -62,7 +62,7 @@
           var publisherInput = document.createElement('input');
           publisherInput.className = "sidebar-link";
           publisherInput.setAttribute("type", "checkbox");
-          publisherInput.onclick = function () {
+          publisherLi.onclick = function () {
             applyPublisherFilter(publisher);
           };
           publisherLi.appendChild(publisherInput);
