@@ -291,6 +291,7 @@ function filterContent(types, latest) {
         }
       });
     });
+    $("#totalContentCount").html(filteredListItems.length);
   } else if (latest) {
     var todaysDate = new Date();
     todaysDate = todaysDate.getTime();
@@ -568,4 +569,3 @@ function toggleFilter(e) {
     $('.sidebar').removeClass('d-none');
   }
 }
-
