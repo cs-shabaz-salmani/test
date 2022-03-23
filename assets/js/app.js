@@ -43,7 +43,7 @@
           var categoryInput = document.createElement('input');
           categoryInput.className = "sidebar-link";
           categoryInput.setAttribute("type", "checkbox");
-          categoryInput.onclick = function () {
+          categoryInput.onChange = function () {
             applyCategoryFilter(category);
           };
           categoryLi.appendChild(categoryInput);
@@ -107,6 +107,10 @@
       $('#carouselProductUpdates').carousel({ interval: 10000 });
     }
   });
+
+  function applyCategoryFilter() {
+    console.log('apply category'); 
+  }
 
   function init() {
     var xmlHttp = new XMLHttpRequest();
