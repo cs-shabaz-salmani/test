@@ -305,6 +305,7 @@ function filterContent(types, latest) {
     });
   } else {
     filteredListItems = listItemsBkp;
+    $("#totalContentCount").html(filteredListItems.length);
   }
   buildListData(filteredListItems);
 }
