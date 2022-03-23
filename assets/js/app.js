@@ -120,14 +120,10 @@ $(document).ready(function () {
 });
 
 function applyCategoryFilter(event, category) {
-  console.log(event);
-  console.log(category);
   applyFilter(event, category, 'category');
 }
 
 function applyPublisherFilter(event, publisher) {
-  console.log(event);
-  console.log(publisher);
   applyFilter(event, publisher, 'publisher');
 }
 
@@ -265,7 +261,7 @@ function applyFilter(item, value, filterType) {
     }
     window.history.replaceState(null, null, appendFilterToURL);
   }
-  filterContent(contentTypeParams);
+  filterContentByParams(contentTypeParams, categoryParams, publisherParams);
 }
 
 function updateFilterParams(data, item, method, type) {
@@ -285,6 +281,35 @@ function updateFilterParams(data, item, method, type) {
     }
   }
   return data;
+}
+
+function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
+  var filteredListItems = [];
+  if (contentTypeFilter || categoryFilter || publisherFilter) {
+    contentTypeFilter = contentTypeFilter ? contentTypeFilter.split(',') : [];
+    categoryFilter = categoryFilter ? categoryFilter.split(',') : [];
+    publisherFilter = publisherFilter ? publisherFilter.split(',') : [];
+    _.each(listItems, function (item) {
+      _.each(contentTypeFilter, function (type) {
+        if (item.type === type) {
+          if(categoryFilter.length > 0 || publisherFilter.length > 0){
+            _.each(categoryFilter, function (category) {
+              if (item.category === category) {
+                filteredListItems.push(item);
+              }
+            });
+          } else {
+            filteredListItems.push(item);
+          }
+        }
+      });
+    });
+    $("#totalContentCount").html(filteredListItems.length);
+  } else {
+    filteredListItems = listItemsBkp;
+    $("#totalContentCount").html(filteredListItems.length);
+  }
+  buildListData(filteredListItems);
 }
 
 function filterContent(types, latest) {
