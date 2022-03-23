@@ -1,5 +1,6 @@
 'use strict';
 
+const URI
 const urlSearchParams = new URLSearchParams(window.location.search);
 var yumRepo = 'https://update.cybersponse.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
@@ -209,9 +210,9 @@ function getContentCount(listData) {
 }
 
 function applyFilter(item, value, filterType) {
-  var contentType = urlSearchParams.get('contentType');
-  var category = urlSearchParams.get('category');
-  var publisher = urlSearchParams.get('publisher');
+  var contentType = getUrlParameter('contentType');
+  var category = getUrlParameter('category');
+  var publisher = getUrlParameter('publisher');
   var contentTypeParams;
   var categoryParams;
   var publisherParams;
@@ -250,10 +251,10 @@ function applyFilter(item, value, filterType) {
     window.location.href = "/list.html?contentType=" + contentTypeParams;
   } else {
     var appendFilterToURL = "/list.html?contentType=" + contentTypeParams;
-    if(categoryParams) {
+    if (categoryParams) {
       appendFilterToURL += "&category=" + categoryParams;
     }
-    if(publisherParams) {
+    if (publisherParams) {
       appendFilterToURL += "&publisher=" + publisherParams;
     }
     window.history.replaceState(null, null, appendFilterToURL);
@@ -570,3 +571,19 @@ function toggleFilter(e) {
     $('.sidebar').removeClass('d-none');
   }
 }
+
+function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+  return false;
+};
