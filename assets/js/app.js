@@ -45,10 +45,10 @@
           categoryInput.setAttribute("type", "checkbox");
           categoryInput.setAttribute("value", category);
           categoryLi.setAttribute("onChange", applyCategoryFilter);
-//           categoryInput.addEventListener("click", applyCategoryFilter, false);
-          categoryLi.onClick = function () {
-            applyCategoryFilter(category);
-          };
+          categoryInput.addEventListener("click", applyCategoryFilter, false);
+//           categoryLi.onClick = function () {
+//             applyCategoryFilter(category);
+//           };
           categoryLi.appendChild(categoryInput);
 
           var categoryText = document.createTextNode(category);
