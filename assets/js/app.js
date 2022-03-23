@@ -5,8 +5,10 @@
   var basePath = 'https://marketplace.cybersponse.com/';
   var listItems = [];
   var listItemsBkp;
-  var paramCategoryType = urlSearchParams.get('contentType');
+  var paramContentType = urlSearchParams.get('contentType');
   var searchContent = urlSearchParams.get('searchContent');
+  var paramCategory = urlSearchParams.get('category');
+  var paramPublisher = urlSearchParams.get('publisher');
   var categoryList = [];
   var publisherList = [];
 
@@ -44,10 +46,8 @@
           categoryInput.className = "sidebar-link";
           categoryInput.setAttribute("type", "checkbox");
           categoryInput.setAttribute("value", category);
-//           categoryLi.setAttribute("onChange", applyCategoryFilter);
-//           categoryInput.addEventListener("click", applyCategoryFilter, false);
           categoryInput.addEventListener("click", function () {
-            applyCategoryFilter(category);
+            applyCategoryFilter(this, category);
           });
           categoryLi.appendChild(categoryInput);
 
@@ -65,9 +65,10 @@
           var publisherInput = document.createElement('input');
           publisherInput.className = "sidebar-link";
           publisherInput.setAttribute("type", "checkbox");
-          publisherLi.onclick = function () {
-            applyPublisherFilter(publisher);
-          };
+          publisherInput.setAttribute("value", publisher);
+          publisherInput.addEventListener("click", function () {
+            applyPublisherFilter(this, publisher);
+          });
           publisherLi.appendChild(publisherInput);
 
           var publisherText = document.createTextNode(publisher);
@@ -111,8 +112,14 @@
     }
   });
 
-  function applyCategoryFilter(event) {
+  function applyCategoryFilter(event, category) {
+    console.log(event);
+    console.log(category); 
+  }
+
+  function applyPublisherFilter(event, publisher) {
     console.log(event); 
+    console.log(publisher); 
   }
 
   function init() {
