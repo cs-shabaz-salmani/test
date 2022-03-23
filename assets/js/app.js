@@ -297,7 +297,6 @@ function filterContent(types, latest) {
     todaysDate = todaysDate.getTime();
 
     _.each(listItems, function (item, index) {
-      var timeStampToDate = new Date(item.published_date);
       var time_difference = todaysDate - (item.published_date * 1000);
       time_difference = time_difference / (1000 * 60 * 60 * 24);
       if (time_difference > 0 && time_difference <= 15) {
@@ -318,6 +317,7 @@ function submitSearch() {
       window.location.href = "/list.html?contentType=all" + searchParams;
     } else {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
+      searchContentData(searchParams);
     }
   } else {
     console.log('Enter atleast 3 chars');
