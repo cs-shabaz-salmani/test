@@ -10,6 +10,7 @@ var paramCategory = getUrlParameter('category');
 var paramPublisher = getUrlParameter('publisher');
 var categoryList = [];
 var publisherList = [];
+var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name': 'Solution Packs', 'value': 'solutionpack' }, { 'name': 'Widgets', 'value': 'widget' }];
 
 $(document).ready(function () {
   var navBar = $('#sidebar');
@@ -35,54 +36,9 @@ $(document).ready(function () {
         $('.sidebar').addClass('d-none');
         $('.mobile-view-filter-btn').removeClass('d-none');
       }
-
-      var categoryListUl = $("#filter-category-list");
-      _.each(categoryList, function (category) {
-
-        // var paramCategoryArray = paramCategory.split(',');
-        // var selectedCategory = _.find(paramCategoryArray, function (catItem) {
-        //   return catItem === category;
-        // });
-        var categoryLi = document.createElement('li');
-        categoryLi.className = "sidebar-item list-unstyled fw-light";
-
-        var categoryInput = document.createElement('input');
-        categoryInput.className = "sidebar-link";
-        categoryInput.setAttribute("type", "checkbox");
-        categoryInput.setAttribute("value", category);
-        // if(selectedCategory) {
-        //   categoryInput.setAttribute("checked", true);
-        // }
-        categoryInput.addEventListener("click", function () {
-          applyCategoryFilter(this, category);
-        });
-        categoryLi.appendChild(categoryInput);
-
-        var categoryText = document.createTextNode(category);
-        categoryLi.appendChild(categoryText);
-
-        categoryListUl.append(categoryLi);
-      });
-
-      var publisherListUl = $("#filter-publisher-list");
-      _.each(publisherList, function (publisher) {
-        var publisherLi = document.createElement('li');
-        publisherLi.className = "sidebar-item list-unstyled fw-light";
-
-        var publisherInput = document.createElement('input');
-        publisherInput.className = "sidebar-link";
-        publisherInput.setAttribute("type", "checkbox");
-        publisherInput.setAttribute("value", publisher);
-        publisherInput.addEventListener("click", function () {
-          applyPublisherFilter(this, publisher);
-        });
-        publisherLi.appendChild(publisherInput);
-
-        var publisherText = document.createTextNode(publisher);
-        publisherLi.appendChild(publisherText);
-
-        publisherListUl.append(publisherLi);
-      });
+      buildFilterList('contentType');
+      buildFilterList('category');
+      buildFilterList('publisher');
     }, 1000);
   }
   var footer = $('#footer-container');
@@ -119,12 +75,76 @@ $(document).ready(function () {
   }
 });
 
-function applyCategoryFilter(event, category) {
-  applyFilter(event, category, 'category');
-}
+function buildFilterList(type, filter) {
+  if(type === 'category'){
+    var categoryListUl = $("#filter-category-list");
+    _.each(categoryList, function (category) {
 
-function applyPublisherFilter(event, publisher) {
-  applyFilter(event, publisher, 'publisher');
+      // var paramCategoryArray = paramCategory.split(',');
+      // var selectedCategory = _.find(paramCategoryArray, function (catItem) {
+      //   return catItem === category;
+      // });
+      var categoryLi = document.createElement('li');
+      categoryLi.className = "sidebar-item list-unstyled fw-light";
+
+      var categoryInput = document.createElement('input');
+      categoryInput.className = "sidebar-link";
+      categoryInput.setAttribute("type", "checkbox");
+      categoryInput.setAttribute("value", category);
+      // if(selectedCategory) {
+      //   categoryInput.setAttribute("checked", true);
+      // }
+      categoryInput.addEventListener("click", function () {
+        applyFilter(this, category, 'category');
+      });
+      categoryLi.appendChild(categoryInput);
+
+      var categoryText = document.createTextNode(category);
+      categoryLi.appendChild(categoryText);
+
+      categoryListUl.append(categoryLi);
+    });
+  } else if(type === 'publisher') {
+    var publisherListUl = $("#filter-publisher-list");
+    _.each(publisherList, function (publisher) {
+      var publisherLi = document.createElement('li');
+      publisherLi.className = "sidebar-item list-unstyled fw-light";
+
+      var publisherInput = document.createElement('input');
+      publisherInput.className = "sidebar-link";
+      publisherInput.setAttribute("type", "checkbox");
+      publisherInput.setAttribute("value", publisher);
+      publisherInput.addEventListener("click", function () {
+        applyFilter(this, publisher, 'publisher');
+      });
+      publisherLi.appendChild(publisherInput);
+
+      var publisherText = document.createTextNode(publisher);
+      publisherLi.appendChild(publisherText);
+
+      publisherListUl.append(publisherLi);
+    });
+  } else if(type === 'contentType') {
+    var contentTypeListUl = $("#filter-contenttype-list");
+    _.each(contentTypeList, function (contentType) {
+      var contentTypeLi = document.createElement('li');
+      contentTypeLi.className = "sidebar-item list-unstyled fw-light";
+
+      var contentTypeInput = document.createElement('input');
+      contentTypeInput.className = "sidebar-link";
+      contentTypeInput.setAttribute("type", "checkbox");
+      contentTypeInput.setAttribute("value", contentType.value);
+      contentTypeInput.addEventListener("click", function () {
+        applyFilter(this, contentType.value, 'contentType');
+      });
+      contentTypeLi.appendChild(contentTypeInput);
+
+      var contentTypeText = document.createTextNode(contentType.name);
+      contentTypeLi.appendChild(contentTypeText);
+
+      contentTypeListUl.append(contentTypeLi);
+    });
+  }
 }
 
 function init() {
@@ -292,11 +312,11 @@ function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilte
     _.each(listItems, function (item) {
       _.each(contentTypeFilter, function (type) {
         if (item.type === type || type === 'all') {
-          if(categoryFilter.length > 0 || publisherFilter.length > 0){
-            if(categoryFilter.length > 0){
+          if (categoryFilter.length > 0 || publisherFilter.length > 0) {
+            if (categoryFilter.length > 0) {
               _.each(categoryFilter, function (category) {
                 if (item.category === category) {
-                  if(publisherFilter.length > 0) {
+                  if (publisherFilter.length > 0) {
                     _.each(publisherFilter, function (publisher) {
                       if (item.publisher === publisher) {
                         filteredListItems.push(item);
