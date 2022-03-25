@@ -78,9 +78,9 @@ $(document).ready(function () {
 function buildFilterList(type, filter) {
   if(type === 'category'){
     var categoryListUl = $("#filter-category-list");
+    var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
     _.each(categoryList, function (category) {
 
-      var paramCategoryArray = paramCategory.split(',');
       var selectedCategory = _.find(paramCategoryArray, function (catItem) {
         return catItem === category;
       });
@@ -92,9 +92,9 @@ function buildFilterList(type, filter) {
       categoryInput.className = "sidebar-link";
       categoryInput.setAttribute("type", "checkbox");
       categoryInput.setAttribute("value", category);
-      // if(selectedCategory) {
-      //   categoryInput.setAttribute("checked", true);
-      // }
+      if(selectedCategory) {
+        categoryInput.setAttribute("checked", true);
+      }
       categoryInput.addEventListener("click", function () {
         applyFilter(this, category, 'category');
       });
