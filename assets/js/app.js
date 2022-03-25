@@ -257,9 +257,11 @@ function clearFilter(type) {
     buildFilterList('category');
     buildFilterList('publisher');
   }
-  updateFilterButtons();
   window.history.replaceState(null, null, appendFilterToURL);
-  filterContentByParams(paramContentType, paramCategory, paramPublisher);
+  setTimeout(function () {
+    updateFilterButtons();
+    filterContentByParams(paramContentType, paramCategory, paramPublisher);
+  }, 100);
 }
 
 function init() {
