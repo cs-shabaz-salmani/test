@@ -678,7 +678,7 @@ function buildListData(listData) {
     noResultTitle.className = "mp-tile-title";
     var noResultText = document.createTextNode('No Results Found');
     noResultTitle.appendChild(noResultText);
-    noResultDiv.appendChild(itemTitle);
+    noResultDiv.appendChild(noResultTitle);
     marketPlace.append(noResultDiv);
   }
   _.each(listData, function (listItem) {
