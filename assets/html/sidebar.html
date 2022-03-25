@@ -1,5 +1,6 @@
 <div class="sidebar-content navbar-expand-lg">
-  <h5 class="sidebar-title fw-normal">Filter</h5>
+  <h5 class="sidebar-title fw-normal">Filters</h5>
+  <button type="button" class="btn btn-sm btn-default" onClick="clearFilter($event, 'clearall')" id="clear-filter-btn" title="Clear All">Clear All</button>
   <div class="accordion accordion-flush" id="accordionFilter">
     <!--Content Type-->
     <div class="accordion-item">
@@ -8,6 +9,7 @@
           data-bs-target="#collapseContentType" aria-expanded="false" aria-controls="collapseContentType">
           Content Type
         </button>
+        <button type="button" class="btn btn-sm btn-default" onClick="clearFilter($event, 'contentType')" id="clear-filter-btn" title="Clear">Clear</button>
       </h2>
       <div id="collapseContentType" class="accordion-collapse collapse" aria-labelledby="filterByContentType"
         data-bs-parent="#accordionFilter">
@@ -17,36 +19,6 @@
               <i class="fa fa-search searchIcon"></i>
           </div>
           <ul class="filter-list-input mt-3" id="filter-contenttype-list">
-<!--             <li class="sidebar-item list-unstyled fw-light">
-              <label for="connector">
-                <input type="checkbox" name="connector" id="connector_sidebar_link" class="sidebar-link" value="connector"
-                onChange="applyFilter(this, 'connector', 'contentType')" />
-                Connectors</label>
-            </li> -->
-<!--             <li class="sidebar-item list-unstyled fw-light">
-              <label for="use_case">
-                <input type="checkbox" name="use_case" id="use_case_sidebar_link" class="sidebar-link" value="use_case"
-                onChange="applyFilter(this, 'use_case', 'contentType')" />
-                Use Cases</label>
-            </li> -->
-<!--             <li class="sidebar-item list-unstyled fw-light">
-              <label for="solutionpack">
-                <input type="checkbox" name="solutionpack" id="solutionpack_sidebar_link" class="sidebar-link" value="solutionpack"
-                onChange="applyFilter(this, 'solutionpack', 'contentType')" />
-                Solution Packs</label>
-            </li>
-            <li class="sidebar-item list-unstyled fw-light">
-              <label for="widget">
-                <input type="checkbox" name="widget" id="widget_sidebar_link" class="sidebar-link" value="widget"
-                onChange="applyFilter(this, 'widget', 'contentType')" />
-                Widgets</label>
-            </li> -->
-<!--             <li class="sidebar-item list-unstyled fw-light">
-              <label for="how_tos">
-                <input type="checkbox" name="how_tos" id="how_tos_sidebar_link" class="sidebar-link" for="how_tos"
-                onChange="applyFilter(this, 'how_tos', 'contentType')" />
-                How To's</label>
-            </li> -->
           </ul>
         </div>
       </div>
