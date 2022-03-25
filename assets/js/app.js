@@ -431,12 +431,13 @@ function submitSearchFilter(event, type){
   buildFilterList(type, true, match);
 }
 
-function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
+function filterContentByParams() {
+  reloadURLParams();
   var filteredListItems = [];
-  if (contentTypeFilter || categoryFilter || publisherFilter) {
-    contentTypeFilter = contentTypeFilter.split(',');
-    categoryFilter = categoryFilter ? categoryFilter.split(',') : [];
-    publisherFilter = publisherFilter ? publisherFilter.split(',') : [];
+  if (paramContentType || paramCategory || paramPublisher) {
+    contentTypeFilter = paramContentType.split(',');
+    categoryFilter = paramCategory ? paramCategory.split(',') : [];
+    publisherFilter = paramPublisher ? paramPublisher.split(',') : [];
     _.each(listItems, function (item) {
       _.each(contentTypeFilter, function (type) {
         if (item.type === type || type === 'all') {
