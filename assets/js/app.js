@@ -79,7 +79,7 @@ $(document).ready(function () {
   }
 });
 
-function buildFilterList(type) {
+function buildFilterList(type, filter, match) {
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
@@ -376,6 +376,12 @@ function updateFilterParams(data, item, method, type) {
     }
   }
   return data;
+}
+
+function searchContent(event, type){
+  console.log(event);
+  // var match = 
+  // buildFilterList(type, true, match);
 }
 
 function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
