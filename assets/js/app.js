@@ -537,6 +537,7 @@ function searchContentData(match) {
     }
   });
 
+  $("#totalContentCount").html(searchedListItems.length);
   buildListData(searchedListItems);
 }
 
@@ -667,7 +668,6 @@ function buildUpdatesAvailableList(listData) {
 }
 
 function buildListData(listData) {
-  var allListItems;
   var marketPlace = $("#marketplace-list");
   $(".mp-tile-container").remove();
   $("#filteredContentCount").html(listData.length);
@@ -757,7 +757,6 @@ function buildCardHtml(listItem) {
 }
 
 function toggleFilter(e) {
-  console.log(e);
   var event = $(e);
   if (event.hasClass('active')) {
     event.removeClass('active');
