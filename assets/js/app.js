@@ -343,43 +343,41 @@ function getContentCount(listData) {
 }
 
 function applyFilter(item, value, filterType) {
-  var contentType = getUrlParameter('contentType');
-  var category = getUrlParameter('category');
-  var publisher = getUrlParameter('publisher');
+  reloadURLParams();
   var contentTypeParams;
   var categoryParams;
   var publisherParams;
 
   if (item.checked || item.className === 'category-link') {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, value, 'add', 'contentType');
-      categoryParams = category;
-      publisherParams = publisher;
+      contentTypeParams = updateFilterParams(paramContentType, value, 'add', 'contentType');
+      categoryParams = paramCategory;
+      publisherParams = paramPublisher;
       showContentTypeClearFilter = true;
     } else if (filterType === 'category') {
-      contentTypeParams = contentType;
-      categoryParams = updateFilterParams(category, value, 'add', 'category');
-      publisherParams = publisher;
+      contentTypeParams = paramContentType;
+      categoryParams = updateFilterParams(paramCategory, value, 'add', 'category');
+      publisherParams = paramPublisher;
       showCategoryClearFilter = true;
     } else if (filterType === 'publisher') {
-      contentTypeParams = contentType;
-      categoryParams = category;
-      publisherParams = updateFilterParams(publisher, value, 'add', 'publisher');
+      contentTypeParams = paramContentType;
+      categoryParams = paramCategory;
+      publisherParams = updateFilterParams(paramPublisher, value, 'add', 'publisher');
       showPublisherClearFilter = true;
     }
   } else {
     if (filterType === 'contentType') {
-      contentTypeParams = updateFilterParams(contentType, value, 'remove', 'contentType');
-      categoryParams = category;
-      publisherParams = publisher;
+      contentTypeParams = updateFilterParams(paramContentType, value, 'remove', 'contentType');
+      categoryParams = paramCategory;
+      publisherParams = paramPublisher;
     } else if (filterType === 'category') {
-      contentTypeParams = contentType;
-      categoryParams = updateFilterParams(category, value, 'remove', 'category');
-      publisherParams = publisher;
+      contentTypeParams = paramContentType;
+      categoryParams = updateFilterParams(paramCategory, value, 'remove', 'category');
+      publisherParams = paramPublisher;
     } else if (filterType === 'publisher') {
-      contentTypeParams = contentType;
-      categoryParams = category;
-      publisherParams = updateFilterParams(publisher, value, 'remove', 'publisher');
+      contentTypeParams = paramContentType;
+      categoryParams = paramCategory;
+      publisherParams = updateFilterParams(paramPublisher, value, 'remove', 'publisher');
     }
   }
 
