@@ -183,7 +183,7 @@ function updateFilterButtons() {
   clearPublisherBtn.disabled = showPublisherClearFilter;
 }
 
-function clearFilter(event, type) {
+function clearFilter(type) {
   var appendFilterToURL = "/list.html";
   if (type == 'contentType') {
     appendFilterToURL = "?contentType=ALL";
