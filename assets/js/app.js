@@ -386,6 +386,7 @@ function applyFilter(item, value, filterType) {
     }
     window.history.replaceState(null, null, appendFilterToURL);
   }
+  updateFilterButtons();
   filterContentByParams(contentTypeParams, categoryParams, publisherParams);
 }
 
