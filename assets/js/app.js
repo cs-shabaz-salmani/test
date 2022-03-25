@@ -8,6 +8,10 @@ var paramContentType = getUrlParameter('contentType');
 var searchContent = getUrlParameter('searchContent');
 var paramCategory = getUrlParameter('category');
 var paramPublisher = getUrlParameter('publisher');
+var showContentTypeClearFilter = false;
+var showCategoryClearFilter = false;
+var showPublisherClearFilter = false;
+var clearAllFilter = false;
 var categoryList = [];
 var publisherList = [];
 var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name': 'Solution Packs', 'value': 'solutionpack' }, { 'name': 'Widgets', 'value': 'widget' }];
@@ -76,7 +80,7 @@ $(document).ready(function () {
 });
 
 function buildFilterList(type, filter) {
-  if(type === 'category'){
+  if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
     _.each(categoryList, function (category) {
@@ -84,7 +88,6 @@ function buildFilterList(type, filter) {
       var selectedCategory = _.find(paramCategoryArray, function (catItem) {
         return catItem === category;
       });
-      console.log(selectedCategory);
       var categoryLi = document.createElement('li');
       categoryLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -92,8 +95,9 @@ function buildFilterList(type, filter) {
       categoryInput.className = "sidebar-link";
       categoryInput.setAttribute("type", "checkbox");
       categoryInput.setAttribute("value", category);
-      if(selectedCategory) {
+      if (selectedCategory) {
         categoryInput.setAttribute("checked", true);
+        showCategoryClearFilter = true;
       }
       categoryInput.addEventListener("click", function () {
         applyFilter(this, category, 'category');
@@ -105,14 +109,13 @@ function buildFilterList(type, filter) {
 
       categoryListUl.append(categoryLi);
     });
-  } else if(type === 'publisher') {
+  } else if (type === 'publisher') {
     var publisherListUl = $("#filter-publisher-list");
     var paramPublisherArray = paramPublisher ? paramPublisher.split(',') : [];
     _.each(publisherList, function (publisher) {
       var selectedPublisher = _.find(paramPublisherArray, function (publisherItem) {
         return publisherItem === publisher;
       });
-      console.log(selectedPublisher);
       var publisherLi = document.createElement('li');
       publisherLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -120,8 +123,9 @@ function buildFilterList(type, filter) {
       publisherInput.className = "sidebar-link";
       publisherInput.setAttribute("type", "checkbox");
       publisherInput.setAttribute("value", publisher);
-      if(selectedPublisher) {
+      if (selectedPublisher) {
         publisherInput.setAttribute("checked", true);
+        showPublisherClearFilter = true;
       }
       publisherInput.addEventListener("click", function () {
         applyFilter(this, publisher, 'publisher');
@@ -133,14 +137,13 @@ function buildFilterList(type, filter) {
 
       publisherListUl.append(publisherLi);
     });
-  } else if(type === 'contentType') {
+  } else if (type === 'contentType') {
     var contentTypeListUl = $("#filter-contenttype-list");
     var paramContentTypeArray = paramContentType ? paramContentType.split(',') : [];
     _.each(contentTypeList, function (contentType) {
       var selectedContentType = _.find(paramContentTypeArray, function (contentTypeItem) {
         return contentTypeItem === contentType.value;
       });
-      console.log(selectedContentType);
       var contentTypeLi = document.createElement('li');
       contentTypeLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -148,8 +151,9 @@ function buildFilterList(type, filter) {
       contentTypeInput.className = "sidebar-link";
       contentTypeInput.setAttribute("type", "checkbox");
       contentTypeInput.setAttribute("value", contentType.value);
-      if(selectedContentType) {
+      if (selectedContentType) {
         contentTypeInput.setAttribute("checked", true);
+        showContentTypeClearFilter = true;
       }
       contentTypeInput.addEventListener("click", function () {
         applyFilter(this, contentType.value, 'contentType');
@@ -162,6 +166,63 @@ function buildFilterList(type, filter) {
       contentTypeListUl.append(contentTypeLi);
     });
   }
+  updateFilterButtons();
+}
+
+function updateFilterButtons() {
+  var clearAllBtn = $("#clear-all-filter-btn");
+  var clearContentTypeBtn = $("#clear-contenttype-filter-btn");
+  var clearCategoryBtn = $("#clear-category-filter-btn");
+  var clearPublisherBtn = $("#clear-publisher-filter-btn");
+  if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
+    clearAllFilter = true;
+  }
+  clearAllBtn.disabled = clearAllFilter;
+  clearContentTypeBtn.disabled = showContentTypeClearFilter;
+  clearCategoryBtn.disabled = showCategoryClearFilter;
+  clearPublisherBtn.disabled = showPublisherClearFilter;
+}
+
+function clearFilter(event, type) {
+  var appendFilterToURL = "/list.html";
+  if (type == 'contentType') {
+    appendFilterToURL = "?contentType=ALL";
+    if (paramCategory) {
+      appendFilterToURL += "&category=" + paramCategory;
+    }
+    if (paramPublisher) {
+      appendFilterToURL += "&publisher=" + paramPublisher;
+    }
+    showContentTypeClearFilter = false;
+  } else if (type == 'category') {
+    if (paramContentType) {
+      appendFilterToURL = "?contentType=" + paramContentType;
+    } else {
+      appendFilterToURL = "?contentType=ALL";
+    }
+    if (paramPublisher) {
+      appendFilterToURL += "&publisher=" + paramPublisher;
+    }
+    showCategoryClearFilter = false;
+  } else if (type == 'publisher') {
+    if (paramContentType) {
+      appendFilterToURL = "?contentType=" + paramContentType;
+    } else {
+      appendFilterToURL = "?contentType=ALL";
+    }
+    if (paramCategory) {
+      appendFilterToURL += "&category=" + paramCategory;
+    }
+    showPublisherClearFilter = false;
+  } else if (type == 'all') {
+    appendFilterToURL = "?contentType=ALL";
+    showContentTypeClearFilter = false;
+    showCategoryClearFilter = false;
+    showPublisherClearFilter = false;
+    clearAllFilter = false;
+  }
+  updateFilterButtons();
+  window.history.replaceState(null, null, appendFilterToURL);
 }
 
 function init() {
@@ -189,13 +250,6 @@ function init() {
   if (paramContentType && !searchContent) {
     setTimeout(function () {
       filterContentByParams(paramContentType, paramCategory, paramPublisher);
-      // var types = paramContentType.split(',');
-      // _.each(types, function (type) {
-      //   if (type !== 'all') {
-      //     var checkedContentType = $("#" + type + "_sidebar_link");
-      //     checkedContentType[0].checked = true;
-      //   }
-      // });
     }, 1000);
   } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
     searchContentData(searchContent);
