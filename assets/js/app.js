@@ -82,9 +82,7 @@ $(document).ready(function () {
 function buildFilterList(type, filter, match) {
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
-    if(filter){
-      categoryListUl.html('');
-    }
+    categoryListUl.html('');
     var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
     _.each(categoryList, function (category) {
 
@@ -120,9 +118,7 @@ function buildFilterList(type, filter, match) {
     });
   } else if (type === 'publisher') {
     var publisherListUl = $("#filter-publisher-list");
-    if(filter){
-      publisherListUl.html('');
-    }
+    publisherListUl.html('');
     var paramPublisherArray = paramPublisher ? paramPublisher.split(',') : [];
     _.each(publisherList, function (publisher) {
       var selectedPublisher = _.find(paramPublisherArray, function (publisherItem) {
@@ -157,9 +153,7 @@ function buildFilterList(type, filter, match) {
     });
   } else if (type === 'contentType') {
     var contentTypeListUl = $("#filter-contenttype-list");
-    if(filter){
-      contentTypeListUl.html('');
-    }
+    contentTypeListUl.html('');
     var paramContentTypeArray = paramContentType ? paramContentType.split(',') : [];
     _.each(contentTypeList, function (contentType) {
       var selectedContentType = _.find(paramContentTypeArray, function (contentTypeItem) {
@@ -221,6 +215,7 @@ function clearFilter(type) {
       appendFilterToURL += "&publisher=" + paramPublisher;
     }
     showContentTypeClearFilter = false;
+    buildFilterList('contentType');
   } else if (type == 'category') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -231,6 +226,7 @@ function clearFilter(type) {
       appendFilterToURL += "&publisher=" + paramPublisher;
     }
     showCategoryClearFilter = false;
+    buildFilterList('category');
   } else if (type == 'publisher') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -241,12 +237,16 @@ function clearFilter(type) {
       appendFilterToURL += "&category=" + paramCategory;
     }
     showPublisherClearFilter = false;
+    buildFilterList('publisher');
   } else if (type == 'all') {
     appendFilterToURL = "?contentType=ALL";
     showContentTypeClearFilter = false;
     showCategoryClearFilter = false;
     showPublisherClearFilter = false;
     clearAllFilter = false;
+    buildFilterList('contentType');
+    buildFilterList('category');
+    buildFilterList('publisher');
   }
   updateFilterButtons();
   window.history.replaceState(null, null, appendFilterToURL);
