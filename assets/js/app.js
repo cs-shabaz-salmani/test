@@ -87,9 +87,7 @@ function reloadURLParams(){
 }
 
 function buildFilterList(type, filter, match) {
-  setTimeout(function () {
-    reloadURLParams();
-  }, 100);
+  reloadURLParams();
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     categoryListUl.html('');
@@ -227,7 +225,8 @@ function clearFilter(type) {
       appendFilterToURL += "&publisher=" + paramPublisher;
     }
     showContentTypeClearFilter = false;
-    buildFilterList('contentType');
+    // buildFilterList('contentType');
+    $('#filter-contenttype-list input').checked(false);
   } else if (type == 'category') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -238,7 +237,8 @@ function clearFilter(type) {
       appendFilterToURL += "&publisher=" + paramPublisher;
     }
     showCategoryClearFilter = false;
-    buildFilterList('category');
+    // buildFilterList('category');
+    $('#filter-category-list input').checked(false);
   } else if (type == 'publisher') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -249,18 +249,21 @@ function clearFilter(type) {
       appendFilterToURL += "&category=" + paramCategory;
     }
     showPublisherClearFilter = false;
-    buildFilterList('publisher');
+    // buildFilterList('publisher');
+    $('#filter-publisher-list input').checked(false);
   } else if (type == 'all') {
     appendFilterToURL = "?contentType=all";
     showContentTypeClearFilter = false;
     showCategoryClearFilter = false;
     showPublisherClearFilter = false;
     clearAllFilter = false;
-    buildFilterList('contentType');
-    buildFilterList('category');
-    buildFilterList('publisher');
+    $('.sidebar-item input').checked(false);
+    // buildFilterList('contentType');
+    // buildFilterList('category');
+    // buildFilterList('publisher');
   }
   window.history.replaceState(null, null, appendFilterToURL);
+  updateFilterButtons();
   filterContentByParams(paramContentType, paramCategory, paramPublisher);
 }
 
