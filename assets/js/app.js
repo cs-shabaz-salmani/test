@@ -435,9 +435,9 @@ function filterContentByParams() {
   reloadURLParams();
   var filteredListItems = [];
   if (paramContentType || paramCategory || paramPublisher) {
-    contentTypeFilter = paramContentType.split(',');
-    categoryFilter = paramCategory ? paramCategory.split(',') : [];
-    publisherFilter = paramPublisher ? paramPublisher.split(',') : [];
+    var contentTypeFilter = paramContentType.split(',');
+    var categoryFilter = paramCategory ? paramCategory.split(',') : [];
+    var publisherFilter = paramPublisher ? paramPublisher.split(',') : [];
     _.each(listItems, function (item) {
       _.each(contentTypeFilter, function (type) {
         if (item.type === type || type === 'all') {
