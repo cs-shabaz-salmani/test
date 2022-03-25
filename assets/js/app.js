@@ -107,7 +107,12 @@ function buildFilterList(type, filter) {
     });
   } else if(type === 'publisher') {
     var publisherListUl = $("#filter-publisher-list");
+    var paramPublisherArray = paramPublisher ? paramPublisher.split(',') : [];
     _.each(publisherList, function (publisher) {
+      var selectedPublisher = _.find(paramPublisherArray, function (publisherItem) {
+        return publisherItem === publisher;
+      });
+      console.log(selectedPublisher);
       var publisherLi = document.createElement('li');
       publisherLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -115,6 +120,9 @@ function buildFilterList(type, filter) {
       publisherInput.className = "sidebar-link";
       publisherInput.setAttribute("type", "checkbox");
       publisherInput.setAttribute("value", publisher);
+      if(selectedPublisher) {
+        publisherInput.setAttribute("checked", true);
+      }
       publisherInput.addEventListener("click", function () {
         applyFilter(this, publisher, 'publisher');
       });
@@ -127,7 +135,12 @@ function buildFilterList(type, filter) {
     });
   } else if(type === 'contentType') {
     var contentTypeListUl = $("#filter-contenttype-list");
+    var paramContentTypeArray = paramContentType ? paramContentType.split(',') : [];
     _.each(contentTypeList, function (contentType) {
+      var selectedContentType = _.find(paramContentTypeArray, function (contentTypeItem) {
+        return contentTypeItem === contentType.value;
+      });
+      console.log(selectedContentType);
       var contentTypeLi = document.createElement('li');
       contentTypeLi.className = "sidebar-item list-unstyled fw-light";
 
@@ -135,6 +148,9 @@ function buildFilterList(type, filter) {
       contentTypeInput.className = "sidebar-link";
       contentTypeInput.setAttribute("type", "checkbox");
       contentTypeInput.setAttribute("value", contentType.value);
+      if(selectedContentType) {
+        contentTypeInput.setAttribute("checked", true);
+      }
       contentTypeInput.addEventListener("click", function () {
         applyFilter(this, contentType.value, 'contentType');
       });
@@ -173,13 +189,13 @@ function init() {
   if (paramContentType && !searchContent) {
     setTimeout(function () {
       filterContentByParams(paramContentType, paramCategory, paramPublisher);
-      var types = paramContentType.split(',');
-      _.each(types, function (type) {
-        if (type !== 'all') {
-          var checkedContentType = $("#" + type + "_sidebar_link");
-          checkedContentType[0].checked = true;
-        }
-      });
+      // var types = paramContentType.split(',');
+      // _.each(types, function (type) {
+      //   if (type !== 'all') {
+      //     var checkedContentType = $("#" + type + "_sidebar_link");
+      //     checkedContentType[0].checked = true;
+      //   }
+      // });
     }, 1000);
   } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
     searchContentData(searchContent);
