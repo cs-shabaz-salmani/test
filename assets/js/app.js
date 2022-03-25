@@ -210,7 +210,7 @@ function updateFilterButtons() {
 function clearFilter(type) {
   var appendFilterToURL = "/list.html";
   if (type == 'contentType') {
-    appendFilterToURL = "?contentType=ALL";
+    appendFilterToURL = "?contentType=all";
     if (paramCategory) {
       appendFilterToURL += "&category=" + paramCategory;
     }
@@ -223,7 +223,7 @@ function clearFilter(type) {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
     } else {
-      appendFilterToURL = "?contentType=ALL";
+      appendFilterToURL = "?contentType=all";
     }
     if (paramPublisher) {
       appendFilterToURL += "&publisher=" + paramPublisher;
@@ -234,7 +234,7 @@ function clearFilter(type) {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
     } else {
-      appendFilterToURL = "?contentType=ALL";
+      appendFilterToURL = "?contentType=all";
     }
     if (paramCategory) {
       appendFilterToURL += "&category=" + paramCategory;
@@ -242,7 +242,7 @@ function clearFilter(type) {
     showPublisherClearFilter = false;
     buildFilterList('publisher');
   } else if (type == 'all') {
-    appendFilterToURL = "?contentType=ALL";
+    appendFilterToURL = "?contentType=all";
     showContentTypeClearFilter = false;
     showCategoryClearFilter = false;
     showPublisherClearFilter = false;
@@ -409,7 +409,6 @@ function updateFilterParams(data, item, method, type) {
 }
 
 function submitSearchFilter(event, type){
-  console.log(event);
   var match = event.value;
   buildFilterList(type, true, match);
 }
