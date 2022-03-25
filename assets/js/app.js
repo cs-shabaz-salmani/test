@@ -82,14 +82,17 @@ $(document).ready(function () {
 function buildFilterList(type, filter, match) {
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
+    if(filter){
+      categoryListUl.html('');
+    }
     var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
     _.each(categoryList, function (category) {
 
       var selectedCategory = _.find(paramCategoryArray, function (catItem) {
         return catItem === category;
       });
-      var matchFound = false;
       var categoryLi = document.createElement('li');
+      var matchFound = false;
       if(filter){
         matchFound = category.toLowerCase().indexOf(match.toLowerCase()) > -1;
         categoryLi.className = matchFound ? "sidebar-item list-unstyled fw-light" : "sidebar-item list-unstyled fw-light d-none";
@@ -117,13 +120,22 @@ function buildFilterList(type, filter, match) {
     });
   } else if (type === 'publisher') {
     var publisherListUl = $("#filter-publisher-list");
+    if(filter){
+      publisherListUl.html('');
+    }
     var paramPublisherArray = paramPublisher ? paramPublisher.split(',') : [];
     _.each(publisherList, function (publisher) {
       var selectedPublisher = _.find(paramPublisherArray, function (publisherItem) {
         return publisherItem === publisher;
       });
       var publisherLi = document.createElement('li');
-      publisherLi.className = "sidebar-item list-unstyled fw-light";
+      var matchFound = false;
+      if(filter){
+        matchFound = publisher.toLowerCase().indexOf(match.toLowerCase()) > -1;
+        publisherLi.className = matchFound ? "sidebar-item list-unstyled fw-light" : "sidebar-item list-unstyled fw-light d-none";
+      } else {
+        publisherLi.className = "sidebar-item list-unstyled fw-light";
+      }
 
       var publisherInput = document.createElement('input');
       publisherInput.className = "sidebar-link";
@@ -145,13 +157,22 @@ function buildFilterList(type, filter, match) {
     });
   } else if (type === 'contentType') {
     var contentTypeListUl = $("#filter-contenttype-list");
+    if(filter){
+      contentTypeListUl.html('');
+    }
     var paramContentTypeArray = paramContentType ? paramContentType.split(',') : [];
     _.each(contentTypeList, function (contentType) {
       var selectedContentType = _.find(paramContentTypeArray, function (contentTypeItem) {
         return contentTypeItem === contentType.value;
       });
       var contentTypeLi = document.createElement('li');
-      contentTypeLi.className = "sidebar-item list-unstyled fw-light";
+      var matchFound = false;
+      if(filter){
+        matchFound = contentType.name.toLowerCase().indexOf(match.toLowerCase()) > -1;
+        contentTypeLi.className = matchFound ? "sidebar-item list-unstyled fw-light" : "sidebar-item list-unstyled fw-light d-none";
+      } else {
+        contentTypeLi.className = "sidebar-item list-unstyled fw-light";
+      }
 
       var contentTypeInput = document.createElement('input');
       contentTypeInput.className = "sidebar-link";
