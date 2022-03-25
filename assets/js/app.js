@@ -223,6 +223,7 @@ function clearFilter(type) {
   }
   updateFilterButtons();
   window.history.replaceState(null, null, appendFilterToURL);
+  filterContentByParams(paramContentType, paramCategory, paramPublisher);
 }
 
 function init() {
