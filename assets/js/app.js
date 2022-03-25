@@ -316,14 +316,17 @@ function applyFilter(item, value, filterType) {
       contentTypeParams = updateFilterParams(contentType, value, 'add', 'contentType');
       categoryParams = category;
       publisherParams = publisher;
+      showContentTypeClearFilter = true;
     } else if (filterType === 'category') {
       contentTypeParams = contentType;
       categoryParams = updateFilterParams(category, value, 'add', 'category');
       publisherParams = publisher;
+      showCategoryClearFilter = true;
     } else if (filterType === 'publisher') {
       contentTypeParams = contentType;
       categoryParams = category;
       publisherParams = updateFilterParams(publisher, value, 'add', 'publisher');
+      showPublisherClearFilter = true;
     }
   } else {
     if (filterType === 'contentType') {
