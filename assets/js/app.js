@@ -173,10 +173,14 @@ function updateFilterButtons() {
   if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
     clearAllFilter = true;
   }
-  document.getElementById("clear-all-filter-btn").setAttribute("disabled", !clearAllFilter);
-  document.getElementById("clear-contenttype-filter-btn").setAttribute("disabled", !showContentTypeClearFilter);
-  document.getElementById("clear-category-filter-btn").setAttribute("disabled", !showCategoryClearFilter);
-  document.getElementById("clear-publisher-filter-btn").setAttribute("disabled", !showPublisherClearFilter);
+  var clearAllBtn = document.getElementById("clear-all-filter-btn");
+  var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
+  var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
+  var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
+  !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
+  !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
+  !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
+  !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
 }
 
 function clearFilter(type) {
