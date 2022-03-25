@@ -1,15 +1,17 @@
 <div class="sidebar-content navbar-expand-lg">
-  <h5 class="sidebar-title fw-normal">Filters</h5>
-  <button type="button" class="btn btn-sm btn-default" onClick="clearFilter($event, 'clearall')" id="clear-filter-btn" title="Clear All">Clear All</button>
+  <div class="d-flex">
+    <h5 class="sidebar-title fw-normal">Filters</h5>
+    <button type="button" class="btn btn-sm btn-default" onClick="clearFilter($event, 'clearall')" id="clear-filter-btn" title="Clear All">Clear All</button>
+  </div>
   <div class="accordion accordion-flush" id="accordionFilter">
     <!--Content Type-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="filterByContentType">
+      <h2 class="accordion-header d-flex" id="filterByContentType">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapseContentType" aria-expanded="false" aria-controls="collapseContentType">
           Content Type
         </button>
-        <button type="button" class="btn btn-sm btn-default" onClick="clearFilter($event, 'contentType')" id="clear-filter-btn" title="Clear">Clear</button>
+        <button type="button" class="btn btn-sm btn-light clear-filter-btn" onClick="clearFilter($event, 'contentType')" title="Clear">Clear</button>
       </h2>
       <div id="collapseContentType" class="accordion-collapse collapse" aria-labelledby="filterByContentType"
         data-bs-parent="#accordionFilter">
@@ -26,11 +28,12 @@
     <!--Content Type Ends-->
     <!--Category-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="filterByCategory">
+      <h2 class="accordion-header d-flex" id="filterByCategory">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
           Category
         </button>
+        <button type="button" class="btn btn-sm btn-light clear-filter-btn" onClick="clearFilter($event, 'category')" title="Clear">Clear</button>
       </h2>
       <div id="collapseCategory" class="accordion-collapse collapse" aria-labelledby="filterByCategory"
         data-bs-parent="#accordionFilter">
@@ -47,11 +50,12 @@
     <!--Category Ends-->
     <!--Publisher-->
     <div class="accordion-item">
-      <h2 class="accordion-header" id="filterByPublisher">
+      <h2 class="accordion-header d-flex" id="filterByPublisher">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsePublisher" aria-expanded="false" aria-controls="collapsePublisher">
           Publisher
         </button>
+        <button type="button" class="btn btn-sm btn-light clear-filter-btn" onClick="clearFilter($event, 'publisher')" title="Clear">Clear</button>
       </h2>
       <div id="collapsePublisher" class="accordion-collapse collapse" aria-labelledby="filterByPublisher"
         data-bs-parent="#accordionFilter">
