@@ -79,7 +79,7 @@ $(document).ready(function () {
   }
 });
 
-function buildFilterList(type, filter) {
+function buildFilterList(type) {
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     var paramCategoryArray = paramCategory ? paramCategory.split(',') : [];
@@ -173,10 +173,10 @@ function updateFilterButtons() {
   if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
     clearAllFilter = true;
   }
-  document.getElementById("clear-all-filter-btn").setAttribute("disabled", clearAllFilter);
-  document.getElementById("clear-contenttype-filter-btn").setAttribute("disabled", showContentTypeClearFilter);
-  document.getElementById("clear-category-filter-btn").setAttribute("disabled", showCategoryClearFilter);
-  document.getElementById("clear-publisher-filter-btn").setAttribute("disabled", showPublisherClearFilter);
+  document.getElementById("clear-all-filter-btn").setAttribute("disabled", !clearAllFilter);
+  document.getElementById("clear-contenttype-filter-btn").setAttribute("disabled", !showContentTypeClearFilter);
+  document.getElementById("clear-category-filter-btn").setAttribute("disabled", !showCategoryClearFilter);
+  document.getElementById("clear-publisher-filter-btn").setAttribute("disabled", !showPublisherClearFilter);
 }
 
 function clearFilter(type) {
