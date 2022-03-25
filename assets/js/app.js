@@ -260,7 +260,6 @@ function clearFilter(type) {
       buildFilterList('publisher');
     }
     window.history.replaceState(null, null, appendFilterToURL);
-    updateFilterButtons();
     filterContentByParams(paramContentType, paramCategory, paramPublisher);
   }, 100);
 }
