@@ -674,7 +674,7 @@ function buildListData(listData) {
   $("#filteredContentCount").html(listData.length);
   if(listData.length === 0){
     var noResultDiv = document.createElement('div');
-    noResultDiv.className = "mp-content-no-results";
+    noResultDiv.className = "fs h-100 m-5 mp-content-no-results text-center";
     var noResultTitle = document.createElement('h4');
     noResultTitle.className = "mp-tile-title";
     var noResultText = document.createTextNode('No Results Found');
