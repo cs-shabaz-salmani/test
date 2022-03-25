@@ -170,17 +170,13 @@ function buildFilterList(type, filter) {
 }
 
 function updateFilterButtons() {
-  var clearAllBtn = $("#clear-all-filter-btn");
-  var clearContentTypeBtn = $("#clear-contenttype-filter-btn");
-  var clearCategoryBtn = $("#clear-category-filter-btn");
-  var clearPublisherBtn = $("#clear-publisher-filter-btn");
   if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
     clearAllFilter = true;
   }
-  clearAllBtn.setAttribute("disabled", clearAllFilter);
-  clearContentTypeBtn.setAttribute("disabled", showContentTypeClearFilter);
-  clearCategoryBtn.setAttribute("disabled", showCategoryClearFilter);
-  clearPublisherBtn.setAttribute("disabled", showPublisherClearFilter);
+  document.getElementById("clear-all-filter-btn").setAttribute("disabled", clearAllFilter);
+  document.getElementById("clear-contenttype-filter-btn").setAttribute("disabled", showContentTypeClearFilter);
+  document.getElementById("clear-category-filter-btn").setAttribute("disabled", showCategoryClearFilter);
+  document.getElementById("clear-publisher-filter-btn").setAttribute("disabled", showPublisherClearFilter);
 }
 
 function clearFilter(type) {
