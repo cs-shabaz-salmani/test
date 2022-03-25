@@ -4,14 +4,14 @@ var yumRepo = 'https://update.cybersponse.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
 var listItems = [];
 var listItemsBkp;
-var paramContentType = getUrlParameter('contentType');
-var searchContent = getUrlParameter('searchContent');
-var paramCategory = getUrlParameter('category');
-var paramPublisher = getUrlParameter('publisher');
 var showContentTypeClearFilter = false;
 var showCategoryClearFilter = false;
 var showPublisherClearFilter = false;
 var clearAllFilter = false;
+var paramContentType = getUrlParameter('contentType');
+var searchContent = getUrlParameter('searchContent');
+var paramCategory = getUrlParameter('category');
+var paramPublisher = getUrlParameter('publisher');
 var categoryList = [];
 var publisherList = [];
 var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name': 'Solution Packs', 'value': 'solutionpack' }, { 'name': 'Widgets', 'value': 'widget' }];
@@ -79,10 +79,15 @@ $(document).ready(function () {
   }
 });
 
-function buildFilterList(type, filter, match) {
+function reloadURLParams(){
   paramContentType = getUrlParameter('contentType');
+  searchContent = getUrlParameter('searchContent');
   paramCategory = getUrlParameter('category');
   paramPublisher = getUrlParameter('publisher');
+}
+
+function buildFilterList(type, filter, match) {
+  reloadURLParams();
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     categoryListUl.html('');
@@ -208,6 +213,7 @@ function updateFilterButtons() {
 }
 
 function clearFilter(type) {
+  reloadURLParams();
   var appendFilterToURL = "/list.html";
   if (type == 'contentType') {
     appendFilterToURL = "?contentType=all";
@@ -505,6 +511,7 @@ function submitSearch() {
 }
 
 function searchContentData(match) {
+  reloadURLParams();
   var searchedListItems = [];
   _.each(listItems, function (item) {
     if (paramContentType && paramContentType !== 'all') {
