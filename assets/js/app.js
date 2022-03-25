@@ -226,7 +226,7 @@ function clearFilter(type) {
     }
     showContentTypeClearFilter = false;
     // buildFilterList('contentType');
-    $('#filter-contenttype-list input').checked(false);
+    resetAllCheckboxes($('#filter-contenttype-list input'));
   } else if (type == 'category') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -238,7 +238,7 @@ function clearFilter(type) {
     }
     showCategoryClearFilter = false;
     // buildFilterList('category');
-    $('#filter-category-list input').checked(false);
+    resetAllCheckboxes($('#filter-category-list input'));
   } else if (type == 'publisher') {
     if (paramContentType) {
       appendFilterToURL = "?contentType=" + paramContentType;
@@ -250,14 +250,14 @@ function clearFilter(type) {
     }
     showPublisherClearFilter = false;
     // buildFilterList('publisher');
-    $('#filter-publisher-list input').checked(false);
+    resetAllCheckboxes($('#filter-publisher-list input'));
   } else if (type == 'all') {
     appendFilterToURL = "?contentType=all";
     showContentTypeClearFilter = false;
     showCategoryClearFilter = false;
     showPublisherClearFilter = false;
     clearAllFilter = false;
-    $('.sidebar-item input').checked(false);
+    resetAllCheckboxes($('.sidebar-item input'));
     // buildFilterList('contentType');
     // buildFilterList('category');
     // buildFilterList('publisher');
@@ -265,6 +265,16 @@ function clearFilter(type) {
   window.history.replaceState(null, null, appendFilterToURL);
   updateFilterButtons();
   filterContentByParams(paramContentType, paramCategory, paramPublisher);
+}
+
+function resetAllCheckboxes(checkboxes){
+  if(checkboxes && checkboxes.isArray){
+    _.each(checkboxes, function(checkbox){
+      checkbox.checked(false);
+    });
+  } else {
+    checkboxes.checked(false);
+  }
 }
 
 function init() {
