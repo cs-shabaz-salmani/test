@@ -91,7 +91,7 @@ function buildFilterList(type, filter, match) {
       var matchFound = false;
       var categoryLi = document.createElement('li');
       if(filter){
-        matchFound = catItem.toLowerCase().indexOf(match.toLowerCase()) > -1;
+        matchFound = category.toLowerCase().indexOf(match.toLowerCase()) > -1;
         categoryLi.className = matchFound ? "sidebar-item list-unstyled fw-light" : "sidebar-item list-unstyled fw-light d-none";
       } else {
         categoryLi.className = "sidebar-item list-unstyled fw-light";
