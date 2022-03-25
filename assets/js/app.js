@@ -669,6 +669,7 @@ function buildUpdatesAvailableList(listData) {
 
 function buildListData(listData) {
   var marketPlace = $("#marketplace-list");
+  marketPlace.html('');
   $(".mp-tile-container").remove();
   $("#filteredContentCount").html(listData.length);
   if(listData.length === 0){
