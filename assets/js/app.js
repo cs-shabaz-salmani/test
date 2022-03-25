@@ -80,6 +80,9 @@ $(document).ready(function () {
 });
 
 function buildFilterList(type, filter, match) {
+  paramContentType = getUrlParameter('contentType');
+  paramCategory = getUrlParameter('category');
+  paramPublisher = getUrlParameter('publisher');
   if (type === 'category') {
     var categoryListUl = $("#filter-category-list");
     categoryListUl.html('');
