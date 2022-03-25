@@ -88,9 +88,15 @@ function buildFilterList(type, filter, match) {
       var selectedCategory = _.find(paramCategoryArray, function (catItem) {
         return catItem === category;
       });
+      var matchFound = false;
       var categoryLi = document.createElement('li');
-      categoryLi.className = "sidebar-item list-unstyled fw-light";
-
+      if(filter){
+        matchFound = catItem.toLowerCase().indexOf(match.toLowerCase()) > -1;
+        categoryLi.className = matchFound ? "sidebar-item list-unstyled fw-light" : "sidebar-item list-unstyled fw-light d-none";
+      } else {
+        categoryLi.className = "sidebar-item list-unstyled fw-light";
+      }
+      
       var categoryInput = document.createElement('input');
       categoryInput.className = "sidebar-link";
       categoryInput.setAttribute("type", "checkbox");
@@ -380,8 +386,8 @@ function updateFilterParams(data, item, method, type) {
 
 function submitSearchFilter(event, type){
   console.log(event);
-  // var match = 
-  // buildFilterList(type, true, match);
+  var match = event.value;
+  buildFilterList(type, true, match);
 }
 
 function filterContentByParams(contentTypeFilter, categoryFilter, publisherFilter) {
