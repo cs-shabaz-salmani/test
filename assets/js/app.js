@@ -378,7 +378,7 @@ function updateFilterParams(data, item, method, type) {
   return data;
 }
 
-function searchContent(event, type){
+function submitSearchFilter(event, type){
   console.log(event);
   // var match = 
   // buildFilterList(type, true, match);
