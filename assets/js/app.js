@@ -671,6 +671,16 @@ function buildListData(listData) {
   var marketPlace = $("#marketplace-list");
   $(".mp-tile-container").remove();
   $("#filteredContentCount").html(listData.length);
+  if(listData.length === 0){
+    var noResultDiv = document.createElement('div');
+    noResultDiv.className = "mp-content-no-results";
+    var noResultTitle = document.createElement('h4');
+    noResultTitle.className = "mp-tile-title";
+    var noResultText = document.createTextNode('No Results Found');
+    noResultTitle.appendChild(noResultText);
+    noResultDiv.appendChild(itemTitle);
+    marketPlace.append(noResultDiv);
+  }
   _.each(listData, function (listItem) {
     var mpCard = buildCardHtml(listItem);
     marketPlace.append(mpCard);
