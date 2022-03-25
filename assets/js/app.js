@@ -80,10 +80,11 @@ function buildFilterList(type, filter) {
     var categoryListUl = $("#filter-category-list");
     _.each(categoryList, function (category) {
 
-      // var paramCategoryArray = paramCategory.split(',');
-      // var selectedCategory = _.find(paramCategoryArray, function (catItem) {
-      //   return catItem === category;
-      // });
+      var paramCategoryArray = paramCategory.split(',');
+      var selectedCategory = _.find(paramCategoryArray, function (catItem) {
+        return catItem === category;
+      });
+      console.log(selectedCategory);
       var categoryLi = document.createElement('li');
       categoryLi.className = "sidebar-item list-unstyled fw-light";
 
