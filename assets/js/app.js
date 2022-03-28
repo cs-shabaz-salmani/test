@@ -1,6 +1,6 @@
 'use strict';
 
-var yumRepo = 'https://update.cybersponse.com/';
+var yumRepo = 'https://repo.fortisoar.fortinet.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
 var listItems = [];
 var listItemsBkp;
