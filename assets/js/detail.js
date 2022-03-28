@@ -1,7 +1,7 @@
 'use strict';
 
   const http = new XMLHttpRequest();
-  var yumRepo = 'https://update.cybersponse.com';
+  var yumRepo = 'https://repo.fortisoar.fortinet.com';
   var basePath = 'http://marketplace.cybersponse.com/';
 
   init();
