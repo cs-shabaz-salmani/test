@@ -8,9 +8,9 @@
 
   function init() {
     var detailInfo;
-    var detailType = urlSearchParams.get('type');
-    var detailName = urlSearchParams.get('entity');
-    var detailVersion = urlSearchParams.get('version');
+    var detailType = getUrlParameter('type');
+    var detailName = getUrlParameter('entity');
+    var detailVersion = getUrlParameter('version');
     var infoPath = "/content-hub/" + detailName + "-" + detailVersion;
     var detailPath = yumRepo + infoPath + '/info.json';
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
