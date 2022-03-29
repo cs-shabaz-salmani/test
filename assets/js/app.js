@@ -207,7 +207,7 @@ function updateFilterButtons() {
   var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
   var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
   var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
-  var navBar = document.getElementById('#sidebar');
+  var navBar = document.getElementById('sidebar');
   if (navBar) {
     !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
     !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
