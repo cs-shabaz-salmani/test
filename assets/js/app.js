@@ -17,7 +17,7 @@ var publisherList = [];
 var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name': 'Solution Packs', 'value': 'solutionpack' }, { 'name': 'Widgets', 'value': 'widget' }];
 
 $(document).ready(function () {
-  var navBar = $('#sidebar');
+  var navBar = document.getElementById('sidebar');
   if (navBar) {
     navBar.load('assets/html/sidebar.html');
     var xmlHttp = new XMLHttpRequest();
