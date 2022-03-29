@@ -53,6 +53,11 @@
       document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
+
+      http.open("GET", mdFilepath, false); // false for synchronous request
+      http.send(null);
+      console.log(http.responseText);
+
       var releaseNotes = document.createElement('zero-md');
       releaseNotes.setAttribute("src", mdFilepath);
       document.getElementById("detail-release-notes").append(releaseNotes);
