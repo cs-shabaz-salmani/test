@@ -672,6 +672,7 @@ function buildUpdatesAvailableList(listData) {
 
 function buildListData(listData) {
   var marketPlace = $("#marketplace-list");
+  var contentCountElement = $("#content-count");
   marketPlace.html('');
   $(".mp-tile-container").remove();
   $("#filteredContentCount").html(listData.length);
@@ -684,6 +685,9 @@ function buildListData(listData) {
     noResultTitle.appendChild(noResultText);
     noResultDiv.appendChild(noResultTitle);
     marketPlace.append(noResultDiv);
+    contentCountElement.addClass('d-none');
+  } else {
+    contentCountElement.removeClass('d-none');
   }
   _.each(listData, function (listItem) {
     var mpCard = buildCardHtml(listItem);
