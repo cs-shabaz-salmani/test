@@ -55,7 +55,7 @@
       document.getElementById("detail-description").innerHTML = detailInfo.description;
 
       http.open("GET", mdFilepath, false); // false for synchronous request
-      http.send(null);
+//       http.send(null);
       if(http.responseText){
         var releaseNotes = document.createElement('zero-md');
         releaseNotes.setAttribute("src", mdFilepath);
