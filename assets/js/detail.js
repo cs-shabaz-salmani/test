@@ -56,11 +56,11 @@
 
       http.open("GET", mdFilepath, false); // false for synchronous request
       http.send(null);
-      console.log(http.responseText);
-
-      var releaseNotes = document.createElement('zero-md');
-      releaseNotes.setAttribute("src", mdFilepath);
-      document.getElementById("detail-release-notes").append(releaseNotes);
+      if(http.responseText){
+        var releaseNotes = document.createElement('zero-md');
+        releaseNotes.setAttribute("src", mdFilepath);
+        document.getElementById("detail-release-notes").append(releaseNotes);
+      }
       if(detailInfo.type === "connector") {
         document.getElementById("release-notes-block").classList.remove("d-none");
       }
