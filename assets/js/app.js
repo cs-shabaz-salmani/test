@@ -19,12 +19,11 @@ var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name':
 $(document).ready(function () {
   var navBar = document.getElementById('sidebar');
   if (navBar) {
-    var xmlHttp1 = new XMLHttpRequest();
-    xmlHttp1.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
-    xmlHttp1.send(null);
-    navBar.innerHTML = xmlHttp1.responseText;
-    // navBar.load('assets/html/sidebar.html');
     var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
+    xmlHttp.send(null);
+    navBar.innerHTML = xmlHttp.responseText;
+    
     xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
     xmlHttp.send(null);
     var allFiltersJson = xmlHttp.responseText;
