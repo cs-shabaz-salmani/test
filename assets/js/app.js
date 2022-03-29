@@ -17,7 +17,7 @@ var publisherList = [];
 var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name': 'Solution Packs', 'value': 'solutionpack' }, { 'name': 'Widgets', 'value': 'widget' }];
 
 $(document).ready(function () {
-  var navBar = document.getElementById('#sidebar');
+  var navBar = $('#sidebar');
   if (navBar) {
     navBar.load('assets/html/sidebar.html');
     var xmlHttp = new XMLHttpRequest();
@@ -207,10 +207,13 @@ function updateFilterButtons() {
   var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
   var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
   var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
-  !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
-  !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
-  !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
-  !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
+  var navBar = document.getElementById('#sidebar');
+  if (navBar) {
+    !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
+    !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
+    !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
+    !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
+  }
 }
 
 function clearFilter(type) {
