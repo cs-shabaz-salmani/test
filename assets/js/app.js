@@ -22,7 +22,7 @@ $(document).ready(function () {
     var xmlHttp1 = new XMLHttpRequest();
     xmlHttp1.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
     xmlHttp1.send(null);
-    navBar.innerHTML(xmlHttp1.responseText);
+    navBar.innerHTML = xmlHttp1.responseText;
     // navBar.load('assets/html/sidebar.html');
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
