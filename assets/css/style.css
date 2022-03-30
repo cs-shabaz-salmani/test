@@ -288,7 +288,7 @@
 }
 
 .main .carousel {
-  z-index: -1;
+  z-index: 1;
 }
 
 .main .carousel .carousel-inner .carousel-item {
