@@ -54,13 +54,12 @@
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
 
-//       http.open("GET", mdFilepath, false); // false for synchronous request
-//       http.send(null);
-//       if(http.responseText){
+
+      if(detailInfo.releaseNotes === 'available'){
         var releaseNotes = document.createElement('zero-md');
         releaseNotes.setAttribute("src", mdFilepath);
         document.getElementById("detail-release-notes").append(releaseNotes);
-//       }
+      }
       if(detailInfo.type === "connector") {
         document.getElementById("release-notes-block").classList.remove("d-none");
       }
