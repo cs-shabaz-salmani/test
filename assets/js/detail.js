@@ -74,7 +74,7 @@
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
-      } else {
+      } else if(docLink) {
         var docLinkTag = document.createElement('a');
         docLinkTag.href = docLink;
         docLinkTag.className = "nav-item detail-doc-link";
