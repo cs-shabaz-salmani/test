@@ -537,7 +537,7 @@ function searchContentData(match) {
         searchedListItems.push(item);
       }
     } else {
-      if (item.name.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+      if (item.name.toLowerCase().indexOf(match.toLowerCase()) > -1|| item.label.toLowerCase().indexOf(match.toLowerCase()) > -1) {
         searchedListItems.push(item);
       }
     }
