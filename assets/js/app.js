@@ -533,7 +533,7 @@ function searchContentData(match) {
   var searchedListItems = [];
   _.each(listItems, function (item) {
     if (paramContentType && paramContentType !== 'all') {
-      if (paramContentType === item.type && item.name.toLowerCase().indexOf(match.toLowerCase()) > -1) {
+      if (paramContentType === item.type && (item.name.toLowerCase().indexOf(match.toLowerCase()) > -1 || item.label.toLowerCase().indexOf(match.toLowerCase()) > -1)) {
         searchedListItems.push(item);
       }
     } else {
