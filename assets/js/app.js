@@ -700,7 +700,7 @@ function buildListData(listData) {
 
 function buildCardHtml(listItem) {
   var aTaglistItem = document.createElement('a');
-  aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type;
+  aTaglistItem.href = basePath + "detail.html?entity=" + listItem.name + "&version=" + listItem.version + "&type=" + listItem.type + "&buildNumber=" + listItem.buildNumber;
   aTaglistItem.className = "mp-tile-container mp-tile-" + listItem.type + "-container";
 
   var itemIconSpan = document.createElement('span');
