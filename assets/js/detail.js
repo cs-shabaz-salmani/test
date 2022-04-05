@@ -11,7 +11,8 @@
     var detailType = getUrlParameter('type');
     var detailName = getUrlParameter('entity');
     var detailVersion = getUrlParameter('version');
-    var infoPath = "/content-hub/" + detailName + "-" + detailVersion;
+    var detailBuildNumber = getUrlParameter('buildNumber');
+    var infoPath = "/content-hub/" + detailName + "-" + detailVersion + "/" + detailBuildNumber;
     var detailPath = yumRepo + infoPath + '/info.json';
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
 
