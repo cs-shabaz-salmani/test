@@ -40,7 +40,8 @@
         _.each(detailInfo.availableVersions, function(version) {
           var versionTag = document.createElement('a');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
-          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
+          var buildNumber = version !== detailInfo.version ? "latest" : detailInfo.buildNumber;
+          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + buildNumber;
           versionTag.setAttribute("target", "_self");
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
