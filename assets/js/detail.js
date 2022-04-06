@@ -83,6 +83,12 @@
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
+        var docTemplate = document.createElement('template');
+        docContent.setAttribute("data-merge", "prepend");
+        docContent.append(docTemplate);
+        var docBase = document.createElement('base');
+        docBase.setAttribute("href", "docLink");
+        docTemplate.append(docBase);
         document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
