@@ -40,7 +40,7 @@
         _.each(detailInfo.availableVersions, function(version) {
           var versionTag = document.createElement('a');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
-          if(version !== detailInfo.version) {
+          if(version === detailInfo.version) {
             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
           } else {
             versionTag.addEventListener("click", function () {
