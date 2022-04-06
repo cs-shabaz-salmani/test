@@ -78,6 +78,7 @@ $(document).ready(function () {
         }, 400);
       }, 400);
     }, 1200);
+    $('#carouselExampleCaptions').carousel({ interval: 9000 });
     $('#carouselProductUpdates').carousel({ interval: 10000 });
   }
 });
