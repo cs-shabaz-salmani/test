@@ -78,15 +78,13 @@
       if(docLink.match(/readme.md/gi) || docLink.match(new RegExp(widgetLink,'gi'))){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
-        var docIframe = document.createElement('iframe');
+        var docContent = document.createElement('zero-md');
+        docContent.setAttribute("src", docLink);
+        docContent.setAttribute("no-shadow", "");
         var docBase = document.createElement('base');
         docBase.setAttribute("href", "https://github.com/fortinet-fortisoar/widget-access-control/blob/release/2.1.0/docs");
-        docIframe.append(docBase);
-        var docContent = document.createElement('zero-md');
-        docContent.setAttribute("src", "/AccessControl.md");
-        docContent.setAttribute("no-shadow", "");
-        docBase.append(docContent);
-        document.getElementById("detail-docs-content").append(docIframe);
+        docContent.append(docBase);
+        document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
