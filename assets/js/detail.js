@@ -141,3 +141,12 @@
     http.open("GET", theUrl, true);
     http.send(null);
   };
+
+  function navigateToContent(){
+    var prevPage = window.location.href;
+    if (window.location.href == prevPage) {
+      window.history.go(-1);
+    } else {
+      window.location.href = "/list.html?contentType=all";
+    }
+  }
