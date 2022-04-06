@@ -41,12 +41,10 @@
           var versionTag = document.createElement('li');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
           if(version !== detailInfo.version) {
-            versionTag.onclick = function () {
-              getBuildNumber(detailInfo.name, version, detailInfo.type);
-            };
-            versionTag.addEventListener("click", function () {
-              getBuildNumber(detailInfo.name, version, detailInfo.type);
-            });
+            versionTag.onclick = getBuildNumber(detailInfo.name, version, detailInfo.type);
+//             versionTag.addEventListener("click", function () {
+//               getBuildNumber(detailInfo.name, version, detailInfo.type);
+//             });
           } else {
 //             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
 //             versionTag.setAttribute("target", "_self");
