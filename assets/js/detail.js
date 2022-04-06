@@ -82,7 +82,7 @@
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
-        docContent.setAttribute("src", docLink);
+        docContent.setAttribute("src", "/");
         var docTemplate = document.createElement('template');
         docTemplate.setAttribute("data-merge", "append");
         docContent.append(docTemplate);
