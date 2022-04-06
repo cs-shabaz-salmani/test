@@ -82,12 +82,12 @@
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
-        docContent.setAttribute("src", "/");
+        docContent.setAttribute("src", docLink);
         var docTemplate = document.createElement('template');
         docTemplate.setAttribute("data-merge", "append");
         docContent.append(docTemplate);
         var docBase = document.createElement('base');
-        docBase.setAttribute("href", docLink);
+        docBase.setAttribute("href", "/");
         docTemplate.append(docBase);
         document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
