@@ -82,7 +82,7 @@
         docContent.setAttribute("src", docLink);
         docContent.setAttribute("no-shadow", "");
         var docTemplate = document.createElement('template');
-        docTemplate.setAttribute("data-merge", "append");
+        docTemplate.setAttribute("data-merge", "prepend");
         docContent.append(docTemplate);
         var docBase = document.createElement('base');
         docBase.setAttribute("href", "/");
