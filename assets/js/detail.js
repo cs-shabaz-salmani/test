@@ -40,8 +40,13 @@
         _.each(detailInfo.availableVersions, function(version) {
           var versionTag = document.createElement('a');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
-          var buildNumber = version !== detailInfo.version ? "latest" : detailInfo.buildNumber;
-          versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + buildNumber;
+          if(version !== detailInfo.version) {
+            versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
+          else {
+            versionTag.addEventListener("click", function () {
+              getBuildNumber(detailInfo.name, version, detailInfo.type);
+            });
+          }
           versionTag.setAttribute("target", "_self");
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
@@ -142,6 +147,14 @@
     http.open("GET", theUrl, true);
     http.send(null);
   };
+
+  function getBuildNumber(contentName, contentVersion, contentType){
+    var buildPath = yumRepo + "/content-hub/" + contentName + "-" + contentVersion + "/build.json";
+    httpGetAsync(buildPath, function(response){
+      var buildNumber = response.buildNumber;
+      window.location.href = basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType + "&buildNumber=" + buildNumber;
+    });
+  }
 
   function navigateToContent(){
     var prevPage = window.location.href;
