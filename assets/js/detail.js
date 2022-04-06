@@ -83,6 +83,7 @@
         docContent.setAttribute("no-shadow", "");
         var docBase = document.createElement('base');
         docBase.setAttribute("href", "https://github.com/fortinet-fortisoar/widget-access-control/blob/release/2.1.0/docs");
+        docBase.setAttribute("data-merge", "append");
         docContent.append(docBase);
         document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
