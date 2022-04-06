@@ -42,7 +42,7 @@
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
           if(version !== detailInfo.version) {
             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
-          else {
+          } else {
             versionTag.addEventListener("click", function () {
               getBuildNumber(detailInfo.name, version, detailInfo.type);
             });
