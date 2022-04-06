@@ -38,18 +38,18 @@
       if(detailInfo.availableVersions.length > 0){
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
-          var versionTag = document.createElement('a');
+          var versionTag = document.createElement('li');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
-          if(version === detailInfo.version) {
-            versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
-            versionTag.setAttribute("target", "_self");
-          } else {
+          if(version !== detailInfo.version) {
             versionTag.onclick = function () {
               getBuildNumber(detailInfo.name, version, detailInfo.type);
             };
 //             versionTag.addEventListener("click", function () {
 //               getBuildNumber(detailInfo.name, version, detailInfo.type);
 //             });
+          } else {
+//             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
+//             versionTag.setAttribute("target", "_self");
           }
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
