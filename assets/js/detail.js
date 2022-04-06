@@ -44,9 +44,12 @@
             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
             versionTag.setAttribute("target", "_self");
           } else {
-            versionTag.addEventListener("click", function () {
+            versionTag.onclick = function () {
               getBuildNumber(detailInfo.name, version, detailInfo.type);
-            });
+            };
+//             versionTag.addEventListener("click", function () {
+//               getBuildNumber(detailInfo.name, version, detailInfo.type);
+//             });
           }
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
