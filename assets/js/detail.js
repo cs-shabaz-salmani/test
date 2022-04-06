@@ -78,16 +78,15 @@
       if(docLink.match(/readme.md/gi) || docLink.match(new RegExp(widgetLink,'gi'))){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
+        var docIframe = document.createElement('iframe');
+        var docBase = document.createElement('base');
+        docBase.setAttribute("href", "/");
+        docIframe.append(docBase);
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         docContent.setAttribute("no-shadow", "");
-        var docTemplate = document.createElement('template');
-        docTemplate.setAttribute("data-merge", "prepend");
-        docContent.append(docTemplate);
-        var docBase = document.createElement('base');
-        docBase.setAttribute("href", "/");
-        docTemplate.append(docBase);
-        document.getElementById("detail-docs-content").append(docContent);
+        docBase.append(docContent);
+        document.getElementById("detail-docs-content").append(docIframe);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
