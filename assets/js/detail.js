@@ -57,7 +57,7 @@
       document.getElementById("detail-img-container").append(imageElement);
       document.getElementById("detail-heading").innerHTML = detailInfo.display;
       document.getElementById("detail-version").innerHTML = detailVersion;
-      document.getElementById("detail-certified").innerHTML = detailInfo.cs_approved ? 'Yes' : 'No';
+      document.getElementById("detail-certified").innerHTML = detailInfo.certified ? 'Yes' : 'No';
       document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       document.getElementById("detail-description").innerHTML = detailInfo.description;
 
