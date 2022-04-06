@@ -43,7 +43,7 @@
           if(version !== detailInfo.version) {
             versionTag.onclick = function(){
               getBuildNumber(detailInfo.name, version, detailInfo.type);
-            });
+            };
 //             versionTag.addEventListener("click", function () {
 //               getBuildNumber(detailInfo.name, version, detailInfo.type);
 //             });
