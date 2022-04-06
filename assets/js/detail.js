@@ -45,9 +45,6 @@
             versionTag.onclick = function(){
               getBuildNumber(detailInfo.name, version, detailInfo.type);
             };
-          } else {
-//             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + buildNumber;
-//             versionTag.setAttribute("target", "_self");
           }
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
@@ -164,7 +161,8 @@
   }
 
   function navigateToContent(){
-    if (window.history.go(-1).indexOf('list.html') > -1) {
+    var prevPage = history.back();
+    if (prevPage.indexOf('list.html') > -1) {
       window.history.go(-1);
     } else {
       window.location.href = "/list.html?contentType=all";
