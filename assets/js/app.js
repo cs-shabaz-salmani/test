@@ -450,7 +450,7 @@ function filterContentByParams() {
           if (categoryFilter.length > 0 || publisherFilter.length > 0) {
             if (categoryFilter.length > 0) {
               _.each(categoryFilter, function (category) {
-                if (item.category === category) {
+                if (item.category === category || item.category.indexOf(category) > -1) {
                   if (publisherFilter.length > 0) {
                     _.each(publisherFilter, function (publisher) {
                       if (item.publisher === publisher) {
