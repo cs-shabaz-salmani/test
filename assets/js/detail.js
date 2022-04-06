@@ -157,8 +157,7 @@
   }
 
   function navigateToContent(){
-    var prevPage = window.location.href;
-    if (window.location.href == prevPage) {
+    if (window.history.go(-1).indexOf('list.html') > -1) {
       window.history.go(-1);
     } else {
       window.location.href = "/list.html?contentType=all";
