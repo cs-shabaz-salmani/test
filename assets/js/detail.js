@@ -84,7 +84,7 @@
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         var docTemplate = document.createElement('template');
-        docContent.setAttribute("data-merge", "prepend");
+        docTemplate.setAttribute("data-merge", "prepend");
         docContent.append(docTemplate);
         var docBase = document.createElement('base');
         docBase.setAttribute("href", "docLink");
