@@ -83,7 +83,7 @@
         docBase.setAttribute("href", "https://github.com/fortinet-fortisoar/widget-access-control/blob/release/2.1.0/docs");
         docIframe.append(docBase);
         var docContent = document.createElement('zero-md');
-        docContent.setAttribute("src", docLink);
+        docContent.setAttribute("src", "/AccessControl.md");
         docContent.setAttribute("no-shadow", "");
         docBase.append(docContent);
         document.getElementById("detail-docs-content").append(docIframe);
