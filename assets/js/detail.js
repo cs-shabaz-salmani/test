@@ -42,12 +42,12 @@
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
           if(version === detailInfo.version) {
             versionTag.href = basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type + "&buildNumber=" + detailInfo.buildNumber;
+            versionTag.setAttribute("target", "_self");
           } else {
             versionTag.addEventListener("click", function () {
               getBuildNumber(detailInfo.name, version, detailInfo.type);
             });
           }
-          versionTag.setAttribute("target", "_self");
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
           detailAvailableVersions.append(versionTag);
