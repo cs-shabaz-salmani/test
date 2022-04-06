@@ -41,7 +41,9 @@
           var versionTag = document.createElement('li');
           versionTag.className = version !== detailInfo.version ? "dropdown-item" : "dropdown-item";
           if(version !== detailInfo.version) {
-//             versionTag.onclick = getBuildNumber(detailInfo.name, version, detailInfo.type);
+            versionTag.onclick = function(){
+              getBuildNumber(detailInfo.name, version, detailInfo.type);
+            });
 //             versionTag.addEventListener("click", function () {
 //               getBuildNumber(detailInfo.name, version, detailInfo.type);
 //             });
