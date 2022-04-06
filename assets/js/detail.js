@@ -161,10 +161,5 @@
   }
 
   function navigateToContent(){
-    var prevPage = history.back();
-    if (prevPage.indexOf('list.html') > -1) {
-      window.history.go(-1);
-    } else {
-      window.location.href = "/list.html?contentType=all";
-    }
+    window.location.href = "/list.html?contentType=all";
   }
