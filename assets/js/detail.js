@@ -80,7 +80,7 @@
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
-        docContent.setAttribute("no-shadow");
+        docContent.setAttribute("no-shadow", "");
         var docTemplate = document.createElement('template');
         docTemplate.setAttribute("data-merge", "append");
         docContent.append(docTemplate);
