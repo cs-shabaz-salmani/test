@@ -12,6 +12,7 @@
     var detailName = getUrlParameter('entity');
     var detailVersion = getUrlParameter('version');
     var detailBuildNumber = getUrlParameter('buildNumber');
+    detailBuildNumber = detailBuildNumber ? detailBuildNumber : 'latest';
     var infoPath = "/content-hub/" + detailName + "-" + detailVersion + "/" + detailBuildNumber;
     var detailPath = yumRepo + infoPath + '/info.json';
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
