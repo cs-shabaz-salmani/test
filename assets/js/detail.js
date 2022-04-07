@@ -72,7 +72,10 @@
       }
       var docLink = detailInfo.help;
       var docLinkBlock = document.getElementById("doc-content-block");
-      if(docLink.match(/readme.md/gi)){
+      var widgetLink = detailInfo.label.replace(/\s+/g, '');
+      widgetLink = widgetLink + '.md';
+      widgetLink = '\\b' + widgetLink + '\\b';
+      if(docLink.match(/readme.md/gi) || docLink.match(new RegExp(widgetLink,'gi'))){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
