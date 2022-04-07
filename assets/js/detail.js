@@ -72,19 +72,16 @@
       }
       var docLink = detailInfo.help;
       var docLinkBlock = document.getElementById("doc-content-block");
-      var widgetLink = detailInfo.label.replace(/\s+/g, '');
-      widgetLink = widgetLink + '.md';
-      widgetLink = '\\b' + widgetLink + '\\b';
-      if(docLink.match(/readme.md/gi) || docLink.match(new RegExp(widgetLink,'gi'))){
+      if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
-        var baseElement = document.createElement('base');
-        baseElement.setAttribute("src", docLink);
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         docContent.setAttribute("no-shadow", "");
-        baseElement.append(docContent);
-        document.getElementById("detail-docs-content").append(baseElement);
+//         var baseElement = document.createElement('base');
+//         baseElement.setAttribute("src", docLink);
+//         docContent.append(baseElement);
+        document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
         docLinkBlock.classList.remove("d-none");
