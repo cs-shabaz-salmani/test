@@ -391,8 +391,8 @@
 }
 
 .mp-tile-container:hover {
-  border-color: #d1d1d1;
-  background: #f9f9f9;
+  border-color: #73c5f9;
+  box-shadow: 1px 1px 3px #e2e1e1;
 }
 
 .mp-tile-container .mp-content-type-icon {
