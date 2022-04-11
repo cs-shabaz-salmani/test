@@ -73,7 +73,7 @@ $(document).ready(function () {
 //         $('.main-loader-inner div').addClass('page');
 //         setTimeout(function () {
 //           $('.main-loader-page-load').addClass('off');
-//           $('.main-page-content').removeClass('d-none');
+          $('.main-page-content').removeClass('d-none');
           mainPageLoader.addClass('d-none');
 //         }, 400);
 //       }, 400);
