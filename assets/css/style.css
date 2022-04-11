@@ -79,6 +79,11 @@
   color: #a9a9a9;
 }
 
+#latest-hub-updates{
+  display: flex;
+  justify-content: center;
+}
+
 .sidebar #sidebar {
   position: fixed;
   top: 107px;
