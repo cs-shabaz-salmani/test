@@ -334,14 +334,17 @@
   color: #ffffff;
 }
 
-.main.main-carousel-container .carousel-gradient {
-  background: linear-gradient(
-0deg, rgba(204,212,217,1) 0%, rgba(255,255,255,1) 100%);
-  height: 7px; 
- }
-
 .main .carousel .carousel-control-prev-icon, .main .carousel .carousel-control-next-icon {
-  background-color: #aba9a9;
+  background-image: none;
+  color: #000;
+}
+
+.main .carousel .carousel-control-prev-icon:before {
+  content: "\f104";
+}
+
+.main .carousel .carousel-control-next-icon:before {
+  content: "\f105";
 }
 
 .main .content {
