@@ -68,15 +68,15 @@ $(document).ready(function () {
   var mainPageLoader = $('.main-loader');
   if (mainPageLoader) {
     setTimeout(function () {
-      $('.main-loader-inner div').addClass('done');
-      setTimeout(function () {
-        $('.main-loader-inner div').addClass('page');
-        setTimeout(function () {
-          $('.main-loader-page-load').addClass('off');
-          $('.main-page-content').removeClass('d-none');
+//       $('.main-loader-inner div').addClass('done');
+//       setTimeout(function () {
+//         $('.main-loader-inner div').addClass('page');
+//         setTimeout(function () {
+//           $('.main-loader-page-load').addClass('off');
+//           $('.main-page-content').removeClass('d-none');
           mainPageLoader.addClass('d-none');
-        }, 400);
-      }, 400);
+//         }, 400);
+//       }, 400);
     }, 1200);
     $('#carouselExampleCaptions').carousel({ interval: 5000 });
     $('#carouselProductUpdates').carousel({ interval: 10000 });
