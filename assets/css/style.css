@@ -164,7 +164,7 @@
 .global-search-input, .filter-search-input {
   position: relative;
   width: 25%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .filter-search-input {
