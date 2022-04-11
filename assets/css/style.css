@@ -18,6 +18,11 @@
  color: #00a3ff; 
 }
 
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .custom-left-offset-1 {
   padding-left: 8.33333333% !important; 
 }
