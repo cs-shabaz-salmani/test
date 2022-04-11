@@ -337,6 +337,10 @@
 .main .carousel .carousel-control-prev-icon, .main .carousel .carousel-control-next-icon {
   background-image: none;
   color: #000;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 2em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .main .carousel .carousel-control-prev-icon:before {
