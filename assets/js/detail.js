@@ -24,7 +24,7 @@
       var imageElement;
       if(detailInfo.iconLarge) {
         imageElement = document.createElement('img');
-        imageElement.className = "mp-tile-image border-0";
+        imageElement.className = "mp-tile-image";
         imageElement.src = yumRepo + detailInfo.iconLarge;
         imageElement.alt = detailInfo.display;
       } else {
@@ -72,18 +72,12 @@
       }
       var docLink = detailInfo.help;
       var docLinkBlock = document.getElementById("doc-content-block");
-      var widgetLink = detailInfo.label.replace(/\s+/g, '');
-      widgetLink = widgetLink + '.md';
-      widgetLink = '\\b' + widgetLink + '\\b';
-      if(docLink.match(/readme.md/gi) || docLink.match(new RegExp(widgetLink,'gi'))){
+      if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
         docContent.setAttribute("no-shadow", "");
-//         var baseElement = document.createElement('base');
-//         baseElement.setAttribute("src", docLink);
-//         docContent.append(baseElement);
         document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
