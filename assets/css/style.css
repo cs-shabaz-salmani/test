@@ -289,9 +289,12 @@
   margin-top: 150px !important; 
 }
 
+.all-list-container {
+  background: #f9f9f9;
+}
+
 .all-list-container .main {
   margin-top: 97px !important; 
-  background: #f9f9f9;
 }
 
 .main.main-carousel-container {
