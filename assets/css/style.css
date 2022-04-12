@@ -140,7 +140,12 @@
 }
 
 .sidebar .sidebar-title {
-  margin: 15px 15px 15px 20px; 
+  margin: 15px 15px 15px 20px;
+  font-size: 16px;
+}
+
+.sidebar .sidebar-content .accordion-button {
+  font-size: 14px;
 }
 
 .sidebar .accordion-flush .accordion-item:first-child {
@@ -207,7 +212,7 @@
 
 .sidebar .sidebar-item {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 13px;
   color: #7c7c7c;
 }
 
