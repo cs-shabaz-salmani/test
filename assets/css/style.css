@@ -64,10 +64,6 @@
   padding-top: 5px;
 }
 
-.top-breadcrumb .breadcrumb {
-  margin-left: 20px; 
-}
-
 .top-breadcrumb .breadcrumb-item.active {
   color: #3c3c3c;
 }
@@ -97,7 +93,6 @@
   bottom: 0px;
   background: #ffff;
   border-right: 1px solid #dfdede;
-  margin-left: 20px;
   border-left: 1px solid #dfdede;
 }
 
@@ -525,11 +520,10 @@
 }
 
 .dropdown-version-content {
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 20px 0px;
 }
 
 .detail-content {
-  padding: 0px 20px;
   margin-bottom: 70px;
 }
 
