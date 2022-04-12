@@ -200,10 +200,14 @@ function updateFilterButtons() {
   if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
     clearAllFilter = true;
   }
-  var clearAllBtn = document.getElementById("clear-all-filter-btn");
-  var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
-  var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
-  var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
+//   var clearAllBtn = document.getElementById("clear-all-filter-btn");
+//   var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
+//   var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
+//   var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
+  var clearAllBtn = $("#clear-all-filter-btn");
+  var clearContentTypeBtn = $("#clear-contenttype-filter-btn");
+  var clearCategoryBtn = $("#clear-category-filter-btn");
+  var clearPublisherBtn = $("#clear-publisher-filter-btn");
   var navBar = document.getElementById('sidebar');
   if (navBar) {
 //     !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
