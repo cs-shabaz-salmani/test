@@ -68,15 +68,8 @@ $(document).ready(function () {
   var mainPageLoader = $('.main-loader');
   if (mainPageLoader) {
     setTimeout(function () {
-//       $('.main-loader-inner div').addClass('done');
-//       setTimeout(function () {
-//         $('.main-loader-inner div').addClass('page');
-//         setTimeout(function () {
-//           $('.main-loader-page-load').addClass('off');
-          $('.main-page-content').removeClass('d-none');
-          mainPageLoader.addClass('d-none');
-//         }, 400);
-//       }, 400);
+      $('.main-page-content').removeClass('d-none');
+      mainPageLoader.addClass('d-none');
     }, 1200);
     $('#carouselExampleCaptions').carousel({ interval: 5000 });
     $('#carouselProductUpdates').carousel({ interval: 10000 });
@@ -213,10 +206,15 @@ function updateFilterButtons() {
   var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
   var navBar = document.getElementById('sidebar');
   if (navBar) {
-    !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
-    !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
-    !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
-    !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
+//     !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
+//     !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
+//     !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
+//     !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
+    
+    !clearAllFilter ? clearAllBtn.addClass("d-none") : clearAllBtn.removeClass("d-none");
+    !showContentTypeClearFilter ? clearContentTypeBtn.addClass("d-none") : clearContentTypeBtn.removeClass("d-none");
+    !showCategoryClearFilter ? clearCategoryBtn.addClass("d-none") : clearCategoryBtn.removeClass("d-none");
+    !showPublisherClearFilter ? clearPublisherBtn.addClass("d-none") : clearPublisherBtn.removeClass("d-none");
   }
 }
 
