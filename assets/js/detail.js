@@ -18,6 +18,10 @@
     var mdFilepath = yumRepo + infoPath + '/release_notes.md';
 
     httpGetAsync(detailPath, function(response) {
+      setTimeout(function () {
+        $('.item-detail-content').removeClass('d-none');
+        $('.details-loader').addClass('d-none');
+      }, 1200);
       detailInfo = response;
       detailInfo.display = detailInfo.label || detailInfo.title;
       detailInfo.type = detailType;
