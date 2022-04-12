@@ -200,21 +200,12 @@ function updateFilterButtons() {
   if (showContentTypeClearFilter || showCategoryClearFilter || showPublisherClearFilter) {
     clearAllFilter = true;
   }
-//   var clearAllBtn = document.getElementById("clear-all-filter-btn");
-//   var clearContentTypeBtn = document.getElementById("clear-contenttype-filter-btn");
-//   var clearCategoryBtn = document.getElementById("clear-category-filter-btn");
-//   var clearPublisherBtn = document.getElementById("clear-publisher-filter-btn");
   var clearAllBtn = $("#clear-all-filter-btn");
   var clearContentTypeBtn = $("#clear-contenttype-filter-btn");
   var clearCategoryBtn = $("#clear-category-filter-btn");
   var clearPublisherBtn = $("#clear-publisher-filter-btn");
   var navBar = document.getElementById('sidebar');
   if (navBar) {
-//     !clearAllFilter ? clearAllBtn.setAttribute("disabled", "disabled") : clearAllBtn.removeAttribute("disabled");
-//     !showContentTypeClearFilter ? clearContentTypeBtn.setAttribute("disabled", "disabled") : clearContentTypeBtn.removeAttribute("disabled");
-//     !showCategoryClearFilter ? clearCategoryBtn.setAttribute("disabled", "disabled") : clearCategoryBtn.removeAttribute("disabled");
-//     !showPublisherClearFilter ? clearPublisherBtn.setAttribute("disabled", "disabled") : clearPublisherBtn.removeAttribute("disabled");
-    
     !clearAllFilter ? clearAllBtn.addClass("d-none") : clearAllBtn.removeClass("d-none");
     !showContentTypeClearFilter ? clearContentTypeBtn.addClass("d-none") : clearContentTypeBtn.removeClass("d-none");
     !showCategoryClearFilter ? clearCategoryBtn.addClass("d-none") : clearCategoryBtn.removeClass("d-none");
