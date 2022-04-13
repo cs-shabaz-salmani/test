@@ -10,6 +10,7 @@
     var detailInfo;
     var detailType = getUrlParameter('type');
     var detailName = getUrlParameter('entity');
+    detailName = decodeURI(detailName);
     var detailVersion = getUrlParameter('version');
     var detailBuildNumber = getUrlParameter('buildNumber');
     detailBuildNumber = detailBuildNumber ? detailBuildNumber : 'latest';
