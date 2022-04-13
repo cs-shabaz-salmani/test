@@ -33,7 +33,7 @@
         imageElement.alt = detailInfo.display;
       } else {
         imageElement = document.createElement('i');
-        imageElement.className = "mp-tile-icon icon-" + detailInfo.type + "-large m-3";
+        imageElement.className = "mp-tile-icon icon-" + detailInfo.type + "-large";
       }
       document.getElementById("detail-current-breadcrumb").innerHTML = detailInfo.display;
       document.getElementById("dropdownVersionLink").innerHTML = "Version - " + detailInfo.version;
