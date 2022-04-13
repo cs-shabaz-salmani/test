@@ -550,7 +550,6 @@ function buildHomePageBanners() {
 
   //Main Banner
   _.each(bannersJson.mainBanner, function (banner, index) {
-    var carouselId = "carouselMainCaptions" + index;
     var carouselIndicatorButton = document.createElement('button');
     carouselIndicatorButton.className = index === 0 ? "active" : "";
     carouselIndicatorButton.setAttribute("type", "button");
