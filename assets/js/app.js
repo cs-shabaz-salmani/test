@@ -554,7 +554,7 @@ function buildHomePageBanners() {
     var carouselIndicatorButton = document.createElement('button');
     carouselIndicatorButton.className = index === 0 ? "active" : "";
     carouselIndicatorButton.setAttribute("type", "button");
-    carouselIndicatorButton.setAttribute("data-bs-target", carouselId);
+    carouselIndicatorButton.setAttribute("data-bs-target", "#carouselExampleCaptions");
     carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
     carouselIndicatorButton.setAttribute("aria-label", banner.heading);
 
