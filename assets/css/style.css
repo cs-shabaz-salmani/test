@@ -489,6 +489,9 @@
   font-size: 80px;
   width: 100px;
   height: 100px;
+}
+
+.detail-summary .mp-tile-icon {
   padding: 10px;
   border: 1px solid #cccccc;
   border-radius: 5px;
