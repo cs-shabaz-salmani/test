@@ -345,10 +345,6 @@ function getContentCount(listData) {
     document.getElementById("solutionpack_category_count").innerHTML = solutionPackCount;
     document.getElementById("widget_category_count").innerHTML = widgetCount;
     document.getElementById("connector_category_count").innerHTML = connectorCount;
-    // document.getElementById("dashboard_category_count").innerHTML = dashboardCount;
-    // document.getElementById("report_category_count").innerHTML = reportCount;
-    // document.getElementById("how_tos_category_count").innerHTML = howToVideosCount;
-    // document.getElementById("playbook_category_count").innerHTML = playbookCount;
   }, 1000);
 }
 
