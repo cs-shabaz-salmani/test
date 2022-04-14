@@ -1083,7 +1083,7 @@ footer ul.links li:not(:last-child) a{
     }
     
     .sidebar {
-      position: absolute;
+      position: fixed;
       top: 45px;
       z-index: 11;
       width: 90% !important;
