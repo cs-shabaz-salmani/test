@@ -515,6 +515,8 @@ function submitSearch() {
     }
   } else {
     console.log('Enter atleast 3 chars');
+    var searchAlertBox = $(".custom-search-alert");
+    searchAlertBox.addClass("show");
   }
 }
 
