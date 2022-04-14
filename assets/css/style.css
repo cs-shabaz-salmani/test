@@ -37,6 +37,23 @@
   color: #ffffff !important; 
 }
 
+.custom-search-alert {
+  position: fixed;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  z-index: 9;
+  top: 62px;
+  font-size: 13px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 325px;
+  text-align: center;
+}
+
 .topbar-container {
   position: fixed;
   top: 0px;
