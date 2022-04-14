@@ -1327,4 +1327,18 @@ footer ul.links li:not(:last-child) a{
     .main.item-detail-column {
       margin-top: 110px !important;
     }
+    
+    .custom-search-alert {
+      padding: 3px 10px !important;
+      top: 50px;
+      font-size: 10px;
+      max-width: 265px;
+      line-height: 12px;
+    }
+    
+    .custom-search-alert .btn {
+      padding: 0px 0px 0px 8px;
+      line-height: 12px;
+      font-size: 10px;
+    }
 }
