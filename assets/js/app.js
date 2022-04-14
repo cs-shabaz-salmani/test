@@ -514,14 +514,14 @@ function submitSearch() {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
       searchContentData(searchText);
     }
-    searchAlertBox.alert('close');
+    searchAlertBox.removeClass("show");
   } else {
     searchAlertBox.addClass("show");
   }
 }
 
 function dismissSearchAlertBox() {
-  $(".custom-search-alert").alert('close');
+  $(".custom-search-alert").removeClass('show');
 }
 
 function searchContentData(match) {
