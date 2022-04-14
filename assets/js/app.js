@@ -510,7 +510,7 @@ function submitSearch() {
     var searchParams = searchText.length >= 3 ? "&searchContent=" + searchText : "";
     if (window.location.href.indexOf('list.html') === -1) {
       window.location.href = "/list.html?contentType=all" + searchParams;
-    } else {
+    } else if (searchText.length >= 3) {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
       searchContentData(searchText);
     }
