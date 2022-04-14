@@ -1328,6 +1328,10 @@ footer ul.links li:not(:last-child) a{
       margin-top: 110px !important;
     }
     
+    #latest-hub-updates {
+      display: block; 
+    }
+    
     .custom-search-alert {
       padding: 3px 10px !important;
       top: 50px;
