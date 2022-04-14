@@ -508,9 +508,9 @@ function submitSearch() {
   var searchAlertBox = $(".custom-search-alert");
   if (searchText.length >= 3 || searchText.length === 0) {
     var searchParams = searchText.length >= 3 ? "&searchContent=" + searchText : "";
-    if (window.location.href.indexOf('list.html') === -1) {
+    if (window.location.href.indexOf('list.html') === -1 && searchText.length >= 3) {
       window.location.href = "/list.html?contentType=all" + searchParams;
-    } else if (searchText.length >= 3) {
+    } else {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
       searchContentData(searchText);
     }
