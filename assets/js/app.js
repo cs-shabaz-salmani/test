@@ -505,6 +505,7 @@ function filterContent(types, latest) {
 
 function submitSearch() {
   var searchText = $("#searchText").val();
+  var searchAlertBox = $(".custom-search-alert");
   if (searchText.length >= 3 || searchText.length === 0) {
     var searchParams = searchText.length >= 3 ? "&searchContent=" + searchText : "";
     if (window.location.href.indexOf('list.html') === -1) {
@@ -513,11 +514,14 @@ function submitSearch() {
       window.history.replaceState(null, null, "/list.html?contentType=all" + searchParams);
       searchContentData(searchText);
     }
+    searchAlertBox.alert('close');
   } else {
-    console.log('Enter atleast 3 chars');
-    var searchAlertBox = $(".custom-search-alert");
     searchAlertBox.addClass("show");
   }
+}
+
+function dismissSearchAlertBox() {
+  $(".custom-search-alert").alert('close');
 }
 
 function searchContentData(match) {
