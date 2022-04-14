@@ -46,10 +46,7 @@
   z-index: 9;
   top: 62px;
   font-size: 13px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  right: 8.33333333%;
   max-width: 325px;
   text-align: center;
 }
@@ -1339,6 +1336,10 @@ footer ul.links li:not(:last-child) a{
       font-size: 10px;
       max-width: 265px;
       line-height: 12px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .custom-search-alert .btn {
