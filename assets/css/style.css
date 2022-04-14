@@ -54,6 +54,10 @@
   text-align: center;
 }
 
+.custom-search-alert .btn {
+  padding: 0px 0px 5px 8px;
+}
+
 .topbar-container {
   position: fixed;
   top: 0px;
