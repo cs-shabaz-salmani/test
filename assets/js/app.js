@@ -282,14 +282,12 @@ function init() {
   var allItemsJson = xmlHttp.responseText;
   allItemsJson = JSON.parse(allItemsJson);
   var updatesList = [];
-  _.each(allItemsJson, function (item, index) {
-//     if (index === 0 || index === 10 || index === 112 || index === 351 || index === 390) {
-//       updatesList.push(item);
-//     }
+  _.each(allItemsJson, function (item) {
     var today = new Date();
     var priorDate = new Date(new Date().setDate(today.getDate() - 30));
     var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
-    if (item.publishedDate >= last30DaysTimeStamp) {
+//     if (item.publishedDate >= last30DaysTimeStamp) {
+    if (item.featured) {
       updatesList.push(item);
     }
   });
