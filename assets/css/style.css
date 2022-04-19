@@ -99,8 +99,7 @@
 }
 
 #latest-hub-updates{
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .sidebar #sidebar {
@@ -418,14 +417,15 @@
 
 .mp-tile-container {
   width: 255px;
-  float: left;
   background: #ffffff;
-  margin: 20px 20px 0px 0px;
+  margin: 20px 10px 0px 10px;
   border-radius: 10px;
   border: 1px solid #e2e2e2;
   padding: 10px 15px;
   position: relative;
   text-decoration: none;
+  display: inline-block;
+  text-align: left;
 }
 
 .mp-tile-container:hover {
