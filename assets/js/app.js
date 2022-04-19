@@ -283,7 +283,13 @@ function init() {
   allItemsJson = JSON.parse(allItemsJson);
   var updatesList = [];
   _.each(allItemsJson, function (item, index) {
-    if (index === 0 || index === 10 || index === 112 || index === 351 || index === 390) {
+//     if (index === 0 || index === 10 || index === 112 || index === 351 || index === 390) {
+//       updatesList.push(item);
+//     }
+    var today = new Date();
+    var priorDate = new Date(new Date().setDate(today.getDate() - 30));
+    var last30DaysTimeStamp = priorDate.getTime();
+    if (last30DaysTimeStamp === item.publishedDate) {
       updatesList.push(item);
     }
   });
