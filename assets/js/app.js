@@ -289,7 +289,7 @@ function init() {
     var today = new Date();
     var priorDate = new Date(new Date().setDate(today.getDate() - 30));
     var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
-    if (last30DaysTimeStamp >= item.publishedDate) {
+    if (item.publishedDate >= last30DaysTimeStamp) {
       updatesList.push(item);
     }
   });
