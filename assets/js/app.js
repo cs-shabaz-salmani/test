@@ -64,13 +64,6 @@ $(document).ready(function () {
   }
   $('.dropdown-toggle').dropdown();
   $('.nav-tabs').tab();
-
-  setTimeout(function () {
-    if (window.location.href.indexOf('list.html') > -1) {
-      $('.list-loading').addClass('d-none');
-      $('.all-list-content').removeClass('d-none');
-    }
-  }, 1000);
 });
 
 function reloadURLParams(){
@@ -342,6 +335,13 @@ function updateContentOnPageLoad(allItemsJson){
     $('#carouselExampleCaptions').carousel({ interval: 5000 });
     $('#carouselProductUpdates').carousel({ interval: 10000 });
   }
+  
+  setTimeout(function () {
+    if (window.location.href.indexOf('list.html') > -1) {
+      $('.list-loading').addClass('d-none');
+      $('.all-list-content').removeClass('d-none');
+    }
+  }, 1000);
 }
 
 var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
