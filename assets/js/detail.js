@@ -157,6 +157,7 @@
     var buildPath = yumRepo + "/content-hub/" + contentName + "-" + contentVersion + "/build.json";
     httpGetAsync(buildPath, function(response){
       var buildNumber = response.buildNumber;
+      contentName = encodeURIComponent(contentName);
       window.location.href = basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType + "&buildNumber=" + buildNumber;
     });
   }
