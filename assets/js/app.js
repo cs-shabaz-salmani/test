@@ -827,7 +827,7 @@ function getUrlParameter(sParam) {
 function httpGetHeaderInfo(theUrl, callback){
   http.onreadystatechange = function() { 
       if (http.readyState == 4 && http.status == 200) {
-        callback(http.getResponseHeader("Last-Modified"););
+        callback(http.getResponseHeader("Last-Modified"));
       }
   }
   http.open("GET", theUrl, true);
