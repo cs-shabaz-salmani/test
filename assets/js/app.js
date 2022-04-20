@@ -283,49 +283,64 @@ function resetAllCheckboxes(checkboxes){
 
 function init() {
   var contentHubPath = yumRepo + "content-hub/content-hub.json";
+  var allItemsJson;
   //Check headers last modified date
   httpGetHeaderInfo(contentHubPath, function(response) {
     console.log(response);
-    if (!localStorage.hasOwnProperty('allItemsJson')) {
+    if (!localStorage.hasOwnProperty('allItemsJsonlastModifiedDate')) {
+      localStorage.setItem('allItemsJsonlastModifiedDate', response);
+    } else {
+      var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
+    }
+    
+    if(allItemsJsonlastModifiedDate === response && localStorage.hasOwnProperty('allItemsJson'){
+      allItemsJson = localStorage.getItem('allItemsJson');
+      allItemsJson = JSON.parse(allItemsJson);
+      updateContentOnPageLoad(allItemsJson);
+    } else {
       http.open("GET", contentHubPath, false); // false for synchronous request
       http.send(null);
       var allItemsJsonResponse = http.responseText;
       localStorage.setItem('allItemsJson', allItemsJsonResponse);
+      allItemsJson = localStorage.getItem('allItemsJson');
+      allItemsJson = JSON.parse(allItemsJson);
+      updateContentOnPageLoad(allItemsJson);
     }
-    var allItemsJson = localStorage.getItem('allItemsJson');
-    allItemsJson = JSON.parse(allItemsJson);
-    var updatesList = [];
-    var updatesCount = 0;
-    _.each(allItemsJson, function (item) {
-      var today = new Date();
-      var priorDate = new Date(new Date().setDate(today.getDate() - 30));
-      var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
-      if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
-        updatesList.push(item);
-      }
-      updatesCount = updatesCount + 1;
-    });
-    var totalItems = allItemsJson.length;
-    listItems = allItemsJson;
-    listItemsBkp = listItems;
-    if (window.location.href.indexOf('list.html') === -1) {
-      getContentCount(listItemsBkp);
-      setTimeout(function () {
-        buildUpdatesAvailableList(updatesList);
-      }, 100);
-      buildHomePageBanners();
-    }
-    if (paramContentType && !searchContent) {
-      setTimeout(function () {
-        filterContentByParams(paramContentType, paramCategory, paramPublisher);
-      }, 1000);
-    } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
-      searchContentData(searchContent);
-    } else {
-      filterContent('all', true);
-    }
-    $("#totalContentCount").html(totalItems);
   });
+}
+
+function updateContentOnPageLoad(allItemsJson){
+  var updatesList = [];
+  var updatesCount = 0;
+  _.each(allItemsJson, function (item) {
+    var today = new Date();
+    var priorDate = new Date(new Date().setDate(today.getDate() - 30));
+    var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
+    if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
+      updatesList.push(item);
+    }
+    updatesCount = updatesCount + 1;
+  });
+  var totalItems = allItemsJson.length;
+  listItems = allItemsJson;
+  listItemsBkp = listItems;
+  if (window.location.href.indexOf('list.html') === -1) {
+    getContentCount(listItemsBkp);
+    setTimeout(function () {
+      buildUpdatesAvailableList(updatesList);
+    }, 100);
+    buildHomePageBanners();
+  }
+  if (paramContentType && !searchContent) {
+    setTimeout(function () {
+      filterContentByParams(paramContentType, paramCategory, paramPublisher);
+    }, 1000);
+  } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
+    searchContentData(searchContent);
+  } else {
+    filterContent('all', true);
+  }
+  $("#totalContentCount").html(totalItems);
 }
 
 var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
