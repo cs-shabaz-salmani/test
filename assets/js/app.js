@@ -844,7 +844,7 @@ function httpGetHeaderInfo(theUrl, callback){
   http.onreadystatechange = function() { 
       if (http.readyState == 4 && http.status == 200) {
         var lastModifiedDate = http.getResponseHeader("Last-Modified");
-        callback(lastModifiedDate);
+        return lastModifiedDate;
       }
   }
   http.open("GET", theUrl, false);
