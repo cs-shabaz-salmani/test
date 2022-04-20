@@ -841,12 +841,12 @@ function getUrlParameter(sParam) {
 };
 
 function httpGetHeaderInfo(theUrl, callback){
+  http.open('HEAD', theUrl);
   http.onreadystatechange = function() { 
       if (http.readyState == 4 && http.status == 200) {
         var lastModifiedDate = http.getResponseHeader("Last-Modified");
-        return lastModifiedDate;
+        callback(lastModifiedDate);
       }
   }
-  http.open("GET", theUrl, false);
-  http.send(null);
+  http.send();
 };
