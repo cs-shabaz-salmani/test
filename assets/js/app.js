@@ -1,5 +1,7 @@
 'use strict';
 
+const http = new XMLHttpRequest();
+
 var yumRepo = 'https://repo.fortisoar.fortinet.com/';
 var basePath = 'https://marketplace.cybersponse.com/';
 var listItems = [];
