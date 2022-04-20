@@ -21,14 +21,15 @@ var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name':
 $(document).ready(function () {
   var navBar = document.getElementById('sidebar');
   if (navBar) {
-    http.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
-    http.send(null);
-    navBar.innerHTML = http.responseText;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
+    xmlHttp.send(null);
+    navBar.innerHTML = xmlHttp.responseText;
 
     if (!localStorage.hasOwnProperty('allFiltersJson')) {
-      http.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
-      http.send(null);
-      var allFilterJsonResponse = http.responseText;
+      xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
+      xmlHttp.send(null);
+      var allFilterJsonResponse = xmlHttp.responseText;
       localStorage.setItem('allFiltersJson', allFilterJsonResponse);
     }
     var allFiltersJson = localStorage.getItem('allFiltersJson');
