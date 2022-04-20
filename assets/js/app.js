@@ -21,15 +21,14 @@ var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name':
 $(document).ready(function () {
   var navBar = document.getElementById('sidebar');
   if (navBar) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
-    xmlHttp.send(null);
-    navBar.innerHTML = xmlHttp.responseText;
+    http.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
+    http.send(null);
+    navBar.innerHTML = http.responseText;
 
     if (!localStorage.hasOwnProperty('allFiltersJson')) {
-      xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
-      xmlHttp.send(null);
-      var allFilterJsonResponse = xmlHttp.responseText;
+      http.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
+      http.send(null);
+      var allFilterJsonResponse = http.responseText;
       localStorage.setItem('allFiltersJson', allFilterJsonResponse);
     }
     var allFiltersJson = localStorage.getItem('allFiltersJson');
@@ -288,10 +287,9 @@ function init() {
   httpGetHeaderInfo(contentHubPath, function(response) {
     console.log(response);
     if (!localStorage.hasOwnProperty('allItemsJson')) {
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open("GET", contentHubPath, false); // false for synchronous request
-      xmlHttp.send(null);
-      var allItemsJsonResponse = xmlHttp.responseText;
+      http.open("GET", contentHubPath, false); // false for synchronous request
+      http.send(null);
+      var allItemsJsonResponse = http.responseText;
       localStorage.setItem('allItemsJson', allItemsJsonResponse);
     }
     var allItemsJson = localStorage.getItem('allItemsJson');
