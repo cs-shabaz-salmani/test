@@ -8,12 +8,12 @@
     "backgroundColorType": "dark"
   },
   {
-    "heading": "Featured - SOC Essentials Solution Pack",
+    "heading": "Featured - SOC Framework Pack",
     "subHeading": "A well-researched and community vetted solution pack to streamline and accelerate your SOC journey.",
     "description": "",
-    "hyperLink": "/detail.html?entity=socSimulator&version=1.0.1&type=solutionpack",
+    "hyperLink": "/detail.html?entity=sOARFramework&version=1.0.0&type=solutionpack",
     "imagePath": "assets/images/main_banner_2.png",
-    "hyperLinkText": "Explore SOC Essentials Pack",
+    "hyperLinkText": "Explore SOC Framework Pack",
     "backgroundColorType": "dark"
   },
   {
