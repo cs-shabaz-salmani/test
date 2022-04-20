@@ -276,11 +276,15 @@ function resetAllCheckboxes(checkboxes){
 }
 
 function init() {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
-  xmlHttp.send(null);
-  var allItemsJson = xmlHttp.responseText;
-  allItemsJson = JSON.parse(allItemsJson);
+  if (!localStorage.hasOwnProperty('allItemsJson')) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
+    xmlHttp.send(null);
+    var allItemsJsonResponse = xmlHttp.responseText;
+    allItemsJsonResponse = JSON.parse(allItemsJsonResponse);
+    localStorage.setItem('allItemsJson', allItemsJsonResponse);
+  }
+  var allItemsJson = localStorage.getItem('allItemsJson');
   var updatesList = [];
   var updatesCount = 0;
   _.each(allItemsJson, function (item) {
