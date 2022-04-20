@@ -845,6 +845,6 @@ function httpGetHeaderInfo(theUrl, callback){
         callback(http.getResponseHeader("Last-Modified"));
       }
   }
-  http.open("GET", theUrl, false);
+  http.open("GET", theUrl, true);
   http.send(null);
 };
