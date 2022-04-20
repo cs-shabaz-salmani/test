@@ -66,7 +66,7 @@
       if(detailInfo.publisher){
         document.getElementById("detail-publisher").innerHTML = (detailInfo.publisher == 'Fortinet' || detailInfo.publisher == 'Cybersponse') ? 'Fortinet' : detailInfo.publisher;
       } else {
-        $(".detail-properties").addClass('d-none');
+        $(".detail-publisher-properties").addClass('d-none');
       }
       document.getElementById("detail-description").innerHTML = detailInfo.description;
 
