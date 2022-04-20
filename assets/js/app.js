@@ -289,9 +289,8 @@ function init() {
     console.log(response);
     if (!localStorage.hasOwnProperty('allItemsJsonlastModifiedDate')) {
       localStorage.setItem('allItemsJsonlastModifiedDate', response);
-    } else {
-      var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     }
+    var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
     if(allItemsJsonlastModifiedDate === response && localStorage.hasOwnProperty('allItemsJson')){
       allItemsJson = localStorage.getItem('allItemsJson');
