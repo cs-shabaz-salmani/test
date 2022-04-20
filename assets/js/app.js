@@ -753,9 +753,10 @@ function buildCardHtml(listItem) {
     var itemPublisherText = document.createTextNode(listItem.publisher);
     itemPublisher.appendChild(itemPublisherText);
     itemDetailsDiv.appendChild(itemPublisher);
-    itemContentDiv.appendChild(itemDetailsDiv);
-    aTaglistItem.appendChild(itemContentDiv);
   }
+  
+  itemContentDiv.appendChild(itemDetailsDiv);
+  aTaglistItem.appendChild(itemContentDiv);
 
   var itemIconDiv = document.createElement('div');
   itemIconDiv.className = "mp-tile-image-container";
