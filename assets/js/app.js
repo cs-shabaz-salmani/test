@@ -281,46 +281,51 @@ function resetAllCheckboxes(checkboxes){
 }
 
 function init() {
-  if (!localStorage.hasOwnProperty('allItemsJson')) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
-    xmlHttp.send(null);
-    var allItemsJsonResponse = xmlHttp.responseText;
-    localStorage.setItem('allItemsJson', allItemsJsonResponse);
-  }
-  var allItemsJson = localStorage.getItem('allItemsJson');
-  allItemsJson = JSON.parse(allItemsJson);
-  var updatesList = [];
-  var updatesCount = 0;
-  _.each(allItemsJson, function (item) {
-    var today = new Date();
-    var priorDate = new Date(new Date().setDate(today.getDate() - 30));
-    var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
-    if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
-      updatesList.push(item);
+  var contentHubPath = yumRepo + "content-hub/content-hub.json";
+  //Check headers last modified date
+  httpGetHeaderInfo(contentHubPath, function(response) {
+    console.log(response);
+    if (!localStorage.hasOwnProperty('allItemsJson')) {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", contentHubPath, false); // false for synchronous request
+      xmlHttp.send(null);
+      var allItemsJsonResponse = xmlHttp.responseText;
+      localStorage.setItem('allItemsJson', allItemsJsonResponse);
     }
-    updatesCount = updatesCount + 1;
+    var allItemsJson = localStorage.getItem('allItemsJson');
+    allItemsJson = JSON.parse(allItemsJson);
+    var updatesList = [];
+    var updatesCount = 0;
+    _.each(allItemsJson, function (item) {
+      var today = new Date();
+      var priorDate = new Date(new Date().setDate(today.getDate() - 30));
+      var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
+      if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
+        updatesList.push(item);
+      }
+      updatesCount = updatesCount + 1;
+    });
+    var totalItems = allItemsJson.length;
+    listItems = allItemsJson;
+    listItemsBkp = listItems;
+    if (window.location.href.indexOf('list.html') === -1) {
+      getContentCount(listItemsBkp);
+      setTimeout(function () {
+        buildUpdatesAvailableList(updatesList);
+      }, 100);
+      buildHomePageBanners();
+    }
+    if (paramContentType && !searchContent) {
+      setTimeout(function () {
+        filterContentByParams(paramContentType, paramCategory, paramPublisher);
+      }, 1000);
+    } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
+      searchContentData(searchContent);
+    } else {
+      filterContent('all', true);
+    }
+    $("#totalContentCount").html(totalItems);
   });
-  var totalItems = allItemsJson.length;
-  listItems = allItemsJson;
-  listItemsBkp = listItems;
-  if (window.location.href.indexOf('list.html') === -1) {
-    getContentCount(listItemsBkp);
-    setTimeout(function () {
-      buildUpdatesAvailableList(updatesList);
-    }, 100);
-    buildHomePageBanners();
-  }
-  if (paramContentType && !searchContent) {
-    setTimeout(function () {
-      filterContentByParams(paramContentType, paramCategory, paramPublisher);
-    }, 1000);
-  } else if (window.location.href.indexOf('list.html') > -1 && searchContent) {
-    searchContentData(searchContent);
-  } else {
-    filterContent('all', true);
-  }
-  $("#totalContentCount").html(totalItems);
 }
 
 var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
@@ -817,4 +822,14 @@ function getUrlParameter(sParam) {
     }
   }
   return null;
+};
+
+function httpGetHeaderInfo(theUrl, callback){
+  http.onreadystatechange = function() { 
+      if (http.readyState == 4 && http.status == 200) {
+        callback(http.getResponseHeader("Last-Modified"););
+      }
+  }
+  http.open("GET", theUrl, true);
+  http.send(null);
 };
