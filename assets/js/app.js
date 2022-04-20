@@ -742,18 +742,20 @@ function buildCardHtml(listItem) {
   itemVersion.appendChild(itemVersionText);
   itemDetailsDiv.appendChild(itemVersion);
 
-  var itemPublisher = document.createElement('p');
-  itemPublisher.className = "m-0";
-  var itemPublisherTag = document.createElement('span');
-  itemPublisherTag.className = "text-black-50";
-  var itemPublisherTagText = document.createTextNode("Published By: ");
-  itemPublisherTag.appendChild(itemPublisherTagText);
-  itemPublisher.appendChild(itemPublisherTag);
-  var itemPublisherText = document.createTextNode(listItem.publisher);
-  itemPublisher.appendChild(itemPublisherText);
-  itemDetailsDiv.appendChild(itemPublisher);
-  itemContentDiv.appendChild(itemDetailsDiv);
-  aTaglistItem.appendChild(itemContentDiv);
+  if(listItem.publisher){
+    var itemPublisher = document.createElement('p');
+    itemPublisher.className = "m-0";
+    var itemPublisherTag = document.createElement('span');
+    itemPublisherTag.className = "text-black-50";
+    var itemPublisherTagText = document.createTextNode("Published By: ");
+    itemPublisherTag.appendChild(itemPublisherTagText);
+    itemPublisher.appendChild(itemPublisherTag);
+    var itemPublisherText = document.createTextNode(listItem.publisher);
+    itemPublisher.appendChild(itemPublisherText);
+    itemDetailsDiv.appendChild(itemPublisher);
+    itemContentDiv.appendChild(itemDetailsDiv);
+    aTaglistItem.appendChild(itemContentDiv);
+  }
 
   var itemIconDiv = document.createElement('div');
   itemIconDiv.className = "mp-tile-image-container";
