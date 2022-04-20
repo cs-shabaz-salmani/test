@@ -281,11 +281,11 @@ function init() {
     xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
     xmlHttp.send(null);
     var allItemsJsonResponse = xmlHttp.responseText;
-//     allItemsJsonResponse = JSON.stringify(allItemsJsonResponse);
+    allItemsJsonResponse = JSON.parse(allItemsJsonResponse);
     localStorage.setItem('allItemsJson', allItemsJsonResponse);
   }
   var allItemsJson = localStorage.getItem('allItemsJson');
-  allItemsJson = JSON.parse(allItemsJson);
+  allItemsJson = JSON.stringify(allItemsJson);
   var updatesList = [];
   var updatesCount = 0;
   _.each(allItemsJson, function (item) {
