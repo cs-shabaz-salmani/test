@@ -298,9 +298,10 @@ function init() {
       allItemsJson = JSON.parse(allItemsJson);
       updateContentOnPageLoad(allItemsJson);
     } else {
-      http.open("GET", contentHubPath, false); // false for synchronous request
-      http.send(null);
-      var allItemsJsonResponse = http.responseText;
+      var httpLoadContent = new XMLHttpRequest();
+      httpLoadContent.open("GET", contentHubPath, false); // false for synchronous request
+      httpLoadContent.send(null);
+      var allItemsJsonResponse = httpLoadContent.responseText;
       localStorage.setItem('allItemsJson', allItemsJsonResponse);
       allItemsJson = localStorage.getItem('allItemsJson');
       allItemsJson = JSON.parse(allItemsJson);
