@@ -193,7 +193,14 @@
   padding-left: 15px;
   max-height: 195px;
   overflow: auto;
-  -ms-overflow-style: auto;
+}
+
+.filter-list-input::-webkit-scrollbar {
+  width: 5px;
+}
+
+.filter-list-input::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .global-search-input-sm{
