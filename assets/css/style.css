@@ -192,7 +192,7 @@
 .filter-list-input {
   padding-left: 15px;
   max-height: 195px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .global-search-input-sm{
