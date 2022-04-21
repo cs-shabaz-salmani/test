@@ -266,7 +266,7 @@ function resetAllCheckboxes(checkboxes){
 }
 
 function init() {
-  var contentHubPath = yumRepo + "content-hub/content-hub.json";
+  var contentHubPath = yumRepo + "content-hub/content-hub-web.json";
   var allItemsJson;
   //Check headers last modified date
   httpGetHeaderInfo(contentHubPath, function(response) {
