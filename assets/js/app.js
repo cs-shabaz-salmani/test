@@ -732,7 +732,7 @@ function buildListData(listData) {
 function buildCardHtml(listItem) {
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
-  aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type + "&buildNumber=" + listItem.buildNumber;
+  aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
   aTaglistItem.className = "mp-tile-container mp-tile-" + listItem.type + "-container";
   aTaglistItem.setAttribute("title", listItem.label);
 
@@ -806,7 +806,7 @@ function buildCardHtml(listItem) {
 
   var cardDescription = document.createElement('p');
   cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
-  listItem.description = listItem.description ? listItem.description : 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...';
+  listItem.description = listItem.description ? listItem.description : '';
   var itemDescription = document.createTextNode(listItem.description.substring(0, 110) + '...');
   cardDescription.appendChild(itemDescription);
   aTaglistItem.appendChild(cardDescription);
