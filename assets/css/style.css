@@ -204,7 +204,9 @@
 }
 
 .filter-list-input::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #9b9999;
+  height: 7px;
+  border-radius: 10px;
 }
 
 .global-search-input-sm{
