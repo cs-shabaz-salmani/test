@@ -42,14 +42,15 @@
       if(detailInfo.availableVersions.length > 0){
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
-          var versionTag = document.createElement('li');
+          var versionTag = document.createElement('a');
           versionTag.className = "btn btn-link dropdown-item rounded-0";
-          var buildNumber = version === detailInfo.version ? detailInfo.buildNumber : "latest";
-          if(version !== detailInfo.version) {
-            versionTag.onclick = function(){
-              getBuildNumber(detailInfo.name, version, detailInfo.type);
-            };
-          }
+          versionTag.setAttribute("href", basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType);
+//           var buildNumber = version === detailInfo.version ? detailInfo.buildNumber : "latest";
+//           if(version !== detailInfo.version) {
+//             versionTag.onclick = function(){
+//               getBuildNumber(detailInfo.name, version, detailInfo.type);
+//             };
+//           }
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
           detailAvailableVersions.append(versionTag);
