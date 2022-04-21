@@ -85,7 +85,7 @@
         docLink = docLink.replace("/blob", "");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
-        docContent.setAttribute("no-shadow", "");
+//         docContent.setAttribute("no-shadow", "");
         document.getElementById("detail-docs-content").append(docContent);
         $('.item-github-content').removeClass('d-none');
         docLinkBlock.classList.add("d-block");
