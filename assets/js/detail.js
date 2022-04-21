@@ -78,7 +78,7 @@
       var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
-        docLink = docLink.replace("/blob", "");
+        docLink = docLink.replace("/blob/", "/");
         docLink = docLink.replace("/tree/", "/");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
