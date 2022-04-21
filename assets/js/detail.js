@@ -46,12 +46,6 @@
           versionTag.className = "btn btn-link dropdown-item rounded-0";
           versionTag.setAttribute("href", basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type);
           versionTag.setAttribute("target", "_self");
-//           var buildNumber = version === detailInfo.version ? detailInfo.buildNumber : "latest";
-//           if(version !== detailInfo.version) {
-//             versionTag.onclick = function(){
-//               getBuildNumber(detailInfo.name, version, detailInfo.type);
-//             };
-//           }
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
           detailAvailableVersions.append(versionTag);
@@ -153,15 +147,6 @@
     http.open("GET", theUrl, true);
     http.send(null);
   };
-
-  function getBuildNumber(contentName, contentVersion, contentType){
-    var buildPath = yumRepo + "/content-hub/" + contentName + "-" + contentVersion + "/build.json";
-    httpGetAsync(buildPath, function(response){
-      var buildNumber = response.buildNumber;
-      contentName = encodeURIComponent(contentName);
-      window.location.href = basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType + "&buildNumber=" + buildNumber;
-    });
-  }
 
   function navigateToContent(){
     window.location.href = "/list.html?contentType=all";
