@@ -203,6 +203,10 @@
   background: transparent;
 }
 
+.filter-list-input::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
 .global-search-input-sm{
   margin-left: 15px;
 }
