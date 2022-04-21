@@ -193,6 +193,7 @@
   padding-left: 15px;
   max-height: 195px;
   overflow: auto;
+  -ms-overflow-style: auto;
 }
 
 .global-search-input-sm{
