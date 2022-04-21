@@ -44,7 +44,7 @@
         _.each(detailInfo.availableVersions, function(version) {
           var versionTag = document.createElement('a');
           versionTag.className = "btn btn-link dropdown-item rounded-0";
-          versionTag.setAttribute("href", basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType);
+          versionTag.setAttribute("href", basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type);
 //           var buildNumber = version === detailInfo.version ? detailInfo.buildNumber : "latest";
 //           if(version !== detailInfo.version) {
 //             versionTag.onclick = function(){
