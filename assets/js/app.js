@@ -797,6 +797,7 @@ function buildCardHtml(listItem) {
     imageElement.className = "mp-tile-image";
     imageElement.src = yumRepo + listItem.iconLarge;
     imageElement.setAttribute("width", "85");
+    imageElement.setAttribute("height", "auto");
     imageElement.setAttribute("loading", "lazy");
   } else {
     imageElement = document.createElement('i');
