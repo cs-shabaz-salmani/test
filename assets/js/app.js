@@ -269,16 +269,19 @@ function init() {
   var contentHubPath = yumRepo + "content-hub/content-hub-web.json";
   var allItemsJson;
   //Check headers last modified date
-  httpGetHeaderInfo(contentHubPath, function(response) {
-    console.log(response);
-    localStorage.setItem('allItemsJsonlastModifiedDate', response);
+  httpGetHeaderInfo(contentHubPath, function(lastModifiedDate) {
+    console.log(lastModifiedDate);
+    if (!localStorage.hasOwnProperty('allItemsJsonlastModifiedDate')) {
+      localStorage.setItem('allItemsJsonlastModifiedDate', lastModifiedDate);
+    }
     var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
-    if(allItemsJsonlastModifiedDate === response && localStorage.hasOwnProperty('allItemsJson')){
+    if(allItemsJsonlastModifiedDate === lastModifiedDate && localStorage.hasOwnProperty('allItemsJson')){
       allItemsJson = localStorage.getItem('allItemsJson');
       allItemsJson = JSON.parse(allItemsJson);
       updateContentOnPageLoad(allItemsJson);
     } else {
+      localStorage.setItem('allItemsJsonlastModifiedDate', lastModifiedDate);
       var httpLoadContent = new XMLHttpRequest();
       httpLoadContent.open("GET", contentHubPath, false); // false for synchronous request
       httpLoadContent.send(null);
