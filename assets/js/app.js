@@ -279,7 +279,6 @@ function init() {
     if(localStorage.hasOwnProperty('allItemsJson')) {
       allItemsJson = localStorage.getItem('allItemsJson');
       allItemsJson = JSON.parse(allItemsJson);
-      allItemsJson = "";
     }
     
     if(allItemsJsonlastModifiedDate === lastModifiedDate && allItemsJson && allItemsJson.length > 0){
