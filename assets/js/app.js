@@ -276,9 +276,12 @@ function init() {
     }
     var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
-    if(allItemsJsonlastModifiedDate === lastModifiedDate && localStorage.hasOwnProperty('allItemsJson')){
+    if(localStorage.hasOwnProperty('allItemsJson') {
       allItemsJson = localStorage.getItem('allItemsJson');
       allItemsJson = JSON.parse(allItemsJson);
+    }
+    
+    if(allItemsJsonlastModifiedDate === lastModifiedDate && allItemsJson && allItemsJson.length > 0){
       updateContentOnPageLoad(allItemsJson);
     } else {
       localStorage.setItem('allItemsJsonlastModifiedDate', lastModifiedDate);
