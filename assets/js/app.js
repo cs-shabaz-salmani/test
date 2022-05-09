@@ -276,7 +276,7 @@ function init() {
     }
     var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
-    if(localStorage.hasOwnProperty('allItemsJson') {
+    if(localStorage.hasOwnProperty('allItemsJson')) {
       allItemsJson = localStorage.getItem('allItemsJson');
       allItemsJson = JSON.parse(allItemsJson);
     }
