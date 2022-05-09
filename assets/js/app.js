@@ -271,9 +271,7 @@ function init() {
   //Check headers last modified date
   httpGetHeaderInfo(contentHubPath, function(response) {
     console.log(response);
-    if (!localStorage.hasOwnProperty('allItemsJsonlastModifiedDate')) {
-      localStorage.setItem('allItemsJsonlastModifiedDate', response);
-    }
+    localStorage.setItem('allItemsJsonlastModifiedDate', response);
     var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
     if(allItemsJsonlastModifiedDate === response && localStorage.hasOwnProperty('allItemsJson')){
