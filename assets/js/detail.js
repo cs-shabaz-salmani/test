@@ -75,6 +75,7 @@
         document.getElementById("release-notes-block").classList.remove("d-none");
       }
       var docLink = detailInfo.help;
+      docLink = 'https://github.com/cs-abhishek-shukla/solution-pack-phishing-email-response/blob/develop/README.md';
       var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
