@@ -306,8 +306,8 @@ function updateContentOnPageLoad(allItemsJson){
     var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
     if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
       updatesList.push(item);
+      updatesCount = updatesCount + 1;
     }
-    updatesCount = updatesCount + 1;
   });
   var totalItems = allItemsJson.length;
   listItems = allItemsJson;
