@@ -45,6 +45,12 @@
   color: #ffffff !important; 
 }
 
+.custom-btn-xs {
+  padding: 0.175rem 0.35rem;
+  font-size: .8rem;
+  border-radius: 0.15rem;
+}
+
 .custom-search-alert {
   position: fixed !important;
   padding: 0px 10px !important;
@@ -79,6 +85,11 @@
   color: #ffffff;
 }
 
+.topbar-navlinks {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
 .top-breadcrumb {
   position: fixed;
   top: 55px;
@@ -110,6 +121,7 @@
   background: url(../images/main_banner_bg.png) no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 450px;
 }
 
 #latest-hub-updates{
