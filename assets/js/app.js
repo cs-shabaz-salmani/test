@@ -388,11 +388,11 @@ function getContentCount(listData) {
     }
   });
 
-  setTimeout(function () {
-    document.getElementById("solutionpack_category_count").innerHTML = solutionPackCount;
-    document.getElementById("widget_category_count").innerHTML = widgetCount;
-    document.getElementById("connector_category_count").innerHTML = connectorCount;
-  }, 1000);
+  // setTimeout(function () {
+  //   document.getElementById("solutionpack_category_count").innerHTML = solutionPackCount;
+  //   document.getElementById("widget_category_count").innerHTML = widgetCount;
+  //   document.getElementById("connector_category_count").innerHTML = connectorCount;
+  // }, 1000);
 }
 
 function applyFilter(item, value, filterType) {
@@ -401,7 +401,7 @@ function applyFilter(item, value, filterType) {
   var categoryParams;
   var publisherParams;
 
-  if (item.checked || item.className === 'category-link') {
+  if (item.checked || item.className === 'nav-link') {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(paramContentType, value, 'add', 'contentType');
       categoryParams = paramCategory;
