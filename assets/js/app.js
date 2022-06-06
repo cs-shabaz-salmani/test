@@ -20,6 +20,7 @@ var contentTypeList = [{ 'name': 'Connectors', 'value': 'connector' }, { 'name':
 
 $(document).ready(function () {
   var navBar = document.getElementById('sidebar');
+  //Sidebar on listing page
   if (navBar) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
@@ -55,14 +56,17 @@ $(document).ready(function () {
       buildFilterList('publisher');
     }, 1000);
   }
+  //Top nav bar
   var topbar = $('#topbar-container');
   if (topbar) {
     topbar.load('assets/html/topbar.html');
   }
+  //Footer
   var footer = $('#footer-container');
   if (footer) {
     footer.load('assets/html/footer.html');
   }
+  //Remove placeholder of search
   if ($(window).width() <= 450) {
     $('#searchText').removeAttr('placeholder');
   }
