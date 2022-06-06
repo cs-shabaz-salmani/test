@@ -10,6 +10,14 @@
   padding-right: 0px !important; 
 }
 
+.margin-left {
+  margin-left: 25px !important;
+}
+
+.margin-right {
+  margin-right: 25px !important;
+}
+
 .text-orange {
   color: #e45c08;
 }
