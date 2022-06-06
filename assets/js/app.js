@@ -55,6 +55,10 @@ $(document).ready(function () {
       buildFilterList('publisher');
     }, 1000);
   }
+  var topbar = $('#topbar-container');
+  if (topbar) {
+    topbar.load('assets/html/topbar.html');
+  }
   var footer = $('#footer-container');
   if (footer) {
     footer.load('assets/html/footer.html');
