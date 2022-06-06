@@ -80,8 +80,8 @@
 }
 
 .topbar-container h1 {
-  font-size: 30px;
-  padding: 10px 10px 10px 0px;
+  font-size: 28px;
+  padding: 8px 10px 8px 0px;
   color: #ffffff;
 }
 
@@ -349,7 +349,7 @@
 }
 
 .main.main-carousel-container {
-  margin-top: 55px !important; 
+  margin-top: 50px !important;
 }
 
 .main.item-detail-column {
