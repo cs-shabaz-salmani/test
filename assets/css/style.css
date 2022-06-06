@@ -90,6 +90,17 @@
   margin-top: 10px;
 }
 
+.topbar-navlinks ul.dropdown-menu {
+  inset: 12px auto auto 0px;
+  background-color: #282c31;
+}
+
+.topbar-navlinks ul.dropdown-menu .dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #c1c1c1;
+  font-size: 12px;
+}
+
 .top-breadcrumb {
   position: fixed;
   top: 55px;

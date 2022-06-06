@@ -5,10 +5,21 @@
     </a>
     <div class="pull-right topbar-navlinks">
         <ul class="d-inline-block text-light">
-            <li class="d-inline-block margin-right">Solution Packs</li>
-            <li class="d-inline-block margin-right">Connectors</li>
-            <li class="d-inline-block margin-right">Widgets</li>
-            <li class="d-inline-block margin-right">How To's</li>
+            <li class="nav-item d-inline-block margin-right">
+                <a class="nav-link" aria-current="page" href="/"><i class="fa fa-home"></i></a>
+            </li>
+            <li class="nav-item d-inline-block margin-right">
+                <a class="nav-link" aria-current="page" onclick="applyFilter(this, 'solutionpack', 'contentType')">Solution Packs</a>
+            </li>
+            <li class="nav-item d-inline-block margin-right">
+                <a class="nav-link" aria-current="page" onclick="applyFilter(this, 'connector', 'contentType')">Connectors</a>
+            </li>
+            <li class="nav-item d-inline-block margin-right">
+                <a class="nav-link" aria-current="page" onclick="applyFilter(this, 'widget', 'contentType')">Widgets</a>
+            </li>
+            <li class="nav-item d-inline-block margin-right">
+                <a class="nav-link" aria-current="page" onclick="applyFilter(this, 'howto', 'contentType')">How To's</a>
+            </li>
             <li class="d-inline-block nav-item dropdown margin-right">
                 <a class="dropdown-toggle nav-link p-0 text-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Product Docs
