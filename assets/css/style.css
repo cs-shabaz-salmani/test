@@ -150,7 +150,7 @@
 }
 
 #latest-hub-updates .mp-tile-container .mp-content-type-icon {
-  margin-right: 5px;
+  margin-right: 10px;
   margin-top: 1px;
   font-size: unset;
 }
@@ -176,6 +176,12 @@
 
 #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container {
   background: url(../images/solutionpack_bg.png) no-repeat;
+}
+
+#latest-hub-updates .mp-tile-container .mp-content-fixed-height .mp-tile-title {
+  font-size: 22px;
+  margin: 15px 0px 20px 0px;
+  max-height: 55px;
 }
 
 .sidebar #sidebar {
@@ -571,6 +577,13 @@
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-title, .mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
   font-size: 18px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  max-height: 45px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-details p, .mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
