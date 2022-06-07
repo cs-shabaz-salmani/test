@@ -140,8 +140,30 @@
 }
 
 #latest-hub-updates .mp-tile-container {
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
+  border-radius: 5px;
+  width: 31%;
+  margin: 2% 1% 0px 1%;
+  border: unset;
+  padding: 30px 25px;
+}
+
+#latest-hub-updates .mp-tile-container .mp-content-type-icon {
+  margin-right: 5px;
+  margin-top: 1px;
+  font-size: unset;
+}
+
+#latest-hub-updates .mp-tile-container .mp-content-type-icon .icon {
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+#latest-hub-updates .mp-tile-container .mp-content-type{
+  color: unset;
+  font-size: 14px;
 }
 
 #latest-hub-updates .mp-tile-container.mp-tile-widget-container {

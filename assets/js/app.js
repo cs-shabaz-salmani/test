@@ -706,8 +706,8 @@ function buildUpdatesAvailableList(listData) {
   _.each(listData, function (listItem) {
     var mpCard = buildCardHtml(listItem, 'updates');
 
-    var itemButton = document.createElement('span');
-    itemButton.className = "btn p-0 btn-link text-decoration-none";
+    var itemButton = document.createElement('button');
+    itemButton.className = "btn btn-outline-light";
     var itemButtonText = document.createTextNode("Learn More");
     itemButton.appendChild(itemButtonText);
     mpCard.appendChild(itemButton);
@@ -745,7 +745,7 @@ function buildCardHtml(listItem, mode) {
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
   aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
-  aTaglistItem.className = "mp-tile-container mp-tile-" + listItem.type + "-container";
+  aTaglistItem.className = mode !== 'updates' ? "mp-tile-container mp-tile-" + listItem.type + "-container text-light" : "mp-tile-container mp-tile-" + listItem.type + "-container";
   aTaglistItem.setAttribute("title", listItem.label);
 
   var itemIconSpan = document.createElement('span');
@@ -776,7 +776,9 @@ function buildCardHtml(listItem, mode) {
   var itemVersion = document.createElement('p');
   itemVersion.className = "m-0";
   var itemVersionTag = document.createElement('span');
-  itemVersionTag.className = "text-black-50";
+  if(mode !== 'updates') {
+    itemVersionTag.className = "text-black-50";
+  }
   var itemVersionTagText = document.createTextNode("Version: ");
   itemVersionTag.appendChild(itemVersionTagText);
   itemVersion.appendChild(itemVersionTag);
@@ -788,7 +790,9 @@ function buildCardHtml(listItem, mode) {
     var itemPublisher = document.createElement('p');
     itemPublisher.className = "m-0";
     var itemPublisherTag = document.createElement('span');
-    itemPublisherTag.className = "text-black-50";
+    if(mode !== 'updates') {
+      itemPublisherTag.className = "text-black-50";
+    }
     var itemPublisherTagText = document.createTextNode("Published By: ");
     itemPublisherTag.appendChild(itemPublisherTagText);
     itemPublisher.appendChild(itemPublisherTag);
