@@ -628,7 +628,7 @@ function buildHomePageBanners() {
     carouselSubHeading.appendChild(carouselSubHeadingText);
 
     var carouselHyperLink = document.createElement('a');
-    carouselHyperLink.href = updateBanner.hyperLink;
+    carouselHyperLink.href = announcementBanner.hyperLink;
     carouselHyperLink.className = "pull-left text-center btn-link";
     carouselHyperLink.setAttribute("target", "_blank");
     carouselHyperLink.setAttribute("rel", "canonical");
