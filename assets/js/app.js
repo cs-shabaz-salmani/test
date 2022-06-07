@@ -601,44 +601,44 @@ function buildHomePageBanners() {
   //Announcement banner
   _.each(bannersJson.announcementBanner, function (announcementBanner, index) {
 
-    var carouselDiv = document.createElement('div');
-    carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+    var announcementCarouselDiv = document.createElement('div');
+    announcementCarouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
 
-    var carouselRow = document.createElement('div');
-    carouselRow.className = "row";
-    carouselDiv.appendChild(carouselRow);
+    var announcementCarouselRow = document.createElement('div');
+    announcementCarouselRow.className = "row";
+    announcementCarouselDiv.appendChild(announcementCarouselRow);
 
-    var carouselColumn = document.createElement('div');
-    carouselColumn.className = "col-auto carousel-col";
-    carouselRow.appendChild(carouselColumn);
+    var announcementCarouselColumn = document.createElement('div');
+    announcementCarouselColumn.className = "custom-left-offset-1 custom-right-offset-1";
+    announcementCarouselRow.appendChild(announcementCarouselColumn);
 
-    var carouselContent = document.createElement('div');
-    carouselContent.className = "d-flex";
+    var announcementContent = document.createElement('div');
+    announcementContent.className = "d-flex";
 
-    var carouselHeading = document.createElement('h3');
-    carouselContent.appendChild(carouselHeading);
+    var announcementHeading = document.createElement('h3');
+    announcementContent.appendChild(announcementHeading);
 
-    var carouselHeadingText = document.createTextNode(announcementBanner.heading);
-    carouselHeading.appendChild(carouselHeadingText);
+    var announcementHeadingText = document.createTextNode(announcementBanner.heading);
+    announcementHeading.appendChild(announcementHeadingText);
 
-    var carouselSubHeading = document.createElement('p');
-    carouselContent.appendChild(carouselSubHeading);
+    var announcementSubHeading = document.createElement('p');
+    announcementContent.appendChild(announcementSubHeading);
 
-    var carouselSubHeadingText = document.createTextNode(announcementBanner.subHeading);
-    carouselSubHeading.appendChild(carouselSubHeadingText);
+    var announcementSubHeadingText = document.createTextNode(announcementBanner.subHeading);
+    announcementSubHeading.appendChild(announcementSubHeadingText);
 
-    var carouselHyperLink = document.createElement('a');
-    carouselHyperLink.href = announcementBanner.hyperLink;
-    carouselHyperLink.className = "pull-left text-center btn-link";
-    carouselHyperLink.setAttribute("target", "_blank");
-    carouselHyperLink.setAttribute("rel", "canonical");
-    var carouselHyperLinkText = document.createTextNode(announcementBanner.hyperLinkText);
-    carouselHyperLink.appendChild(carouselHyperLinkText);
-    carouselContent.appendChild(carouselHyperLink);
+    var announcementHyperLink = document.createElement('a');
+    announcementHyperLink.href = announcementBanner.hyperLink;
+    announcementHyperLink.className = "pull-left text-center btn-link";
+    announcementHyperLink.setAttribute("target", "_blank");
+    announcementHyperLink.setAttribute("rel", "canonical");
+    var announcementHyperLinkText = document.createTextNode(announcementBanner.hyperLinkText);
+    announcementHyperLink.appendChild(announcementHyperLinkText);
+    announcementContent.appendChild(announcementHyperLink);
 
-    carouselColumn.appendChild(carouselContent);
+    announcementCarouselColumn.appendChild(announcementContent);
 
-    announcementsBanner.append(carouselDiv);
+    announcementsBanner.append(announcementCarouselDiv);
   });
 
   //Main Banner

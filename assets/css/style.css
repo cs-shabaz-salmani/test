@@ -272,7 +272,8 @@
   font-weight: 700;
 }
 
-.global-search-input, .filter-search-input {
+.global-search-input,
+.filter-search-input {
   position: relative;
   width: 25%;
   margin-top: 10px;
@@ -306,13 +307,15 @@
   margin-left: 15px;
 }
 
-.global-search-input .form-control, .filter-search-input .form-control {
+.global-search-input .form-control,
+.filter-search-input .form-control {
   height: 38px;
   font-size: 14px;
   padding-right: 35px;
 }
 
-.global-search-input .searchIcon, .filter-search-input .searchIcon {
+.global-search-input .searchIcon,
+.filter-search-input .searchIcon {
   position: absolute;
   top: 11px;
   right: 15px;
@@ -466,7 +469,8 @@
   color: #ffffff;
 }
 
-.main .carousel .carousel-control-prev-icon, .main .carousel .carousel-control-next-icon {
+.main .carousel .carousel-control-prev-icon,
+.main .carousel .carousel-control-next-icon {
   background-image: none;
   color: #000;
   font: normal normal normal 14px/1 FontAwesome;
@@ -550,35 +554,64 @@
   font-size: 20px;
 }
 
-.icon-connector-type, .icon-connector-border, .icon-connector, .icon-connector-large, .mp-tile-connector-container .btn-link {
+.icon-connector-type,
+.icon-connector-border,
+.icon-connector,
+.icon-connector-large,
+.mp-tile-connector-container .btn-link {
   color: #00a3ff;
 }
 
-.icon-widget-type, .icon-widget-border, .icon-widget, .icon-widget-large, .mp-tile-widget-container .btn-link {
+.icon-widget-type,
+.icon-widget-border,
+.icon-widget,
+.icon-widget-large,
+.mp-tile-widget-container .btn-link {
   color: #6e7dff;
 }
 
-.icon-solutionpack-type, .icon-solutionpack-border, .icon-solutionpack, .icon-solutionpack-large, .mp-tile-solutionpack-container .btn-link {
+.icon-solutionpack-type,
+.icon-solutionpack-border,
+.icon-solutionpack,
+.icon-solutionpack-large,
+.mp-tile-solutionpack-container .btn-link {
   color: #ff4751;
 }
 
-.icon-playbook-type, .icon-playbook-border, .icon-playbook, .icon-playbook-large, .mp-tile-playbook-container .btn-link {
+.icon-playbook-type,
+.icon-playbook-border,
+.icon-playbook,
+.icon-playbook-large,
+.mp-tile-playbook-container .btn-link {
   color: #57d388;
 }
 
-.icon-report-type, .icon-report-border, .icon-report, .icon-report-large, .mp-tile-report-container .btn-link {
+.icon-report-type,
+.icon-report-border,
+.icon-report,
+.icon-report-large,
+.mp-tile-report-container .btn-link {
   color: #a57ffe;
 }
 
-.icon-dashboard-type, .icon-dashboard-border, .icon-dashboard, .icon-dashboard-large, .mp-tile-dashboard-container .btn-link {
+.icon-dashboard-type,
+.icon-dashboard-border,
+.icon-dashboard,
+.icon-dashboard-large,
+.mp-tile-dashboard-container .btn-link {
   color: #feb800;
 }
 
-.icon-howtovideos-type, .icon-howtovideos-border, .icon-howtovideos, .icon-howtovideos-large, .mp-tile-howtovideos-container .btn-link {
+.icon-howtovideos-type,
+.icon-howtovideos-border,
+.icon-howtovideos,
+.icon-howtovideos-large,
+.mp-tile-howtovideos-container .btn-link {
   color: #41c9d7;
 }
 
-.mp-tile-container .mp-content-type, .mp-update-tile-container .mp-content-type {
+.mp-tile-container .mp-content-type,
+.mp-update-tile-container .mp-content-type {
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -587,7 +620,8 @@
   min-height: 107px;
 }
 
-.mp-tile-container .mp-content-fixed-height .mp-tile-title, .mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
+.mp-tile-container .mp-content-fixed-height .mp-tile-title,
+.mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
   font-size: 18px;
   letter-spacing: 1px;
   overflow: hidden;
@@ -598,12 +632,14 @@
   -webkit-box-orient: vertical;
 }
 
-.mp-tile-container .mp-content-fixed-height .mp-tile-details p, .mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
+.mp-tile-container .mp-content-fixed-height .mp-tile-details p,
+.mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
   font-size: 12px;
   opacity: 75%;
 }
 
-.mp-tile-container .mp-tile-image-container, .mp-update-tile-container .mp-tile-image-container {
+.mp-tile-container .mp-tile-image-container,
+.mp-update-tile-container .mp-tile-image-container {
   margin: 10px 0px;
   height: 85px;
 }
@@ -1043,7 +1079,7 @@ footer ul.links li:not(:last-child) a{
 }
 
 #product-updates-slider {
-  background-color: #f5f8f9;
+  background-color: #000000;
   padding-top: 5px;
 }
 
