@@ -592,10 +592,54 @@ function searchContentData(match) {
 
 function buildHomePageBanners() {
   var mainBanner = $("#main-carousel-content");
+  var announcementsBanner = $("#carousel-announcement-content");
   var updatesBanner = $("#carousel-product-updates-content");
   var mainBannerIndicator = $("#main-carousel-indicators");
   var bannersJson = $.getJSON({ 'url': "assets/banners.json", 'async': false });
   bannersJson = JSON.parse(bannersJson.responseText);
+
+  //Announcement banner
+  _.each(bannersJson.announcementBanner, function (announcementBanner, index) {
+
+    var carouselDiv = document.createElement('div');
+    carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+
+    var carouselRow = document.createElement('div');
+    carouselRow.className = "row";
+    carouselDiv.appendChild(carouselRow);
+
+    var carouselColumn = document.createElement('div');
+    carouselColumn.className = "col-auto carousel-col";
+    carouselRow.appendChild(carouselColumn);
+
+    var carouselContent = document.createElement('div');
+    carouselContent.className = "d-flex";
+
+    var carouselHeading = document.createElement('h3');
+    carouselContent.appendChild(carouselHeading);
+
+    var carouselHeadingText = document.createTextNode(announcementBanner.heading);
+    carouselHeading.appendChild(carouselHeadingText);
+
+    var carouselSubHeading = document.createElement('p');
+    carouselContent.appendChild(carouselSubHeading);
+
+    var carouselSubHeadingText = document.createTextNode(announcementBanner.subHeading);
+    carouselSubHeading.appendChild(carouselSubHeadingText);
+
+    var carouselHyperLink = document.createElement('a');
+    carouselHyperLink.href = updateBanner.hyperLink;
+    carouselHyperLink.className = "pull-left text-center btn-link";
+    carouselHyperLink.setAttribute("target", "_blank");
+    carouselHyperLink.setAttribute("rel", "canonical");
+    var carouselHyperLinkText = document.createTextNode(announcementBanner.hyperLinkText);
+    carouselHyperLink.appendChild(carouselHyperLinkText);
+    carouselContent.appendChild(carouselHyperLink);
+
+    carouselColumn.appendChild(carouselContent);
+
+    announcementsBanner.append(carouselDiv);
+  });
 
   //Main Banner
   _.each(bannersJson.mainBanner, function (banner, index) {

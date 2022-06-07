@@ -135,6 +135,18 @@
   min-height: 450px;
 }
 
+#carouselAnnoucements {
+  background: rgba(0,0,0,0.5);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 150px;
+}
+
 #latest-hub-updates{
   text-align: center;
 }
