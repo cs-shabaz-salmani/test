@@ -436,6 +436,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
+  width: 50%;
 }
 
 .main #main-carousel-content .carousel .carousel-inner .carousel-item .carousel-col {
@@ -1445,7 +1446,8 @@ footer ul.links li:not(:last-child) a{
       padding-bottom: 10px;
     }
     
-    #carouselProductUpdates .carousel-control-prev, #carouselProductUpdates .carousel-control-next {
+    #carouselProductUpdates .carousel-control-prev,
+    #carouselProductUpdates .carousel-control-next {
       display: none; 
     }
     
