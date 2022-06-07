@@ -704,7 +704,7 @@ function buildHomePageBanners() {
 function buildUpdatesAvailableList(listData) {
   var marketPlaceUpdates = $("#latest-hub-updates");
   _.each(listData, function (listItem) {
-    var mpCard = buildCardHtml(listItem);
+    var mpCard = buildCardHtml(listItem, 'updates');
 
     var itemButton = document.createElement('span');
     itemButton.className = "btn p-0 btn-link text-decoration-none";
@@ -741,7 +741,7 @@ function buildListData(listData) {
   });
 }
 
-function buildCardHtml(listItem) {
+function buildCardHtml(listItem, mode) {
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
   aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
@@ -800,24 +800,26 @@ function buildCardHtml(listItem) {
   itemContentDiv.appendChild(itemDetailsDiv);
   aTaglistItem.appendChild(itemContentDiv);
 
-  var itemIconDiv = document.createElement('div');
-  itemIconDiv.className = "mp-tile-image-container";
+  if(mode !== 'updates') {
+    var itemIconDiv = document.createElement('div');
+    itemIconDiv.className = "mp-tile-image-container";
 
-  var imageElement;
-  if (listItem.iconLarge) {
-    imageElement = document.createElement('img');
-    imageElement.className = "mp-tile-image";
-    imageElement.src = yumRepo + listItem.iconLarge;
-    imageElement.setAttribute("width", "85");
-    imageElement.setAttribute("height", "auto");
-    imageElement.setAttribute("loading", "lazy");
-  } else {
-    imageElement = document.createElement('i');
-    imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+    var imageElement;
+    if (listItem.iconLarge) {
+      imageElement = document.createElement('img');
+      imageElement.className = "mp-tile-image";
+      imageElement.src = yumRepo + listItem.iconLarge;
+      imageElement.setAttribute("width", "85");
+      imageElement.setAttribute("height", "auto");
+      imageElement.setAttribute("loading", "lazy");
+    } else {
+      imageElement = document.createElement('i');
+      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+    }
+
+    itemIconDiv.appendChild(imageElement);
+    aTaglistItem.appendChild(itemIconDiv);
   }
-
-  itemIconDiv.appendChild(imageElement);
-  aTaglistItem.appendChild(itemIconDiv);
 
   var cardDescription = document.createElement('p');
   cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class

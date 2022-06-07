@@ -46,9 +46,9 @@
 }
 
 .custom-btn-xs {
-  padding: 0.175rem 0.35rem;
-  font-size: .8rem;
-  border-radius: 0.15rem;
+  padding: 0.175rem 0.35rem !important;
+  font-size: .8rem !important;
+  border-radius: 0.15rem !important;
 }
 
 .custom-search-alert {
