@@ -768,6 +768,15 @@
   border-color: #000000;
 }
 
+#main-carousel-content {
+  position: absolute;
+  background: #191c20;
+  top: -100px;
+  z-index: 11;
+  padding: 30px 10px;
+  border-radius: 4px;
+}
+
 .main-carousel-container .carousel-indicators {
   right: unset !important;
   left: 0px !important;
@@ -858,6 +867,7 @@
 .latest-updates-suggestions-content {
   background: #000000;
   padding-bottom: 40px;
+  padding-top: 210px;
 }
 
 .latest-updates-suggestions-content .nav.nav-tabs .nav-item {
