@@ -139,6 +139,23 @@
   text-align: center;
 }
 
+#latest-hub-updates .mp-tile-container {
+  background-position: center;
+  background-size: cover;
+}
+
+#latest-hub-updates .mp-tile-container.mp-tile-widget-container {
+  background: url(../images/widget_bg.png) no-repeat;
+}
+
+#latest-hub-updates .mp-tile-container.mp-tile-connector-container {
+  background: url(../images/connector_bg.png) no-repeat;
+}
+
+#latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container {
+  background: url(../images/solutionpack_bg.png) no-repeat;
+}
+
 .sidebar #sidebar {
   position: fixed;
   top: 97px;
