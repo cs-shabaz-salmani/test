@@ -436,7 +436,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
-  width: 50%;
 }
 
 .main #main-carousel-content .carousel .carousel-inner .carousel-item .carousel-col {
@@ -776,6 +775,7 @@
   z-index: 11;
   padding: 30px 10px;
   border-radius: 4px;
+  width: 50%;
 }
 
 .main-carousel-container .carousel-indicators {
