@@ -562,7 +562,6 @@
 
 .mp-tile-container .mp-content-type, .mp-update-tile-container .mp-content-type {
   text-transform: uppercase;
-  color: #000000;
   font-size: 12px;
 }
 
@@ -571,12 +570,10 @@
 }
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-title, .mp-update-tile-container .mp-content-fixed-height .mp-tile-title {
-  color: #585858;
   font-size: 18px;
 }
 
 .mp-tile-container .mp-content-fixed-height .mp-tile-details p, .mp-update-tile-container .mp-content-fixed-height .mp-tile-details p {
-  color: #000000;
   font-size: 12px;
   opacity: 75%;
 }
