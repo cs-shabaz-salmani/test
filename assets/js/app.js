@@ -344,7 +344,7 @@ function updateContentOnPageLoad(allItemsJson){
       $('.main-page-content').removeClass('d-none');
       mainPageLoader.addClass('d-none');
     }, 1200);
-    $('#carouselExampleCaptions').carousel({ interval: 5000 });
+    $('#carouselMain').carousel({ interval: 5000 });
     $('#carouselProductUpdates').carousel({ interval: 10000 });
   }
   
@@ -647,7 +647,7 @@ function buildHomePageBanners() {
     carouselIndicatorButton.className = index === 0 ? "active" : "";
     var carouselId = "carouselMainCaptions" + index;
     carouselIndicatorButton.setAttribute("type", "button");
-    carouselIndicatorButton.setAttribute("data-bs-target", "#carouselExampleCaptions");
+    carouselIndicatorButton.setAttribute("data-bs-target", "#carouselMain");
     carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
     carouselIndicatorButton.setAttribute("aria-label", banner.heading);
 
