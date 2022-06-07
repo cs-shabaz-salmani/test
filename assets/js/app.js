@@ -745,7 +745,7 @@ function buildCardHtml(listItem, mode) {
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
   aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
-  aTaglistItem.className = mode !== 'updates' ? "mp-tile-container mp-tile-" + listItem.type + "-container text-light" : "mp-tile-container mp-tile-" + listItem.type + "-container";
+  aTaglistItem.className = mode === 'updates' ? "mp-tile-container mp-tile-" + listItem.type + "-container text-light" : "mp-tile-container mp-tile-" + listItem.type + "-container";
   aTaglistItem.setAttribute("title", listItem.label);
 
   var itemIconSpan = document.createElement('span');
