@@ -303,6 +303,10 @@ function init() {
       updateContentOnPageLoad(allItemsJson);
     }
   });
+
+  setTimeout(function () {
+    $('#topbar-home-link').addClass('d-none');
+  }, 1200);
 }
 
 function updateContentOnPageLoad(allItemsJson){
@@ -321,7 +325,6 @@ function updateContentOnPageLoad(allItemsJson){
   listItems = allItemsJson;
   listItemsBkp = listItems;
   if (window.location.href.indexOf('list.html') === -1) {
-    getContentCount(listItemsBkp);
     setTimeout(function () {
       buildUpdatesAvailableList(updatesList);
     }, 100);
@@ -360,39 +363,6 @@ var initLoad = window.location.href.indexOf('connect.html') > -1 || window.locat
 
 if (!initLoad) {
   init();
-}
-
-function getContentCount(listData) {
-  var solutionPackCount = 0;
-  var connectorCount = 0;
-  var widgetCount = 0;
-  var reportCount = 0;
-  var dashboardCount = 0;
-  var howToVideosCount = 0;
-  var playbookCount = 0;
-  _.each(listData, function (listItem) {
-    if (listItem.type === 'solutionpack') {
-      solutionPackCount = solutionPackCount + 1;
-    } else if (listItem.type === 'widget') {
-      widgetCount = widgetCount + 1;
-    } else if (listItem.type === 'connector') {
-      connectorCount = connectorCount + 1;
-    } else if (listItem.type === 'dashboard') {
-      dashboardCount = dashboardCount + 1;
-    } else if (listItem.type === 'report') {
-      reportCount = reportCount + 1;
-    } else if (listItem.type === 'how_to_videos') {
-      howToVideosCount = howToVideosCount + 1;
-    } else if (listItem.type === 'playbook') {
-      playbookCount = playbookCount + 1;
-    }
-  });
-
-  // setTimeout(function () {
-  //   document.getElementById("solutionpack_category_count").innerHTML = solutionPackCount;
-  //   document.getElementById("widget_category_count").innerHTML = widgetCount;
-  //   document.getElementById("connector_category_count").innerHTML = connectorCount;
-  // }, 1000);
 }
 
 function applyFilter(item, value, filterType) {
