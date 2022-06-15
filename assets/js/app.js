@@ -719,13 +719,6 @@ function buildUpdatesAvailableList(listData) {
   var marketPlaceUpdates = $("#latest-hub-updates");
   _.each(listData, function (listItem) {
     var mpCard = buildCardHtml(listItem, 'updates');
-
-    var itemButton = document.createElement('button');
-    itemButton.className = "btn btn-outline-light";
-    var itemButtonText = document.createTextNode("Learn More");
-    itemButton.appendChild(itemButtonText);
-    $(mpCard).find('.mp-tile-container').appendChild(itemButton);
-
     marketPlaceUpdates.append(mpCard);
   });
 }
@@ -853,7 +846,13 @@ function buildCardHtml(listItem, mode) {
   var itemDescription = document.createTextNode(listItem.description.substring(0, 110) + '...');
   cardDescription.appendChild(itemDescription);
   aTaglistItem.appendChild(cardDescription);
+
   if(mode === 'updates'){
+    var itemButton = document.createElement('button');
+    itemButton.className = "btn btn-outline-light";
+    var itemButtonText = document.createTextNode("Learn More");
+    itemButton.appendChild(itemButtonText);
+    aTaglistItem.appendChild(itemButton);
     divTaglistItem.appendChild(aTaglistItem);
     return divColTaglistItem;
   } else {
