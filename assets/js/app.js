@@ -641,14 +641,14 @@ function buildHomePageBanners() {
     carouselRow.appendChild(carouselColumn);
 
     var carouselHeading = document.createElement('h1');
-    carouselHeading.className = banner.backgroundColorType;
+    carouselHeading.className = banner.backgroundColorType + " fs-2";
     carouselColumn.appendChild(carouselHeading);
 
     var carouselHeadingText = document.createTextNode(banner.heading);
     carouselHeading.appendChild(carouselHeadingText);
 
     var carouselSubHeading = document.createElement('p');
-    carouselSubHeading.className = banner.backgroundColorType;
+    carouselSubHeading.className = banner.backgroundColorType + " fs-6";
     carouselColumn.appendChild(carouselSubHeading);
 
     var carouselSubHeadingText = document.createTextNode(banner.subHeading);
