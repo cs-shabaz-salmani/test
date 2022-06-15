@@ -586,12 +586,14 @@ function buildHomePageBanners() {
     announcementContent.className = "d-flex justify-content-center";
 
     var announcementHeading = document.createElement('h6');
+    announcementHeading.className = "lh-base mb-0 me-1";
     announcementContent.appendChild(announcementHeading);
 
-    var announcementHeadingText = document.createTextNode(announcementBanner.heading + ': ');
+    var announcementHeadingText = document.createTextNode(announcementBanner.heading + ':');
     announcementHeading.appendChild(announcementHeadingText);
 
     var announcementSubHeading = document.createElement('p');
+    announcementSubHeading.className = "fw-lighter mb-0 me-3";
     announcementContent.appendChild(announcementSubHeading);
 
     var announcementSubHeadingText = document.createTextNode(announcementBanner.subHeading);
