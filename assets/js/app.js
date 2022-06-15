@@ -751,9 +751,9 @@ function buildUpdatesCarousel(mpCards, index){
   carouselRow.appendChild(carouselColumn);
 
   _.each(mpCards, function (mpCard) {
-    carouselColumn.appendChild(mpCard);
+    carouselColumn.append(mpCard.innerHTML);
   });
-  
+
   return carouselDiv;
 }
 
