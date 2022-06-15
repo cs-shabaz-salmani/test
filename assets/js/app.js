@@ -726,12 +726,11 @@ function buildUpdatesAvailableList(listData) {
   _.each(listData, function (listItem) {
 
     var mpCard = buildCardHtml(listItem, 'updates');
-    carouselCards.push(mpCard, carouselIndex);
+    carouselCards.push(mpCard);
     itemIndex = itemIndex + 1;
 
-    if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6) {
-      carouselDiv = buildUpdatesCarousel(carouselCards);
-      itemIndex = 0;
+    if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6 || itemIndex === listData.length) {
+      carouselDiv = buildUpdatesCarousel(carouselCards, carouselIndex);
       marketPlaceUpdates.append(carouselDiv);
     }
 
@@ -746,12 +745,8 @@ function buildUpdatesCarousel(mpCards, index){
   carouselRow.className = "row";
   carouselDiv.appendChild(carouselRow);
 
-  var carouselColumn = document.createElement('div');
-  carouselColumn.className = "carousel-col";
-  carouselRow.appendChild(carouselColumn);
-
   _.each(mpCards, function (mpCard) {
-    carouselColumn.append(mpCard.innerHTML);
+    carouselRow.append(mpCard);
   });
 
   return carouselDiv;
