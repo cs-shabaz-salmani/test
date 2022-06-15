@@ -572,7 +572,7 @@ function buildHomePageBanners() {
   _.each(bannersJson.announcementBanner, function (announcementBanner, index) {
 
     var announcementCarouselDiv = document.createElement('div');
-    announcementCarouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+    announcementCarouselDiv.className = index === 0 ? "carousel-item active text-light" : "carousel-item text-light";
 
     var announcementCarouselRow = document.createElement('div');
     announcementCarouselRow.className = "row";
@@ -585,7 +585,7 @@ function buildHomePageBanners() {
     var announcementContent = document.createElement('div');
     announcementContent.className = "d-flex";
 
-    var announcementHeading = document.createElement('h3');
+    var announcementHeading = document.createElement('h5');
     announcementContent.appendChild(announcementHeading);
 
     var announcementHeadingText = document.createTextNode(announcementBanner.heading);
