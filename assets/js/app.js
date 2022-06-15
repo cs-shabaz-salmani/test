@@ -316,7 +316,7 @@ function updateContentOnPageLoad(allItemsJson){
     var today = new Date();
     var priorDate = new Date(new Date().setDate(today.getDate() - 30));
     var last30DaysTimeStamp = Math.floor(priorDate.getTime() / 1000);
-    if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 10) {
+    if (item.publishedDate >= last30DaysTimeStamp && updatesCount < 18) {
       updatesList.push(item);
       updatesCount = updatesCount + 1;
     }
@@ -730,6 +730,7 @@ function buildUpdatesAvailableList(listData) {
     itemIndex = itemIndex + 1;
 
     if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6 || itemIndex === listData.length) {
+      carouselIndex = carouselIndex + 1;
       carouselDiv = buildUpdatesCarousel(carouselCards, carouselIndex);
       marketPlaceUpdates.append(carouselDiv);
     }
