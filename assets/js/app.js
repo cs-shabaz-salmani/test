@@ -841,9 +841,9 @@ function buildCardHtml(listItem, mode) {
   }
 
   var cardDescription = document.createElement('p');
-  cardDescription.className = "card-description mp-tile-description muted-80"; //remove card-description class
+  cardDescription.className = "mp-tile-description muted-80";
   listItem.description = listItem.description ? listItem.description : '';
-  var itemDescription = document.createTextNode(listItem.description.substring(0, 110) + '...');
+  var itemDescription = document.createTextNode(listItem.description);
   cardDescription.appendChild(itemDescription);
   aTaglistItem.appendChild(cardDescription);
 
