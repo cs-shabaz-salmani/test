@@ -729,7 +729,7 @@ function buildUpdatesAvailableList(listData) {
     carouselCards.push(mpCard);
     itemIndex = itemIndex + 1;
 
-    if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6 || itemIndex === 12 || itemIndex === 18 || itemIndex === listData.length) {
+    if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6 || itemIndex === listData.length) {
       carouselDiv = buildUpdatesCarousel(carouselCards, carouselIndex);
       marketPlaceUpdates.append(carouselDiv);
       carouselIndex = carouselIndex + 1;
