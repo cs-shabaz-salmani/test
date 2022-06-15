@@ -583,9 +583,9 @@ function buildHomePageBanners() {
     announcementCarouselRow.appendChild(announcementCarouselColumn);
 
     var announcementContent = document.createElement('div');
-    announcementContent.className = "d-flex";
+    announcementContent.className = "d-flex justify-content-center";
 
-    var announcementHeading = document.createElement('h5');
+    var announcementHeading = document.createElement('h6');
     announcementContent.appendChild(announcementHeading);
 
     var announcementHeadingText = document.createTextNode(announcementBanner.heading + ': ');
