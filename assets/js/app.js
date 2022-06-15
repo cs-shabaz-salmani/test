@@ -740,11 +740,23 @@ function buildUpdatesAvailableList(listData) {
 }
 
 function buildUpdatesCarousel(mpCards, index){
+  var mainBannerIndicator = $("#latest-updates-carousel-indicators");
+  var carouselIndicatorButton = document.createElement('button');
+  carouselIndicatorButton.className = index === 0 ? "active" : "";
+  var carouselId = "carouselUpdatesCaptions" + index;
+  carouselIndicatorButton.setAttribute("type", "button");
+  carouselIndicatorButton.setAttribute("data-bs-target", "#carouselUpdates");
+  carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
+  carouselIndicatorButton.setAttribute("aria-label", banner.heading);
+
+  mainBannerIndicator.append(carouselIndicatorButton);
+
   var carouselDiv = document.createElement('div');
   carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
 
   var carouselRow = document.createElement('div');
   carouselRow.className = "row";
+  carouselRow.setAttribute("id", carouselId);
   carouselDiv.appendChild(carouselRow);
 
   _.each(mpCards, function (mpCard) {
