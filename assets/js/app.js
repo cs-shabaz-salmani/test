@@ -733,6 +733,7 @@ function buildUpdatesAvailableList(listData) {
       carouselDiv = buildUpdatesCarousel(carouselCards, carouselIndex);
       marketPlaceUpdates.append(carouselDiv);
       carouselIndex = carouselIndex + 1;
+      carouselCards = [];
     }
 
   });
