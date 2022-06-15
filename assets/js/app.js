@@ -732,9 +732,9 @@ function buildUpdatesAvailableList(listData) {
     if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6) {
       carouselDiv = buildUpdatesCarousel(carouselCards);
       itemIndex = 0;
+      marketPlaceUpdates.append(carouselDiv);
     }
 
-    marketPlaceUpdates.append(carouselDiv);
   });
 }
 
