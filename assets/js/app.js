@@ -749,8 +749,11 @@ function buildUpdatesCarousel(mpCards, index){
   var carouselColumn = document.createElement('div');
   carouselColumn.className = "carousel-col";
   carouselRow.appendChild(carouselColumn);
-  carouselColumn.appendChild(mpCards);
-  carouselDiv.appendChild(carouselColumn);
+
+  _.each(mpCards, function (mpCard) {
+    carouselColumn.appendChild(mpCard);
+  });
+  
   return carouselDiv;
 }
 
