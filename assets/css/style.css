@@ -146,14 +146,29 @@ body {
 
 #carouselAnnoucements {
   background: rgba(0,0,0,0.5);
-  width: 50%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 150px;
+  top: 120px;
+  border-radius: 5px;
+}
+
+#carouselAnnoucements .carousel-control-next,
+#carouselAnnoucements .carousel-control-prev {
+  width: 50px;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+#carouselAnnoucements .carousel-control-prev-icon,
+#carouselAnnoucements .carousel-control-next-icon {
+  color: #ffffff;
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 #latest-hub-updates{

@@ -583,7 +583,7 @@ function buildHomePageBanners() {
     announcementCarouselRow.appendChild(announcementCarouselColumn);
 
     var announcementContent = document.createElement('div');
-    announcementContent.className = "d-flex justify-content-center";
+    announcementContent.className = "d-flex justify-content-center mb-1 mt-1";
 
     var announcementHeading = document.createElement('h6');
     announcementHeading.className = "lh-base mb-0 me-1";
@@ -593,7 +593,7 @@ function buildHomePageBanners() {
     announcementHeading.appendChild(announcementHeadingText);
 
     var announcementSubHeading = document.createElement('p');
-    announcementSubHeading.className = "fw-lighter mb-0 me-3";
+    announcementSubHeading.className = "fw-light mb-0 me-3";
     announcementContent.appendChild(announcementSubHeading);
 
     var announcementSubHeadingText = document.createTextNode(announcementBanner.subHeading);
