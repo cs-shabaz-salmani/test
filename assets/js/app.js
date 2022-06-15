@@ -724,7 +724,7 @@ function buildUpdatesAvailableList(listData) {
     itemButton.className = "btn btn-outline-light";
     var itemButtonText = document.createTextNode("Learn More");
     itemButton.appendChild(itemButtonText);
-    mpCard.appendChild(itemButton);
+    mpCard.find('.mp-tile-container').appendChild(itemButton);
 
     marketPlaceUpdates.append(mpCard);
   });
@@ -855,7 +855,7 @@ function buildCardHtml(listItem, mode) {
   aTaglistItem.appendChild(cardDescription);
   if(mode === 'updates'){
     divTaglistItem.appendChild(aTaglistItem);
-    return divTaglistItem;
+    return divColTaglistItem;
   } else {
     return aTaglistItem;
   }
