@@ -741,21 +741,21 @@ function buildUpdatesAvailableList(listData) {
 
 function buildUpdatesCarousel(mpCards, index){
   var latestUpdatesIndicator = $("#latest-updates-carousel-indicators");
-  var carouselIndicatorButton = document.createElement('button');
-  carouselIndicatorButton.className = index === 0 ? "active" : "";
-  var carouselId = "carouselUpdatesCaptions" + index;
-  carouselIndicatorButton.setAttribute("type", "button");
-  carouselIndicatorButton.setAttribute("data-bs-target", "#carouselUpdates");
-  carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
+  var latestUpdatesIndicatorButton = document.createElement('button');
+  latestUpdatesIndicatorButton.className = index === 0 ? "active" : "";
+  var latestUpdatesId = "carouselUpdatesCaptions" + index;
+  latestUpdatesIndicatorButton.setAttribute("type", "button");
+  latestUpdatesIndicatorButton.setAttribute("data-bs-target", "#carouselUpdates");
+  latestUpdatesIndicatorButton.setAttribute("data-bs-slide-to", index);
 
-  latestUpdatesIndicator.append(carouselIndicatorButton);
+  latestUpdatesIndicator.append(latestUpdatesIndicatorButton);
 
   var carouselDiv = document.createElement('div');
   carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
 
   var carouselRow = document.createElement('div');
   carouselRow.className = "row";
-  carouselRow.setAttribute("id", carouselId);
+  carouselRow.setAttribute("id", latestUpdatesId);
   carouselDiv.appendChild(carouselRow);
 
   _.each(mpCards, function (mpCard) {
