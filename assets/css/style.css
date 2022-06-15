@@ -10,11 +10,11 @@
   padding-right: 0px !important; 
 }
 
-.margin-left {
+.margin-left-25px {
   margin-left: 25px !important;
 }
 
-.margin-right {
+.margin-right-25px {
   margin-right: 25px !important;
 }
 
@@ -488,7 +488,7 @@
 }
 
 .main .content {
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
 .product-updates-container {
@@ -496,7 +496,7 @@
 }
 
 .product-updates-content {
-  padding: 0px 15px; 
+  padding: 0px 15px;
 }
 
 .product-updates-content .product-updates-image {

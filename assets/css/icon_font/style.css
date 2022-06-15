@@ -118,3 +118,18 @@
 .icon-solutionpack-large:before {
   content: "\e923";
 }
+.icon-subscribe:before {
+  content: "\e924";
+}
+.icon-light-mode:before {
+  content: "\e925";
+}
+.icon-home:before {
+  content: "\e926";
+}
+.icon-dark-mode:before {
+  content: "\e927";
+}
+.icon-accessibility:before {
+  content: "\e928";
+}
