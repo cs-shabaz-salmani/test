@@ -588,7 +588,7 @@ function buildHomePageBanners() {
     var announcementHeading = document.createElement('h5');
     announcementContent.appendChild(announcementHeading);
 
-    var announcementHeadingText = document.createTextNode(announcementBanner.heading);
+    var announcementHeadingText = document.createTextNode(announcementBanner.heading + ': ');
     announcementHeading.appendChild(announcementHeadingText);
 
     var announcementSubHeading = document.createElement('p');
@@ -756,6 +756,11 @@ function buildListData(listData) {
 }
 
 function buildCardHtml(listItem, mode) {
+  if(mode === 'updates') {
+    var divTaglistItem = document.createElement('div');
+    divTaglistItem.className = "col-md-4";
+  }
+
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
   aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
@@ -845,7 +850,12 @@ function buildCardHtml(listItem, mode) {
   var itemDescription = document.createTextNode(listItem.description.substring(0, 110) + '...');
   cardDescription.appendChild(itemDescription);
   aTaglistItem.appendChild(cardDescription);
-  return aTaglistItem;
+  if(mode === 'updates'){
+    divTaglistItem.appendChild(aTaglistItem);
+    return divTaglistItem;
+  } else {
+    return aTaglistItem;
+  }
 }
 
 function toggleFilter(e) {
