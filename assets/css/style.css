@@ -1074,7 +1074,9 @@ footer ul.links li:not(:last-child) a{
 
 .build-it-yourself-icon {
   background: url("../images/build_it_yourself_icon.png") no-repeat;
-  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  background-position: right;
 }
 
 .page-loading .center {

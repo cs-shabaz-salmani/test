@@ -718,11 +718,39 @@ function buildHomePageBanners() {
 }
 
 function buildUpdatesAvailableList(listData) {
+  var carouselCards = [];
+  var carouselDiv;
+  var itemIndex = 0;
   var marketPlaceUpdates = $("#latest-hub-updates");
   _.each(listData, function (listItem) {
+
     var mpCard = buildCardHtml(listItem, 'updates');
-    marketPlaceUpdates.append(mpCard);
+    carouselCards.push(mpCard);
+    itemIndex = itemIndex + 1;
+
+    if((listData.length < 6 && itemIndex === listData.length) || itemIndex === 6) {
+      carouselDiv = buildUpdatesCarousel(carouselCards);
+      itemIndex = 0;
+    }
   });
+
+  marketPlaceUpdates.append(carouselDiv);
+}
+
+function buildUpdatesCarousel(mpCards){
+  var carouselDiv = document.createElement('div');
+  carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+
+  var carouselRow = document.createElement('div');
+  carouselRow.className = "row";
+  carouselDiv.appendChild(carouselRow);
+
+  var carouselColumn = document.createElement('div');
+  carouselColumn.className = "carousel-col";
+  carouselRow.appendChild(carouselColumn);
+  carouselColumn.appendChild(mpCards);
+  carouselDiv.appendChild(carouselColumn);
+  return carouselDiv;
 }
 
 function buildListData(listData) {
