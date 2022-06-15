@@ -757,14 +757,17 @@ function buildListData(listData) {
 
 function buildCardHtml(listItem, mode) {
   if(mode === 'updates') {
+    var divColTaglistItem = document.createElement('div');
+    divColTaglistItem.className = "col-md-4";
     var divTaglistItem = document.createElement('div');
-    divTaglistItem.className = "col-md-4";
+    divTaglistItem.className = "mp-tile-container mp-tile-" + listItem.type + "-container";
+    divColTaglistItem.appendChild(divTaglistItem);
   }
 
   var aTaglistItem = document.createElement('a');
   var entityName = encodeURIComponent(listItem.name);
   aTaglistItem.href = basePath + "detail.html?entity=" + entityName + "&version=" + listItem.version + "&type=" + listItem.type;
-  aTaglistItem.className = mode === 'updates' ? "mp-tile-container mp-tile-" + listItem.type + "-container text-light" : "mp-tile-container mp-tile-" + listItem.type + "-container";
+  aTaglistItem.className = mode === 'updates' ? "text-light text-decoration-none" : "mp-tile-container mp-tile-" + listItem.type + "-container";
   aTaglistItem.setAttribute("title", listItem.label);
 
   var itemIconSpan = document.createElement('span');
