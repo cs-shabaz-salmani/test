@@ -849,7 +849,7 @@ function buildCardHtml(listItem, mode) {
 
   if(mode === 'updates'){
     var itemButton = document.createElement('button');
-    itemButton.className = "btn btn-outline-light";
+    itemButton.className = "btn btn-outline-light mt-3";
     var itemButtonText = document.createTextNode("Learn More");
     itemButton.appendChild(itemButtonText);
     aTaglistItem.appendChild(itemButton);
