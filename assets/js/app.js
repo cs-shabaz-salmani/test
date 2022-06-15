@@ -724,7 +724,7 @@ function buildUpdatesAvailableList(listData) {
     itemButton.className = "btn btn-outline-light";
     var itemButtonText = document.createTextNode("Learn More");
     itemButton.appendChild(itemButtonText);
-    mpCard.find('.mp-tile-container').appendChild(itemButton);
+    $(mpCard).find('.mp-tile-container').appendChild(itemButton);
 
     marketPlaceUpdates.append(mpCard);
   });
