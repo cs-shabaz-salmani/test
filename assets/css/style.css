@@ -171,6 +171,7 @@ body {
   margin-top: 10px;
 }
 
+
 #latest-hub-updates{
   text-align: center;
 }
@@ -796,7 +797,7 @@ body {
   border-color: #000000;
 }
 
-#main-carousel-content {
+.main-carousel-content {
   position: absolute;
   background: #191c20;
   top: -100px;
@@ -804,6 +805,14 @@ body {
   padding: 30px 10px;
   border-radius: 4px;
   width: 50%;
+}
+
+#main-carousel-indicators {
+  right: 0px !important;
+  margin-left: 0px !important;
+  z-index: 12;
+  left: unset !important;
+  bottom: 0px !important;
 }
 
 .main-carousel-container .carousel-indicators {
