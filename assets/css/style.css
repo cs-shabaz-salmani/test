@@ -29,6 +29,11 @@
 .wrapper {
   width: 100%;
   overflow-x: hidden;
+  background-color: #000000;
+}
+
+.wrapper.light-theme {
+  background-color: #ffffff;
 }
 
 .custom-left-offset-1 {
