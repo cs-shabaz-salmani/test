@@ -729,7 +729,7 @@ function buildUpdatesAvailableList(listData) {
     carouselCards.push(mpCard);
     itemIndex = itemIndex + 1;
 
-    if((listData.length < 6 && itemIndex === listData.length) || (carouselIndex === 0 && itemIndex === 6) || (carouselIndex === 1 && itemIndex <= 12 && itemIndex > 6) || (carouselIndex === 2 && itemIndex <= 18 && itemIndex > 12)) {
+    if((listData.length < 6 && itemIndex === listData.length) || (carouselIndex === 0 && itemIndex === 6) || (carouselIndex === 1 && itemIndex <= 12 && itemIndex > 6 && itemIndex === (listData.length - 6)) || (carouselIndex === 2 && itemIndex <= 18 && itemIndex > 12  && itemIndex === (listData.length - 12))) {
       carouselDiv = buildUpdatesCarousel(carouselCards, carouselIndex);
       marketPlaceUpdates.append(carouselDiv);
       carouselIndex = carouselIndex + 1;
