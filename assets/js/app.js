@@ -731,6 +731,7 @@ function buildProductUpdatesCard(updateBanner){
 }
 
 function buildProductUpdatesCarousel(updateBannerCards, index) {
+  var mainBannerIndicator = $("#product-carousel-indicators");
   var carouselIndicatorButton = document.createElement('button');
   carouselIndicatorButton.className = index === 0 ? "active" : "";
   var carouselId = "carouselUpdatesCaptions" + index;
