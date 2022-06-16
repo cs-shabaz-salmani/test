@@ -117,7 +117,7 @@ body {
   right: 0px;
   z-index: 1;
   border-bottom: 1px solid #ececec;
-  background: #ffffff;
+  background: #000000;
   padding-top: 5px;
 }
 
@@ -227,7 +227,7 @@ body {
   left: 8.3333%;
   right: 70%;
   bottom: 0px;
-  background: #ffff;
+  background: #191c20;
   border-right: 1px solid #dfdede;
   border-left: 1px solid #dfdede;
 }
@@ -437,7 +437,7 @@ body {
 }
 
 .all-list-container {
-  background: #f9f9f9;
+  background: #000000;
 }
 
 .all-list-container .main {
@@ -553,7 +553,7 @@ body {
 
 .mp-tile-container {
   width: 255px;
-  background: #ffffff;
+  background: #191c20;
   margin: 20px 10px 0px 10px;
   border-radius: 10px;
   border: 1px solid #e2e2e2;
