@@ -848,12 +848,14 @@ function buildCardHtml(listItem, mode) {
   aTaglistItem.className = mode === 'updates' ? "text-light text-decoration-none" : "text-light mp-tile-container mp-tile-" + listItem.type + "-container";
   aTaglistItem.setAttribute("title", listItem.label);
 
-  var itemIconSpan = document.createElement('span');
-  itemIconSpan.className = "mp-content-type-icon pull-left";
-  var itemIcon = document.createElement('i');
-  itemIcon.className = "icon-" + listItem.type + "-type icon";
-  itemIconSpan.appendChild(itemIcon);
-  aTaglistItem.appendChild(itemIconSpan);
+  if(mode === 'updates') {
+    var itemIconSpan = document.createElement('span');
+    itemIconSpan.className = "mp-content-type-icon pull-left";
+    var itemIcon = document.createElement('i');
+    itemIcon.className = "icon-" + listItem.type + "-type icon";
+    itemIconSpan.appendChild(itemIcon);
+    aTaglistItem.appendChild(itemIconSpan);
+  }
 
   var itemType = document.createElement('p');
   itemType.className = "mp-content-type d-inline-block";
@@ -898,9 +900,6 @@ function buildCardHtml(listItem, mode) {
   var itemVersion = document.createElement('p');
   itemVersion.className = "m-0";
   var itemVersionTag = document.createElement('span');
-  if(mode !== 'updates') {
-    itemVersionTag.className = "text-black-50";
-  }
   var itemVersionTagText = document.createTextNode("Version: ");
   itemVersionTag.appendChild(itemVersionTagText);
   itemVersion.appendChild(itemVersionTag);
@@ -912,9 +911,6 @@ function buildCardHtml(listItem, mode) {
     var itemPublisher = document.createElement('p');
     itemPublisher.className = "m-0";
     var itemPublisherTag = document.createElement('span');
-    if(mode !== 'updates') {
-      itemPublisherTag.className = "text-black-50";
-    }
     var itemPublisherTagText = document.createTextNode("Published By: ");
     itemPublisherTag.appendChild(itemPublisherTagText);
     itemPublisher.appendChild(itemPublisherTag);
