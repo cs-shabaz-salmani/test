@@ -669,52 +669,96 @@ function buildHomePageBanners() {
   });
 
   //Updates banner
-  _.each(bannersJson.updatesBanner, function (updateBanner, index) {
+  var updatesCarouselCards = [];
+  var updatesCarouselDiv;
+  var updatesItemIndex = 0;
+  var updatesCarouselIndex = 0;
+  _.each(bannersJson.updatesBanner, function (updateBanner) {
 
-    var carouselDiv = document.createElement('div');
-    carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+    var updateBannerCard = buildProductUpdatesCard(updateBanner);
+    updatesCarouselCards.push(updateBannerCard);
+    updatesItemIndex = updatesItemIndex + 1;
 
-    var carouselRow = document.createElement('div');
-    carouselRow.className = "row";
-    carouselDiv.appendChild(carouselRow);
-
-    var carouselColumn = document.createElement('div');
-    carouselColumn.className = "col-auto carousel-col";
-    carouselRow.appendChild(carouselColumn);
-
-    var itemIconDiv = document.createElement('span');
-    itemIconDiv.className = "d-inline-block item-image";
-    itemIconDiv.style.backgroundImage = "url(" + updateBanner.imagePath + ")";
-    carouselColumn.appendChild(itemIconDiv);
-
-    var carouselContent = document.createElement('div');
-    carouselContent.className = "d-inline-block";
-
-    var carouselHeading = document.createElement('h3');
-    carouselContent.appendChild(carouselHeading);
-
-    var carouselHeadingText = document.createTextNode(updateBanner.heading);
-    carouselHeading.appendChild(carouselHeadingText);
-
-    var carouselSubHeading = document.createElement('p');
-    carouselContent.appendChild(carouselSubHeading);
-
-    var carouselSubHeadingText = document.createTextNode(updateBanner.subHeading);
-    carouselSubHeading.appendChild(carouselSubHeadingText);
-
-    var carouselHyperLink = document.createElement('a');
-    carouselHyperLink.href = updateBanner.hyperLink;
-    carouselHyperLink.className = "pull-left text-center btn-link";
-    carouselHyperLink.setAttribute("target", "_blank");
-    carouselHyperLink.setAttribute("rel", "canonical");
-    var carouselHyperLinkText = document.createTextNode(updateBanner.hyperLinkText);
-    carouselHyperLink.appendChild(carouselHyperLinkText);
-    carouselContent.appendChild(carouselHyperLink);
-
-    carouselColumn.appendChild(carouselContent);
-
-    updatesBanner.append(carouselDiv);
+    if((bannersJson.updatesBanner.length < 4 && updatesItemIndex === bannersJson.updatesBanner.length) || (updatesCarouselIndex === 0 && updatesItemIndex === 4) || (((updatesItemIndex/4) === updatesCarouselIndex * updatesItemIndex))) {
+      updatesCarouselDiv = buildProductUpdatesCarousel(updatesCarouselCards, updatesCarouselIndex);
+      updatesBanner.append(updatesCarouselDiv);
+      updatesCarouselIndex = updatesCarouselIndex + 1;
+      updatesCarouselCards = [];
+    }
   });
+}
+
+function buildProductUpdatesCard(updateBanner){
+
+  var carouselBlock = document.createElement('div');
+  carouselBlock.className = "col-md-3";
+
+  var carouselHyperLink = document.createElement('a');
+  carouselHyperLink.href = updateBanner.hyperLink;
+  carouselHyperLink.className = "pull-left text-center btn-link";
+  carouselHyperLink.setAttribute("target", "_blank");
+  carouselHyperLink.setAttribute("rel", "canonical");
+  carouselBlock.appendChild(carouselHyperLink);
+
+  var itemIconDiv = document.createElement('div');
+  itemIconDiv.className = "item-image";
+  itemIconDiv.style.backgroundImage = "url(" + updateBanner.imagePath + ")";
+  carouselHyperLink.appendChild(itemIconDiv);
+
+  var carouselContent = document.createElement('div');
+
+  var carouselSubHeading = document.createElement('h6');
+  carouselContent.appendChild(carouselSubHeading);
+
+  var carouselSubHeadingText = document.createTextNode(updateBanner.subHeading);
+  carouselSubHeading.appendChild(carouselSubHeadingText);
+
+  var carouselHeading = document.createElement('h3');
+  carouselContent.appendChild(carouselHeading);
+
+  var carouselHeadingText = document.createTextNode(updateBanner.heading);
+  carouselHeading.appendChild(carouselHeadingText);
+
+  var carouselDescription = document.createElement('p');
+  carouselContent.appendChild(carouselDescription);
+
+  var carouselDescriptionText = document.createTextNode(updateBanner.subHeading);
+  carouselDescription.appendChild(carouselDescriptionText);
+
+  carouselHyperLink.appendChild(carouselContent);
+
+  return carouselBlock;
+}
+
+function buildProductUpdatesCarousel(updateBannerCards, index) {
+  var carouselIndicatorButton = document.createElement('button');
+  carouselIndicatorButton.className = index === 0 ? "active" : "";
+  var carouselId = "carouselUpdatesCaptions" + index;
+  carouselIndicatorButton.setAttribute("type", "button");
+  carouselIndicatorButton.setAttribute("data-bs-target", "#carouselUpdates");
+  carouselIndicatorButton.setAttribute("data-bs-slide-to", index);
+  carouselIndicatorButton.setAttribute("aria-label", "Product Updates Section" + index);
+
+  mainBannerIndicator.append(carouselIndicatorButton);
+
+  var carouselDiv = document.createElement('div');
+  carouselDiv.className = index === 0 ? "carousel-item active" : "carousel-item";
+
+  var carouselRow = document.createElement('div');
+  carouselRow.setAttribute("id", carouselId);
+  carouselRow.className = "row";
+  carouselDiv.appendChild(carouselRow);
+
+  var carouselColumn = document.createElement('div');
+  carouselColumn.className = "carousel-col";
+  carouselRow.appendChild(carouselColumn);
+
+
+  _.each(updateBannerCards, function (updateBannerCard) {
+    carouselColumn.append(updateBannerCard);
+  });
+
+  return carouselDiv;
 }
 
 function buildUpdatesAvailableList(listData) {
