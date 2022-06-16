@@ -39,7 +39,7 @@
     "subHeading": "FortiSOAR helps to streamline your SOC and empowering it to orchestrate and automate accelerated and informed threat responses.",
     "description": "",
     "hyperLink": "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/fortisoar.pdf",
-    "imagePath": "",
+    "imagePath": "/assets/images/product_updates.png",
     "hyperLinkText": "View Data Sheet"
   },
   {
@@ -47,7 +47,7 @@
     "subHeading": "Well curated and updated technical help and FAQs available for your reference.",
     "description": "",
     "hyperLink": "https://community.fortinet.com/t5/forums/searchpage/tab/message?searchString=fortisoar&from=0&sortby=post_time&orderBy=desc&pageNo=1&aggregations=%5B%5D&uid=8021d0dd-1517-11ec-b3e2-0242ac12000d&resultsPerPage=10&exactPhrase=&withOneOrMore=&withoutTheWords=&pageSize=10&language=en&state=2&suCaseCreate=false",
-    "imagePath": "",
+    "imagePath": "/assets/images/product_updates.png",
     "hyperLinkText": "Explore FAQs"
   },
   {
@@ -55,7 +55,7 @@
     "subHeading": "Participate in community discussions, request a feature, tune in to product updates and much more",
     "description": "",
     "hyperLink": "https://fusecommunity.fortinet.com/groups/community-home?CommunityKey=9f1420e8-e3c6-4535-8cae-3fa714da66d8",
-    "imagePath": "",
+    "imagePath": "/assets/images/product_updates.png",
     "hyperLinkText": "Explore Community"
   }],
  "announcementBanner": [{
