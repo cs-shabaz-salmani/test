@@ -706,7 +706,7 @@ function buildProductUpdatesCard(updateBanner){
   carouselHyperLink.appendChild(itemIconDiv);
 
   var carouselContent = document.createElement('div');
-  itemIconDiv.className = "update-item-details";
+  carouselContent.className = "update-item-details";
 
   var carouselSubHeading = document.createElement('h6');
   carouselContent.appendChild(carouselSubHeading);
