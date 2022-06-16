@@ -678,8 +678,7 @@ function buildHomePageBanners() {
     var updateBannerCard = buildProductUpdatesCard(updateBanner);
     updatesCarouselCards.push(updateBannerCard);
     updatesItemIndex = updatesItemIndex + 1;
-    console.log(updatesCarouselIndex * updatesItemIndex);
-    console.log(updatesItemIndex/4);
+    
     if((bannersJson.updatesBanner.length < 4 && updatesItemIndex === bannersJson.updatesBanner.length) || (updatesCarouselIndex === 0 && updatesItemIndex === 4) || ((((updatesItemIndex/4) - 1) === updatesCarouselIndex)) || (bannersJson.updatesBanner.length === updatesItemIndex)) {
       updatesCarouselDiv = buildProductUpdatesCarousel(updatesCarouselCards, updatesCarouselIndex);
       updatesBanner.append(updatesCarouselDiv);

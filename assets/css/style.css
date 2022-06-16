@@ -182,7 +182,7 @@ body {
   border-radius: 5px;
   width: 100%;
   margin: 1em 0em;
-  border: none;
+  border: 1px solid transparent;
   padding: 30px 25px;
 }
 
@@ -565,8 +565,8 @@ body {
 }
 
 .mp-tile-container:hover {
-  border-color: #73c5f9;
-  box-shadow: 1px 1px 3px #e2e1e1;
+  border: #18435f;
+  box-shadow: none;
 }
 
 .mp-tile-container .mp-content-type-icon {
