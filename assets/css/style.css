@@ -1154,7 +1154,8 @@ footer ul.links li:not(:last-child) a{
 }
 
 #carouselProductUpdates {
-  margin: 30px 0px 100px 0px;
+  margin: 30px 0px 0px 0px;
+  padding-bottom: 60px;
 }
 
 #carouselProductUpdates .carousel-item {
