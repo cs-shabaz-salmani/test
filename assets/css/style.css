@@ -826,8 +826,8 @@ body {
 
 .main-carousel-container .carousel-indicators [data-bs-target] {
   flex: unset !important;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   margin-top: 3px;
   margin-bottom: 3px;
   text-indent: unset !important;
