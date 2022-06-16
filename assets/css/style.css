@@ -825,20 +825,23 @@ body {
 }
 
 .main-carousel-container .carousel-indicators [data-bs-target] {
-  box-sizing: unset !important;
   flex: unset !important;
   width: 10px;
   height: 10px;
   margin-top: 3px;
   margin-bottom: 3px;
   text-indent: unset !important;
-  background-color: #30a8f4;
+  background-color: transparent;
   background-clip: unset !important;
-  border: 0px solid #30a8f4;
-  border-top: unset !important;
-  border-bottom: unset !important;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   margin-right: 10px;
+  opacity: 1 !important;
+}
+
+.main-carousel-container .carousel-indicators .active {
+  background-color: #ffffff;
+  opacity: 1 !important;
 }
 
 .category-title {
