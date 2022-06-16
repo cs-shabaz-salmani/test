@@ -706,6 +706,7 @@ function buildProductUpdatesCard(updateBanner){
   carouselHyperLink.appendChild(itemIconDiv);
 
   var carouselContent = document.createElement('div');
+  itemIconDiv.className = "update-item-details";
 
   var carouselSubHeading = document.createElement('h6');
   carouselContent.appendChild(carouselSubHeading);
@@ -722,7 +723,7 @@ function buildProductUpdatesCard(updateBanner){
   var carouselDescription = document.createElement('p');
   carouselContent.appendChild(carouselDescription);
 
-  var carouselDescriptionText = document.createTextNode(updateBanner.subHeading);
+  var carouselDescriptionText = document.createTextNode(updateBanner.description);
   carouselDescription.appendChild(carouselDescriptionText);
 
   carouselHyperLink.appendChild(carouselContent);
@@ -751,7 +752,7 @@ function buildProductUpdatesCarousel(updateBannerCards, index) {
   carouselDiv.appendChild(carouselRow);
 
   _.each(updateBannerCards, function (updateBannerCard) {
-    carouselDiv.append(updateBannerCard);
+    carouselRow.append(updateBannerCard);
   });
 
   return carouselDiv;
