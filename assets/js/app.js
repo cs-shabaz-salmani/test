@@ -371,7 +371,7 @@ function applyFilter(item, value, filterType) {
   var categoryParams;
   var publisherParams;
 
-  if (item.checked || item.className === 'nav-link') {
+  if (item.checked || item.className === 'nav-link' || item.className === 'nav-link text-light') {
     if (filterType === 'contentType') {
       contentTypeParams = updateFilterParams(paramContentType, value, 'add', 'contentType');
       categoryParams = paramCategory;
