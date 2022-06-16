@@ -695,7 +695,7 @@ function buildProductUpdatesCard(updateBanner){
 
   var carouselHyperLink = document.createElement('a');
   carouselHyperLink.href = updateBanner.hyperLink;
-  carouselHyperLink.className = "pull-left text-center btn-link";
+  carouselHyperLink.className = "text-decoration-none text-light";
   carouselHyperLink.setAttribute("target", "_blank");
   carouselHyperLink.setAttribute("rel", "canonical");
   carouselBlock.appendChild(carouselHyperLink);
@@ -750,13 +750,8 @@ function buildProductUpdatesCarousel(updateBannerCards, index) {
   carouselRow.className = "row";
   carouselDiv.appendChild(carouselRow);
 
-  var carouselColumn = document.createElement('div');
-  carouselColumn.className = "carousel-col";
-  carouselRow.appendChild(carouselColumn);
-
-
   _.each(updateBannerCards, function (updateBannerCard) {
-    carouselColumn.append(updateBannerCard);
+    carouselDiv.append(updateBannerCard);
   });
 
   return carouselDiv;
