@@ -709,6 +709,7 @@ function buildProductUpdatesCard(updateBanner){
   carouselContent.className = "update-item-details";
 
   var carouselSubHeading = document.createElement('h6');
+  carouselSubHeading.className = "fw-light";
   carouselContent.appendChild(carouselSubHeading);
 
   var carouselSubHeadingText = document.createTextNode(updateBanner.subHeading);
