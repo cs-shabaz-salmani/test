@@ -861,6 +861,28 @@ function buildCardHtml(listItem, mode) {
   itemType.appendChild(itemTypeText);
   aTaglistItem.appendChild(itemType);
 
+
+  if(mode !== 'updates') {
+    var itemIconDiv = document.createElement('div');
+    itemIconDiv.className = "mp-tile-image-container";
+
+    var imageElement;
+    if (listItem.iconLarge) {
+      imageElement = document.createElement('img');
+      imageElement.className = "mp-tile-image";
+      imageElement.src = yumRepo + listItem.iconLarge;
+      imageElement.setAttribute("width", "85");
+      imageElement.setAttribute("height", "auto");
+      imageElement.setAttribute("loading", "lazy");
+    } else {
+      imageElement = document.createElement('i');
+      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
+    }
+
+    itemIconDiv.appendChild(imageElement);
+    aTaglistItem.appendChild(itemIconDiv);
+  }
+
   var itemContentDiv = document.createElement('div');
   itemContentDiv.className = "mp-content-fixed-height";
 
@@ -903,27 +925,6 @@ function buildCardHtml(listItem, mode) {
   
   itemContentDiv.appendChild(itemDetailsDiv);
   aTaglistItem.appendChild(itemContentDiv);
-
-  if(mode !== 'updates') {
-    var itemIconDiv = document.createElement('div');
-    itemIconDiv.className = "mp-tile-image-container";
-
-    var imageElement;
-    if (listItem.iconLarge) {
-      imageElement = document.createElement('img');
-      imageElement.className = "mp-tile-image";
-      imageElement.src = yumRepo + listItem.iconLarge;
-      imageElement.setAttribute("width", "85");
-      imageElement.setAttribute("height", "auto");
-      imageElement.setAttribute("loading", "lazy");
-    } else {
-      imageElement = document.createElement('i');
-      imageElement.className = "mp-tile-icon icon-" + listItem.type + "-large";
-    }
-
-    itemIconDiv.appendChild(imageElement);
-    aTaglistItem.appendChild(itemIconDiv);
-  }
 
   var cardDescription = document.createElement('p');
   cardDescription.className = "mp-tile-description muted-80";

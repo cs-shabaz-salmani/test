@@ -222,14 +222,9 @@ body {
 }
 
 .sidebar #sidebar {
-  position: fixed;
-  top: 97px;
-  left: 8.3333%;
-  right: 70%;
-  bottom: 0px;
+  position: relative;
   background: #191c20;
-  border-right: 1px solid #dfdede;
-  border-left: 1px solid #dfdede;
+  height: 100vh;
 }
 
 .sidebar #sidebar .navbar-expand-lg .navbar-collapse {
@@ -268,6 +263,8 @@ body {
 
 .sidebar .sidebar-content {
   padding: 0px 0px 20px 0px;
+  position: sticky;
+  top: 100px;
 }
 
 .sidebar .sidebar-title {
