@@ -747,6 +747,7 @@ function buildUpdatesCarousel(mpCards, index){
   latestUpdatesIndicatorButton.setAttribute("type", "button");
   latestUpdatesIndicatorButton.setAttribute("data-bs-target", "#carouselUpdates");
   latestUpdatesIndicatorButton.setAttribute("data-bs-slide-to", index);
+  carouselIndicatorButton.setAttribute("aria-label", "Featured Updates Content " + index);
 
   latestUpdatesIndicator.append(latestUpdatesIndicatorButton);
 
